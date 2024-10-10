@@ -1,3 +1,979 @@
-<h1 class="text-3xl font-bold leading-tight tracking-tighter md:text-4xl lg:leading-[1.1] hidden md:block">
-    Check out some dashboard
-</h1>
+<div class="overflow-hidden rounded-[0.5rem] border bg-background shadow">
+    <div class="md:hidden">
+        <img
+            alt="Dashboard"
+            loading="lazy"
+            width="1280"
+            height="866"
+            decoding="async"
+            data-nimg="1"
+            class="block dark:hidden"
+            srcset="
+        /_next/image?url=%2Fexamples%2Fdashboard-light.png&amp;w=1920&amp;q=75 1x,
+        /_next/image?url=%2Fexamples%2Fdashboard-light.png&amp;w=3840&amp;q=75 2x
+      "
+            src="/_next/image?url=%2Fexamples%2Fdashboard-light.png&amp;w=3840&amp;q=75"
+            style="color: transparent" /><img
+            alt="Dashboard"
+            loading="lazy"
+            width="1280"
+            height="866"
+            decoding="async"
+            data-nimg="1"
+            class="hidden dark:block"
+            srcset="
+        /_next/image?url=%2Fexamples%2Fdashboard-dark.png&amp;w=1920&amp;q=75 1x,
+        /_next/image?url=%2Fexamples%2Fdashboard-dark.png&amp;w=3840&amp;q=75 2x
+      "
+            src="/_next/image?url=%2Fexamples%2Fdashboard-dark.png&amp;w=3840&amp;q=75"
+            style="color: transparent" />
+    </div>
+    <div class="hidden flex-col md:flex">
+        <div class="border-b">
+            <div class="flex h-16 items-center px-4">
+                <button
+                    class="inline-flex items-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground h-9 px-4 py-2 w-[200px] justify-between"
+                    role="combobox"
+                    aria-expanded="false"
+                    aria-label="Select a team"
+                    type="button"
+                    aria-haspopup="dialog"
+                    aria-controls="radix-:r1ai:"
+                    data-state="closed">
+                    <span
+                        class="relative flex shrink-0 overflow-hidden rounded-full mr-2 h-5 w-5"><img
+                            class="aspect-square h-full w-full grayscale"
+                            alt="Alicia Koch"
+                            src="https://avatar.vercel.sh/personal.png" /></span>Alicia
+                    Koch<svg
+                        width="15"
+                        height="15"
+                        viewBox="0 0 15 15"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="ml-auto h-4 w-4 shrink-0 opacity-50">
+                        <path
+                            d="M4.93179 5.43179C4.75605 5.60753 4.75605 5.89245 4.93179 6.06819C5.10753 6.24392 5.39245 6.24392 5.56819 6.06819L7.49999 4.13638L9.43179 6.06819C9.60753 6.24392 9.89245 6.24392 10.0682 6.06819C10.2439 5.89245 10.2439 5.60753 10.0682 5.43179L7.81819 3.18179C7.73379 3.0974 7.61933 3.04999 7.49999 3.04999C7.38064 3.04999 7.26618 3.0974 7.18179 3.18179L4.93179 5.43179ZM10.0682 9.56819C10.2439 9.39245 10.2439 9.10753 10.0682 8.93179C9.89245 8.75606 9.60753 8.75606 9.43179 8.93179L7.49999 10.8636L5.56819 8.93179C5.39245 8.75606 5.10753 8.75606 4.93179 8.93179C4.75605 9.10753 4.75605 9.39245 4.93179 9.56819L7.18179 11.8182C7.35753 11.9939 7.64245 11.9939 7.81819 11.8182L10.0682 9.56819Z"
+                            fill="currentColor"
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+                <nav class="flex items-center space-x-4 lg:space-x-6 mx-6">
+                    <a
+                        class="text-sm font-medium transition-colors hover:text-primary"
+                        href="/examples/dashboard">Overview</a><a
+                        class="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
+                        href="/examples/dashboard">Customers</a><a
+                        class="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
+                        href="/examples/dashboard">Products</a><a
+                        class="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
+                        href="/examples/dashboard">Settings</a>
+                </nav>
+                <div class="ml-auto flex items-center space-x-4">
+                    <div>
+                        <input
+                            class="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:w-[100px] lg:w-[300px]"
+                            placeholder="Search..."
+                            type="search" />
+                    </div>
+                    <button
+                        class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground px-4 py-2 relative h-8 w-8 rounded-full"
+                        type="button"
+                        id="radix-:r1aj:"
+                        aria-haspopup="menu"
+                        aria-expanded="false"
+                        data-state="closed">
+                        <span
+                            class="relative flex shrink-0 overflow-hidden rounded-full h-8 w-8"><img
+                                class="aspect-square h-full w-full"
+                                alt="@shadcn"
+                                src="./assets/img/01.png" /></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="flex-1 space-y-4 p-8 pt-6">
+            <div class="flex items-center justify-between space-y-2">
+                <h2 class="text-3xl font-bold tracking-tight">Dashboard</h2>
+                <div class="flex items-center space-x-2">
+                    <div class="grid gap-2">
+                        <button
+                            class="inline-flex items-center whitespace-nowrap rounded-md text-sm transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground h-9 px-4 py-2 w-[260px] justify-start text-left font-normal"
+                            id="date"
+                            type="button"
+                            aria-haspopup="dialog"
+                            aria-expanded="false"
+                            aria-controls="radix-:r1al:"
+                            data-state="closed">
+                            <svg
+                                width="15"
+                                height="15"
+                                viewBox="0 0 15 15"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="mr-2 h-4 w-4">
+                                <path
+                                    d="M4.5 1C4.77614 1 5 1.22386 5 1.5V2H10V1.5C10 1.22386 10.2239 1 10.5 1C10.7761 1 11 1.22386 11 1.5V2H12.5C13.3284 2 14 2.67157 14 3.5V12.5C14 13.3284 13.3284 14 12.5 14H2.5C1.67157 14 1 13.3284 1 12.5V3.5C1 2.67157 1.67157 2 2.5 2H4V1.5C4 1.22386 4.22386 1 4.5 1ZM10 3V3.5C10 3.77614 10.2239 4 10.5 4C10.7761 4 11 3.77614 11 3.5V3H12.5C12.7761 3 13 3.22386 13 3.5V5H2V3.5C2 3.22386 2.22386 3 2.5 3H4V3.5C4 3.77614 4.22386 4 4.5 4C4.77614 4 5 3.77614 5 3.5V3H10ZM2 6V12.5C2 12.7761 2.22386 13 2.5 13H12.5C12.7761 13 13 12.7761 13 12.5V6H2ZM7 7.5C7 7.22386 7.22386 7 7.5 7C7.77614 7 8 7.22386 8 7.5C8 7.77614 7.77614 8 7.5 8C7.22386 8 7 7.77614 7 7.5ZM9.5 7C9.22386 7 9 7.22386 9 7.5C9 7.77614 9.22386 8 9.5 8C9.77614 8 10 7.77614 10 7.5C10 7.22386 9.77614 7 9.5 7ZM11 7.5C11 7.22386 11.2239 7 11.5 7C11.7761 7 12 7.22386 12 7.5C12 7.77614 11.7761 8 11.5 8C11.2239 8 11 7.77614 11 7.5ZM11.5 9C11.2239 9 11 9.22386 11 9.5C11 9.77614 11.2239 10 11.5 10C11.7761 10 12 9.77614 12 9.5C12 9.22386 11.7761 9 11.5 9ZM9 9.5C9 9.22386 9.22386 9 9.5 9C9.77614 9 10 9.22386 10 9.5C10 9.77614 9.77614 10 9.5 10C9.22386 10 9 9.77614 9 9.5ZM7.5 9C7.22386 9 7 9.22386 7 9.5C7 9.77614 7.22386 10 7.5 10C7.77614 10 8 9.77614 8 9.5C8 9.22386 7.77614 9 7.5 9ZM5 9.5C5 9.22386 5.22386 9 5.5 9C5.77614 9 6 9.22386 6 9.5C6 9.77614 5.77614 10 5.5 10C5.22386 10 5 9.77614 5 9.5ZM3.5 9C3.22386 9 3 9.22386 3 9.5C3 9.77614 3.22386 10 3.5 10C3.77614 10 4 9.77614 4 9.5C4 9.22386 3.77614 9 3.5 9ZM3 11.5C3 11.2239 3.22386 11 3.5 11C3.77614 11 4 11.2239 4 11.5C4 11.7761 3.77614 12 3.5 12C3.22386 12 3 11.7761 3 11.5ZM5.5 11C5.22386 11 5 11.2239 5 11.5C5 11.7761 5.22386 12 5.5 12C5.77614 12 6 11.7761 6 11.5C6 11.2239 5.77614 11 5.5 11ZM7 11.5C7 11.2239 7.22386 11 7.5 11C7.77614 11 8 11.2239 8 11.5C8 11.7761 7.77614 12 7.5 12C7.22386 12 7 11.7761 7 11.5ZM9.5 11C9.22386 11 9 11.2239 9 11.5C9 11.7761 9.22386 12 9.5 12C9.77614 12 10 11.7761 10 11.5C10 11.2239 9.77614 11 9.5 11Z"
+                                    fill="currentColor"
+                                    fill-rule="evenodd"
+                                    clip-rule="evenodd"></path></svg>Jan 20,
+                            2023 - Feb 09, 2023
+                        </button>
+                    </div>
+                    <button
+                        class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground shadow hover:bg-primary/90 h-9 px-4 py-2">
+                        Download
+                    </button>
+                </div>
+            </div>
+            <div dir="ltr" data-orientation="horizontal" class="space-y-4">
+                <div
+                    role="tablist"
+                    aria-orientation="horizontal"
+                    class="inline-flex h-9 items-center justify-center rounded-lg bg-muted p-1 text-muted-foreground"
+                    tabindex="0"
+                    data-orientation="horizontal"
+                    style="outline: none">
+                    <button
+                        type="button"
+                        role="tab"
+                        aria-selected="true"
+                        aria-controls="radix-:r1am:-content-overview"
+                        data-state="active"
+                        id="radix-:r1am:-trigger-overview"
+                        class="inline-flex items-center justify-center whitespace-nowrap rounded-md px-3 py-1 text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:shadow"
+                        tabindex="-1"
+                        data-orientation="horizontal"
+                        data-radix-collection-item>
+                        Overview</button><button
+                        type="button"
+                        role="tab"
+                        aria-selected="false"
+                        aria-controls="radix-:r1am:-content-analytics"
+                        data-state="inactive"
+                        data-disabled
+                        disabled
+                        id="radix-:r1am:-trigger-analytics"
+                        class="inline-flex items-center justify-center whitespace-nowrap rounded-md px-3 py-1 text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:shadow"
+                        tabindex="-1"
+                        data-orientation="horizontal"
+                        data-radix-collection-item>
+                        Analytics</button><button
+                        type="button"
+                        role="tab"
+                        aria-selected="false"
+                        aria-controls="radix-:r1am:-content-reports"
+                        data-state="inactive"
+                        data-disabled
+                        disabled
+                        id="radix-:r1am:-trigger-reports"
+                        class="inline-flex items-center justify-center whitespace-nowrap rounded-md px-3 py-1 text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:shadow"
+                        tabindex="-1"
+                        data-orientation="horizontal"
+                        data-radix-collection-item>
+                        Reports</button><button
+                        type="button"
+                        role="tab"
+                        aria-selected="false"
+                        aria-controls="radix-:r1am:-content-notifications"
+                        data-state="inactive"
+                        data-disabled
+                        disabled
+                        id="radix-:r1am:-trigger-notifications"
+                        class="inline-flex items-center justify-center whitespace-nowrap rounded-md px-3 py-1 text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:shadow"
+                        tabindex="-1"
+                        data-orientation="horizontal"
+                        data-radix-collection-item>
+                        Notifications
+                    </button>
+                </div>
+                <div
+                    data-state="active"
+                    data-orientation="horizontal"
+                    role="tabpanel"
+                    aria-labelledby="radix-:r1am:-trigger-overview"
+                    id="radix-:r1am:-content-overview"
+                    tabindex="0"
+                    class="mt-2 ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 space-y-4"
+                    style="animation-duration: 0s">
+                    <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+                        <div
+                            class="rounded-xl border bg-card text-card-foreground shadow">
+                            <div
+                                class="p-6 flex flex-row items-center justify-between space-y-0 pb-2">
+                                <h3 class="tracking-tight text-sm font-medium">
+                                    Total Revenue
+                                </h3>
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    class="h-4 w-4 text-muted-foreground">
+                                    <path
+                                        d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                                </svg>
+                            </div>
+                            <div class="p-6 pt-0">
+                                <div class="text-2xl font-bold">$45,231.89</div>
+                                <p class="text-xs text-muted-foreground">
+                                    +20.1% from last month
+                                </p>
+                            </div>
+                        </div>
+                        <div
+                            class="rounded-xl border bg-card text-card-foreground shadow">
+                            <div
+                                class="p-6 flex flex-row items-center justify-between space-y-0 pb-2">
+                                <h3 class="tracking-tight text-sm font-medium">
+                                    Subscriptions
+                                </h3>
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    class="h-4 w-4 text-muted-foreground">
+                                    <path
+                                        d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                                    <circle cx="9" cy="7" r="4"></circle>
+                                    <path
+                                        d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                </svg>
+                            </div>
+                            <div class="p-6 pt-0">
+                                <div class="text-2xl font-bold">+2350</div>
+                                <p class="text-xs text-muted-foreground">
+                                    +180.1% from last month
+                                </p>
+                            </div>
+                        </div>
+                        <div
+                            class="rounded-xl border bg-card text-card-foreground shadow">
+                            <div
+                                class="p-6 flex flex-row items-center justify-between space-y-0 pb-2">
+                                <h3
+                                    class="tracking-tight text-sm font-medium">Sales</h3>
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    class="h-4 w-4 text-muted-foreground">
+                                    <rect width="20" height="14" x="2" y="5"
+                                        rx="2"></rect>
+                                    <path d="M2 10h20"></path>
+                                </svg>
+                            </div>
+                            <div class="p-6 pt-0">
+                                <div class="text-2xl font-bold">+12,234</div>
+                                <p class="text-xs text-muted-foreground">
+                                    +19% from last month
+                                </p>
+                            </div>
+                        </div>
+                        <div
+                            class="rounded-xl border bg-card text-card-foreground shadow">
+                            <div
+                                class="p-6 flex flex-row items-center justify-between space-y-0 pb-2">
+                                <h3
+                                    class="tracking-tight text-sm font-medium">Active
+                                    Now</h3>
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    class="h-4 w-4 text-muted-foreground">
+                                    <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                                </svg>
+                            </div>
+                            <div class="p-6 pt-0">
+                                <div class="text-2xl font-bold">+573</div>
+                                <p class="text-xs text-muted-foreground">
+                                    +201 since last hour
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-7">
+                        <div
+                            class="rounded-xl border bg-card text-card-foreground shadow col-span-4">
+                            <div class="flex flex-col space-y-1.5 p-6">
+                                <h3
+                                    class="font-semibold leading-none tracking-tight">
+                                    Overview
+                                </h3>
+                            </div>
+                            <div class="p-6 pt-0 pl-2">
+                                <div
+                                    class="recharts-responsive-container"
+                                    style="width: 100%; height: 350px; min-width: 0px">
+                                    <div
+                                        class="recharts-wrapper"
+                                        style="
+                      position: relative;
+                      cursor: default;
+                      width: 100%;
+                      height: 100%;
+                      max-height: 350px;
+                      max-width: 657px;
+                    ">
+                                        <svg
+                                            class="recharts-surface"
+                                            width="657"
+                                            height="350"
+                                            viewBox="0 0 657 350"
+                                            style="width: 100%; height: 100%">
+                                            <title></title>
+                                            <desc></desc>
+                                            <defs>
+                                                <clippath id="recharts591-clip">
+                                                    <rect x="65" y="5"
+                                                        height="310"
+                                                        width="587"></rect>
+                                                </clippath>
+                                            </defs>
+                                            <g
+                                                class="recharts-layer recharts-cartesian-axis recharts-xAxis xAxis">
+                                                <g
+                                                    class="recharts-cartesian-axis-ticks">
+                                                    <g
+                                                        class="recharts-layer recharts-cartesian-axis-tick">
+                                                        <text
+                                                            stroke="none"
+                                                            font-size="12"
+                                                            orientation="bottom"
+                                                            width="587"
+                                                            height="30"
+                                                            x="89.45833333333333"
+                                                            y="323"
+                                                            class="recharts-text recharts-cartesian-axis-tick-value"
+                                                            text-anchor="middle"
+                                                            fill="#888888">
+                                                            <tspan
+                                                                x="89.45833333333333"
+                                                                dy="0.71em">
+                                                                Jan
+                                                            </tspan>
+                                                        </text>
+                                                    </g>
+                                                    <g
+                                                        class="recharts-layer recharts-cartesian-axis-tick">
+                                                        <text
+                                                            stroke="none"
+                                                            font-size="12"
+                                                            orientation="bottom"
+                                                            width="587"
+                                                            height="30"
+                                                            x="138.375"
+                                                            y="323"
+                                                            class="recharts-text recharts-cartesian-axis-tick-value"
+                                                            text-anchor="middle"
+                                                            fill="#888888">
+                                                            <tspan x="138.375"
+                                                                dy="0.71em">Feb</tspan>
+                                                        </text>
+                                                    </g>
+                                                    <g
+                                                        class="recharts-layer recharts-cartesian-axis-tick">
+                                                        <text
+                                                            stroke="none"
+                                                            font-size="12"
+                                                            orientation="bottom"
+                                                            width="587"
+                                                            height="30"
+                                                            x="187.29166666666666"
+                                                            y="323"
+                                                            class="recharts-text recharts-cartesian-axis-tick-value"
+                                                            text-anchor="middle"
+                                                            fill="#888888">
+                                                            <tspan
+                                                                x="187.29166666666666"
+                                                                dy="0.71em">
+                                                                Mar
+                                                            </tspan>
+                                                        </text>
+                                                    </g>
+                                                    <g
+                                                        class="recharts-layer recharts-cartesian-axis-tick">
+                                                        <text
+                                                            stroke="none"
+                                                            font-size="12"
+                                                            orientation="bottom"
+                                                            width="587"
+                                                            height="30"
+                                                            x="236.20833333333334"
+                                                            y="323"
+                                                            class="recharts-text recharts-cartesian-axis-tick-value"
+                                                            text-anchor="middle"
+                                                            fill="#888888">
+                                                            <tspan
+                                                                x="236.20833333333334"
+                                                                dy="0.71em">
+                                                                Apr
+                                                            </tspan>
+                                                        </text>
+                                                    </g>
+                                                    <g
+                                                        class="recharts-layer recharts-cartesian-axis-tick">
+                                                        <text
+                                                            stroke="none"
+                                                            font-size="12"
+                                                            orientation="bottom"
+                                                            width="587"
+                                                            height="30"
+                                                            x="285.12499999999994"
+                                                            y="323"
+                                                            class="recharts-text recharts-cartesian-axis-tick-value"
+                                                            text-anchor="middle"
+                                                            fill="#888888">
+                                                            <tspan
+                                                                x="285.12499999999994"
+                                                                dy="0.71em">
+                                                                May
+                                                            </tspan>
+                                                        </text>
+                                                    </g>
+                                                    <g
+                                                        class="recharts-layer recharts-cartesian-axis-tick">
+                                                        <text
+                                                            stroke="none"
+                                                            font-size="12"
+                                                            orientation="bottom"
+                                                            width="587"
+                                                            height="30"
+                                                            x="334.04166666666663"
+                                                            y="323"
+                                                            class="recharts-text recharts-cartesian-axis-tick-value"
+                                                            text-anchor="middle"
+                                                            fill="#888888">
+                                                            <tspan
+                                                                x="334.04166666666663"
+                                                                dy="0.71em">
+                                                                Jun
+                                                            </tspan>
+                                                        </text>
+                                                    </g>
+                                                    <g
+                                                        class="recharts-layer recharts-cartesian-axis-tick">
+                                                        <text
+                                                            stroke="none"
+                                                            font-size="12"
+                                                            orientation="bottom"
+                                                            width="587"
+                                                            height="30"
+                                                            x="382.9583333333333"
+                                                            y="323"
+                                                            class="recharts-text recharts-cartesian-axis-tick-value"
+                                                            text-anchor="middle"
+                                                            fill="#888888">
+                                                            <tspan
+                                                                x="382.9583333333333"
+                                                                dy="0.71em">
+                                                                Jul
+                                                            </tspan>
+                                                        </text>
+                                                    </g>
+                                                    <g
+                                                        class="recharts-layer recharts-cartesian-axis-tick">
+                                                        <text
+                                                            stroke="none"
+                                                            font-size="12"
+                                                            orientation="bottom"
+                                                            width="587"
+                                                            height="30"
+                                                            x="431.87499999999994"
+                                                            y="323"
+                                                            class="recharts-text recharts-cartesian-axis-tick-value"
+                                                            text-anchor="middle"
+                                                            fill="#888888">
+                                                            <tspan
+                                                                x="431.87499999999994"
+                                                                dy="0.71em">
+                                                                Aug
+                                                            </tspan>
+                                                        </text>
+                                                    </g>
+                                                    <g
+                                                        class="recharts-layer recharts-cartesian-axis-tick">
+                                                        <text
+                                                            stroke="none"
+                                                            font-size="12"
+                                                            orientation="bottom"
+                                                            width="587"
+                                                            height="30"
+                                                            x="480.79166666666663"
+                                                            y="323"
+                                                            class="recharts-text recharts-cartesian-axis-tick-value"
+                                                            text-anchor="middle"
+                                                            fill="#888888">
+                                                            <tspan
+                                                                x="480.79166666666663"
+                                                                dy="0.71em">
+                                                                Sep
+                                                            </tspan>
+                                                        </text>
+                                                    </g>
+                                                    <g
+                                                        class="recharts-layer recharts-cartesian-axis-tick">
+                                                        <text
+                                                            stroke="none"
+                                                            font-size="12"
+                                                            orientation="bottom"
+                                                            width="587"
+                                                            height="30"
+                                                            x="529.7083333333334"
+                                                            y="323"
+                                                            class="recharts-text recharts-cartesian-axis-tick-value"
+                                                            text-anchor="middle"
+                                                            fill="#888888">
+                                                            <tspan
+                                                                x="529.7083333333334"
+                                                                dy="0.71em">
+                                                                Oct
+                                                            </tspan>
+                                                        </text>
+                                                    </g>
+                                                    <g
+                                                        class="recharts-layer recharts-cartesian-axis-tick">
+                                                        <text
+                                                            stroke="none"
+                                                            font-size="12"
+                                                            orientation="bottom"
+                                                            width="587"
+                                                            height="30"
+                                                            x="578.625"
+                                                            y="323"
+                                                            class="recharts-text recharts-cartesian-axis-tick-value"
+                                                            text-anchor="middle"
+                                                            fill="#888888">
+                                                            <tspan x="578.625"
+                                                                dy="0.71em">Nov</tspan>
+                                                        </text>
+                                                    </g>
+                                                    <g
+                                                        class="recharts-layer recharts-cartesian-axis-tick">
+                                                        <text
+                                                            stroke="none"
+                                                            font-size="12"
+                                                            orientation="bottom"
+                                                            width="587"
+                                                            height="30"
+                                                            x="627.5416666666666"
+                                                            y="323"
+                                                            class="recharts-text recharts-cartesian-axis-tick-value"
+                                                            text-anchor="middle"
+                                                            fill="#888888">
+                                                            <tspan
+                                                                x="627.5416666666666"
+                                                                dy="0.71em">
+                                                                Dec
+                                                            </tspan>
+                                                        </text>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                            <g
+                                                class="recharts-layer recharts-cartesian-axis recharts-yAxis yAxis">
+                                                <g
+                                                    class="recharts-cartesian-axis-ticks">
+                                                    <g
+                                                        class="recharts-layer recharts-cartesian-axis-tick">
+                                                        <text
+                                                            stroke="none"
+                                                            font-size="12"
+                                                            orientation="left"
+                                                            width="60"
+                                                            height="310"
+                                                            x="57"
+                                                            y="315"
+                                                            class="recharts-text recharts-cartesian-axis-tick-value"
+                                                            text-anchor="end"
+                                                            fill="#888888">
+                                                            <tspan x="57"
+                                                                dy="0.355em">$0</tspan>
+                                                        </text>
+                                                    </g>
+                                                    <g
+                                                        class="recharts-layer recharts-cartesian-axis-tick">
+                                                        <text
+                                                            stroke="none"
+                                                            font-size="12"
+                                                            orientation="left"
+                                                            width="60"
+                                                            height="310"
+                                                            x="57"
+                                                            y="237.5"
+                                                            class="recharts-text recharts-cartesian-axis-tick-value"
+                                                            text-anchor="end"
+                                                            fill="#888888">
+                                                            <tspan x="57"
+                                                                dy="0.355em">$1500</tspan>
+                                                        </text>
+                                                    </g>
+                                                    <g
+                                                        class="recharts-layer recharts-cartesian-axis-tick">
+                                                        <text
+                                                            stroke="none"
+                                                            font-size="12"
+                                                            orientation="left"
+                                                            width="60"
+                                                            height="310"
+                                                            x="57"
+                                                            y="160"
+                                                            class="recharts-text recharts-cartesian-axis-tick-value"
+                                                            text-anchor="end"
+                                                            fill="#888888">
+                                                            <tspan x="57"
+                                                                dy="0.355em">$3000</tspan>
+                                                        </text>
+                                                    </g>
+                                                    <g
+                                                        class="recharts-layer recharts-cartesian-axis-tick">
+                                                        <text
+                                                            stroke="none"
+                                                            font-size="12"
+                                                            orientation="left"
+                                                            width="60"
+                                                            height="310"
+                                                            x="57"
+                                                            y="82.5"
+                                                            class="recharts-text recharts-cartesian-axis-tick-value"
+                                                            text-anchor="end"
+                                                            fill="#888888">
+                                                            <tspan x="57"
+                                                                dy="0.355em">$4500</tspan>
+                                                        </text>
+                                                    </g>
+                                                    <g
+                                                        class="recharts-layer recharts-cartesian-axis-tick">
+                                                        <text
+                                                            stroke="none"
+                                                            font-size="12"
+                                                            orientation="left"
+                                                            width="60"
+                                                            height="310"
+                                                            x="57"
+                                                            y="9"
+                                                            class="recharts-text recharts-cartesian-axis-tick-value"
+                                                            text-anchor="end"
+                                                            fill="#888888">
+                                                            <tspan x="57"
+                                                                dy="0.355em">$6000</tspan>
+                                                        </text>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                            <g
+                                                class="recharts-layer recharts-bar fill-primary">
+                                                <g
+                                                    class="recharts-layer recharts-bar-rectangles">
+                                                    <g class="recharts-layer">
+                                                        <g
+                                                            class="recharts-layer recharts-bar-rectangle">
+                                                            <path
+                                                                x="69.89166666666667"
+                                                                y="20.5"
+                                                                width="39"
+                                                                height="294.5"
+                                                                radius="4,4,0,0"
+                                                                fill="currentColor"
+                                                                class="recharts-rectangle fill-primary"
+                                                                name="Jan"
+                                                                d="M69.89166666666667,24.5A 4,4,0,0,1,73.89166666666667,20.5L 104.89166666666667,20.5A 4,4,0,0,1,
+        108.89166666666667,24.5L 108.89166666666667,315L 69.89166666666667,315Z"></path>
+                                                        </g>
+                                                        <g
+                                                            class="recharts-layer recharts-bar-rectangle">
+                                                            <path
+                                                                x="118.80833333333332"
+                                                                y="20.810000000000002"
+                                                                width="39"
+                                                                height="294.19"
+                                                                radius="4,4,0,0"
+                                                                fill="currentColor"
+                                                                class="recharts-rectangle fill-primary"
+                                                                name="Feb"
+                                                                d="M118.80833333333332,24.810000000000002A 4,4,0,0,1,122.80833333333332,20.810000000000002L 153.80833333333334,20.810000000000002A 4,4,0,0,1,
+        157.80833333333334,24.810000000000002L 157.80833333333334,315L 118.80833333333332,315Z"></path>
+                                                        </g>
+                                                        <g
+                                                            class="recharts-layer recharts-bar-rectangle">
+                                                            <path
+                                                                x="167.725"
+                                                                y="14.66166666666669"
+                                                                width="39"
+                                                                height="300.3383333333333"
+                                                                radius="4,4,0,0"
+                                                                fill="currentColor"
+                                                                class="recharts-rectangle fill-primary"
+                                                                name="Mar"
+                                                                d="M167.725,18.66166666666669A 4,4,0,0,1,171.725,14.66166666666669L 202.725,14.66166666666669A 4,4,0,0,1,
+        206.725,18.66166666666669L 206.725,315L 167.725,315Z"></path>
+                                                        </g>
+                                                        <g
+                                                            class="recharts-layer recharts-bar-rectangle">
+                                                            <path
+                                                                x="216.64166666666668"
+                                                                y="235.58833333333334"
+                                                                width="39"
+                                                                height="79.41166666666666"
+                                                                radius="4,4,0,0"
+                                                                fill="currentColor"
+                                                                class="recharts-rectangle fill-primary"
+                                                                name="Apr"
+                                                                d="M216.64166666666668,239.58833333333334A 4,4,0,0,1,220.64166666666668,235.58833333333334L 251.64166666666668,235.58833333333334A 4,4,0,0,1,
+        255.64166666666668,239.58833333333334L 255.64166666666668,315L 216.64166666666668,315Z"></path>
+                                                        </g>
+                                                        <g
+                                                            class="recharts-layer recharts-bar-rectangle">
+                                                            <path
+                                                                x="265.5583333333333"
+                                                                y="146.51500000000001"
+                                                                width="39"
+                                                                height="168.48499999999999"
+                                                                radius="4,4,0,0"
+                                                                fill="currentColor"
+                                                                class="recharts-rectangle fill-primary"
+                                                                name="May"
+                                                                d="M265.5583333333333,150.51500000000001A 4,4,0,0,1,269.5583333333333,146.51500000000001L 300.5583333333333,146.51500000000001A 4,4,0,0,1,
+        304.5583333333333,150.51500000000001L 304.5583333333333,315L 265.5583333333333,315Z"></path>
+                                                        </g>
+                                                        <g
+                                                            class="recharts-layer recharts-bar-rectangle">
+                                                            <path
+                                                                x="314.47499999999997"
+                                                                y="259.71666666666664"
+                                                                width="39"
+                                                                height="55.28333333333336"
+                                                                radius="4,4,0,0"
+                                                                fill="currentColor"
+                                                                class="recharts-rectangle fill-primary"
+                                                                name="Jun"
+                                                                d="M314.47499999999997,263.71666666666664A 4,4,0,0,1,318.47499999999997,259.71666666666664L 349.47499999999997,259.71666666666664A 4,4,0,0,1,
+        353.47499999999997,263.71666666666664L 353.47499999999997,315L 314.47499999999997,315Z"></path>
+                                                        </g>
+                                                        <g
+                                                            class="recharts-layer recharts-bar-rectangle">
+                                                            <path
+                                                                x="363.39166666666665"
+                                                                y="202.41833333333335"
+                                                                width="39"
+                                                                height="112.58166666666665"
+                                                                radius="4,4,0,0"
+                                                                fill="currentColor"
+                                                                class="recharts-rectangle fill-primary"
+                                                                name="Jul"
+                                                                d="M363.39166666666665,206.41833333333335A 4,4,0,0,1,367.39166666666665,202.41833333333335L 398.39166666666665,202.41833333333335A 4,4,0,0,1,
+        402.39166666666665,206.41833333333335L 402.39166666666665,315L 363.39166666666665,315Z"></path>
+                                                        </g>
+                                                        <g
+                                                            class="recharts-layer recharts-bar-rectangle">
+                                                            <path
+                                                                x="412.3083333333333"
+                                                                y="48.710000000000036"
+                                                                width="39"
+                                                                height="266.28999999999996"
+                                                                radius="4,4,0,0"
+                                                                fill="currentColor"
+                                                                class="recharts-rectangle fill-primary"
+                                                                name="Aug"
+                                                                d="M412.3083333333333,52.710000000000036A 4,4,0,0,1,416.3083333333333,48.710000000000036L 447.3083333333333,48.710000000000036A 4,4,0,0,1,
+        451.3083333333333,52.710000000000036L 451.3083333333333,315L 412.3083333333333,315Z"></path>
+                                                        </g>
+                                                        <g
+                                                            class="recharts-layer recharts-bar-rectangle">
+                                                            <path
+                                                                x="461.22499999999997"
+                                                                y="137.47333333333336"
+                                                                width="39"
+                                                                height="177.52666666666664"
+                                                                radius="4,4,0,0"
+                                                                fill="currentColor"
+                                                                class="recharts-rectangle fill-primary"
+                                                                name="Sep"
+                                                                d="M461.22499999999997,141.47333333333336A 4,4,0,0,1,465.22499999999997,137.47333333333336L 496.22499999999997,137.47333333333336A 4,4,0,0,1,
+        500.22499999999997,141.47333333333336L 500.22499999999997,315L 461.22499999999997,315Z"></path>
+                                                        </g>
+                                                        <g
+                                                            class="recharts-layer recharts-bar-rectangle">
+                                                            <path
+                                                                x="510.14166666666665"
+                                                                y="149.35666666666668"
+                                                                width="39"
+                                                                height="165.64333333333332"
+                                                                radius="4,4,0,0"
+                                                                fill="currentColor"
+                                                                class="recharts-rectangle fill-primary"
+                                                                name="Oct"
+                                                                d="M510.14166666666665,153.35666666666668A 4,4,0,0,1,514.1416666666667,149.35666666666668L 545.1416666666667,149.35666666666668A 4,4,0,0,1,
+        549.1416666666667,153.35666666666668L 549.1416666666667,315L 510.14166666666665,315Z"></path>
+                                                        </g>
+                                                        <g
+                                                            class="recharts-layer recharts-bar-rectangle">
+                                                            <path
+                                                                x="559.0583333333333"
+                                                                y="136.02666666666664"
+                                                                width="39"
+                                                                height="178.97333333333336"
+                                                                radius="4,4,0,0"
+                                                                fill="currentColor"
+                                                                class="recharts-rectangle fill-primary"
+                                                                name="Nov"
+                                                                d="M559.0583333333333,140.02666666666664A 4,4,0,0,1,563.0583333333333,136.02666666666664L 594.0583333333333,136.02666666666664A 4,4,0,0,1,
+        598.0583333333333,140.02666666666664L 598.0583333333333,315L 559.0583333333333,315Z"></path>
+                                                        </g>
+                                                        <g
+                                                            class="recharts-layer recharts-bar-rectangle">
+                                                            <path
+                                                                x="607.9749999999999"
+                                                                y="181.3383333333333"
+                                                                width="39"
+                                                                height="133.6616666666667"
+                                                                radius="4,4,0,0"
+                                                                fill="currentColor"
+                                                                class="recharts-rectangle fill-primary"
+                                                                name="Dec"
+                                                                d="M607.9749999999999,185.3383333333333A 4,4,0,0,1,611.9749999999999,181.3383333333333L 642.9749999999999,181.3383333333333A 4,4,0,0,1,
+        646.9749999999999,185.3383333333333L 646.9749999999999,315L 607.9749999999999,315Z"></path>
+                                                        </g>
+                                                    </g>
+                                                </g>
+                                                <g class="recharts-layer"></g>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="rounded-xl border bg-card text-card-foreground shadow col-span-3">
+                            <div class="flex flex-col space-y-1.5 p-6">
+                                <h3
+                                    class="font-semibold leading-none tracking-tight">
+                                    Recent Sales
+                                </h3>
+                                <p class="text-sm text-muted-foreground">
+                                    You made 265 sales this month.
+                                </p>
+                            </div>
+                            <div class="p-6 pt-0">
+                                <div class="space-y-8">
+                                    <div class="flex items-center">
+                                        <span
+                                            class="relative flex shrink-0 overflow-hidden rounded-full h-9 w-9"><img
+                                                class="aspect-square h-full w-full"
+                                                alt="Avatar"
+                                                src="./assets/img/01.png" /></span>
+                                        <div class="ml-4 space-y-1">
+                                            <p
+                                                class="text-sm font-medium leading-none">
+                                                Olivia Martin
+                                            </p>
+                                            <p
+                                                class="text-sm text-muted-foreground">
+                                                olivia.martin@email.com
+                                            </p>
+                                        </div>
+                                        <div
+                                            class="ml-auto font-medium">+$1,999.00</div>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <span
+                                            class="relative shrink-0 overflow-hidden rounded-full flex h-9 w-9 items-center justify-center space-y-0 border"><img
+                                                class="aspect-square h-full w-full"
+                                                alt="Avatar"
+                                                src="./assets/img/02.png" /></span>
+                                        <div class="ml-4 space-y-1">
+                                            <p
+                                                class="text-sm font-medium leading-none">
+                                                Jackson Lee
+                                            </p>
+                                            <p
+                                                class="text-sm text-muted-foreground">
+                                                jackson.lee@email.com
+                                            </p>
+                                        </div>
+                                        <div
+                                            class="ml-auto font-medium">+$39.00</div>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <span
+                                            class="relative flex shrink-0 overflow-hidden rounded-full h-9 w-9"><img
+                                                class="aspect-square h-full w-full"
+                                                alt="Avatar"
+                                                src="./assets/img/03.png" /></span>
+                                        <div class="ml-4 space-y-1">
+                                            <p
+                                                class="text-sm font-medium leading-none">
+                                                Isabella Nguyen
+                                            </p>
+                                            <p
+                                                class="text-sm text-muted-foreground">
+                                                isabella.nguyen@email.com
+                                            </p>
+                                        </div>
+                                        <div
+                                            class="ml-auto font-medium">+$299.00</div>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <span
+                                            class="relative flex shrink-0 overflow-hidden rounded-full h-9 w-9"><img
+                                                class="aspect-square h-full w-full"
+                                                alt="Avatar"
+                                                src="./assets/img/04.png" /></span>
+                                        <div class="ml-4 space-y-1">
+                                            <p
+                                                class="text-sm font-medium leading-none">
+                                                William Kim
+                                            </p>
+                                            <p
+                                                class="text-sm text-muted-foreground">
+                                                will@email.com
+                                            </p>
+                                        </div>
+                                        <div
+                                            class="ml-auto font-medium">+$99.00</div>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <span
+                                            class="relative flex shrink-0 overflow-hidden rounded-full h-9 w-9"><img
+                                                class="aspect-square h-full w-full"
+                                                alt="Avatar"
+                                                src="./assets/img/05.png" /></span>
+                                        <div class="ml-4 space-y-1">
+                                            <p
+                                                class="text-sm font-medium leading-none">
+                                                Sofia Davis
+                                            </p>
+                                            <p
+                                                class="text-sm text-muted-foreground">
+                                                sofia.davis@email.com
+                                            </p>
+                                        </div>
+                                        <div
+                                            class="ml-auto font-medium">+$39.00</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
