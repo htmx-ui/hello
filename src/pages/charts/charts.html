@@ -54,21 +54,21 @@
                 >Pie Chart</a
               ><a
                 class="flex h-7 items-center justify-center rounded-full px-4 text-center text-sm transition-colors hover:text-primary text-muted-foreground"
-                hx-get="./pages/charts/chart/playground.html"
+                hx-get="./pages/charts/radar-chart/index.html"
                 hx-trigger="click"
                 hx-target="#charts-portal"
                 hx-swap="innerHTML"
                 >Radar Chart</a
               ><a
                 class="flex h-7 items-center justify-center rounded-full px-4 text-center text-sm transition-colors hover:text-primary text-muted-foreground"
-                hx-get="./pages/charts/chart/forms.html"
+                hx-get="./pages/charts/radial-chart/index.html"
                 hx-trigger="click"
                 hx-target="#charts-portal"
                 hx-swap="innerHTML"
                 >Radial Chart</a
               ><a
                 class="flex h-7 items-center justify-center rounded-full px-4 text-center text-sm transition-colors hover:text-primary text-muted-foreground"
-                hx-get="./pages/charts/chart/music.html"
+                hx-get="./pages/charts/tooltip/index.html"
                 hx-trigger="click"
                 hx-target="#charts-portal"
                 hx-swap="innerHTML"
@@ -79,6 +79,12 @@
         </div>
       </div>
     </section>
-    <section id="charts-portal"></section>
+    <section id="charts-portal">
+      <div
+        hx-get="./pages/charts/area-chart/index.html"
+        hx-trigger="load"
+        hx-swap="outerHTML"
+      ></div>
+    </section>
   </div>
 </main>
