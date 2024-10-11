@@ -781,12 +781,12 @@ body {
   margin: 0px;
 }
 
-.m-6 {
-  margin: 1.5rem;
-}
-
 .m-10 {
   margin: 2.5rem;
+}
+
+.m-6 {
+  margin: 1.5rem;
 }
 
 .-mx-1 {
@@ -894,6 +894,10 @@ body {
   margin-left: 0.5rem;
 }
 
+.ml-3 {
+  margin-left: 0.75rem;
+}
+
 .ml-4 {
   margin-left: 1rem;
 }
@@ -908,6 +912,10 @@ body {
 
 .mr-2 {
   margin-right: 0.5rem;
+}
+
+.mr-3 {
+  margin-right: 0.75rem;
 }
 
 .mr-4 {
@@ -936,14 +944,6 @@ body {
 
 .mt-px {
   margin-top: 1px;
-}
-
-.ml-3 {
-  margin-left: 0.75rem;
-}
-
-.mr-3 {
-  margin-right: 0.75rem;
 }
 
 .line-clamp-1 {
@@ -1119,8 +1119,8 @@ body {
   height: 32px;
 }
 
-.h-\[52px\] {
-  height: 52px;
+.h-\[51px\] {
+  height: 51px;
 }
 
 .h-\[53px\] {
@@ -1157,10 +1157,6 @@ body {
 
 .h-screen {
   height: 100vh;
-}
-
-.h-\[51px\] {
-  height: 51px;
 }
 
 .max-h-\[300px\] {
@@ -1653,16 +1649,16 @@ body {
   gap: 1rem;
 }
 
+.gap-5 {
+  gap: 1.25rem;
+}
+
 .gap-6 {
   gap: 1.5rem;
 }
 
 .gap-8 {
   gap: 2rem;
-}
-
-.gap-5 {
-  gap: 1.25rem;
 }
 
 .space-x-1 > :not([hidden]) ~ :not([hidden]) {
@@ -1956,11 +1952,6 @@ body {
   background-color: rgb(24 24 27 / var(--tw-bg-opacity));
 }
 
-.bg-teal-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(20 184 166 / var(--tw-bg-opacity));
-}
-
 .fill-foreground {
   fill: hsl(var(--foreground));
 }
@@ -2121,10 +2112,6 @@ body {
 
 .pb-12 {
   padding-bottom: 3rem;
-}
-
-.pb-16 {
-  padding-bottom: 4rem;
 }
 
 .pb-2 {

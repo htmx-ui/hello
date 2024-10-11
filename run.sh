@@ -8,4 +8,4 @@ kill $(lsof -t -i:8000)
 python3 -m http.server 8000 &
 
 # Run Tailwind CSS in watch mode in the foreground
-tailwindcss -i ./src/base.css -o ./src/assets/css/tailwindcss.css --watch
+tailwindcss -i ./main.css -o ./src/assets/css/tailwindcss.css --watch
