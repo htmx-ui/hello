@@ -1936,6 +1936,11 @@ body {
   background-color: rgb(24 24 27 / var(--tw-bg-opacity));
 }
 
+.bg-teal-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(20 184 166 / var(--tw-bg-opacity));
+}
+
 .fill-foreground {
   fill: hsl(var(--foreground));
 }
@@ -3790,10 +3795,6 @@ body {
     grid-column: span 6 / span 6;
   }
 
-  .xl\:block {
-    display: block;
-  }
-
   .xl\:table-column {
     display: table-column;
   }
@@ -3840,16 +3841,8 @@ body {
     margin-bottom: calc(1rem * var(--tw-space-y-reverse));
   }
 
-  .xl\:pl-3 {
-    padding-left: 0.75rem;
-  }
-
   .xl\:pl-4 {
     padding-left: 1rem;
-  }
-
-  .xl\:pt-3 {
-    padding-top: 0.75rem;
   }
 
   .xl\:pt-4 {
