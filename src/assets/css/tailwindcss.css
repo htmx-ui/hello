@@ -785,6 +785,10 @@ body {
   margin: 1.5rem;
 }
 
+.m-10 {
+  margin: 2.5rem;
+}
+
 .-mx-1 {
   margin-left: -0.25rem;
   margin-right: -0.25rem;
@@ -932,6 +936,14 @@ body {
 
 .mt-px {
   margin-top: 1px;
+}
+
+.ml-3 {
+  margin-left: 0.75rem;
+}
+
+.mr-3 {
+  margin-right: 0.75rem;
 }
 
 .line-clamp-1 {
@@ -1145,6 +1157,10 @@ body {
 
 .h-screen {
   height: 100vh;
+}
+
+.h-\[51px\] {
+  height: 51px;
 }
 
 .max-h-\[300px\] {
@@ -1643,6 +1659,10 @@ body {
 
 .gap-8 {
   gap: 2rem;
+}
+
+.gap-5 {
+  gap: 1.25rem;
 }
 
 .space-x-1 > :not([hidden]) ~ :not([hidden]) {
@@ -2553,6 +2573,12 @@ body {
   content: var(--tw-content);
   top: 0px;
   bottom: 0px;
+}
+
+.after\:inset-y-1::after {
+  content: var(--tw-content);
+  top: 0.25rem;
+  bottom: 0.25rem;
 }
 
 .after\:left-1\/2::after {

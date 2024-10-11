@@ -2,41 +2,14 @@
     <div class="container relative">
         <section class="mx-auto flex flex-col items-start gap-2 px-4 py-8 md:py-12 md:pb-8 lg:py-12 lg:pb-10">
             <h1 class="text-3xl font-bold leading-tight tracking-tighter md:text-4xl lg:leading-[1.1] hidden md:block">
-                Check out some examples hello
+                Check out some examples
             </h1>
             <p class="max-w-2xl text-lg font-light text-foreground">
                 Dashboard, cards, authentication. Some examples built using the
                 components. Use this as a guide to build your own.
             </p>
         </section>
-        <section class="relative">
-            <div class="relative max-w-[600px] lg:max-w-none">
-                <div class="h-full w-full rounded-[inherit]" style="overflow-x: hidden">
-                    <div style="min-width: 100%; display: table">
-                        <div class="mb-4 flex items-center">
-                            <a class="flex h-7 items-center justify-center rounded-full px-4 text-center text-sm transition-colors hover:text-primary bg-muted font-medium text-primary"
-                            hx-get="./pages/examples/mail.html" hx-trigger="click" hx-target="#examples" hx-swap="innerHTML">Mail</a><a
-                                class="flex h-7 items-center justify-center rounded-full px-4 text-center text-sm transition-colors hover:text-primary text-muted-foreground"
-                                hx-get="./pages/examples/dashboard.html" hx-trigger="click" hx-target="#examples" hx-swap="innerHTML">Dashboard</a><a
-                                class="flex h-7 items-center justify-center rounded-full px-4 text-center text-sm transition-colors hover:text-primary text-muted-foreground"
-                                hx-get="./pages/examples/cards.html" hx-trigger="click" hx-target="#examples" hx-swap="innerHTML">Cards</a><a
-                                class="flex h-7 items-center justify-center rounded-full px-4 text-center text-sm transition-colors hover:text-primary text-muted-foreground"
-                                hx-get="./pages/examples/tasks.html" hx-trigger="click" hx-target="#examples" hx-swap="innerHTML">Tasks</a><a
-                                class="flex h-7 items-center justify-center rounded-full px-4 text-center text-sm transition-colors hover:text-primary text-muted-foreground"
-                                hx-get="./pages/examples/playground.html" hx-trigger="click" hx-target="#examples" hx-swap="innerHTML">Playground</a><a
-                                class="flex h-7 items-center justify-center rounded-full px-4 text-center text-sm transition-colors hover:text-primary text-muted-foreground"
-                                hx-get="./pages/examples/forms.html" hx-trigger="click" hx-target="#examples" hx-swap="innerHTML">Forms</a><a
-                                class="flex h-7 items-center justify-center rounded-full px-4 text-center text-sm transition-colors hover:text-primary text-muted-foreground"
-                                hx-get="./pages/examples/music.html" hx-trigger="click" hx-target="#examples" hx-swap="innerHTML">Music</a><a
-                                class="flex h-7 items-center justify-center rounded-full px-4 text-center text-sm transition-colors hover:text-primary text-muted-foreground"
-                                hx-get="./pages/examples/authentication.html" hx-trigger="click" hx-target="#examples" hx-swap="innerHTML">Authentication</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section id="examples">
-          <div hx-get="./pages/examples/mail.html" hx-trigger="load" hx-swap="outerHTML"></div>
-        </section>
+       
+          <div hx-get="./pages/examples/portal.html" hx-trigger="load" hx-swap="outerHTML"></div>
     </div>
 </main>
