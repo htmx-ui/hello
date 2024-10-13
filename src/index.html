@@ -1,23 +1,60 @@
 <!DOCTYPE html>
 <html lang="en" class="dark">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Paper UI</title>
+        <script src="./assets/js/hyperscript.js"></script>
+        <script src="./assets/js/htmx.js"></script>
+        <link rel="stylesheet" href="./assets/css/scroll.css" />
+        <link rel="stylesheet" href="./assets/css/tailwindcss.css" />
+        <link
+            rel="shortcut icon"
+            href="./assets/svg/terminal.svg"
+            type="image/x-icon" />
+    </head>
 
-<head>
-    <meta charSet="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Paper UI</title>
-    <script src="./assets/js/hyperscript.js"></script>
-    <script src="./assets/js/htmx.js"></script>
-    <link rel="stylesheet" href="./assets/css/scroll.css">
-    <link rel="stylesheet" href="./assets/css/tailwindcss.css">
-    <link rel="shortcut icon" href="./assets/svg/terminal.svg" type="image/x-icon">
-</head>
+    <body class="min-h-screen bg-background font-sans">
+        <div class="relative flex min-h-screen flex-col bg-background">
+            <div
+                hx-get="./partials/navbar.html"
+                hx-trigger="load"
+                hx-swap="outerHTML"></div>
+            <div class="container relative"  id="page">
+                <section
+                    class="mx-auto flex flex-col items-start gap-2 px-4 py-8 md:py-12 md:pb-8 lg:py-12 lg:pb-10">
+                    <h1
+                        class="text-3xl font-bold leading-tight tracking-tighter md:text-4xl lg:leading-[1.1]">
+                        Build your component library
+                    </h1>
 
-<body class="min-h-screen bg-background font-sans">
-    <div class="relative flex min-h-screen flex-col bg-background">
-        <div hx-get="./partials/navbar.html" hx-trigger="load" hx-swap="outerHTML"></div>
-        <div hx-get="./pages/examples/index.html" hx-trigger="load" hx-swap="outerHTML"></div>
-        <div hx-get="./partials/footer.html" hx-trigger="load" hx-swap="outerHTML"></div>
-    </div>
-</body>
+                    <p class="max-w-2xl text-lg font-light text-foreground">
+                        Beautifully designed components that you can copy and
+                        paste into
+                        your apps.
+                    </p>
 
+                    <div
+                        class="flex w-full items-center justify-start gap-2 py-2">
+                        <a
+                            class="inline-flex items-center justify-center whitespace-nowrap font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground shadow hover:bg-primary/90 h-8 rounded-md px-3 text-xs"
+                            href="/docs">Get Started</a><a
+                            target="_blank"
+                            rel="noreferrer"
+                            class="inline-flex items-center justify-center whitespace-nowrap font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-8 rounded-md px-3 text-xs"
+                            href="https://github.com/shadcn-ui/ui">GitHub</a>
+                    </div>
+                </section>
+
+                <div
+                    hx-get="./pages/examples/portal.html"
+                    hx-trigger="load"
+                    hx-swap="outerHTML"></div>
+            </div>
+            <div
+                hx-get="./partials/footer.html"
+                hx-trigger="load"
+                hx-swap="outerHTML"></div>
+        </div>
+    </body>
 </html>
