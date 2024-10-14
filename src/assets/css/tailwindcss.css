@@ -789,10 +789,6 @@ body {
   margin: 1.5rem;
 }
 
-.m-4 {
-  margin: 1rem;
-}
-
 .m-8 {
   margin: 2rem;
 }
@@ -1289,10 +1285,6 @@ body {
 
 .w-\[150px\] {
   width: 150px;
-}
-
-.w-\[160px\] {
-  width: 160px;
 }
 
 .w-\[180px\] {
@@ -2864,10 +2856,6 @@ body {
 
 .data-\[disabled\=true\]\:pointer-events-none[data-disabled="true"] {
   pointer-events: none;
-}
-
-.data-\[state\=active\]\:flex[data-state="active"] {
-  display: flex;
 }
 
 .data-\[panel-group-direction\=vertical\]\:h-px[data-panel-group-direction="vertical"] {
