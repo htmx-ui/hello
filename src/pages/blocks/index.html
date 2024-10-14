@@ -13,7 +13,7 @@
                     <div style="min-width: 100%; display: table">
                         <div class="mb-4 flex items-center">
                             <a class="flex h-7 items-center justify-center rounded-full px-4 text-center text-sm transition-colors hover:text-primary bg-muted font-medium text-primary"
-                                hx-get="./pages/blocks/charts.html" hx-trigger="click" hx-target="#examples"
+                                hx-get="./pages/blocks/charts/index.html" hx-trigger="click" hx-target="#examples"
                                 hx-swap="innerHTML">Charts</a>
                             <a class="flex h-7 items-center justify-center rounded-full px-4 text-center text-sm transition-colors hover:text-primary text-muted-foreground"
                                 hx-get="./pages/blocks/dashboard.html" hx-trigger="click" hx-target="#examples"
@@ -54,7 +54,7 @@
             </div>
         </section>
         <section id="examples" class="m-6">
-            <div hx-get="./pages/blocks/charts.html" hx-trigger="load" hx-swap="outerHTML"></div>
+            <div hx-get="./pages/blocks/charts/index.html" hx-trigger="load" hx-swap="outerHTML"></div>
         </section>
     </div>
 </main>
