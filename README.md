@@ -1,2 +1,2 @@
-# Gallium-UI
+# UI
 htmx UI lib
