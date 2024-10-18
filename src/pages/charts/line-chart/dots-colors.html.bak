@@ -86,7 +86,7 @@
                             --color-chrome: #2662d9;
                             --color-safari: #e23670;
                             --color-firefox: #e88c30;
-                            --color-edge: hsl(var(--chart-4));
+                            --color-edge: #af57db;
                             --color-other: hsl(var(--chart-5));
                         }
 
@@ -95,7 +95,7 @@
                             --color-chrome: #2662d9;
                             --color-safari: #e23670;
                             --color-firefox: #e88c30;
-                            --color-edge: hsl(var(--chart-4));
+                            --color-edge: #af57db;
                             --color-other: hsl(var(--chart-5));
                         }
                     </style>

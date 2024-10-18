@@ -87,7 +87,7 @@
                             --color-january: #2662d9;
                             --color-february: #e23670;
                             --color-march: #e88c30;
-                            --color-april: hsl(var(--chart-4));
+                            --color-april: #af57db;
                             --color-may: hsl(var(--chart-5));
                         }
 
@@ -95,7 +95,7 @@
                             --color-january: #2662d9;
                             --color-february: #e23670;
                             --color-march: #e88c30;
-                            --color-april: hsl(var(--chart-4));
+                            --color-april: #af57db;
                             --color-may: hsl(var(--chart-5));
                         }
                     </style>
