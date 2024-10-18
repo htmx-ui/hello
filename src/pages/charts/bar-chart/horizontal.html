@@ -1,52 +1,428 @@
-<div class="themes-wrapper group relative flex flex-col overflow-hidden rounded-xl border shadow transition-all duration-200 ease-in-out hover:z-30"><div class="items-center gap-2 relative z-20 flex justify-end border-b bg-card px-3 py-2.5 text-card-foreground"><div class="flex items-center gap-1.5 pl-1 text-[13px] text-muted-foreground [&amp;>svg]:h-[0.9rem] [&amp;>svg]:w-[0.9rem]"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bar-chart-big "><path d="M3 3v18h18"></path><rect width="4" height="7" x="7" y="10" rx="1"></rect><rect width="4" height="12" x="15" y="5" rx="1"></rect></svg> Chart</div><div class="ml-auto flex items-center gap-2 [&amp;>form]:flex"><button class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 border border-input hover:text-accent-foreground [&amp;_svg]-h-3.5 [&amp;_svg]-h-3 h-6 w-6 rounded-[6px] bg-transparent text-foreground shadow-none hover:bg-muted dark:text-foreground [&amp;_svg]:w-3" data-state="closed"><span class="sr-only">Copy</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clipboard "><rect width="8" height="4" x="8" y="2" rx="1" ry="1"></rect><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path></svg></button><div data-orientation="vertical" role="none" class="shrink-0 bg-border w-[1px] mx-0 hidden h-4 md:flex"></div><button class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 border-input hover:text-accent-foreground h-6 rounded-[6px] border bg-transparent px-2 text-xs text-foreground shadow-none hover:bg-muted dark:text-foreground" type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="radix-:r1r:" data-state="closed">View Code</button></div></div><div class="relative z-10 [&amp;>div]:rounded-none [&amp;>div]:border-none [&amp;>div]:shadow-none"><div class="rounded-xl border bg-card text-card-foreground shadow"><div class="flex flex-col space-y-1.5 p-6"><h3 class="font-semibold leading-none tracking-tight">Bar Chart - Horizontal</h3><p class="text-sm text-muted-foreground">January - June 2024</p></div><div class="p-6 pt-0"><div data-chart="chart-Ra4defkv9u6ja" class="flex aspect-video justify-center text-xs [&amp;_.recharts-cartesian-axis-tick_text]:fill-muted-foreground [&amp;_.recharts-cartesian-grid_line[stroke='#ccc']]:stroke-border/50 [&amp;_.recharts-curve.recharts-tooltip-cursor]:stroke-border [&amp;_.recharts-dot[stroke='#fff']]:stroke-transparent [&amp;_.recharts-layer]:outline-none [&amp;_.recharts-polar-grid_[stroke='#ccc']]:stroke-border [&amp;_.recharts-radial-bar-background-sector]:fill-muted [&amp;_.recharts-rectangle.recharts-tooltip-cursor]:fill-muted [&amp;_.recharts-reference-line_[stroke='#ccc']]:stroke-border [&amp;_.recharts-sector[stroke='#fff']]:stroke-transparent [&amp;_.recharts-sector]:outline-none [&amp;_.recharts-surface]:outline-none"><style>
- [data-chart=chart-Ra4defkv9u6ja] {
-  --color-desktop: hsl(var(--chart-1));
-}
+<div
+    class="themes-wrapper group relative flex flex-col overflow-hidden rounded-xl border shadow transition-all duration-200 ease-in-out hover:z-30"
+>
+    <div
+        class="items-center gap-2 relative z-20 flex justify-end border-b bg-card px-3 py-2.5 text-card-foreground"
+    >
+        <div
+            class="flex items-center gap-1.5 pl-1 text-[13px] text-muted-foreground [&amp;>svg]:h-[0.9rem] [&amp;>svg]:w-[0.9rem]"
+        >
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-bar-chart-big"
+            >
+                <path d="M3 3v18h18"></path>
+                <rect width="4" height="7" x="7" y="10" rx="1"></rect>
+                <rect width="4" height="12" x="15" y="5" rx="1"></rect>
+            </svg>
+            Chart
+        </div>
+        <div class="ml-auto flex items-center gap-2 [&amp;>form]:flex">
+            <button
+                class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 border border-input hover:text-accent-foreground [&amp;_svg]-h-3.5 [&amp;_svg]-h-3 h-6 w-6 rounded-[6px] bg-transparent text-foreground shadow-none hover:bg-muted dark:text-foreground [&amp;_svg]:w-3"
+                data-state="closed"
+            >
+                <span class="sr-only">Copy</span
+                ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-clipboard"
+                >
+                    <rect width="8" height="4" x="8" y="2" rx="1" ry="1"></rect>
+                    <path
+                        d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"
+                    ></path>
+                </svg>
+            </button>
+            <div
+                data-orientation="vertical"
+                role="none"
+                class="shrink-0 bg-border w-[1px] mx-0 hidden h-4 md:flex"
+            ></div>
+            <button
+                class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 border-input hover:text-accent-foreground h-6 rounded-[6px] border bg-transparent px-2 text-xs text-foreground shadow-none hover:bg-muted dark:text-foreground"
+                type="button"
+                aria-haspopup="dialog"
+                aria-expanded="false"
+                aria-controls="radix-:r1r:"
+                data-state="closed"
+            >
+                View Code
+            </button>
+        </div>
+    </div>
+    <div
+        class="relative z-10 [&amp;>div]:rounded-none [&amp;>div]:border-none [&amp;>div]:shadow-none"
+    >
+        <div class="rounded-xl border bg-card text-card-foreground shadow">
+            <div class="flex flex-col space-y-1.5 p-6">
+                <h3 class="font-semibold leading-none tracking-tight">
+                    Bar Chart - Horizontal
+                </h3>
+                <p class="text-sm text-muted-foreground">January - June 2024</p>
+            </div>
+            <div class="p-6 pt-0">
+                <div
+                    data-chart="chart-Ra4defkv9u6ja"
+                    class="flex aspect-video justify-center text-xs [&amp;_.recharts-cartesian-axis-tick_text]:fill-muted-foreground [&amp;_.recharts-cartesian-grid_line[stroke='#ccc']]:stroke-border/50 [&amp;_.recharts-curve.recharts-tooltip-cursor]:stroke-border [&amp;_.recharts-dot[stroke='#fff']]:stroke-transparent [&amp;_.recharts-layer]:outline-none [&amp;_.recharts-polar-grid_[stroke='#ccc']]:stroke-border [&amp;_.recharts-radial-bar-background-sector]:fill-muted [&amp;_.recharts-rectangle.recharts-tooltip-cursor]:fill-muted [&amp;_.recharts-reference-line_[stroke='#ccc']]:stroke-border [&amp;_.recharts-sector[stroke='#fff']]:stroke-transparent [&amp;_.recharts-sector]:outline-none [&amp;_.recharts-surface]:outline-none"
+                >
+                    <style>
+                        [data-chart="chart-Ra4defkv9u6ja"] {
+                            --color-desktop: hsl(var(--chart-1));
+                        }
 
-
-.dark [data-chart=chart-Ra4defkv9u6ja] {
-  --color-desktop: hsl(var(--chart-1));
-}
-</style><div class="recharts-responsive-container" style="width:100%;height:100%;min-width:0"><div class="recharts-wrapper" style="position: relative; cursor: default; width: 100%; height: 100%; max-height: 186px; max-width: 331px;"><svg tabindex="0" role="application" class="recharts-surface" width="331" height="186" viewBox="0 0 331 186" style="width: 100%; height: 100%;"><title></title><desc></desc><defs><clipPath id="recharts45-clip"><rect x="40" y="0" height="186" width="291"></rect></clipPath></defs><g class="recharts-layer recharts-cartesian-axis recharts-yAxis yAxis"><g class="recharts-cartesian-axis-ticks"><g class="recharts-layer recharts-cartesian-axis-tick"><text orientation="left" width="60" height="186" stroke="none" x="24" y="15.5" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="end" fill="#666"><tspan x="24" dy="0.355em">Jan</tspan></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><text orientation="left" width="60" height="186" stroke="none" x="24" y="46.5" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="end" fill="#666"><tspan x="24" dy="0.355em">Feb</tspan></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><text orientation="left" width="60" height="186" stroke="none" x="24" y="77.5" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="end" fill="#666"><tspan x="24" dy="0.355em">Mar</tspan></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><text orientation="left" width="60" height="186" stroke="none" x="24" y="108.5" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="end" fill="#666"><tspan x="24" dy="0.355em">Apr</tspan></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><text orientation="left" width="60" height="186" stroke="none" x="24" y="139.5" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="end" fill="#666"><tspan x="24" dy="0.355em">May</tspan></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><text orientation="left" width="60" height="186" stroke="none" x="24" y="170.5" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="end" fill="#666"><tspan x="24" dy="0.355em">Jun</tspan></text></g></g></g><g class="recharts-layer recharts-bar"><g class="recharts-layer recharts-bar-rectangles"><g class="recharts-layer"><g class="recharts-layer recharts-bar-rectangle"><path x="40" y="3.1" width="169.14375" height="24" radius="5" fill="var(--color-desktop)" class="recharts-rectangle" d="M 40,8.1
+                        .dark [data-chart="chart-Ra4defkv9u6ja"] {
+                            --color-desktop: hsl(var(--chart-1));
+                        }
+                    </style>
+                    <div
+                        class="recharts-responsive-container"
+                        style="width: 100%; height: 100%; min-width: 0"
+                    >
+                        <div
+                            class="recharts-wrapper"
+                            style="
+                                position: relative;
+                                cursor: default;
+                                width: 100%;
+                                height: 100%;
+                                max-height: 186px;
+                                max-width: 331px;
+                            "
+                        >
+                            <svg
+                                tabindex="0"
+                                role="application"
+                                class="recharts-surface"
+                                width="331"
+                                height="186"
+                                viewBox="0 0 331 186"
+                                style="width: 100%; height: 100%"
+                            >
+                                <title></title>
+                                <desc></desc>
+                                <defs>
+                                    <clipPath id="recharts45-clip">
+                                        <rect
+                                            x="40"
+                                            y="0"
+                                            height="186"
+                                            width="291"
+                                        ></rect>
+                                    </clipPath>
+                                </defs>
+                                <g
+                                    class="recharts-layer recharts-cartesian-axis recharts-yAxis yAxis"
+                                >
+                                    <g class="recharts-cartesian-axis-ticks">
+                                        <g
+                                            class="recharts-layer recharts-cartesian-axis-tick"
+                                        >
+                                            <text
+                                                orientation="left"
+                                                width="60"
+                                                height="186"
+                                                stroke="none"
+                                                x="24"
+                                                y="15.5"
+                                                class="recharts-text recharts-cartesian-axis-tick-value"
+                                                text-anchor="end"
+                                                fill="#666"
+                                            >
+                                                <tspan x="24" dy="0.355em">
+                                                    Jan
+                                                </tspan>
+                                            </text>
+                                        </g>
+                                        <g
+                                            class="recharts-layer recharts-cartesian-axis-tick"
+                                        >
+                                            <text
+                                                orientation="left"
+                                                width="60"
+                                                height="186"
+                                                stroke="none"
+                                                x="24"
+                                                y="46.5"
+                                                class="recharts-text recharts-cartesian-axis-tick-value"
+                                                text-anchor="end"
+                                                fill="#666"
+                                            >
+                                                <tspan x="24" dy="0.355em">
+                                                    Feb
+                                                </tspan>
+                                            </text>
+                                        </g>
+                                        <g
+                                            class="recharts-layer recharts-cartesian-axis-tick"
+                                        >
+                                            <text
+                                                orientation="left"
+                                                width="60"
+                                                height="186"
+                                                stroke="none"
+                                                x="24"
+                                                y="77.5"
+                                                class="recharts-text recharts-cartesian-axis-tick-value"
+                                                text-anchor="end"
+                                                fill="#666"
+                                            >
+                                                <tspan x="24" dy="0.355em">
+                                                    Mar
+                                                </tspan>
+                                            </text>
+                                        </g>
+                                        <g
+                                            class="recharts-layer recharts-cartesian-axis-tick"
+                                        >
+                                            <text
+                                                orientation="left"
+                                                width="60"
+                                                height="186"
+                                                stroke="none"
+                                                x="24"
+                                                y="108.5"
+                                                class="recharts-text recharts-cartesian-axis-tick-value"
+                                                text-anchor="end"
+                                                fill="#666"
+                                            >
+                                                <tspan x="24" dy="0.355em">
+                                                    Apr
+                                                </tspan>
+                                            </text>
+                                        </g>
+                                        <g
+                                            class="recharts-layer recharts-cartesian-axis-tick"
+                                        >
+                                            <text
+                                                orientation="left"
+                                                width="60"
+                                                height="186"
+                                                stroke="none"
+                                                x="24"
+                                                y="139.5"
+                                                class="recharts-text recharts-cartesian-axis-tick-value"
+                                                text-anchor="end"
+                                                fill="#666"
+                                            >
+                                                <tspan x="24" dy="0.355em">
+                                                    May
+                                                </tspan>
+                                            </text>
+                                        </g>
+                                        <g
+                                            class="recharts-layer recharts-cartesian-axis-tick"
+                                        >
+                                            <text
+                                                orientation="left"
+                                                width="60"
+                                                height="186"
+                                                stroke="none"
+                                                x="24"
+                                                y="170.5"
+                                                class="recharts-text recharts-cartesian-axis-tick-value"
+                                                text-anchor="end"
+                                                fill="#666"
+                                            >
+                                                <tspan x="24" dy="0.355em">
+                                                    Jun
+                                                </tspan>
+                                            </text>
+                                        </g>
+                                    </g>
+                                </g>
+                                <g class="recharts-layer recharts-bar">
+                                    <g
+                                        class="recharts-layer recharts-bar-rectangles"
+                                    >
+                                        <g class="recharts-layer">
+                                            <g
+                                                class="recharts-layer recharts-bar-rectangle"
+                                            >
+                                                <path
+                                                    x="40"
+                                                    y="3.1"
+                                                    width="169.14375"
+                                                    height="24"
+                                                    radius="5"
+                                                    fill="var(--color-desktop)"
+                                                    class="recharts-rectangle"
+                                                    d="M 40,8.1
             A 5,5,0,0,1,45,3.1
             L 204.14375,3.1
             A 5,5,0,0,1,209.14375,8.1
             L 209.14375,22.1
             A 5,5,0,0,1,204.14375,27.1
             L 45,27.1
-            A 5,5,0,0,1,40,22.1 Z"></path></g><g class="recharts-layer recharts-bar-rectangle"><path x="40" y="34.1" width="277.359375" height="24" radius="5" fill="var(--color-desktop)" class="recharts-rectangle" d="M 40,39.1
+            A 5,5,0,0,1,40,22.1 Z"
+                                                ></path>
+                                            </g>
+                                            <g
+                                                class="recharts-layer recharts-bar-rectangle"
+                                            >
+                                                <path
+                                                    x="40"
+                                                    y="34.1"
+                                                    width="277.359375"
+                                                    height="24"
+                                                    radius="5"
+                                                    fill="var(--color-desktop)"
+                                                    class="recharts-rectangle"
+                                                    d="M 40,39.1
             A 5,5,0,0,1,45,34.1
             L 312.359375,34.1
             A 5,5,0,0,1,317.359375,39.1
             L 317.359375,53.1
             A 5,5,0,0,1,312.359375,58.1
             L 45,58.1
-            A 5,5,0,0,1,40,53.1 Z"></path></g><g class="recharts-layer recharts-bar-rectangle"><path x="40" y="65.1" width="215.521875" height="24" radius="5" fill="var(--color-desktop)" class="recharts-rectangle" d="M 40,70.1
+            A 5,5,0,0,1,40,53.1 Z"
+                                                ></path>
+                                            </g>
+                                            <g
+                                                class="recharts-layer recharts-bar-rectangle"
+                                            >
+                                                <path
+                                                    x="40"
+                                                    y="65.1"
+                                                    width="215.521875"
+                                                    height="24"
+                                                    radius="5"
+                                                    fill="var(--color-desktop)"
+                                                    class="recharts-rectangle"
+                                                    d="M 40,70.1
             A 5,5,0,0,1,45,65.1
             L 250.521875,65.1
             A 5,5,0,0,1,255.521875,70.1
             L 255.521875,84.1
             A 5,5,0,0,1,250.521875,89.1
             L 45,89.1
-            A 5,5,0,0,1,40,84.1 Z"></path></g><g class="recharts-layer recharts-bar-rectangle"><path x="40" y="96.1" width="66.38437499999999" height="24" radius="5" fill="var(--color-desktop)" class="recharts-rectangle" d="M 40,101.1
+            A 5,5,0,0,1,40,84.1 Z"
+                                                ></path>
+                                            </g>
+                                            <g
+                                                class="recharts-layer recharts-bar-rectangle"
+                                            >
+                                                <path
+                                                    x="40"
+                                                    y="96.1"
+                                                    width="66.38437499999999"
+                                                    height="24"
+                                                    radius="5"
+                                                    fill="var(--color-desktop)"
+                                                    class="recharts-rectangle"
+                                                    d="M 40,101.1
             A 5,5,0,0,1,45,96.1
             L 101.38437499999999,96.1
             A 5,5,0,0,1,106.38437499999999,101.1
             L 106.38437499999999,115.1
             A 5,5,0,0,1,101.38437499999999,120.1
             L 45,120.1
-            A 5,5,0,0,1,40,115.1 Z"></path></g><g class="recharts-layer recharts-bar-rectangle"><path x="40" y="127.1" width="190.059375" height="24" radius="5" fill="var(--color-desktop)" class="recharts-rectangle" d="M 40,132.1
+            A 5,5,0,0,1,40,115.1 Z"
+                                                ></path>
+                                            </g>
+                                            <g
+                                                class="recharts-layer recharts-bar-rectangle"
+                                            >
+                                                <path
+                                                    x="40"
+                                                    y="127.1"
+                                                    width="190.059375"
+                                                    height="24"
+                                                    radius="5"
+                                                    fill="var(--color-desktop)"
+                                                    class="recharts-rectangle"
+                                                    d="M 40,132.1
             A 5,5,0,0,1,45,127.1
             L 225.059375,127.1
             A 5,5,0,0,1,230.059375,132.1
             L 230.059375,146.1
             A 5,5,0,0,1,225.059375,151.1
             L 45,151.1
-            A 5,5,0,0,1,40,146.1 Z"></path></g><g class="recharts-layer recharts-bar-rectangle"><path x="40" y="158.1" width="194.60625" height="24" radius="5" fill="var(--color-desktop)" class="recharts-rectangle" d="M 40,163.1
+            A 5,5,0,0,1,40,146.1 Z"
+                                                ></path>
+                                            </g>
+                                            <g
+                                                class="recharts-layer recharts-bar-rectangle"
+                                            >
+                                                <path
+                                                    x="40"
+                                                    y="158.1"
+                                                    width="194.60625"
+                                                    height="24"
+                                                    radius="5"
+                                                    fill="var(--color-desktop)"
+                                                    class="recharts-rectangle"
+                                                    d="M 40,163.1
             A 5,5,0,0,1,45,158.1
             L 229.60625,158.1
             A 5,5,0,0,1,234.60625,163.1
             L 234.60625,177.1
             A 5,5,0,0,1,229.60625,182.1
             L 45,182.1
-            A 5,5,0,0,1,40,177.1 Z"></path></g></g></g><g class="recharts-layer"></g></g></svg><div tabindex="-1" class="recharts-tooltip-wrapper recharts-tooltip-wrapper-right recharts-tooltip-wrapper-bottom" style="visibility: hidden; pointer-events: none; position: absolute; top: 0px; left: 0px; transform: translate(79px, 87.5px);"></div></div></div></div></div><div class="flex p-6 pt-0 flex-col items-start gap-2 text-sm"><div class="flex gap-2 font-medium leading-none">Trending up by 5.2% this month <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-trending-up h-4 w-4"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline><polyline points="16 7 22 7 22 13"></polyline></svg></div><div class="leading-none text-muted-foreground">Showing total visitors for the last 6 months</div></div></div></div></div>
+            A 5,5,0,0,1,40,177.1 Z"
+                                                ></path>
+                                            </g>
+                                        </g>
+                                    </g>
+                                    <g class="recharts-layer"></g>
+                                </g>
+                            </svg>
+                            <div
+                                tabindex="-1"
+                                class="recharts-tooltip-wrapper recharts-tooltip-wrapper-right recharts-tooltip-wrapper-bottom"
+                                style="
+                                    visibility: hidden;
+                                    pointer-events: none;
+                                    position: absolute;
+                                    top: 0px;
+                                    left: 0px;
+                                    transform: translate(79px, 87.5px);
+                                "
+                            ></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex p-6 pt-0 flex-col items-start gap-2 text-sm">
+                <div class="flex gap-2 font-medium leading-none">
+                    Trending up by 5.2% this month
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="lucide lucide-trending-up h-4 w-4"
+                    >
+                        <polyline
+                            points="22 7 13.5 15.5 8.5 10.5 2 17"
+                        ></polyline>
+                        <polyline points="16 7 22 7 22 13"></polyline>
+                    </svg>
+                </div>
+                <div class="leading-none text-muted-foreground">
+                    Showing total visitors for the last 6 months
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
