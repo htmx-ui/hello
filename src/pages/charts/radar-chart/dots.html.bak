@@ -85,11 +85,11 @@
                 >
                     <style>
                         [data-chart="chart-Ra4pefkv9u6ja"] {
-                            --color-desktop: hsl(var(--chart-1));
+                            --color-desktop: #2662d9;
                         }
 
                         .dark [data-chart="chart-Ra4pefkv9u6ja"] {
-                            --color-desktop: hsl(var(--chart-1));
+                            --color-desktop: #2662d9;
                         }
                     </style>
                     <div

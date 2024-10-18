@@ -90,17 +90,17 @@
                 >
                     <style>
                         [data-chart="chart-R54tefkv9u6ja"] {
-                            --color-chrome: hsl(var(--chart-1));
-                            --color-safari: hsl(var(--chart-2));
-                            --color-firefox: hsl(var(--chart-3));
+                            --color-chrome: #2662d9;
+                            --color-safari: #e23670;
+                            --color-firefox: #e88c30;
                             --color-edge: hsl(var(--chart-4));
                             --color-other: hsl(var(--chart-5));
                         }
 
                         .dark [data-chart="chart-R54tefkv9u6ja"] {
-                            --color-chrome: hsl(var(--chart-1));
-                            --color-safari: hsl(var(--chart-2));
-                            --color-firefox: hsl(var(--chart-3));
+                            --color-chrome: #2662d9;
+                            --color-safari: #e23670;
+                            --color-firefox: #e88c30;
                             --color-edge: hsl(var(--chart-4));
                             --color-other: hsl(var(--chart-5));
                         }
@@ -273,7 +273,7 @@
                                             <path
                                                 cx="125"
                                                 cy="125"
-                                                fill="var(--color-edge)"
+                                                fill="#af57db"
                                                 class="recharts-sector recharts-radial-bar-sector undefined"
                                                 d="M 125,208.6
     A 83.6,83.6,0,
@@ -376,7 +376,7 @@
                                         </text>
                                         <text
                                             offset="5"
-                                            fill="var(--color-edge)"
+                                            fill="#af57db"
                                             cx="125"
                                             cy="125"
                                             class="recharts-radial-bar-label fill-white capitalize mix-blend-luminosity"

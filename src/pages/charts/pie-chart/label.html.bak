@@ -84,17 +84,17 @@
                 >
                     <style>
                         [data-chart="chart-Ra6lefkv9u6ja"] {
-                            --color-chrome: hsl(var(--chart-1));
-                            --color-safari: hsl(var(--chart-2));
-                            --color-firefox: hsl(var(--chart-3));
+                            --color-chrome: #2662d9;
+                            --color-safari: #e23670;
+                            --color-firefox: #e88c30;
                             --color-edge: hsl(var(--chart-4));
                             --color-other: hsl(var(--chart-5));
                         }
 
                         .dark [data-chart="chart-Ra6lefkv9u6ja"] {
-                            --color-chrome: hsl(var(--chart-1));
-                            --color-safari: hsl(var(--chart-2));
-                            --color-firefox: hsl(var(--chart-3));
+                            --color-chrome: #2662d9;
+                            --color-safari: #e23670;
+                            --color-firefox: #e88c30;
                             --color-edge: hsl(var(--chart-4));
                             --color-other: hsl(var(--chart-5));
                         }
@@ -209,7 +209,7 @@
                                                 cy="125"
                                                 name="edge"
                                                 stroke="#fff"
-                                                fill="var(--color-edge)"
+                                                fill="#af57db"
                                                 tabindex="-1"
                                                 class="recharts-sector"
                                                 d="M 104.45617900182538,218.77607060863107
@@ -336,7 +336,7 @@
                                         </g>
                                         <g class="recharts-layer">
                                             <path
-                                                stroke="var(--color-edge)"
+                                                stroke="#af57db"
                                                 fill="none"
                                                 cx="125"
                                                 cy="125"
@@ -354,7 +354,7 @@
                                                 y="233.07021835660393"
                                                 class="recharts-text recharts-pie-label-text"
                                                 text-anchor="start"
-                                                fill="var(--color-edge)"
+                                                fill="#af57db"
                                             >
                                                 <tspan
                                                     x="167.15243651742978"

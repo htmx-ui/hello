@@ -83,13 +83,13 @@
                 >
                     <style>
                         [data-chart="chart-Ra6defkv9u6ja"] {
-                            --color-desktop: hsl(var(--chart-1));
-                            --color-mobile: hsl(var(--chart-2));
+                            --color-desktop: #2662d9;
+                            --color-mobile: #e23670;
                         }
 
                         .dark [data-chart="chart-Ra6defkv9u6ja"] {
-                            --color-desktop: hsl(var(--chart-1));
-                            --color-mobile: hsl(var(--chart-2));
+                            --color-desktop: #2662d9;
+                            --color-mobile: #e23670;
                         }
                     </style>
                     <div

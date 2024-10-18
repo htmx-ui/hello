@@ -197,7 +197,7 @@
                                                     width="42"
                                                     height="54.56"
                                                     radius="0"
-                                                    fill="hsl(var(--chart-1))"
+                                                    fill="#2662d9"
                                                     class="recharts-rectangle"
                                                     d="M 10.35,38.44 h 42 v 54.56 h -42 Z"
                                                 ></path>
@@ -211,7 +211,7 @@
                                                     width="42"
                                                     height="60.13333333333333"
                                                     radius="0"
-                                                    fill="hsl(var(--chart-1))"
+                                                    fill="#2662d9"
                                                     class="recharts-rectangle"
                                                     d="M 63.85,32.86666666666667 h 42 v 60.13333333333333 h -42 Z"
                                                 ></path>
@@ -225,7 +225,7 @@
                                                     width="42"
                                                     height="-60.72"
                                                     radius="0"
-                                                    fill="hsl(var(--chart-2))"
+                                                    fill="#e23670"
                                                     class="recharts-rectangle"
                                                     d="M 117.35,153.72 h 42 v -60.72 h -42 Z"
                                                 ></path>
@@ -239,7 +239,7 @@
                                                     width="42"
                                                     height="50.74666666666667"
                                                     radius="0"
-                                                    fill="hsl(var(--chart-1))"
+                                                    fill="#2662d9"
                                                     class="recharts-rectangle"
                                                     d="M 170.85,42.25333333333333 h 42 v 50.74666666666667 h -42 Z"
                                                 ></path>
@@ -253,7 +253,7 @@
                                                     width="42"
                                                     height="-61.30666666666667"
                                                     radius="0"
-                                                    fill="hsl(var(--chart-2))"
+                                                    fill="#e23670"
                                                     class="recharts-rectangle"
                                                     d="M 224.35,154.30666666666667 h 42 v -61.30666666666667 h -42 Z"
                                                 ></path>
@@ -267,7 +267,7 @@
                                                     width="42"
                                                     height="62.77333333333334"
                                                     radius="0"
-                                                    fill="hsl(var(--chart-1))"
+                                                    fill="#2662d9"
                                                     class="recharts-rectangle"
                                                     d="M 277.85,30.22666666666666 h 42 v 62.77333333333334 h -42 Z"
                                                 ></path>
@@ -287,7 +287,7 @@
                                             y="33.44"
                                             class="recharts-text recharts-label"
                                             text-anchor="middle"
-                                            fill="hsl(var(--chart-1))"
+                                            fill="#2662d9"
                                         >
                                             <tspan x="31.35" dy="0em">
                                                 January
@@ -302,7 +302,7 @@
                                             y="27.866666666666667"
                                             class="recharts-text recharts-label"
                                             text-anchor="middle"
-                                            fill="hsl(var(--chart-1))"
+                                            fill="#2662d9"
                                         >
                                             <tspan x="84.85" dy="0em">
                                                 February
@@ -317,7 +317,7 @@
                                             y="158.72"
                                             class="recharts-text recharts-label"
                                             text-anchor="middle"
-                                            fill="hsl(var(--chart-2))"
+                                            fill="#e23670"
                                         >
                                             <tspan x="138.35" dy="0.71em">
                                                 March
@@ -332,7 +332,7 @@
                                             y="37.25333333333333"
                                             class="recharts-text recharts-label"
                                             text-anchor="middle"
-                                            fill="hsl(var(--chart-1))"
+                                            fill="#2662d9"
                                         >
                                             <tspan x="191.85" dy="0em">
                                                 April
@@ -347,7 +347,7 @@
                                             y="159.30666666666667"
                                             class="recharts-text recharts-label"
                                             text-anchor="middle"
-                                            fill="hsl(var(--chart-2))"
+                                            fill="#e23670"
                                         >
                                             <tspan x="245.35" dy="0.71em">
                                                 May
@@ -362,7 +362,7 @@
                                             y="25.22666666666666"
                                             class="recharts-text recharts-label"
                                             text-anchor="middle"
-                                            fill="hsl(var(--chart-1))"
+                                            fill="#2662d9"
                                         >
                                             <tspan x="298.85" dy="0em">
                                                 June

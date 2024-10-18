@@ -84,17 +84,17 @@
                 >
                     <style>
                         [data-chart="chart-Raelefkv9u6ja"] {
-                            --color-chrome: hsl(var(--chart-1));
-                            --color-safari: hsl(var(--chart-2));
-                            --color-firefox: hsl(var(--chart-3));
+                            --color-chrome: #2662d9;
+                            --color-safari: #e23670;
+                            --color-firefox: #e88c30;
                             --color-edge: hsl(var(--chart-4));
                             --color-other: hsl(var(--chart-5));
                         }
 
                         .dark [data-chart="chart-Raelefkv9u6ja"] {
-                            --color-chrome: hsl(var(--chart-1));
-                            --color-safari: hsl(var(--chart-2));
-                            --color-firefox: hsl(var(--chart-3));
+                            --color-chrome: #2662d9;
+                            --color-safari: #e23670;
+                            --color-firefox: #e88c30;
                             --color-edge: hsl(var(--chart-4));
                             --color-other: hsl(var(--chart-5));
                         }
@@ -218,7 +218,7 @@
                                                 cy="125"
                                                 name="edge"
                                                 stroke="#fff"
-                                                fill="var(--color-edge)"
+                                                fill="#af57db"
                                                 tabindex="-1"
                                                 class="recharts-sector"
                                                 d="M 104.45617900182538,218.77607060863107
