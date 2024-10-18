@@ -14,7 +14,7 @@
             </a>
             <nav class="flex items-center gap-4 text-sm lg:gap-6">
                 <a
-                    _="on click toggle .text-red-500 on me"
+                    _="on click toggle .text-red-500 on me then remove .text-red-500 from closest not me"
                     class="transition-colors hover:text-foreground/80 text-foreground/60 cursor-pointer"
                     hx-get="./pages/components/index.html"
                     hx-trigger="click"
@@ -23,6 +23,7 @@
                     >Docs</a
                 >
                 <a
+                    _="on click toggle .text-red-500 on me then remove .text-red-500 from closest"
                     class="transition-colors hover:text-foreground/80 text-foreground/60 cursor-pointer"
                     hx-get="./pages/components/index.html"
                     hx-trigger="click"
