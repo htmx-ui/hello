@@ -1,7 +1,6 @@
 
 #!/bin/bash
 
-
 # Loop to check for changes every 10 minutes
 while true; do
     # Check if there are any changes
@@ -20,12 +19,7 @@ while true; do
         echo "No changes detected at $(date)"
     fi
 
+    prettier --write "**/*.html" --tab-width 4
     # Wait 10 minutes before checking again
     sleep 600
-done
-
-while true; do
-
-prettier --write "**/*.html" --tab-width 4
-    sleep 60
 done
