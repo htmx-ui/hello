@@ -23,3 +23,9 @@ while true; do
     # Wait 10 minutes before checking again
     sleep 600
 done
+
+while true; do
+
+prettier --write "**/*.html" --tab-width 4
+    sleep 60
+done
