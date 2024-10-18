@@ -3,9 +3,11 @@
 
 # Loop to check for changes every 10 minutes
 while true; do
-    prettier --write "**/*.html" --tab-width 4
+
     # Check if there are any changes
     if test -n "$(git status --porcelain)" ; then
+
+        prettier --write "**/*.html" --tab-width 4
         # Add changes to the staging area
         git add .
 
