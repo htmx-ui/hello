@@ -1178,6 +1178,10 @@ body {
   max-height: 100vh;
 }
 
+.max-h-\[250px\] {
+  max-height: 250px;
+}
+
 .min-h-12 {
   min-height: 3rem;
 }
@@ -1989,6 +1993,10 @@ body {
 
 .fill-sky-400 {
   fill: #38bdf8;
+}
+
+.fill-\[--color-label\] {
+  fill: var(--color-label);
 }
 
 .object-cover {
