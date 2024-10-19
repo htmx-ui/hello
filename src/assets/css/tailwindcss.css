@@ -2832,10 +2832,6 @@ body {
   color: hsl(var(--foreground));
 }
 
-.hover\:text-foreground\/80:hover {
-  color: hsl(var(--foreground) / 0.8);
-}
-
 .hover\:text-muted-foreground:hover {
   color: hsl(var(--muted-foreground));
 }
