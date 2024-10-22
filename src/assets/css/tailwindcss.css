@@ -1729,6 +1729,12 @@ body {
   margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
+.space-x-3 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(0.75rem * var(--tw-space-x-reverse));
+  margin-left: calc(0.75rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
 .space-x-4 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
   margin-right: calc(1rem * var(--tw-space-x-reverse));
@@ -1793,12 +1799,6 @@ body {
   --tw-space-y-reverse: 0;
   margin-top: calc(2rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(2rem * var(--tw-space-y-reverse));
-}
-
-.space-x-3 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-x-reverse: 0;
-  margin-right: calc(0.75rem * var(--tw-space-x-reverse));
-  margin-left: calc(0.75rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
 .overflow-auto {
@@ -1956,6 +1956,11 @@ body {
   border-color: transparent;
 }
 
+.bg-\[\#ecedef\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(236 237 239 / var(--tw-bg-opacity));
+}
+
 .bg-\[--color-bg\] {
   background-color: var(--color-bg);
 }
@@ -2021,20 +2026,6 @@ body {
   background-color: hsl(var(--secondary));
 }
 
-.bg-transparent {
-  background-color: transparent;
-}
-
-.bg-zinc-900 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(24 24 27 / var(--tw-bg-opacity));
-}
-
-.bg-\[\#ecedef\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(236 237 239 / var(--tw-bg-opacity));
-}
-
 .bg-slate-400 {
   --tw-bg-opacity: 1;
   background-color: rgb(148 163 184 / var(--tw-bg-opacity));
@@ -2050,9 +2041,18 @@ body {
   background-color: rgb(2 6 23 / var(--tw-bg-opacity));
 }
 
+.bg-transparent {
+  background-color: transparent;
+}
+
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.bg-zinc-900 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(24 24 27 / var(--tw-bg-opacity));
 }
 
 .fill-\[--color-desktop\] {
@@ -2269,6 +2269,10 @@ body {
   padding-left: 0.625rem;
 }
 
+.pl-3 {
+  padding-left: 0.75rem;
+}
+
 .pl-4 {
   padding-left: 1rem;
 }
@@ -2315,10 +2319,6 @@ body {
 
 .pt-6 {
   padding-top: 1.5rem;
-}
-
-.pl-3 {
-  padding-left: 0.75rem;
 }
 
 .text-left {
@@ -2823,12 +2823,12 @@ body {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.hover\:border-border:hover {
-  border-color: hsl(var(--border));
-}
-
 .hover\:border-accent:hover {
   border-color: hsl(var(--accent));
+}
+
+.hover\:border-border:hover {
+  border-color: hsl(var(--border));
 }
 
 .hover\:bg-accent:hover {
