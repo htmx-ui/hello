@@ -2529,11 +2529,6 @@ body {
   color: hsl(var(--primary-foreground));
 }
 
-.text-red-500 {
-  --tw-text-opacity: 1;
-  color: rgb(239 68 68 / var(--tw-text-opacity));
-}
-
 .text-secondary-foreground {
   color: hsl(var(--secondary-foreground));
 }
@@ -2883,11 +2878,6 @@ body {
 
 .hover\:text-primary-foreground:hover {
   color: hsl(var(--primary-foreground));
-}
-
-.hover\:text-red-500:hover {
-  --tw-text-opacity: 1;
-  color: rgb(239 68 68 / var(--tw-text-opacity));
 }
 
 .hover\:underline:hover {
