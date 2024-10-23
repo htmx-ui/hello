@@ -2,6 +2,7 @@
   <div
     class="mb-4 flex items-center space-x-1 text-sm leading-none text-muted-foreground">
     <div class="truncate">Docs</div>
+
     <svg
       width="15"
       height="15"
@@ -15,10 +16,13 @@
         fill-rule="evenodd"
         clip-rule="evenodd"></path>
     </svg>
+
     <div class="text-foreground">Tabs</div>
   </div>
+
   <div class="space-y-2">
     <h1 class="scroll-m-20 text-3xl font-bold tracking-tight">Tabs</h1>
+
     <p class="text-base text-muted-foreground">
       <span
         data-br=":r1k:"
@@ -33,6 +37,7 @@
       </span>
     </p>
   </div>
+
   <div
     class="preview flex min-h-[350px] w-full justify-center p-10 items-center">
     <div
@@ -59,6 +64,7 @@
           data-radix-collection-item="">
           Account
         </button>
+
         <button
           type="button"
           role="tab"
@@ -73,6 +79,7 @@
           Password
         </button>
       </div>
+
       <div
         data-state="active"
         data-orientation="horizontal"
@@ -85,10 +92,12 @@
         <div class="rounded-xl border bg-card text-card-foreground shadow">
           <div class="flex flex-col space-y-1.5 p-6">
             <h3 class="font-semibold leading-none tracking-tight">Account</h3>
+
             <p class="text-sm text-muted-foreground">
               Make changes to your account here. Click save when you're done.
             </p>
           </div>
+
           <div class="p-6 pt-0 space-y-2">
             <div class="space-y-1">
               <label
@@ -96,23 +105,27 @@
                 for="name">
                 Name
               </label>
+
               <input
                 class="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
                 id="name"
                 value="Pedro Duarte" />
             </div>
+
             <div class="space-y-1">
               <label
                 class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                 for="username">
                 Username
               </label>
+
               <input
                 class="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
                 id="username"
                 value="@peduarte" />
             </div>
           </div>
+
           <div class="flex items-center p-6 pt-0">
             <button
               class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground shadow hover:bg-primary/90 h-9 px-4 py-2">
@@ -121,6 +134,7 @@
           </div>
         </div>
       </div>
+
       <div
         data-state="inactive"
         data-orientation="horizontal"

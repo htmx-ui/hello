@@ -2,6 +2,7 @@
   <div
     class="mb-4 flex items-center space-x-1 text-sm leading-none text-muted-foreground">
     <div class="truncate">Docs</div>
+
     <svg
       width="15"
       height="15"
@@ -15,10 +16,13 @@
         fill-rule="evenodd"
         clip-rule="evenodd"></path>
     </svg>
+
     <div class="text-foreground">Chart</div>
   </div>
+
   <div class="space-y-2">
     <h1 class="scroll-m-20 text-3xl font-bold tracking-tight">Chart</h1>
+
     <p class="text-base text-muted-foreground">
       <span
         data-br=":r1k:"
@@ -33,6 +37,7 @@
       </span>
     </p>
   </div>
+
   <div
     class="preview flex min-h-[350px] w-full justify-center p-10 items-center">
     <div class="rounded-xl border bg-card text-card-foreground shadow">
@@ -43,29 +48,35 @@
           <h3 class="font-semibold leading-none tracking-tight">
             Bar Chart - Interactive
           </h3>
+
           <p class="text-sm text-muted-foreground">
             Showing total visitors for the last 3 months
           </p>
         </div>
+
         <div class="flex">
           <button
             data-active="true"
             class="relative z-30 flex flex-1 flex-col justify-center gap-1 border-t px-6 py-4 text-left even:border-l data-[active=true]:bg-muted/50 sm:border-l sm:border-t-0 sm:px-8 sm:py-6">
             <span class="text-xs text-muted-foreground">Desktop</span>
+
             <span class="text-lg font-bold leading-none sm:text-3xl">
               24,828
             </span>
           </button>
+
           <button
             data-active="false"
             class="relative z-30 flex flex-1 flex-col justify-center gap-1 border-t px-6 py-4 text-left even:border-l data-[active=true]:bg-muted/50 sm:border-l sm:border-t-0 sm:px-8 sm:py-6">
             <span class="text-xs text-muted-foreground">Mobile</span>
+
             <span class="text-lg font-bold leading-none sm:text-3xl">
               25,010
             </span>
           </button>
         </div>
       </div>
+
       <div class="p-6 pt-0 px-2 sm:p-6">
         <div
           data-chart="chart-rdv"
@@ -81,6 +92,7 @@
               --color-mobile: hsl(var(--chart-2));
             }
           </style>
+
           <div
             class="recharts-responsive-container"
             style="width: 100%; height: 100%; min-width: 0px">
@@ -103,7 +115,9 @@
                 viewBox="0 0 617 250"
                 style="width: 100%; height: 100%">
                 <title></title>
+
                 <desc></desc>
+
                 <defs>
                   <clipPath id="recharts1-clip">
                     <rect
@@ -113,6 +127,7 @@
                       width="593"></rect>
                   </clipPath>
                 </defs>
+
                 <g class="recharts-cartesian-grid">
                   <g class="recharts-cartesian-grid-horizontal">
                     <line
@@ -126,6 +141,7 @@
                       y1="220"
                       x2="605"
                       y2="220"></line>
+
                     <line
                       stroke="#ccc"
                       fill="none"
@@ -137,6 +153,7 @@
                       y1="165"
                       x2="605"
                       y2="165"></line>
+
                     <line
                       stroke="#ccc"
                       fill="none"
@@ -148,6 +165,7 @@
                       y1="110"
                       x2="605"
                       y2="110"></line>
+
                     <line
                       stroke="#ccc"
                       fill="none"
@@ -159,6 +177,7 @@
                       y1="55"
                       x2="605"
                       y2="55"></line>
+
                     <line
                       stroke="#ccc"
                       fill="none"
@@ -172,6 +191,7 @@
                       y2="0"></line>
                   </g>
                 </g>
+
                 <g
                   class="recharts-layer recharts-cartesian-axis recharts-xAxis xAxis">
                   <g class="recharts-cartesian-axis-ticks">
@@ -193,6 +213,7 @@
                         </tspan>
                       </text>
                     </g>
+
                     <g class="recharts-layer recharts-cartesian-axis-tick">
                       <text
                         orientation="bottom"
@@ -211,6 +232,7 @@
                         </tspan>
                       </text>
                     </g>
+
                     <g class="recharts-layer recharts-cartesian-axis-tick">
                       <text
                         orientation="bottom"
@@ -229,6 +251,7 @@
                         </tspan>
                       </text>
                     </g>
+
                     <g class="recharts-layer recharts-cartesian-axis-tick">
                       <text
                         orientation="bottom"
@@ -247,6 +270,7 @@
                         </tspan>
                       </text>
                     </g>
+
                     <g class="recharts-layer recharts-cartesian-axis-tick">
                       <text
                         orientation="bottom"
@@ -265,6 +289,7 @@
                         </tspan>
                       </text>
                     </g>
+
                     <g class="recharts-layer recharts-cartesian-axis-tick">
                       <text
                         orientation="bottom"
@@ -283,6 +308,7 @@
                         </tspan>
                       </text>
                     </g>
+
                     <g class="recharts-layer recharts-cartesian-axis-tick">
                       <text
                         orientation="bottom"
@@ -301,6 +327,7 @@
                         </tspan>
                       </text>
                     </g>
+
                     <g class="recharts-layer recharts-cartesian-axis-tick">
                       <text
                         orientation="bottom"
@@ -319,6 +346,7 @@
                         </tspan>
                       </text>
                     </g>
+
                     <g class="recharts-layer recharts-cartesian-axis-tick">
                       <text
                         orientation="bottom"
@@ -339,6 +367,7 @@
                     </g>
                   </g>
                 </g>
+
                 <g class="recharts-layer recharts-bar">
                   <g class="recharts-layer recharts-bar-rectangles">
                     <g class="recharts-layer">
@@ -353,6 +382,7 @@
                           class="recharts-rectangle"
                           d="M 12.651648351648351,138.6 h 5 v 81.4 h -5 Z"></path>
                       </g>
+
                       <g class="recharts-layer recharts-bar-rectangle">
                         <path
                           x="19.16813186813187"
@@ -364,6 +394,7 @@
                           class="recharts-rectangle"
                           d="M 19.16813186813187,184.43333333333334 h 5 v 35.56666666666666 h -5 Z"></path>
                       </g>
+
                       <g class="recharts-layer recharts-bar-rectangle">
                         <path
                           x="25.684615384615384"
@@ -375,6 +406,7 @@
                           class="recharts-rectangle"
                           d="M 25.684615384615384,158.76666666666668 h 5 v 61.23333333333332 h -5 Z"></path>
                       </g>
+
                       <g class="recharts-layer recharts-bar-rectangle">
                         <path
                           x="32.2010989010989"
@@ -386,6 +418,7 @@
                           class="recharts-rectangle"
                           d="M 32.2010989010989,131.26666666666668 h 5 v 88.73333333333332 h -5 Z"></path>
                       </g>
+
                       <g class="recharts-layer recharts-bar-rectangle">
                         <path
                           x="38.71758241758242"
@@ -397,6 +430,7 @@
                           class="recharts-rectangle"
                           d="M 38.71758241758242,83.23333333333332 h 5 v 136.76666666666668 h -5 Z"></path>
                       </g>
+
                       <g class="recharts-layer recharts-bar-rectangle">
                         <path
                           x="45.23406593406594"
@@ -408,6 +442,7 @@
                           class="recharts-rectangle"
                           d="M 45.23406593406594,109.63333333333333 h 5 v 110.36666666666667 h -5 Z"></path>
                       </g>
+
                       <g class="recharts-layer recharts-bar-rectangle">
                         <path
                           x="51.75054945054945"
@@ -419,6 +454,7 @@
                           class="recharts-rectangle"
                           d="M 51.75054945054945,130.16666666666666 h 5 v 89.83333333333334 h -5 Z"></path>
                       </g>
+
                       <g class="recharts-layer recharts-bar-rectangle">
                         <path
                           x="58.26703296703297"
@@ -430,6 +466,7 @@
                           class="recharts-rectangle"
                           d="M 58.26703296703297,70.03333333333333 h 5 v 149.96666666666667 h -5 Z"></path>
                       </g>
+
                       <g class="recharts-layer recharts-bar-rectangle">
                         <path
                           x="64.78351648351648"
@@ -441,6 +478,7 @@
                           class="recharts-rectangle"
                           d="M 64.78351648351648,198.36666666666665 h 5 v 21.633333333333354 h -5 Z"></path>
                       </g>
+
                       <g class="recharts-layer recharts-bar-rectangle">
                         <path
                           x="71.3"
@@ -452,6 +490,7 @@
                           class="recharts-rectangle"
                           d="M 71.3,124.29999999999998 h 5 v 95.70000000000002 h -5 Z"></path>
                       </g>
+
                       <g class="recharts-layer recharts-bar-rectangle">
                         <path
                           x="77.81648351648352"
@@ -463,6 +502,7 @@
                           class="recharts-rectangle"
                           d="M 77.81648351648352,100.1 h 5 v 119.9 h -5 Z"></path>
                       </g>
+
                       <g class="recharts-layer recharts-bar-rectangle">
                         <path
                           x="84.33296703296703"
@@ -474,6 +514,7 @@
                           class="recharts-rectangle"
                           d="M 84.33296703296703,112.93333333333332 h 5 v 107.06666666666668 h -5 Z"></path>
                       </g>
+
                       <g class="recharts-layer recharts-bar-rectangle">
                         <path
                           x="90.84945054945054"
@@ -485,6 +526,7 @@
                           class="recharts-rectangle"
                           d="M 90.84945054945054,94.60000000000001 h 5 v 125.39999999999999 h -5 Z"></path>
                       </g>
+
                       <g class="recharts-layer recharts-bar-rectangle">
                         <path
                           x="97.36593406593406"
@@ -496,6 +538,7 @@
                           class="recharts-rectangle"
                           d="M 97.36593406593406,169.76666666666668 h 5 v 50.23333333333332 h -5 Z"></path>
                       </g>
+
                       <g class="recharts-layer recharts-bar-rectangle">
                         <path
                           x="103.88241758241757"
@@ -507,6 +550,7 @@
                           class="recharts-rectangle"
                           d="M 103.88241758241757,176 h 5 v 44 h -5 Z"></path>
                       </g>
+
                       <g class="recharts-layer recharts-bar-rectangle">
                         <path
                           x="110.39890109890109"
@@ -518,6 +562,7 @@
                           class="recharts-rectangle"
                           d="M 110.39890109890109,169.4 h 5 v 50.599999999999994 h -5 Z"></path>
                       </g>
+
                       <g class="recharts-layer recharts-bar-rectangle">
                         <path
                           x="116.91538461538461"
@@ -529,6 +574,7 @@
                           class="recharts-rectangle"
                           d="M 116.91538461538461,56.46666666666667 h 5 v 163.53333333333333 h -5 Z"></path>
                       </g>
+
                       <g class="recharts-layer recharts-bar-rectangle">
                         <path
                           x="123.43186813186813"
@@ -540,6 +586,7 @@
                           class="recharts-rectangle"
                           d="M 123.43186813186813,86.53333333333333 h 5 v 133.46666666666667 h -5 Z"></path>
                       </g>
+
                       <g class="recharts-layer recharts-bar-rectangle">
                         <path
                           x="129.94835164835166"
@@ -551,6 +598,7 @@
                           class="recharts-rectangle"
                           d="M 129.94835164835166,130.9 h 5 v 89.1 h -5 Z"></path>
                       </g>
+
                       <g class="recharts-layer recharts-bar-rectangle">
                         <path
                           x="136.46483516483516"
@@ -562,6 +610,7 @@
                           class="recharts-rectangle"
                           d="M 136.46483516483516,187.36666666666667 h 5 v 32.633333333333326 h -5 Z"></path>
                       </g>
+
                       <g class="recharts-layer recharts-bar-rectangle">
                         <path
                           x="142.9813186813187"
@@ -573,6 +622,7 @@
                           class="recharts-rectangle"
                           d="M 142.9813186813187,169.76666666666668 h 5 v 50.23333333333332 h -5 Z"></path>
                       </g>
+
                       <g class="recharts-layer recharts-bar-rectangle">
                         <path
                           x="149.4978021978022"
@@ -584,6 +634,7 @@
                           class="recharts-rectangle"
                           d="M 149.4978021978022,137.86666666666667 h 5 v 82.13333333333333 h -5 Z"></path>
                       </g>
+
                       <g class="recharts-layer recharts-bar-rectangle">
                         <path
                           x="156.01428571428573"
@@ -595,6 +646,7 @@
                           class="recharts-rectangle"
                           d="M 156.01428571428573,169.4 h 5 v 50.599999999999994 h -5 Z"></path>
                       </g>
+
                       <g class="recharts-layer recharts-bar-rectangle">
                         <path
                           x="162.53076923076924"
@@ -606,6 +658,7 @@
                           class="recharts-rectangle"
                           d="M 162.53076923076924,78.1 h 5 v 141.9 h -5 Z"></path>
                       </g>
+
                       <g class="recharts-layer recharts-bar-rectangle">
                         <path
                           x="169.04725274725274"
@@ -617,6 +670,7 @@
                           class="recharts-rectangle"
                           d="M 169.04725274725274,141.16666666666666 h 5 v 78.83333333333334 h -5 Z"></path>
                       </g>
+
                       <g class="recharts-layer recharts-bar-rectangle">
                         <path
                           x="175.56373626373627"
@@ -628,6 +682,7 @@
                           class="recharts-rectangle"
                           d="M 175.56373626373627,192.5 h 5 v 27.5 h -5 Z"></path>
                       </g>
+
                       <g class="recharts-layer recharts-bar-rectangle">
                         <path
                           x="182.08021978021978"
@@ -639,6 +694,7 @@
                           class="recharts-rectangle"
                           d="M 182.08021978021978,79.56666666666666 h 5 v 140.43333333333334 h -5 Z"></path>
                       </g>
+
                       <g class="recharts-layer recharts-bar-rectangle">
                         <path
                           x="188.5967032967033"
@@ -650,6 +706,7 @@
                           class="recharts-rectangle"
                           d="M 188.5967032967033,175.26666666666665 h 5 v 44.73333333333335 h -5 Z"></path>
                       </g>
+
                       <g class="recharts-layer recharts-bar-rectangle">
                         <path
                           x="195.11318681318681"
@@ -661,6 +718,7 @@
                           class="recharts-rectangle"
                           d="M 195.11318681318681,104.5 h 5 v 115.5 h -5 Z"></path>
                       </g>
+
                       <g class="recharts-layer recharts-bar-rectangle">
                         <path
                           x="201.62967032967035"
@@ -672,6 +730,7 @@
                           class="recharts-rectangle"
                           d="M 201.62967032967035,53.53333333333333 h 5 v 166.46666666666667 h -5 Z"></path>
                       </g>
+
                       <g class="recharts-layer recharts-bar-rectangle">
                         <path
                           x="208.14615384615385"
@@ -683,6 +742,7 @@
                           class="recharts-rectangle"
                           d="M 208.14615384615385,159.5 h 5 v 60.5 h -5 Z"></path>
                       </g>
+
                       <g class="recharts-layer recharts-bar-rectangle">
                         <path
                           x="214.66263736263738"
@@ -694,6 +754,7 @@
                           class="recharts-rectangle"
                           d="M 214.66263736263738,112.56666666666668 h 5 v 107.43333333333332 h -5 Z"></path>
                       </g>
+
                       <g class="recharts-layer recharts-bar-rectangle">
                         <path
                           x="221.1791208791209"
@@ -705,6 +766,7 @@
                           class="recharts-rectangle"
                           d="M 221.1791208791209,129.43333333333334 h 5 v 90.56666666666666 h -5 Z"></path>
                       </g>
+
                       <g class="recharts-layer recharts-bar-rectangle">
                         <path
                           x="227.6956043956044"
@@ -716,6 +778,7 @@
                           class="recharts-rectangle"
                           d="M 227.6956043956044,78.83333333333331 h 5 v 141.16666666666669 h -5 Z"></path>
                       </g>
+
                       <g class="recharts-layer recharts-bar-rectangle">
                         <path
                           x="234.21208791208792"
@@ -727,6 +790,7 @@
                           class="recharts-rectangle"
                           d="M 234.21208791208792,43.633333333333326 h 5 v 176.36666666666667 h -5 Z"></path>
                       </g>
+
                       <g class="recharts-layer recharts-bar-rectangle">
                         <path
                           x="240.72857142857143"
@@ -738,6 +802,7 @@
                           class="recharts-rectangle"
                           d="M 240.72857142857143,37.400000000000006 h 5 v 182.6 h -5 Z"></path>
                       </g>
+
                       <g class="recharts-layer recharts-bar-rectangle">
                         <path
                           x="247.24505494505496"
@@ -749,6 +814,7 @@
                           class="recharts-rectangle"
                           d="M 247.24505494505496,77.73333333333335 h 5 v 142.26666666666665 h -5 Z"></path>
                       </g>
+
                       <g class="recharts-layer recharts-bar-rectangle">
                         <path
                           x="253.76153846153846"
@@ -760,6 +826,7 @@
                           class="recharts-rectangle"
                           d="M 253.76153846153846,165.36666666666667 h 5 v 54.633333333333326 h -5 Z"></path>
                       </g>
+
                       <g class="recharts-layer recharts-bar-rectangle">
                         <path
                           x="260.27802197802197"
@@ -771,6 +838,7 @@
                           class="recharts-rectangle"
                           d="M 260.27802197802197,136.76666666666665 h 5 v 83.23333333333335 h -5 Z"></path>
                       </g>
+
                       <g class="recharts-layer recharts-bar-rectangle">
                         <path
                           x="266.7945054945055"
@@ -782,6 +850,7 @@
                           class="recharts-rectangle"
                           d="M 266.7945054945055,112.56666666666668 h 5 v 107.43333333333332 h -5 Z"></path>
                       </g>
+
                       <g class="recharts-layer recharts-bar-rectangle">
                         <path
                           x="273.31098901098903"
@@ -793,6 +862,7 @@
                           class="recharts-rectangle"
                           d="M 273.31098901098903,97.16666666666666 h 5 v 122.83333333333334 h -5 Z"></path>
                       </g>
+
                       <g class="recharts-layer recharts-bar-rectangle">
                         <path
                           x="279.82747252747254"
@@ -804,6 +874,7 @@
                           class="recharts-rectangle"
                           d="M 279.82747252747254,147.76666666666665 h 5 v 72.23333333333335 h -5 Z"></path>
                       </g>
+
                       <g class="recharts-layer recharts-bar-rectangle">
                         <path
                           x="286.34395604395604"
@@ -815,6 +886,7 @@
                           class="recharts-rectangle"
                           d="M 286.34395604395604,147.76666666666665 h 5 v 72.23333333333335 h -5 Z"></path>
                       </g>
+
                       <g class="recharts-layer recharts-bar-rectangle">
                         <path
                           x="292.86043956043954"
@@ -826,6 +898,7 @@
                           class="recharts-rectangle"
                           d="M 292.86043956043954,55.73333333333332 h 5 v 164.26666666666668 h -5 Z"></path>
                       </g>
+
                       <g class="recharts-layer recharts-bar-rectangle">
                         <path
                           x="299.3769230769231"
@@ -837,6 +910,7 @@
                           class="recharts-rectangle"
                           d="M 299.3769230769231,46.56666666666666 h 5 v 173.43333333333334 h -5 Z"></path>
                       </g>
+
                       <g class="recharts-layer recharts-bar-rectangle">
                         <path
                           x="305.8934065934066"
@@ -848,6 +922,7 @@
                           class="recharts-rectangle"
                           d="M 305.8934065934066,96.06666666666666 h 5 v 123.93333333333334 h -5 Z"></path>
                       </g>
+
                       <g class="recharts-layer recharts-bar-rectangle">
                         <path
                           x="312.4098901098901"
@@ -859,6 +934,7 @@
                           class="recharts-rectangle"
                           d="M 312.4098901098901,37.03333333333333 h 5 v 182.96666666666667 h -5 Z"></path>
                       </g>
+
                       <g class="recharts-layer recharts-bar-rectangle">
                         <path
                           x="318.9263736263736"
@@ -870,6 +946,7 @@
                           class="recharts-rectangle"
                           d="M 318.9263736263736,104.5 h 5 v 115.5 h -5 Z"></path>
                       </g>
+
                       <g class="recharts-layer recharts-bar-rectangle">
                         <path
                           x="325.4428571428571"
@@ -881,6 +958,7 @@
                           class="recharts-rectangle"
                           d="M 325.4428571428571,133.83333333333334 h 5 v 86.16666666666666 h -5 Z"></path>
                       </g>
+
                       <g class="recharts-layer recharts-bar-rectangle">
                         <path
                           x="331.9593406593407"
@@ -892,6 +970,7 @@
                           class="recharts-rectangle"
                           d="M 331.9593406593407,155.10000000000002 h 5 v 64.89999999999998 h -5 Z"></path>
                       </g>
+
                       <g class="recharts-layer recharts-bar-rectangle">
                         <path
                           x="338.4758241758242"
@@ -903,6 +982,7 @@
                           class="recharts-rectangle"
                           d="M 338.4758241758242,189.93333333333334 h 5 v 30.066666666666663 h -5 Z"></path>
                       </g>
+
                       <g class="recharts-layer recharts-bar-rectangle">
                         <path
                           x="344.9923076923077"
@@ -914,6 +994,7 @@
                           class="recharts-rectangle"
                           d="M 344.9923076923077,190.3 h 5 v 29.69999999999999 h -5 Z"></path>
                       </g>
+
                       <g class="recharts-layer recharts-bar-rectangle">
                         <path
                           x="351.5087912087912"
@@ -925,6 +1006,7 @@
                           class="recharts-rectangle"
                           d="M 351.5087912087912,127.60000000000002 h 5 v 92.39999999999998 h -5 Z"></path>
                       </g>
+
                       <g class="recharts-layer recharts-bar-rectangle">
                         <path
                           x="358.02527472527476"
@@ -936,6 +1018,7 @@
                           class="recharts-rectangle"
                           d="M 358.02527472527476,112.2 h 5 v 107.8 h -5 Z"></path>
                       </g>
+
                       <g class="recharts-layer recharts-bar-rectangle">
                         <path
                           x="364.54175824175826"
@@ -947,6 +1030,7 @@
                           class="recharts-rectangle"
                           d="M 364.54175824175826,146.3 h 5 v 73.69999999999999 h -5 Z"></path>
                       </g>
+
                       <g class="recharts-layer recharts-bar-rectangle">
                         <path
                           x="371.05824175824176"
@@ -958,6 +1042,7 @@
                           class="recharts-rectangle"
                           d="M 371.05824175824176,141.9 h 5 v 78.1 h -5 Z"></path>
                       </g>
+
                       <g class="recharts-layer recharts-bar-rectangle">
                         <path
                           x="377.57472527472527"
@@ -969,6 +1054,7 @@
                           class="recharts-rectangle"
                           d="M 377.57472527472527,66 h 5 v 154 h -5 Z"></path>
                       </g>
+
                       <g class="recharts-layer recharts-bar-rectangle">
                         <path
                           x="384.09120879120877"
@@ -980,6 +1066,7 @@
                           class="recharts-rectangle"
                           d="M 384.09120879120877,134.56666666666666 h 5 v 85.43333333333334 h -5 Z"></path>
                       </g>
+
                       <g class="recharts-layer recharts-bar-rectangle">
                         <path
                           x="390.60769230769233"
@@ -991,6 +1078,7 @@
                           class="recharts-rectangle"
                           d="M 390.60769230769233,191.4 h 5 v 28.599999999999994 h -5 Z"></path>
                       </g>
+
                       <g class="recharts-layer recharts-bar-rectangle">
                         <path
                           x="397.12417582417584"
@@ -1002,6 +1090,7 @@
                           class="recharts-rectangle"
                           d="M 397.12417582417584,95.33333333333334 h 5 v 124.66666666666666 h -5 Z"></path>
                       </g>
+
                       <g class="recharts-layer recharts-bar-rectangle">
                         <path
                           x="403.64065934065934"
@@ -1013,6 +1102,7 @@
                           class="recharts-rectangle"
                           d="M 403.64065934065934,154.73333333333335 h 5 v 65.26666666666665 h -5 Z"></path>
                       </g>
+
                       <g class="recharts-layer recharts-bar-rectangle">
                         <path
                           x="410.15714285714284"
@@ -1024,6 +1114,7 @@
                           class="recharts-rectangle"
                           d="M 410.15714285714284,154.73333333333335 h 5 v 65.26666666666665 h -5 Z"></path>
                       </g>
+
                       <g class="recharts-layer recharts-bar-rectangle">
                         <path
                           x="416.6736263736264"
@@ -1035,6 +1126,7 @@
                           class="recharts-rectangle"
                           d="M 416.6736263736264,47.666666666666686 h 5 v 172.33333333333331 h -5 Z"></path>
                       </g>
+
                       <g class="recharts-layer recharts-bar-rectangle">
                         <path
                           x="423.1901098901099"
@@ -1046,6 +1138,7 @@
                           class="recharts-rectangle"
                           d="M 423.1901098901099,182.23333333333335 h 5 v 37.76666666666665 h -5 Z"></path>
                       </g>
+
                       <g class="recharts-layer recharts-bar-rectangle">
                         <path
                           x="429.7065934065934"
@@ -1057,6 +1150,7 @@
                           class="recharts-rectangle"
                           d="M 429.7065934065934,59.03333333333333 h 5 v 160.96666666666667 h -5 Z"></path>
                       </g>
+
                       <g class="recharts-layer recharts-bar-rectangle">
                         <path
                           x="436.2230769230769"
@@ -1068,6 +1162,7 @@
                           class="recharts-rectangle"
                           d="M 436.2230769230769,187.73333333333332 h 5 v 32.26666666666668 h -5 Z"></path>
                       </g>
+
                       <g class="recharts-layer recharts-bar-rectangle">
                         <path
                           x="442.7395604395604"
@@ -1079,6 +1174,7 @@
                           class="recharts-rectangle"
                           d="M 442.7395604395604,112.2 h 5 v 107.8 h -5 Z"></path>
                       </g>
+
                       <g class="recharts-layer recharts-bar-rectangle">
                         <path
                           x="449.256043956044"
@@ -1090,6 +1186,7 @@
                           class="recharts-rectangle"
                           d="M 449.256043956044,101.56666666666666 h 5 v 118.43333333333334 h -5 Z"></path>
                       </g>
+
                       <g class="recharts-layer recharts-bar-rectangle">
                         <path
                           x="455.7725274725275"
@@ -1101,6 +1198,7 @@
                           class="recharts-rectangle"
                           d="M 455.7725274725275,78.83333333333331 h 5 v 141.16666666666669 h -5 Z"></path>
                       </g>
+
                       <g class="recharts-layer recharts-bar-rectangle">
                         <path
                           x="462.289010989011"
@@ -1112,6 +1210,7 @@
                           class="recharts-rectangle"
                           d="M 462.289010989011,59.400000000000006 h 5 v 160.6 h -5 Z"></path>
                       </g>
+
                       <g class="recharts-layer recharts-bar-rectangle">
                         <path
                           x="468.8054945054945"
@@ -1123,6 +1222,7 @@
                           class="recharts-rectangle"
                           d="M 468.8054945054945,163.16666666666669 h 5 v 56.833333333333314 h -5 Z"></path>
                       </g>
+
                       <g class="recharts-layer recharts-bar-rectangle">
                         <path
                           x="475.32197802197805"
@@ -1134,6 +1234,7 @@
                           class="recharts-rectangle"
                           d="M 475.32197802197805,186.26666666666668 h 5 v 33.73333333333332 h -5 Z"></path>
                       </g>
+
                       <g class="recharts-layer recharts-bar-rectangle">
                         <path
                           x="481.83846153846156"
@@ -1145,6 +1246,7 @@
                           class="recharts-rectangle"
                           d="M 481.83846153846156,39.60000000000002 h 5 v 180.39999999999998 h -5 Z"></path>
                       </g>
+
                       <g class="recharts-layer recharts-bar-rectangle">
                         <path
                           x="488.35494505494506"
@@ -1156,6 +1258,7 @@
                           class="recharts-rectangle"
                           d="M 488.35494505494506,190.3 h 5 v 29.69999999999999 h -5 Z"></path>
                       </g>
+
                       <g class="recharts-layer recharts-bar-rectangle">
                         <path
                           x="494.87142857142857"
@@ -1167,6 +1270,7 @@
                           class="recharts-rectangle"
                           d="M 494.87142857142857,63.80000000000001 h 5 v 156.2 h -5 Z"></path>
                       </g>
+
                       <g class="recharts-layer recharts-bar-rectangle">
                         <path
                           x="501.38791208791207"
@@ -1178,6 +1282,7 @@
                           class="recharts-rectangle"
                           d="M 501.38791208791207,107.43333333333332 h 5 v 112.56666666666668 h -5 Z"></path>
                       </g>
+
                       <g class="recharts-layer recharts-bar-rectangle">
                         <path
                           x="507.90439560439563"
@@ -1189,6 +1294,7 @@
                           class="recharts-rectangle"
                           d="M 507.90439560439563,83.9666666666667 h 5 v 136.0333333333333 h -5 Z"></path>
                       </g>
+
                       <g class="recharts-layer recharts-bar-rectangle">
                         <path
                           x="514.420879120879"
@@ -1200,6 +1306,7 @@
                           class="recharts-rectangle"
                           d="M 514.420879120879,45.83333333333334 h 5 v 174.16666666666666 h -5 Z"></path>
                       </g>
+
                       <g class="recharts-layer recharts-bar-rectangle">
                         <path
                           x="520.9373626373625"
@@ -1211,6 +1318,7 @@
                           class="recharts-rectangle"
                           d="M 520.9373626373625,180.76666666666665 h 5 v 39.23333333333335 h -5 Z"></path>
                       </g>
+
                       <g class="recharts-layer recharts-bar-rectangle">
                         <path
                           x="527.4538461538461"
@@ -1222,6 +1330,7 @@
                           class="recharts-rectangle"
                           d="M 527.4538461538461,94.96666666666667 h 5 v 125.03333333333333 h -5 Z"></path>
                       </g>
+
                       <g class="recharts-layer recharts-bar-rectangle">
                         <path
                           x="533.9703296703296"
@@ -1233,6 +1342,7 @@
                           class="recharts-rectangle"
                           d="M 533.9703296703296,70.39999999999998 h 5 v 149.60000000000002 h -5 Z"></path>
                       </g>
+
                       <g class="recharts-layer recharts-bar-rectangle">
                         <path
                           x="540.4868131868132"
@@ -1244,6 +1354,7 @@
                           class="recharts-rectangle"
                           d="M 540.4868131868132,158.03333333333333 h 5 v 61.96666666666667 h -5 Z"></path>
                       </g>
+
                       <g class="recharts-layer recharts-bar-rectangle">
                         <path
                           x="547.0032967032967"
@@ -1255,6 +1366,7 @@
                           class="recharts-rectangle"
                           d="M 547.0032967032967,103.76666666666667 h 5 v 116.23333333333333 h -5 Z"></path>
                       </g>
+
                       <g class="recharts-layer recharts-bar-rectangle">
                         <path
                           x="553.5197802197802"
@@ -1266,6 +1378,7 @@
                           class="recharts-rectangle"
                           d="M 553.5197802197802,44 h 5 v 176 h -5 Z"></path>
                       </g>
+
                       <g class="recharts-layer recharts-bar-rectangle">
                         <path
                           x="560.0362637362637"
@@ -1277,6 +1390,7 @@
                           class="recharts-rectangle"
                           d="M 560.0362637362637,171.6 h 5 v 48.400000000000006 h -5 Z"></path>
                       </g>
+
                       <g class="recharts-layer recharts-bar-rectangle">
                         <path
                           x="566.5527472527472"
@@ -1288,6 +1402,7 @@
                           class="recharts-rectangle"
                           d="M 566.5527472527472,168.3 h 5 v 51.69999999999999 h -5 Z"></path>
                       </g>
+
                       <g class="recharts-layer recharts-bar-rectangle">
                         <path
                           x="573.0692307692307"
@@ -1299,6 +1414,7 @@
                           class="recharts-rectangle"
                           d="M 573.0692307692307,60.866666666666646 h 5 v 159.13333333333335 h -5 Z"></path>
                       </g>
+
                       <g class="recharts-layer recharts-bar-rectangle">
                         <path
                           x="579.5857142857143"
@@ -1310,6 +1426,7 @@
                           class="recharts-rectangle"
                           d="M 579.5857142857143,55.73333333333332 h 5 v 164.26666666666668 h -5 Z"></path>
                       </g>
+
                       <g class="recharts-layer recharts-bar-rectangle">
                         <path
                           x="586.1021978021978"
@@ -1321,6 +1438,7 @@
                           class="recharts-rectangle"
                           d="M 586.1021978021978,165.36666666666667 h 5 v 54.633333333333326 h -5 Z"></path>
                       </g>
+
                       <g class="recharts-layer recharts-bar-rectangle">
                         <path
                           x="592.6186813186813"
@@ -1332,6 +1450,7 @@
                           class="recharts-rectangle"
                           d="M 592.6186813186813,182.23333333333335 h 5 v 37.76666666666665 h -5 Z"></path>
                       </g>
+
                       <g class="recharts-layer recharts-bar-rectangle">
                         <path
                           x="599.1351648351648"
@@ -1345,9 +1464,11 @@
                       </g>
                     </g>
                   </g>
+
                   <g class="recharts-layer"></g>
                 </g>
               </svg>
+
               <div
                 tabindex="-1"
                 class="recharts-tooltip-wrapper recharts-tooltip-wrapper-right recharts-tooltip-wrapper-bottom"

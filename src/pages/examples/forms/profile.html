@@ -3,14 +3,17 @@
     <div class="space-y-6">
       <div>
         <h3 class="text-lg font-medium">Profile</h3>
+
         <p class="text-sm text-muted-foreground">
           This is how others will see you on the site.
         </p>
       </div>
+
       <div
         data-orientation="horizontal"
         role="none"
         class="shrink-0 bg-border h-[1px] w-full"></div>
+
       <form class="space-y-8">
         <div class="space-y-2">
           <label
@@ -18,6 +21,7 @@
             for=":r1ea:-form-item">
             Username
           </label>
+
           <input
             class="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
             placeholder="shadcn"
@@ -32,12 +36,14 @@
             pseudonym. You can only change this once every 30 days.
           </p>
         </div>
+
         <div class="space-y-2">
           <label
             class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
             for=":r1eb:-form-item">
             Email
           </label>
+
           <button
             type="button"
             role="combobox"
@@ -54,6 +60,7 @@
             <span style="pointer-events: none">
               Select a verified email to display
             </span>
+
             <svg
               width="15"
               height="15"
@@ -69,6 +76,7 @@
                 clip-rule="evenodd"></path>
             </svg>
           </button>
+
           <select
             aria-hidden="true"
             tabindex="-1"
@@ -85,24 +93,31 @@
               overflow-wrap: normal;
             ">
             <option value></option>
+
             <option value="m@example.com">m@example.com</option>
+
             <option value="m@google.com">m@google.com</option>
+
             <option value="m@support.com">m@support.com</option>
           </select>
+
           <p
             id=":r1eb:-form-item-description"
             class="text-[0.8rem] text-muted-foreground">
             You can manage verified email addresses in your
             <a href="/examples/forms">email settings</a>
+
             .
           </p>
         </div>
+
         <div class="space-y-2">
           <label
             class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
             for=":r1ed:-form-item">
             Bio
           </label>
+
           <textarea
             class="flex min-h-[60px] w-full rounded-md border border-input bg-transparent px-3 py-2 text-sm shadow-sm placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 resize-none"
             placeholder="Tell us a little bit about yourself"
@@ -117,9 +132,11 @@ I own a computer.</textarea
             class="text-[0.8rem] text-muted-foreground">
             You can
             <span>@mention</span>
+
             other users and organizations to link to them.
           </p>
         </div>
+
         <div>
           <div class="space-y-2">
             <label
@@ -127,11 +144,13 @@ I own a computer.</textarea
               for=":r1ee:-form-item">
               URLs
             </label>
+
             <p
               id=":r1ee:-form-item-description"
               class="text-[0.8rem] text-muted-foreground">
               Add links to your website, blog, or social media profiles.
             </p>
+
             <input
               class="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
               id=":r1ee:-form-item"
@@ -140,17 +159,20 @@ I own a computer.</textarea
               value="https://shadcn.com"
               name="urls.0.value" />
           </div>
+
           <div class="space-y-2">
             <label
               class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 sr-only"
               for=":r1ef:-form-item">
               URLs
             </label>
+
             <p
               id=":r1ef:-form-item-description"
               class="text-[0.8rem] text-muted-foreground sr-only">
               Add links to your website, blog, or social media profiles.
             </p>
+
             <input
               class="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
               id=":r1ef:-form-item"
@@ -159,12 +181,14 @@ I own a computer.</textarea
               value="http://twitter.com/shadcn"
               name="urls.1.value" />
           </div>
+
           <button
             class="inline-flex items-center justify-center whitespace-nowrap font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground h-8 rounded-md px-3 text-xs mt-2"
             type="button">
             Add URL
           </button>
         </div>
+
         <button
           class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground shadow hover:bg-primary/90 h-9 px-4 py-2"
           type="submit">

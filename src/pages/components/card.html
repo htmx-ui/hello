@@ -2,6 +2,7 @@
   <div
     class="mb-4 flex items-center space-x-1 text-sm leading-none text-muted-foreground">
     <div class="truncate">Docs</div>
+
     <svg
       width="15"
       height="15"
@@ -15,10 +16,13 @@
         fill-rule="evenodd"
         clip-rule="evenodd"></path>
     </svg>
+
     <div class="text-foreground">Card</div>
   </div>
+
   <div class="space-y-2">
     <h1 class="scroll-m-20 text-3xl font-bold tracking-tight">Card</h1>
+
     <p class="text-base text-muted-foreground">
       <span
         data-br=":r1k:"
@@ -33,6 +37,7 @@
       </span>
     </p>
   </div>
+
   <div
     class="preview flex min-h-[350px] w-full justify-center p-10 items-center">
     <div
@@ -41,10 +46,12 @@
         <h3 class="font-semibold leading-none tracking-tight">
           Create project
         </h3>
+
         <p class="text-sm text-muted-foreground">
           Deploy your new project in one-click.
         </p>
       </div>
+
       <div class="p-6 pt-0">
         <form>
           <div class="grid w-full items-center gap-4">
@@ -54,17 +61,20 @@
                 for="name">
                 Name
               </label>
+
               <input
                 class="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
                 id="name"
                 placeholder="Name of your project" />
             </div>
+
             <div class="flex flex-col space-y-1.5">
               <label
                 class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                 for="framework">
                 Framework
               </label>
+
               <button
                 type="button"
                 role="combobox"
@@ -77,6 +87,7 @@
                 class="flex h-9 w-full items-center justify-between whitespace-nowrap rounded-md border border-input bg-transparent px-3 py-2 text-sm shadow-sm ring-offset-background placeholder:text-muted-foreground focus:outline-none focus:ring-1 focus:ring-ring disabled:cursor-not-allowed disabled:opacity-50 [&amp;>span]:line-clamp-1"
                 id="framework">
                 <span style="pointer-events: none">Select</span>
+
                 <svg
                   width="15"
                   height="15"
@@ -92,6 +103,7 @@
                     clip-rule="evenodd"></path>
                 </svg>
               </button>
+
               <select
                 aria-hidden="true"
                 tabindex="-1"
@@ -108,20 +120,26 @@
                   overflow-wrap: normal;
                 ">
                 <option value=""></option>
+
                 <option value="next">Next.js</option>
+
                 <option value="sveltekit">SvelteKit</option>
+
                 <option value="astro">Astro</option>
+
                 <option value="nuxt">Nuxt.js</option>
               </select>
             </div>
           </div>
         </form>
       </div>
+
       <div class="items-center p-6 pt-0 flex justify-between">
         <button
           class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground h-9 px-4 py-2">
           Cancel
         </button>
+
         <button
           class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground shadow hover:bg-primary/90 h-9 px-4 py-2">
           Deploy
