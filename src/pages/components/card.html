@@ -1,147 +1,132 @@
 <div class="my-8 w-full min-w-0">
+  <div
+    class="mb-4 flex items-center space-x-1 text-sm leading-none text-muted-foreground">
+    <div class="truncate">Docs</div>
+    <svg
+      width="15"
+      height="15"
+      viewBox="0 0 15 15"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      class="h-3.5 w-3.5">
+      <path
+        d="M6.1584 3.13508C6.35985 2.94621 6.67627 2.95642 6.86514 3.15788L10.6151 7.15788C10.7954 7.3502 10.7954 7.64949 10.6151 7.84182L6.86514 11.8418C6.67627 12.0433 6.35985 12.0535 6.1584 11.8646C5.95694 11.6757 5.94673 11.3593 6.1356 11.1579L9.565 7.49985L6.1356 3.84182C5.94673 3.64036 5.95694 3.32394 6.1584 3.13508Z"
+        fill="currentColor"
+        fill-rule="evenodd"
+        clip-rule="evenodd"></path>
+    </svg>
+    <div class="text-foreground">Card</div>
+  </div>
+  <div class="space-y-2">
+    <h1 class="scroll-m-20 text-3xl font-bold tracking-tight">Card</h1>
+    <p class="text-base text-muted-foreground">
+      <span
+        data-br=":r1k:"
+        data-brr="1"
+        style="
+          display: inline-block;
+          vertical-align: top;
+          text-decoration: inherit;
+          max-width: 334px;
+        ">
+        Displays a callout for user attention.
+      </span>
+    </p>
+  </div>
+  <div
+    class="preview flex min-h-[350px] w-full justify-center p-10 items-center">
     <div
-        class="mb-4 flex items-center space-x-1 text-sm leading-none text-muted-foreground"
-    >
-        <div class="truncate">Docs</div>
-        <svg
-            width="15"
-            height="15"
-            viewBox="0 0 15 15"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            class="h-3.5 w-3.5"
-        >
-            <path
-                d="M6.1584 3.13508C6.35985 2.94621 6.67627 2.95642 6.86514 3.15788L10.6151 7.15788C10.7954 7.3502 10.7954 7.64949 10.6151 7.84182L6.86514 11.8418C6.67627 12.0433 6.35985 12.0535 6.1584 11.8646C5.95694 11.6757 5.94673 11.3593 6.1356 11.1579L9.565 7.49985L6.1356 3.84182C5.94673 3.64036 5.95694 3.32394 6.1584 3.13508Z"
-                fill="currentColor"
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-            ></path>
-        </svg>
-        <div class="text-foreground">Card</div>
-    </div>
-    <div class="space-y-2">
-        <h1 class="scroll-m-20 text-3xl font-bold tracking-tight">Card</h1>
-        <p class="text-base text-muted-foreground">
-            <span
-                data-br=":r1k:"
-                data-brr="1"
-                style="
-                    display: inline-block;
-                    vertical-align: top;
-                    text-decoration: inherit;
-                    max-width: 334px;
-                "
-            >
-                Displays a callout for user attention.
-            </span>
+      class="rounded-xl border bg-card text-card-foreground shadow w-[350px]">
+      <div class="flex flex-col space-y-1.5 p-6">
+        <h3 class="font-semibold leading-none tracking-tight">
+          Create project
+        </h3>
+        <p class="text-sm text-muted-foreground">
+          Deploy your new project in one-click.
         </p>
+      </div>
+      <div class="p-6 pt-0">
+        <form>
+          <div class="grid w-full items-center gap-4">
+            <div class="flex flex-col space-y-1.5">
+              <label
+                class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                for="name">
+                Name
+              </label>
+              <input
+                class="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
+                id="name"
+                placeholder="Name of your project" />
+            </div>
+            <div class="flex flex-col space-y-1.5">
+              <label
+                class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                for="framework">
+                Framework
+              </label>
+              <button
+                type="button"
+                role="combobox"
+                aria-controls="radix-:rb3:"
+                aria-expanded="false"
+                aria-autocomplete="none"
+                dir="ltr"
+                data-state="closed"
+                data-placeholder=""
+                class="flex h-9 w-full items-center justify-between whitespace-nowrap rounded-md border border-input bg-transparent px-3 py-2 text-sm shadow-sm ring-offset-background placeholder:text-muted-foreground focus:outline-none focus:ring-1 focus:ring-ring disabled:cursor-not-allowed disabled:opacity-50 [&amp;>span]:line-clamp-1"
+                id="framework">
+                <span style="pointer-events: none">Select</span>
+                <svg
+                  width="15"
+                  height="15"
+                  viewBox="0 0 15 15"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-4 w-4 opacity-50"
+                  aria-hidden="true">
+                  <path
+                    d="M4.93179 5.43179C4.75605 5.60753 4.75605 5.89245 4.93179 6.06819C5.10753 6.24392 5.39245 6.24392 5.56819 6.06819L7.49999 4.13638L9.43179 6.06819C9.60753 6.24392 9.89245 6.24392 10.0682 6.06819C10.2439 5.89245 10.2439 5.60753 10.0682 5.43179L7.81819 3.18179C7.73379 3.0974 7.61933 3.04999 7.49999 3.04999C7.38064 3.04999 7.26618 3.0974 7.18179 3.18179L4.93179 5.43179ZM10.0682 9.56819C10.2439 9.39245 10.2439 9.10753 10.0682 8.93179C9.89245 8.75606 9.60753 8.75606 9.43179 8.93179L7.49999 10.8636L5.56819 8.93179C5.39245 8.75606 5.10753 8.75606 4.93179 8.93179C4.75605 9.10753 4.75605 9.39245 4.93179 9.56819L7.18179 11.8182C7.35753 11.9939 7.64245 11.9939 7.81819 11.8182L10.0682 9.56819Z"
+                    fill="currentColor"
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"></path>
+                </svg>
+              </button>
+              <select
+                aria-hidden="true"
+                tabindex="-1"
+                style="
+                  position: absolute;
+                  border: 0px;
+                  width: 1px;
+                  height: 1px;
+                  padding: 0px;
+                  margin: -1px;
+                  overflow: hidden;
+                  clip: rect(0px, 0px, 0px, 0px);
+                  white-space: nowrap;
+                  overflow-wrap: normal;
+                ">
+                <option value=""></option>
+                <option value="next">Next.js</option>
+                <option value="sveltekit">SvelteKit</option>
+                <option value="astro">Astro</option>
+                <option value="nuxt">Nuxt.js</option>
+              </select>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="items-center p-6 pt-0 flex justify-between">
+        <button
+          class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground h-9 px-4 py-2">
+          Cancel
+        </button>
+        <button
+          class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground shadow hover:bg-primary/90 h-9 px-4 py-2">
+          Deploy
+        </button>
+      </div>
     </div>
-    <div
-        class="preview flex min-h-[350px] w-full justify-center p-10 items-center"
-    >
-        <div
-            class="rounded-xl border bg-card text-card-foreground shadow w-[350px]"
-        >
-            <div class="flex flex-col space-y-1.5 p-6">
-                <h3 class="font-semibold leading-none tracking-tight">
-                    Create project
-                </h3>
-                <p class="text-sm text-muted-foreground">
-                    Deploy your new project in one-click.
-                </p>
-            </div>
-            <div class="p-6 pt-0">
-                <form>
-                    <div class="grid w-full items-center gap-4">
-                        <div class="flex flex-col space-y-1.5">
-                            <label
-                                class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                                for="name"
-                            >
-                                Name
-                            </label>
-                            <input
-                                class="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
-                                id="name"
-                                placeholder="Name of your project"
-                            />
-                        </div>
-                        <div class="flex flex-col space-y-1.5">
-                            <label
-                                class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                                for="framework"
-                            >
-                                Framework
-                            </label>
-                            <button
-                                type="button"
-                                role="combobox"
-                                aria-controls="radix-:rb3:"
-                                aria-expanded="false"
-                                aria-autocomplete="none"
-                                dir="ltr"
-                                data-state="closed"
-                                data-placeholder=""
-                                class="flex h-9 w-full items-center justify-between whitespace-nowrap rounded-md border border-input bg-transparent px-3 py-2 text-sm shadow-sm ring-offset-background placeholder:text-muted-foreground focus:outline-none focus:ring-1 focus:ring-ring disabled:cursor-not-allowed disabled:opacity-50 [&amp;>span]:line-clamp-1"
-                                id="framework"
-                            >
-                                <span style="pointer-events: none">Select</span>
-                                <svg
-                                    width="15"
-                                    height="15"
-                                    viewBox="0 0 15 15"
-                                    fill="none"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    class="h-4 w-4 opacity-50"
-                                    aria-hidden="true"
-                                >
-                                    <path
-                                        d="M4.93179 5.43179C4.75605 5.60753 4.75605 5.89245 4.93179 6.06819C5.10753 6.24392 5.39245 6.24392 5.56819 6.06819L7.49999 4.13638L9.43179 6.06819C9.60753 6.24392 9.89245 6.24392 10.0682 6.06819C10.2439 5.89245 10.2439 5.60753 10.0682 5.43179L7.81819 3.18179C7.73379 3.0974 7.61933 3.04999 7.49999 3.04999C7.38064 3.04999 7.26618 3.0974 7.18179 3.18179L4.93179 5.43179ZM10.0682 9.56819C10.2439 9.39245 10.2439 9.10753 10.0682 8.93179C9.89245 8.75606 9.60753 8.75606 9.43179 8.93179L7.49999 10.8636L5.56819 8.93179C5.39245 8.75606 5.10753 8.75606 4.93179 8.93179C4.75605 9.10753 4.75605 9.39245 4.93179 9.56819L7.18179 11.8182C7.35753 11.9939 7.64245 11.9939 7.81819 11.8182L10.0682 9.56819Z"
-                                        fill="currentColor"
-                                        fill-rule="evenodd"
-                                        clip-rule="evenodd"
-                                    ></path>
-                                </svg>
-                            </button>
-                            <select
-                                aria-hidden="true"
-                                tabindex="-1"
-                                style="
-                                    position: absolute;
-                                    border: 0px;
-                                    width: 1px;
-                                    height: 1px;
-                                    padding: 0px;
-                                    margin: -1px;
-                                    overflow: hidden;
-                                    clip: rect(0px, 0px, 0px, 0px);
-                                    white-space: nowrap;
-                                    overflow-wrap: normal;
-                                "
-                            >
-                                <option value=""></option>
-                                <option value="next">Next.js</option>
-                                <option value="sveltekit">SvelteKit</option>
-                                <option value="astro">Astro</option>
-                                <option value="nuxt">Nuxt.js</option>
-                            </select>
-                        </div>
-                    </div>
-                </form>
-            </div>
-            <div class="items-center p-6 pt-0 flex justify-between">
-                <button
-                    class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground h-9 px-4 py-2"
-                >
-                    Cancel
-                </button>
-                <button
-                    class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground shadow hover:bg-primary/90 h-9 px-4 py-2"
-                >
-                    Deploy
-                </button>
-            </div>
-        </div>
-    </div>
+  </div>
 </div>

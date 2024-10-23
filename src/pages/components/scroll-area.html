@@ -1,379 +1,318 @@
 <div class="my-8 w-full min-w-0">
+  <div
+    class="mb-4 flex items-center space-x-1 text-sm leading-none text-muted-foreground">
+    <div class="truncate">Docs</div>
+    <svg
+      width="15"
+      height="15"
+      viewBox="0 0 15 15"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      class="h-3.5 w-3.5">
+      <path
+        d="M6.1584 3.13508C6.35985 2.94621 6.67627 2.95642 6.86514 3.15788L10.6151 7.15788C10.7954 7.3502 10.7954 7.64949 10.6151 7.84182L6.86514 11.8418C6.67627 12.0433 6.35985 12.0535 6.1584 11.8646C5.95694 11.6757 5.94673 11.3593 6.1356 11.1579L9.565 7.49985L6.1356 3.84182C5.94673 3.64036 5.95694 3.32394 6.1584 3.13508Z"
+        fill="currentColor"
+        fill-rule="evenodd"
+        clip-rule="evenodd"></path>
+    </svg>
+    <div class="text-foreground">Scroll Area</div>
+  </div>
+  <div class="space-y-2">
+    <h1 class="scroll-m-20 text-3xl font-bold tracking-tight">Scroll Area</h1>
+    <p class="text-base text-muted-foreground">
+      <span
+        data-br=":r1k:"
+        data-brr="1"
+        style="
+          display: inline-block;
+          vertical-align: top;
+          text-decoration: inherit;
+          max-width: 334px;
+        ">
+        Displays a callout for user attention.
+      </span>
+    </p>
+  </div>
+  <div
+    class="preview flex min-h-[350px] w-full justify-center p-10 items-center">
     <div
-        class="mb-4 flex items-center space-x-1 text-sm leading-none text-muted-foreground"
-    >
-        <div class="truncate">Docs</div>
-        <svg
-            width="15"
-            height="15"
-            viewBox="0 0 15 15"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            class="h-3.5 w-3.5"
-        >
-            <path
-                d="M6.1584 3.13508C6.35985 2.94621 6.67627 2.95642 6.86514 3.15788L10.6151 7.15788C10.7954 7.3502 10.7954 7.64949 10.6151 7.84182L6.86514 11.8418C6.67627 12.0433 6.35985 12.0535 6.1584 11.8646C5.95694 11.6757 5.94673 11.3593 6.1356 11.1579L9.565 7.49985L6.1356 3.84182C5.94673 3.64036 5.95694 3.32394 6.1584 3.13508Z"
-                fill="currentColor"
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-            ></path>
-        </svg>
-        <div class="text-foreground">Scroll Area</div>
-    </div>
-    <div class="space-y-2">
-        <h1 class="scroll-m-20 text-3xl font-bold tracking-tight">
-            Scroll Area
-        </h1>
-        <p class="text-base text-muted-foreground">
-            <span
-                data-br=":r1k:"
-                data-brr="1"
-                style="
-                    display: inline-block;
-                    vertical-align: top;
-                    text-decoration: inherit;
-                    max-width: 334px;
-                "
-            >
-                Displays a callout for user attention.
-            </span>
-        </p>
-    </div>
-    <div
-        class="preview flex min-h-[350px] w-full justify-center p-10 items-center"
-    >
-        <div
-            dir="ltr"
-            class="relative overflow-hidden h-72 w-48 rounded-md border"
-            style="
-                position: relative;
-                --radix-scroll-area-corner-width: 0px;
-                --radix-scroll-area-corner-height: 0px;
-            "
-        >
-            <style>
-                [data-radix-scroll-area-viewport] {
-                    scrollbar-width: none;
-                    -ms-overflow-style: none;
-                    -webkit-overflow-scrolling: touch;
-                }
-                [data-radix-scroll-area-viewport]::-webkit-scrollbar {
-                    display: none;
-                }
-            </style>
+      dir="ltr"
+      class="relative overflow-hidden h-72 w-48 rounded-md border"
+      style="
+        position: relative;
+        --radix-scroll-area-corner-width: 0px;
+        --radix-scroll-area-corner-height: 0px;
+      ">
+      <style>
+        [data-radix-scroll-area-viewport] {
+          scrollbar-width: none;
+          -ms-overflow-style: none;
+          -webkit-overflow-scrolling: touch;
+        }
+        [data-radix-scroll-area-viewport]::-webkit-scrollbar {
+          display: none;
+        }
+      </style>
+      <div
+        data-radix-scroll-area-viewport=""
+        class="h-full w-full rounded-[inherit]"
+        style="overflow: hidden scroll">
+        <div style="min-width: 100%; display: table">
+          <div class="p-4">
+            <h4 class="mb-4 text-sm font-medium leading-none">Tags</h4>
+            <div class="text-sm">v1.2.0-beta.50</div>
             <div
-                data-radix-scroll-area-viewport=""
-                class="h-full w-full rounded-[inherit]"
-                style="overflow: hidden scroll"
-            >
-                <div style="min-width: 100%; display: table">
-                    <div class="p-4">
-                        <h4 class="mb-4 text-sm font-medium leading-none">
-                            Tags
-                        </h4>
-                        <div class="text-sm">v1.2.0-beta.50</div>
-                        <div
-                            data-orientation="horizontal"
-                            role="none"
-                            class="shrink-0 bg-border h-[1px] w-full my-2"
-                        ></div>
-                        <div class="text-sm">v1.2.0-beta.49</div>
-                        <div
-                            data-orientation="horizontal"
-                            role="none"
-                            class="shrink-0 bg-border h-[1px] w-full my-2"
-                        ></div>
-                        <div class="text-sm">v1.2.0-beta.48</div>
-                        <div
-                            data-orientation="horizontal"
-                            role="none"
-                            class="shrink-0 bg-border h-[1px] w-full my-2"
-                        ></div>
-                        <div class="text-sm">v1.2.0-beta.47</div>
-                        <div
-                            data-orientation="horizontal"
-                            role="none"
-                            class="shrink-0 bg-border h-[1px] w-full my-2"
-                        ></div>
-                        <div class="text-sm">v1.2.0-beta.46</div>
-                        <div
-                            data-orientation="horizontal"
-                            role="none"
-                            class="shrink-0 bg-border h-[1px] w-full my-2"
-                        ></div>
-                        <div class="text-sm">v1.2.0-beta.45</div>
-                        <div
-                            data-orientation="horizontal"
-                            role="none"
-                            class="shrink-0 bg-border h-[1px] w-full my-2"
-                        ></div>
-                        <div class="text-sm">v1.2.0-beta.44</div>
-                        <div
-                            data-orientation="horizontal"
-                            role="none"
-                            class="shrink-0 bg-border h-[1px] w-full my-2"
-                        ></div>
-                        <div class="text-sm">v1.2.0-beta.43</div>
-                        <div
-                            data-orientation="horizontal"
-                            role="none"
-                            class="shrink-0 bg-border h-[1px] w-full my-2"
-                        ></div>
-                        <div class="text-sm">v1.2.0-beta.42</div>
-                        <div
-                            data-orientation="horizontal"
-                            role="none"
-                            class="shrink-0 bg-border h-[1px] w-full my-2"
-                        ></div>
-                        <div class="text-sm">v1.2.0-beta.41</div>
-                        <div
-                            data-orientation="horizontal"
-                            role="none"
-                            class="shrink-0 bg-border h-[1px] w-full my-2"
-                        ></div>
-                        <div class="text-sm">v1.2.0-beta.40</div>
-                        <div
-                            data-orientation="horizontal"
-                            role="none"
-                            class="shrink-0 bg-border h-[1px] w-full my-2"
-                        ></div>
-                        <div class="text-sm">v1.2.0-beta.39</div>
-                        <div
-                            data-orientation="horizontal"
-                            role="none"
-                            class="shrink-0 bg-border h-[1px] w-full my-2"
-                        ></div>
-                        <div class="text-sm">v1.2.0-beta.38</div>
-                        <div
-                            data-orientation="horizontal"
-                            role="none"
-                            class="shrink-0 bg-border h-[1px] w-full my-2"
-                        ></div>
-                        <div class="text-sm">v1.2.0-beta.37</div>
-                        <div
-                            data-orientation="horizontal"
-                            role="none"
-                            class="shrink-0 bg-border h-[1px] w-full my-2"
-                        ></div>
-                        <div class="text-sm">v1.2.0-beta.36</div>
-                        <div
-                            data-orientation="horizontal"
-                            role="none"
-                            class="shrink-0 bg-border h-[1px] w-full my-2"
-                        ></div>
-                        <div class="text-sm">v1.2.0-beta.35</div>
-                        <div
-                            data-orientation="horizontal"
-                            role="none"
-                            class="shrink-0 bg-border h-[1px] w-full my-2"
-                        ></div>
-                        <div class="text-sm">v1.2.0-beta.34</div>
-                        <div
-                            data-orientation="horizontal"
-                            role="none"
-                            class="shrink-0 bg-border h-[1px] w-full my-2"
-                        ></div>
-                        <div class="text-sm">v1.2.0-beta.33</div>
-                        <div
-                            data-orientation="horizontal"
-                            role="none"
-                            class="shrink-0 bg-border h-[1px] w-full my-2"
-                        ></div>
-                        <div class="text-sm">v1.2.0-beta.32</div>
-                        <div
-                            data-orientation="horizontal"
-                            role="none"
-                            class="shrink-0 bg-border h-[1px] w-full my-2"
-                        ></div>
-                        <div class="text-sm">v1.2.0-beta.31</div>
-                        <div
-                            data-orientation="horizontal"
-                            role="none"
-                            class="shrink-0 bg-border h-[1px] w-full my-2"
-                        ></div>
-                        <div class="text-sm">v1.2.0-beta.30</div>
-                        <div
-                            data-orientation="horizontal"
-                            role="none"
-                            class="shrink-0 bg-border h-[1px] w-full my-2"
-                        ></div>
-                        <div class="text-sm">v1.2.0-beta.29</div>
-                        <div
-                            data-orientation="horizontal"
-                            role="none"
-                            class="shrink-0 bg-border h-[1px] w-full my-2"
-                        ></div>
-                        <div class="text-sm">v1.2.0-beta.28</div>
-                        <div
-                            data-orientation="horizontal"
-                            role="none"
-                            class="shrink-0 bg-border h-[1px] w-full my-2"
-                        ></div>
-                        <div class="text-sm">v1.2.0-beta.27</div>
-                        <div
-                            data-orientation="horizontal"
-                            role="none"
-                            class="shrink-0 bg-border h-[1px] w-full my-2"
-                        ></div>
-                        <div class="text-sm">v1.2.0-beta.26</div>
-                        <div
-                            data-orientation="horizontal"
-                            role="none"
-                            class="shrink-0 bg-border h-[1px] w-full my-2"
-                        ></div>
-                        <div class="text-sm">v1.2.0-beta.25</div>
-                        <div
-                            data-orientation="horizontal"
-                            role="none"
-                            class="shrink-0 bg-border h-[1px] w-full my-2"
-                        ></div>
-                        <div class="text-sm">v1.2.0-beta.24</div>
-                        <div
-                            data-orientation="horizontal"
-                            role="none"
-                            class="shrink-0 bg-border h-[1px] w-full my-2"
-                        ></div>
-                        <div class="text-sm">v1.2.0-beta.23</div>
-                        <div
-                            data-orientation="horizontal"
-                            role="none"
-                            class="shrink-0 bg-border h-[1px] w-full my-2"
-                        ></div>
-                        <div class="text-sm">v1.2.0-beta.22</div>
-                        <div
-                            data-orientation="horizontal"
-                            role="none"
-                            class="shrink-0 bg-border h-[1px] w-full my-2"
-                        ></div>
-                        <div class="text-sm">v1.2.0-beta.21</div>
-                        <div
-                            data-orientation="horizontal"
-                            role="none"
-                            class="shrink-0 bg-border h-[1px] w-full my-2"
-                        ></div>
-                        <div class="text-sm">v1.2.0-beta.20</div>
-                        <div
-                            data-orientation="horizontal"
-                            role="none"
-                            class="shrink-0 bg-border h-[1px] w-full my-2"
-                        ></div>
-                        <div class="text-sm">v1.2.0-beta.19</div>
-                        <div
-                            data-orientation="horizontal"
-                            role="none"
-                            class="shrink-0 bg-border h-[1px] w-full my-2"
-                        ></div>
-                        <div class="text-sm">v1.2.0-beta.18</div>
-                        <div
-                            data-orientation="horizontal"
-                            role="none"
-                            class="shrink-0 bg-border h-[1px] w-full my-2"
-                        ></div>
-                        <div class="text-sm">v1.2.0-beta.17</div>
-                        <div
-                            data-orientation="horizontal"
-                            role="none"
-                            class="shrink-0 bg-border h-[1px] w-full my-2"
-                        ></div>
-                        <div class="text-sm">v1.2.0-beta.16</div>
-                        <div
-                            data-orientation="horizontal"
-                            role="none"
-                            class="shrink-0 bg-border h-[1px] w-full my-2"
-                        ></div>
-                        <div class="text-sm">v1.2.0-beta.15</div>
-                        <div
-                            data-orientation="horizontal"
-                            role="none"
-                            class="shrink-0 bg-border h-[1px] w-full my-2"
-                        ></div>
-                        <div class="text-sm">v1.2.0-beta.14</div>
-                        <div
-                            data-orientation="horizontal"
-                            role="none"
-                            class="shrink-0 bg-border h-[1px] w-full my-2"
-                        ></div>
-                        <div class="text-sm">v1.2.0-beta.13</div>
-                        <div
-                            data-orientation="horizontal"
-                            role="none"
-                            class="shrink-0 bg-border h-[1px] w-full my-2"
-                        ></div>
-                        <div class="text-sm">v1.2.0-beta.12</div>
-                        <div
-                            data-orientation="horizontal"
-                            role="none"
-                            class="shrink-0 bg-border h-[1px] w-full my-2"
-                        ></div>
-                        <div class="text-sm">v1.2.0-beta.11</div>
-                        <div
-                            data-orientation="horizontal"
-                            role="none"
-                            class="shrink-0 bg-border h-[1px] w-full my-2"
-                        ></div>
-                        <div class="text-sm">v1.2.0-beta.10</div>
-                        <div
-                            data-orientation="horizontal"
-                            role="none"
-                            class="shrink-0 bg-border h-[1px] w-full my-2"
-                        ></div>
-                        <div class="text-sm">v1.2.0-beta.9</div>
-                        <div
-                            data-orientation="horizontal"
-                            role="none"
-                            class="shrink-0 bg-border h-[1px] w-full my-2"
-                        ></div>
-                        <div class="text-sm">v1.2.0-beta.8</div>
-                        <div
-                            data-orientation="horizontal"
-                            role="none"
-                            class="shrink-0 bg-border h-[1px] w-full my-2"
-                        ></div>
-                        <div class="text-sm">v1.2.0-beta.7</div>
-                        <div
-                            data-orientation="horizontal"
-                            role="none"
-                            class="shrink-0 bg-border h-[1px] w-full my-2"
-                        ></div>
-                        <div class="text-sm">v1.2.0-beta.6</div>
-                        <div
-                            data-orientation="horizontal"
-                            role="none"
-                            class="shrink-0 bg-border h-[1px] w-full my-2"
-                        ></div>
-                        <div class="text-sm">v1.2.0-beta.5</div>
-                        <div
-                            data-orientation="horizontal"
-                            role="none"
-                            class="shrink-0 bg-border h-[1px] w-full my-2"
-                        ></div>
-                        <div class="text-sm">v1.2.0-beta.4</div>
-                        <div
-                            data-orientation="horizontal"
-                            role="none"
-                            class="shrink-0 bg-border h-[1px] w-full my-2"
-                        ></div>
-                        <div class="text-sm">v1.2.0-beta.3</div>
-                        <div
-                            data-orientation="horizontal"
-                            role="none"
-                            class="shrink-0 bg-border h-[1px] w-full my-2"
-                        ></div>
-                        <div class="text-sm">v1.2.0-beta.2</div>
-                        <div
-                            data-orientation="horizontal"
-                            role="none"
-                            class="shrink-0 bg-border h-[1px] w-full my-2"
-                        ></div>
-                        <div class="text-sm">v1.2.0-beta.1</div>
-                        <div
-                            data-orientation="horizontal"
-                            role="none"
-                            class="shrink-0 bg-border h-[1px] w-full my-2"
-                        ></div>
-                    </div>
-                </div>
-            </div>
+              data-orientation="horizontal"
+              role="none"
+              class="shrink-0 bg-border h-[1px] w-full my-2"></div>
+            <div class="text-sm">v1.2.0-beta.49</div>
+            <div
+              data-orientation="horizontal"
+              role="none"
+              class="shrink-0 bg-border h-[1px] w-full my-2"></div>
+            <div class="text-sm">v1.2.0-beta.48</div>
+            <div
+              data-orientation="horizontal"
+              role="none"
+              class="shrink-0 bg-border h-[1px] w-full my-2"></div>
+            <div class="text-sm">v1.2.0-beta.47</div>
+            <div
+              data-orientation="horizontal"
+              role="none"
+              class="shrink-0 bg-border h-[1px] w-full my-2"></div>
+            <div class="text-sm">v1.2.0-beta.46</div>
+            <div
+              data-orientation="horizontal"
+              role="none"
+              class="shrink-0 bg-border h-[1px] w-full my-2"></div>
+            <div class="text-sm">v1.2.0-beta.45</div>
+            <div
+              data-orientation="horizontal"
+              role="none"
+              class="shrink-0 bg-border h-[1px] w-full my-2"></div>
+            <div class="text-sm">v1.2.0-beta.44</div>
+            <div
+              data-orientation="horizontal"
+              role="none"
+              class="shrink-0 bg-border h-[1px] w-full my-2"></div>
+            <div class="text-sm">v1.2.0-beta.43</div>
+            <div
+              data-orientation="horizontal"
+              role="none"
+              class="shrink-0 bg-border h-[1px] w-full my-2"></div>
+            <div class="text-sm">v1.2.0-beta.42</div>
+            <div
+              data-orientation="horizontal"
+              role="none"
+              class="shrink-0 bg-border h-[1px] w-full my-2"></div>
+            <div class="text-sm">v1.2.0-beta.41</div>
+            <div
+              data-orientation="horizontal"
+              role="none"
+              class="shrink-0 bg-border h-[1px] w-full my-2"></div>
+            <div class="text-sm">v1.2.0-beta.40</div>
+            <div
+              data-orientation="horizontal"
+              role="none"
+              class="shrink-0 bg-border h-[1px] w-full my-2"></div>
+            <div class="text-sm">v1.2.0-beta.39</div>
+            <div
+              data-orientation="horizontal"
+              role="none"
+              class="shrink-0 bg-border h-[1px] w-full my-2"></div>
+            <div class="text-sm">v1.2.0-beta.38</div>
+            <div
+              data-orientation="horizontal"
+              role="none"
+              class="shrink-0 bg-border h-[1px] w-full my-2"></div>
+            <div class="text-sm">v1.2.0-beta.37</div>
+            <div
+              data-orientation="horizontal"
+              role="none"
+              class="shrink-0 bg-border h-[1px] w-full my-2"></div>
+            <div class="text-sm">v1.2.0-beta.36</div>
+            <div
+              data-orientation="horizontal"
+              role="none"
+              class="shrink-0 bg-border h-[1px] w-full my-2"></div>
+            <div class="text-sm">v1.2.0-beta.35</div>
+            <div
+              data-orientation="horizontal"
+              role="none"
+              class="shrink-0 bg-border h-[1px] w-full my-2"></div>
+            <div class="text-sm">v1.2.0-beta.34</div>
+            <div
+              data-orientation="horizontal"
+              role="none"
+              class="shrink-0 bg-border h-[1px] w-full my-2"></div>
+            <div class="text-sm">v1.2.0-beta.33</div>
+            <div
+              data-orientation="horizontal"
+              role="none"
+              class="shrink-0 bg-border h-[1px] w-full my-2"></div>
+            <div class="text-sm">v1.2.0-beta.32</div>
+            <div
+              data-orientation="horizontal"
+              role="none"
+              class="shrink-0 bg-border h-[1px] w-full my-2"></div>
+            <div class="text-sm">v1.2.0-beta.31</div>
+            <div
+              data-orientation="horizontal"
+              role="none"
+              class="shrink-0 bg-border h-[1px] w-full my-2"></div>
+            <div class="text-sm">v1.2.0-beta.30</div>
+            <div
+              data-orientation="horizontal"
+              role="none"
+              class="shrink-0 bg-border h-[1px] w-full my-2"></div>
+            <div class="text-sm">v1.2.0-beta.29</div>
+            <div
+              data-orientation="horizontal"
+              role="none"
+              class="shrink-0 bg-border h-[1px] w-full my-2"></div>
+            <div class="text-sm">v1.2.0-beta.28</div>
+            <div
+              data-orientation="horizontal"
+              role="none"
+              class="shrink-0 bg-border h-[1px] w-full my-2"></div>
+            <div class="text-sm">v1.2.0-beta.27</div>
+            <div
+              data-orientation="horizontal"
+              role="none"
+              class="shrink-0 bg-border h-[1px] w-full my-2"></div>
+            <div class="text-sm">v1.2.0-beta.26</div>
+            <div
+              data-orientation="horizontal"
+              role="none"
+              class="shrink-0 bg-border h-[1px] w-full my-2"></div>
+            <div class="text-sm">v1.2.0-beta.25</div>
+            <div
+              data-orientation="horizontal"
+              role="none"
+              class="shrink-0 bg-border h-[1px] w-full my-2"></div>
+            <div class="text-sm">v1.2.0-beta.24</div>
+            <div
+              data-orientation="horizontal"
+              role="none"
+              class="shrink-0 bg-border h-[1px] w-full my-2"></div>
+            <div class="text-sm">v1.2.0-beta.23</div>
+            <div
+              data-orientation="horizontal"
+              role="none"
+              class="shrink-0 bg-border h-[1px] w-full my-2"></div>
+            <div class="text-sm">v1.2.0-beta.22</div>
+            <div
+              data-orientation="horizontal"
+              role="none"
+              class="shrink-0 bg-border h-[1px] w-full my-2"></div>
+            <div class="text-sm">v1.2.0-beta.21</div>
+            <div
+              data-orientation="horizontal"
+              role="none"
+              class="shrink-0 bg-border h-[1px] w-full my-2"></div>
+            <div class="text-sm">v1.2.0-beta.20</div>
+            <div
+              data-orientation="horizontal"
+              role="none"
+              class="shrink-0 bg-border h-[1px] w-full my-2"></div>
+            <div class="text-sm">v1.2.0-beta.19</div>
+            <div
+              data-orientation="horizontal"
+              role="none"
+              class="shrink-0 bg-border h-[1px] w-full my-2"></div>
+            <div class="text-sm">v1.2.0-beta.18</div>
+            <div
+              data-orientation="horizontal"
+              role="none"
+              class="shrink-0 bg-border h-[1px] w-full my-2"></div>
+            <div class="text-sm">v1.2.0-beta.17</div>
+            <div
+              data-orientation="horizontal"
+              role="none"
+              class="shrink-0 bg-border h-[1px] w-full my-2"></div>
+            <div class="text-sm">v1.2.0-beta.16</div>
+            <div
+              data-orientation="horizontal"
+              role="none"
+              class="shrink-0 bg-border h-[1px] w-full my-2"></div>
+            <div class="text-sm">v1.2.0-beta.15</div>
+            <div
+              data-orientation="horizontal"
+              role="none"
+              class="shrink-0 bg-border h-[1px] w-full my-2"></div>
+            <div class="text-sm">v1.2.0-beta.14</div>
+            <div
+              data-orientation="horizontal"
+              role="none"
+              class="shrink-0 bg-border h-[1px] w-full my-2"></div>
+            <div class="text-sm">v1.2.0-beta.13</div>
+            <div
+              data-orientation="horizontal"
+              role="none"
+              class="shrink-0 bg-border h-[1px] w-full my-2"></div>
+            <div class="text-sm">v1.2.0-beta.12</div>
+            <div
+              data-orientation="horizontal"
+              role="none"
+              class="shrink-0 bg-border h-[1px] w-full my-2"></div>
+            <div class="text-sm">v1.2.0-beta.11</div>
+            <div
+              data-orientation="horizontal"
+              role="none"
+              class="shrink-0 bg-border h-[1px] w-full my-2"></div>
+            <div class="text-sm">v1.2.0-beta.10</div>
+            <div
+              data-orientation="horizontal"
+              role="none"
+              class="shrink-0 bg-border h-[1px] w-full my-2"></div>
+            <div class="text-sm">v1.2.0-beta.9</div>
+            <div
+              data-orientation="horizontal"
+              role="none"
+              class="shrink-0 bg-border h-[1px] w-full my-2"></div>
+            <div class="text-sm">v1.2.0-beta.8</div>
+            <div
+              data-orientation="horizontal"
+              role="none"
+              class="shrink-0 bg-border h-[1px] w-full my-2"></div>
+            <div class="text-sm">v1.2.0-beta.7</div>
+            <div
+              data-orientation="horizontal"
+              role="none"
+              class="shrink-0 bg-border h-[1px] w-full my-2"></div>
+            <div class="text-sm">v1.2.0-beta.6</div>
+            <div
+              data-orientation="horizontal"
+              role="none"
+              class="shrink-0 bg-border h-[1px] w-full my-2"></div>
+            <div class="text-sm">v1.2.0-beta.5</div>
+            <div
+              data-orientation="horizontal"
+              role="none"
+              class="shrink-0 bg-border h-[1px] w-full my-2"></div>
+            <div class="text-sm">v1.2.0-beta.4</div>
+            <div
+              data-orientation="horizontal"
+              role="none"
+              class="shrink-0 bg-border h-[1px] w-full my-2"></div>
+            <div class="text-sm">v1.2.0-beta.3</div>
+            <div
+              data-orientation="horizontal"
+              role="none"
+              class="shrink-0 bg-border h-[1px] w-full my-2"></div>
+            <div class="text-sm">v1.2.0-beta.2</div>
+            <div
+              data-orientation="horizontal"
+              role="none"
+              class="shrink-0 bg-border h-[1px] w-full my-2"></div>
+            <div class="text-sm">v1.2.0-beta.1</div>
+            <div
+              data-orientation="horizontal"
+              role="none"
+              class="shrink-0 bg-border h-[1px] w-full my-2"></div>
+          </div>
         </div>
+      </div>
     </div>
+  </div>
 </div>

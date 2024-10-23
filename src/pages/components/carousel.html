@@ -1,193 +1,150 @@
 <div class="my-8 w-full min-w-0">
+  <div
+    class="mb-4 flex items-center space-x-1 text-sm leading-none text-muted-foreground">
+    <div class="truncate">Docs</div>
+    <svg
+      width="15"
+      height="15"
+      viewBox="0 0 15 15"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      class="h-3.5 w-3.5">
+      <path
+        d="M6.1584 3.13508C6.35985 2.94621 6.67627 2.95642 6.86514 3.15788L10.6151 7.15788C10.7954 7.3502 10.7954 7.64949 10.6151 7.84182L6.86514 11.8418C6.67627 12.0433 6.35985 12.0535 6.1584 11.8646C5.95694 11.6757 5.94673 11.3593 6.1356 11.1579L9.565 7.49985L6.1356 3.84182C5.94673 3.64036 5.95694 3.32394 6.1584 3.13508Z"
+        fill="currentColor"
+        fill-rule="evenodd"
+        clip-rule="evenodd"></path>
+    </svg>
+    <div class="text-foreground">Carousel</div>
+  </div>
+  <div class="space-y-2">
+    <h1 class="scroll-m-20 text-3xl font-bold tracking-tight">Carousel</h1>
+    <p class="text-base text-muted-foreground">
+      <span
+        data-br=":r1k:"
+        data-brr="1"
+        style="
+          display: inline-block;
+          vertical-align: top;
+          text-decoration: inherit;
+          max-width: 334px;
+        ">
+        Displays a callout for user attention.
+      </span>
+    </p>
+  </div>
+  <div
+    class="preview flex min-h-[350px] w-full justify-center p-10 items-center">
     <div
-        class="mb-4 flex items-center space-x-1 text-sm leading-none text-muted-foreground"
-    >
-        <div class="truncate">Docs</div>
-        <svg
-            width="15"
-            height="15"
-            viewBox="0 0 15 15"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            class="h-3.5 w-3.5"
-        >
-            <path
-                d="M6.1584 3.13508C6.35985 2.94621 6.67627 2.95642 6.86514 3.15788L10.6151 7.15788C10.7954 7.3502 10.7954 7.64949 10.6151 7.84182L6.86514 11.8418C6.67627 12.0433 6.35985 12.0535 6.1584 11.8646C5.95694 11.6757 5.94673 11.3593 6.1356 11.1579L9.565 7.49985L6.1356 3.84182C5.94673 3.64036 5.95694 3.32394 6.1584 3.13508Z"
-                fill="currentColor"
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-            ></path>
-        </svg>
-        <div class="text-foreground">Carousel</div>
-    </div>
-    <div class="space-y-2">
-        <h1 class="scroll-m-20 text-3xl font-bold tracking-tight">Carousel</h1>
-        <p class="text-base text-muted-foreground">
-            <span
-                data-br=":r1k:"
-                data-brr="1"
-                style="
-                    display: inline-block;
-                    vertical-align: top;
-                    text-decoration: inherit;
-                    max-width: 334px;
-                "
-            >
-                Displays a callout for user attention.
-            </span>
-        </p>
-    </div>
-    <div
-        class="preview flex min-h-[350px] w-full justify-center p-10 items-center"
-    >
+      class="relative w-full max-w-xs"
+      role="region"
+      aria-roledescription="carousel">
+      <div class="overflow-hidden">
         <div
-            class="relative w-full max-w-xs"
-            role="region"
-            aria-roledescription="carousel"
-        >
-            <div class="overflow-hidden">
-                <div
-                    class="flex -ml-4"
-                    style="transform: translate3d(0px, 0px, 0px)"
-                >
-                    <div
-                        role="group"
-                        aria-roledescription="slide"
-                        class="min-w-0 shrink-0 grow-0 basis-full pl-4"
-                    >
-                        <div class="p-1">
-                            <div
-                                class="rounded-xl border bg-card text-card-foreground shadow"
-                            >
-                                <div
-                                    class="flex aspect-square items-center justify-center p-6"
-                                >
-                                    <span class="text-4xl font-semibold"
-                                        >1</span
-                                    >
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div
-                        role="group"
-                        aria-roledescription="slide"
-                        class="min-w-0 shrink-0 grow-0 basis-full pl-4"
-                    >
-                        <div class="p-1">
-                            <div
-                                class="rounded-xl border bg-card text-card-foreground shadow"
-                            >
-                                <div
-                                    class="flex aspect-square items-center justify-center p-6"
-                                >
-                                    <span class="text-4xl font-semibold"
-                                        >2</span
-                                    >
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div
-                        role="group"
-                        aria-roledescription="slide"
-                        class="min-w-0 shrink-0 grow-0 basis-full pl-4"
-                    >
-                        <div class="p-1">
-                            <div
-                                class="rounded-xl border bg-card text-card-foreground shadow"
-                            >
-                                <div
-                                    class="flex aspect-square items-center justify-center p-6"
-                                >
-                                    <span class="text-4xl font-semibold"
-                                        >3</span
-                                    >
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div
-                        role="group"
-                        aria-roledescription="slide"
-                        class="min-w-0 shrink-0 grow-0 basis-full pl-4"
-                    >
-                        <div class="p-1">
-                            <div
-                                class="rounded-xl border bg-card text-card-foreground shadow"
-                            >
-                                <div
-                                    class="flex aspect-square items-center justify-center p-6"
-                                >
-                                    <span class="text-4xl font-semibold"
-                                        >4</span
-                                    >
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div
-                        role="group"
-                        aria-roledescription="slide"
-                        class="min-w-0 shrink-0 grow-0 basis-full pl-4"
-                    >
-                        <div class="p-1">
-                            <div
-                                class="rounded-xl border bg-card text-card-foreground shadow"
-                            >
-                                <div
-                                    class="flex aspect-square items-center justify-center p-6"
-                                >
-                                    <span class="text-4xl font-semibold"
-                                        >5</span
-                                    >
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+          class="flex -ml-4"
+          style="transform: translate3d(0px, 0px, 0px)">
+          <div
+            role="group"
+            aria-roledescription="slide"
+            class="min-w-0 shrink-0 grow-0 basis-full pl-4">
+            <div class="p-1">
+              <div
+                class="rounded-xl border bg-card text-card-foreground shadow">
+                <div class="flex aspect-square items-center justify-center p-6">
+                  <span class="text-4xl font-semibold">1</span>
                 </div>
+              </div>
             </div>
-            <button
-                class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground absolute h-8 w-8 rounded-full -left-12 top-1/2 -translate-y-1/2"
-                disabled=""
-            >
-                <svg
-                    width="15"
-                    height="15"
-                    viewBox="0 0 15 15"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="h-4 w-4"
-                >
-                    <path
-                        d="M6.85355 3.14645C7.04882 3.34171 7.04882 3.65829 6.85355 3.85355L3.70711 7H12.5C12.7761 7 13 7.22386 13 7.5C13 7.77614 12.7761 8 12.5 8H3.70711L6.85355 11.1464C7.04882 11.3417 7.04882 11.6583 6.85355 11.8536C6.65829 12.0488 6.34171 12.0488 6.14645 11.8536L2.14645 7.85355C1.95118 7.65829 1.95118 7.34171 2.14645 7.14645L6.14645 3.14645C6.34171 2.95118 6.65829 2.95118 6.85355 3.14645Z"
-                        fill="currentColor"
-                        fill-rule="evenodd"
-                        clip-rule="evenodd"
-                    ></path>
-                </svg>
-                <span class="sr-only">Previous slide</span>
-            </button>
-            <button
-                class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground absolute h-8 w-8 rounded-full -right-12 top-1/2 -translate-y-1/2"
-            >
-                <svg
-                    width="15"
-                    height="15"
-                    viewBox="0 0 15 15"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="h-4 w-4"
-                >
-                    <path
-                        d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z"
-                        fill="currentColor"
-                        fill-rule="evenodd"
-                        clip-rule="evenodd"
-                    ></path>
-                </svg>
-                <span class="sr-only">Next slide</span>
-            </button>
+          </div>
+          <div
+            role="group"
+            aria-roledescription="slide"
+            class="min-w-0 shrink-0 grow-0 basis-full pl-4">
+            <div class="p-1">
+              <div
+                class="rounded-xl border bg-card text-card-foreground shadow">
+                <div class="flex aspect-square items-center justify-center p-6">
+                  <span class="text-4xl font-semibold">2</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            role="group"
+            aria-roledescription="slide"
+            class="min-w-0 shrink-0 grow-0 basis-full pl-4">
+            <div class="p-1">
+              <div
+                class="rounded-xl border bg-card text-card-foreground shadow">
+                <div class="flex aspect-square items-center justify-center p-6">
+                  <span class="text-4xl font-semibold">3</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            role="group"
+            aria-roledescription="slide"
+            class="min-w-0 shrink-0 grow-0 basis-full pl-4">
+            <div class="p-1">
+              <div
+                class="rounded-xl border bg-card text-card-foreground shadow">
+                <div class="flex aspect-square items-center justify-center p-6">
+                  <span class="text-4xl font-semibold">4</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            role="group"
+            aria-roledescription="slide"
+            class="min-w-0 shrink-0 grow-0 basis-full pl-4">
+            <div class="p-1">
+              <div
+                class="rounded-xl border bg-card text-card-foreground shadow">
+                <div class="flex aspect-square items-center justify-center p-6">
+                  <span class="text-4xl font-semibold">5</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
+      <button
+        class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground absolute h-8 w-8 rounded-full -left-12 top-1/2 -translate-y-1/2"
+        disabled="">
+        <svg
+          width="15"
+          height="15"
+          viewBox="0 0 15 15"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-4 w-4">
+          <path
+            d="M6.85355 3.14645C7.04882 3.34171 7.04882 3.65829 6.85355 3.85355L3.70711 7H12.5C12.7761 7 13 7.22386 13 7.5C13 7.77614 12.7761 8 12.5 8H3.70711L6.85355 11.1464C7.04882 11.3417 7.04882 11.6583 6.85355 11.8536C6.65829 12.0488 6.34171 12.0488 6.14645 11.8536L2.14645 7.85355C1.95118 7.65829 1.95118 7.34171 2.14645 7.14645L6.14645 3.14645C6.34171 2.95118 6.65829 2.95118 6.85355 3.14645Z"
+            fill="currentColor"
+            fill-rule="evenodd"
+            clip-rule="evenodd"></path>
+        </svg>
+        <span class="sr-only">Previous slide</span>
+      </button>
+      <button
+        class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground absolute h-8 w-8 rounded-full -right-12 top-1/2 -translate-y-1/2">
+        <svg
+          width="15"
+          height="15"
+          viewBox="0 0 15 15"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-4 w-4">
+          <path
+            d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z"
+            fill="currentColor"
+            fill-rule="evenodd"
+            clip-rule="evenodd"></path>
+        </svg>
+        <span class="sr-only">Next slide</span>
+      </button>
     </div>
+  </div>
 </div>

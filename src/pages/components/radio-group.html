@@ -1,133 +1,116 @@
 <div class="my-8 w-full min-w-0">
+  <div
+    class="mb-4 flex items-center space-x-1 text-sm leading-none text-muted-foreground">
+    <div class="truncate">Docs</div>
+    <svg
+      width="15"
+      height="15"
+      viewBox="0 0 15 15"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      class="h-3.5 w-3.5">
+      <path
+        d="M6.1584 3.13508C6.35985 2.94621 6.67627 2.95642 6.86514 3.15788L10.6151 7.15788C10.7954 7.3502 10.7954 7.64949 10.6151 7.84182L6.86514 11.8418C6.67627 12.0433 6.35985 12.0535 6.1584 11.8646C5.95694 11.6757 5.94673 11.3593 6.1356 11.1579L9.565 7.49985L6.1356 3.84182C5.94673 3.64036 5.95694 3.32394 6.1584 3.13508Z"
+        fill="currentColor"
+        fill-rule="evenodd"
+        clip-rule="evenodd"></path>
+    </svg>
+    <div class="text-foreground">Radio Group</div>
+  </div>
+  <div class="space-y-2">
+    <h1 class="scroll-m-20 text-3xl font-bold tracking-tight">Radio Group</h1>
+    <p class="text-base text-muted-foreground">
+      <span
+        data-br=":r1k:"
+        data-brr="1"
+        style="
+          display: inline-block;
+          vertical-align: top;
+          text-decoration: inherit;
+          max-width: 334px;
+        ">
+        Displays a callout for user attention.
+      </span>
+    </p>
+  </div>
+  <div
+    class="preview flex min-h-[350px] w-full justify-center p-10 items-center">
     <div
-        class="mb-4 flex items-center space-x-1 text-sm leading-none text-muted-foreground"
-    >
-        <div class="truncate">Docs</div>
-        <svg
-            width="15"
-            height="15"
-            viewBox="0 0 15 15"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            class="h-3.5 w-3.5"
-        >
-            <path
-                d="M6.1584 3.13508C6.35985 2.94621 6.67627 2.95642 6.86514 3.15788L10.6151 7.15788C10.7954 7.3502 10.7954 7.64949 10.6151 7.84182L6.86514 11.8418C6.67627 12.0433 6.35985 12.0535 6.1584 11.8646C5.95694 11.6757 5.94673 11.3593 6.1356 11.1579L9.565 7.49985L6.1356 3.84182C5.94673 3.64036 5.95694 3.32394 6.1584 3.13508Z"
+      role="radiogroup"
+      aria-required="false"
+      dir="ltr"
+      class="grid gap-2"
+      tabindex="0"
+      style="outline: none">
+      <div class="flex items-center space-x-2">
+        <button
+          type="button"
+          role="radio"
+          aria-checked="false"
+          data-state="unchecked"
+          value="default"
+          class="aspect-square h-4 w-4 rounded-full border border-primary text-primary shadow focus:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
+          id="r1"
+          tabindex="-1"
+          data-radix-collection-item=""></button>
+        <label
+          class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+          for="r1">
+          Default
+        </label>
+      </div>
+      <div class="flex items-center space-x-2">
+        <button
+          type="button"
+          role="radio"
+          aria-checked="true"
+          data-state="checked"
+          value="comfortable"
+          class="aspect-square h-4 w-4 rounded-full border border-primary text-primary shadow focus:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
+          id="r2"
+          tabindex="-1"
+          data-radix-collection-item="">
+          <span
+            data-state="checked"
+            class="flex items-center justify-center">
+            <svg
+              width="15"
+              height="15"
+              viewBox="0 0 15 15"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-3.5 w-3.5 fill-primary">
+              <path
+                d="M11.4669 3.72684C11.7558 3.91574 11.8369 4.30308 11.648 4.59198L7.39799 11.092C7.29783 11.2452 7.13556 11.3467 6.95402 11.3699C6.77247 11.3931 6.58989 11.3355 6.45446 11.2124L3.70446 8.71241C3.44905 8.48022 3.43023 8.08494 3.66242 7.82953C3.89461 7.57412 4.28989 7.55529 4.5453 7.78749L6.75292 9.79441L10.6018 3.90792C10.7907 3.61902 11.178 3.53795 11.4669 3.72684Z"
                 fill="currentColor"
                 fill-rule="evenodd"
-                clip-rule="evenodd"
-            ></path>
-        </svg>
-        <div class="text-foreground">Radio Group</div>
+                clip-rule="evenodd"></path>
+            </svg>
+          </span>
+        </button>
+        <label
+          class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+          for="r2">
+          Comfortable
+        </label>
+      </div>
+      <div class="flex items-center space-x-2">
+        <button
+          type="button"
+          role="radio"
+          aria-checked="false"
+          data-state="unchecked"
+          value="compact"
+          class="aspect-square h-4 w-4 rounded-full border border-primary text-primary shadow focus:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
+          id="r3"
+          tabindex="-1"
+          data-radix-collection-item=""></button>
+        <label
+          class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+          for="r3">
+          Compact
+        </label>
+      </div>
     </div>
-    <div class="space-y-2">
-        <h1 class="scroll-m-20 text-3xl font-bold tracking-tight">
-            Radio Group
-        </h1>
-        <p class="text-base text-muted-foreground">
-            <span
-                data-br=":r1k:"
-                data-brr="1"
-                style="
-                    display: inline-block;
-                    vertical-align: top;
-                    text-decoration: inherit;
-                    max-width: 334px;
-                "
-            >
-                Displays a callout for user attention.
-            </span>
-        </p>
-    </div>
-    <div
-        class="preview flex min-h-[350px] w-full justify-center p-10 items-center"
-    >
-        <div
-            role="radiogroup"
-            aria-required="false"
-            dir="ltr"
-            class="grid gap-2"
-            tabindex="0"
-            style="outline: none"
-        >
-            <div class="flex items-center space-x-2">
-                <button
-                    type="button"
-                    role="radio"
-                    aria-checked="false"
-                    data-state="unchecked"
-                    value="default"
-                    class="aspect-square h-4 w-4 rounded-full border border-primary text-primary shadow focus:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
-                    id="r1"
-                    tabindex="-1"
-                    data-radix-collection-item=""
-                ></button>
-                <label
-                    class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                    for="r1"
-                >
-                    Default
-                </label>
-            </div>
-            <div class="flex items-center space-x-2">
-                <button
-                    type="button"
-                    role="radio"
-                    aria-checked="true"
-                    data-state="checked"
-                    value="comfortable"
-                    class="aspect-square h-4 w-4 rounded-full border border-primary text-primary shadow focus:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
-                    id="r2"
-                    tabindex="-1"
-                    data-radix-collection-item=""
-                >
-                    <span
-                        data-state="checked"
-                        class="flex items-center justify-center"
-                    >
-                        <svg
-                            width="15"
-                            height="15"
-                            viewBox="0 0 15 15"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                            class="h-3.5 w-3.5 fill-primary"
-                        >
-                            <path
-                                d="M11.4669 3.72684C11.7558 3.91574 11.8369 4.30308 11.648 4.59198L7.39799 11.092C7.29783 11.2452 7.13556 11.3467 6.95402 11.3699C6.77247 11.3931 6.58989 11.3355 6.45446 11.2124L3.70446 8.71241C3.44905 8.48022 3.43023 8.08494 3.66242 7.82953C3.89461 7.57412 4.28989 7.55529 4.5453 7.78749L6.75292 9.79441L10.6018 3.90792C10.7907 3.61902 11.178 3.53795 11.4669 3.72684Z"
-                                fill="currentColor"
-                                fill-rule="evenodd"
-                                clip-rule="evenodd"
-                            ></path>
-                        </svg>
-                    </span>
-                </button>
-                <label
-                    class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                    for="r2"
-                >
-                    Comfortable
-                </label>
-            </div>
-            <div class="flex items-center space-x-2">
-                <button
-                    type="button"
-                    role="radio"
-                    aria-checked="false"
-                    data-state="unchecked"
-                    value="compact"
-                    class="aspect-square h-4 w-4 rounded-full border border-primary text-primary shadow focus:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
-                    id="r3"
-                    tabindex="-1"
-                    data-radix-collection-item=""
-                ></button>
-                <label
-                    class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                    for="r3"
-                >
-                    Compact
-                </label>
-            </div>
-        </div>
-    </div>
+  </div>
 </div>

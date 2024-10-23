@@ -1,212 +1,199 @@
 <div class="my-8 w-full min-w-0">
+  <div
+    class="mb-4 flex items-center space-x-1 text-sm leading-none text-muted-foreground">
+    <div class="truncate">Docs</div>
+    <svg
+      width="15"
+      height="15"
+      viewBox="0 0 15 15"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      class="h-3.5 w-3.5">
+      <path
+        d="M6.1584 3.13508C6.35985 2.94621 6.67627 2.95642 6.86514 3.15788L10.6151 7.15788C10.7954 7.3502 10.7954 7.64949 10.6151 7.84182L6.86514 11.8418C6.67627 12.0433 6.35985 12.0535 6.1584 11.8646C5.95694 11.6757 5.94673 11.3593 6.1356 11.1579L9.565 7.49985L6.1356 3.84182C5.94673 3.64036 5.95694 3.32394 6.1584 3.13508Z"
+        fill="currentColor"
+        fill-rule="evenodd"
+        clip-rule="evenodd"></path>
+    </svg>
+    <div class="text-foreground">Accordion</div>
+  </div>
+  <div class="space-y-2">
+    <h1 class="scroll-m-20 text-3xl font-bold tracking-tight">Accordion</h1>
+    <p class="text-base text-muted-foreground">
+      <span
+        data-br=":r1k:"
+        data-brr="1"
+        style="
+          display: inline-block;
+          vertical-align: top;
+          text-decoration: inherit;
+          max-width: 334px;
+        ">
+        A vertically stacked set of interactive headings that each reveal a
+        section of content.
+      </span>
+    </p>
+  </div>
+  <div
+    class="preview flex min-h-[350px] w-full justify-center p-10 items-center">
     <div
-        class="mb-4 flex items-center space-x-1 text-sm leading-none text-muted-foreground"
-    >
-        <div class="truncate">Docs</div>
-        <svg
-            width="15"
-            height="15"
-            viewBox="0 0 15 15"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            class="h-3.5 w-3.5"
-        >
-            <path
-                d="M6.1584 3.13508C6.35985 2.94621 6.67627 2.95642 6.86514 3.15788L10.6151 7.15788C10.7954 7.3502 10.7954 7.64949 10.6151 7.84182L6.86514 11.8418C6.67627 12.0433 6.35985 12.0535 6.1584 11.8646C5.95694 11.6757 5.94673 11.3593 6.1356 11.1579L9.565 7.49985L6.1356 3.84182C5.94673 3.64036 5.95694 3.32394 6.1584 3.13508Z"
+      class="w-full"
+      data-orientation="vertical">
+      <div
+        data-state="open"
+        data-orientation="vertical"
+        class="border-b">
+        <h3
+          data-orientation="vertical"
+          data-state="open"
+          class="flex">
+          <button
+            type="button"
+            aria-controls="radix-:r2i:"
+            aria-expanded="true"
+            data-state="open"
+            data-orientation="vertical"
+            id="radix-:r2h:"
+            class="flex flex-1 items-center justify-between py-4 text-sm font-medium transition-all hover:underline [&amp;[data-state=open]>svg]:rotate-180"
+            data-radix-collection-item>
+            Is it accessible?
+            <svg
+              width="15"
+              height="15"
+              viewBox="0 0 15 15"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-4 w-4 shrink-0 text-muted-foreground transition-transform duration-200">
+              <path
+                d="M3.13523 6.15803C3.3241 5.95657 3.64052 5.94637 3.84197 6.13523L7.5 9.56464L11.158 6.13523C11.3595 5.94637 11.6759 5.95657 11.8648 6.15803C12.0536 6.35949 12.0434 6.67591 11.842 6.86477L7.84197 10.6148C7.64964 10.7951 7.35036 10.7951 7.15803 10.6148L3.15803 6.86477C2.95657 6.67591 2.94637 6.35949 3.13523 6.15803Z"
                 fill="currentColor"
                 fill-rule="evenodd"
-                clip-rule="evenodd"
-            ></path>
-        </svg>
-        <div class="text-foreground">Accordion</div>
-    </div>
-    <div class="space-y-2">
-        <h1 class="scroll-m-20 text-3xl font-bold tracking-tight">Accordion</h1>
-        <p class="text-base text-muted-foreground">
-            <span
-                data-br=":r1k:"
-                data-brr="1"
-                style="
-                    display: inline-block;
-                    vertical-align: top;
-                    text-decoration: inherit;
-                    max-width: 334px;
-                "
-            >
-                A vertically stacked set of interactive headings that each
-                reveal a section of content.
-            </span>
-        </p>
-    </div>
-    <div
-        class="preview flex min-h-[350px] w-full justify-center p-10 items-center"
-    >
-        <div class="w-full" data-orientation="vertical">
-            <div data-state="open" data-orientation="vertical" class="border-b">
-                <h3 data-orientation="vertical" data-state="open" class="flex">
-                    <button
-                        type="button"
-                        aria-controls="radix-:r2i:"
-                        aria-expanded="true"
-                        data-state="open"
-                        data-orientation="vertical"
-                        id="radix-:r2h:"
-                        class="flex flex-1 items-center justify-between py-4 text-sm font-medium transition-all hover:underline [&amp;[data-state=open]>svg]:rotate-180"
-                        data-radix-collection-item
-                    >
-                        Is it accessible?
-                        <svg
-                            width="15"
-                            height="15"
-                            viewBox="0 0 15 15"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                            class="h-4 w-4 shrink-0 text-muted-foreground transition-transform duration-200"
-                        >
-                            <path
-                                d="M3.13523 6.15803C3.3241 5.95657 3.64052 5.94637 3.84197 6.13523L7.5 9.56464L11.158 6.13523C11.3595 5.94637 11.6759 5.95657 11.8648 6.15803C12.0536 6.35949 12.0434 6.67591 11.842 6.86477L7.84197 10.6148C7.64964 10.7951 7.35036 10.7951 7.15803 10.6148L3.15803 6.86477C2.95657 6.67591 2.94637 6.35949 3.13523 6.15803Z"
-                                fill="currentColor"
-                                fill-rule="evenodd"
-                                clip-rule="evenodd"
-                            ></path>
-                        </svg>
-                    </button>
-                </h3>
-                <div
-                    data-state="open"
-                    id="radix-:r2i:"
-                    role="region"
-                    aria-labelledby="radix-:r2h:"
-                    data-orientation="vertical"
-                    class="overflow-hidden text-sm data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down"
-                    style="
-                        --radix-accordion-content-height: var(
-                            --radix-collapsible-content-height
-                        );
-                        --radix-accordion-content-width: var(
-                            --radix-collapsible-content-width
-                        );
-                        --radix-collapsible-content-height: 36px;
-                        --radix-collapsible-content-width: 409.5px;
-                    "
-                >
-                    <div class="pb-4 pt-0">
-                        Yes. It adheres to the WAI-ARIA design pattern.
-                    </div>
-                </div>
-            </div>
-            <div
-                data-state="closed"
-                data-orientation="vertical"
-                class="border-b"
-            >
-                <h3
-                    data-orientation="vertical"
-                    data-state="closed"
-                    class="flex"
-                >
-                    <button
-                        type="button"
-                        aria-controls="radix-:r2k:"
-                        aria-expanded="false"
-                        data-state="closed"
-                        data-orientation="vertical"
-                        id="radix-:r2j:"
-                        class="flex flex-1 items-center justify-between py-4 text-sm font-medium transition-all hover:underline [&amp;[data-state=open]>svg]:rotate-180"
-                        data-radix-collection-item
-                    >
-                        Is it styled?
-                        <svg
-                            width="15"
-                            height="15"
-                            viewBox="0 0 15 15"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                            class="h-4 w-4 shrink-0 text-muted-foreground transition-transform duration-200"
-                        >
-                            <path
-                                d="M3.13523 6.15803C3.3241 5.95657 3.64052 5.94637 3.84197 6.13523L7.5 9.56464L11.158 6.13523C11.3595 5.94637 11.6759 5.95657 11.8648 6.15803C12.0536 6.35949 12.0434 6.67591 11.842 6.86477L7.84197 10.6148C7.64964 10.7951 7.35036 10.7951 7.15803 10.6148L3.15803 6.86477C2.95657 6.67591 2.94637 6.35949 3.13523 6.15803Z"
-                                fill="currentColor"
-                                fill-rule="evenodd"
-                                clip-rule="evenodd"
-                            ></path>
-                        </svg>
-                    </button>
-                </h3>
-                <div
-                    data-state="closed"
-                    id="radix-:r2k:"
-                    hidden
-                    role="region"
-                    aria-labelledby="radix-:r2j:"
-                    data-orientation="vertical"
-                    class="overflow-hidden text-sm data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down"
-                    style="
-                        --radix-accordion-content-height: var(
-                            --radix-collapsible-content-height
-                        );
-                        --radix-accordion-content-width: var(
-                            --radix-collapsible-content-width
-                        );
-                    "
-                ></div>
-            </div>
-            <div
-                data-state="closed"
-                data-orientation="vertical"
-                class="border-b"
-            >
-                <h3
-                    data-orientation="vertical"
-                    data-state="closed"
-                    class="flex"
-                >
-                    <button
-                        type="button"
-                        aria-controls="radix-:r2m:"
-                        aria-expanded="false"
-                        data-state="closed"
-                        data-orientation="vertical"
-                        id="radix-:r2l:"
-                        class="flex flex-1 items-center justify-between py-4 text-sm font-medium transition-all hover:underline [&amp;[data-state=open]>svg]:rotate-180"
-                        data-radix-collection-item
-                    >
-                        Is it animated?
-                        <svg
-                            width="15"
-                            height="15"
-                            viewBox="0 0 15 15"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                            class="h-4 w-4 shrink-0 text-muted-foreground transition-transform duration-200"
-                        >
-                            <path
-                                d="M3.13523 6.15803C3.3241 5.95657 3.64052 5.94637 3.84197 6.13523L7.5 9.56464L11.158 6.13523C11.3595 5.94637 11.6759 5.95657 11.8648 6.15803C12.0536 6.35949 12.0434 6.67591 11.842 6.86477L7.84197 10.6148C7.64964 10.7951 7.35036 10.7951 7.15803 10.6148L3.15803 6.86477C2.95657 6.67591 2.94637 6.35949 3.13523 6.15803Z"
-                                fill="currentColor"
-                                fill-rule="evenodd"
-                                clip-rule="evenodd"
-                            ></path>
-                        </svg>
-                    </button>
-                </h3>
-                <div
-                    data-state="closed"
-                    id="radix-:r2m:"
-                    hidden
-                    role="region"
-                    aria-labelledby="radix-:r2l:"
-                    data-orientation="vertical"
-                    class="overflow-hidden text-sm data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down"
-                    style="
-                        --radix-accordion-content-height: var(
-                            --radix-collapsible-content-height
-                        );
-                        --radix-accordion-content-width: var(
-                            --radix-collapsible-content-width
-                        );
-                    "
-                ></div>
-            </div>
+                clip-rule="evenodd"></path>
+            </svg>
+          </button>
+        </h3>
+        <div
+          data-state="open"
+          id="radix-:r2i:"
+          role="region"
+          aria-labelledby="radix-:r2h:"
+          data-orientation="vertical"
+          class="overflow-hidden text-sm data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down"
+          style="
+            --radix-accordion-content-height: var(
+              --radix-collapsible-content-height
+            );
+            --radix-accordion-content-width: var(
+              --radix-collapsible-content-width
+            );
+            --radix-collapsible-content-height: 36px;
+            --radix-collapsible-content-width: 409.5px;
+          ">
+          <div class="pb-4 pt-0">
+            Yes. It adheres to the WAI-ARIA design pattern.
+          </div>
         </div>
+      </div>
+      <div
+        data-state="closed"
+        data-orientation="vertical"
+        class="border-b">
+        <h3
+          data-orientation="vertical"
+          data-state="closed"
+          class="flex">
+          <button
+            type="button"
+            aria-controls="radix-:r2k:"
+            aria-expanded="false"
+            data-state="closed"
+            data-orientation="vertical"
+            id="radix-:r2j:"
+            class="flex flex-1 items-center justify-between py-4 text-sm font-medium transition-all hover:underline [&amp;[data-state=open]>svg]:rotate-180"
+            data-radix-collection-item>
+            Is it styled?
+            <svg
+              width="15"
+              height="15"
+              viewBox="0 0 15 15"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-4 w-4 shrink-0 text-muted-foreground transition-transform duration-200">
+              <path
+                d="M3.13523 6.15803C3.3241 5.95657 3.64052 5.94637 3.84197 6.13523L7.5 9.56464L11.158 6.13523C11.3595 5.94637 11.6759 5.95657 11.8648 6.15803C12.0536 6.35949 12.0434 6.67591 11.842 6.86477L7.84197 10.6148C7.64964 10.7951 7.35036 10.7951 7.15803 10.6148L3.15803 6.86477C2.95657 6.67591 2.94637 6.35949 3.13523 6.15803Z"
+                fill="currentColor"
+                fill-rule="evenodd"
+                clip-rule="evenodd"></path>
+            </svg>
+          </button>
+        </h3>
+        <div
+          data-state="closed"
+          id="radix-:r2k:"
+          hidden
+          role="region"
+          aria-labelledby="radix-:r2j:"
+          data-orientation="vertical"
+          class="overflow-hidden text-sm data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down"
+          style="
+            --radix-accordion-content-height: var(
+              --radix-collapsible-content-height
+            );
+            --radix-accordion-content-width: var(
+              --radix-collapsible-content-width
+            );
+          "></div>
+      </div>
+      <div
+        data-state="closed"
+        data-orientation="vertical"
+        class="border-b">
+        <h3
+          data-orientation="vertical"
+          data-state="closed"
+          class="flex">
+          <button
+            type="button"
+            aria-controls="radix-:r2m:"
+            aria-expanded="false"
+            data-state="closed"
+            data-orientation="vertical"
+            id="radix-:r2l:"
+            class="flex flex-1 items-center justify-between py-4 text-sm font-medium transition-all hover:underline [&amp;[data-state=open]>svg]:rotate-180"
+            data-radix-collection-item>
+            Is it animated?
+            <svg
+              width="15"
+              height="15"
+              viewBox="0 0 15 15"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-4 w-4 shrink-0 text-muted-foreground transition-transform duration-200">
+              <path
+                d="M3.13523 6.15803C3.3241 5.95657 3.64052 5.94637 3.84197 6.13523L7.5 9.56464L11.158 6.13523C11.3595 5.94637 11.6759 5.95657 11.8648 6.15803C12.0536 6.35949 12.0434 6.67591 11.842 6.86477L7.84197 10.6148C7.64964 10.7951 7.35036 10.7951 7.15803 10.6148L3.15803 6.86477C2.95657 6.67591 2.94637 6.35949 3.13523 6.15803Z"
+                fill="currentColor"
+                fill-rule="evenodd"
+                clip-rule="evenodd"></path>
+            </svg>
+          </button>
+        </h3>
+        <div
+          data-state="closed"
+          id="radix-:r2m:"
+          hidden
+          role="region"
+          aria-labelledby="radix-:r2l:"
+          data-orientation="vertical"
+          class="overflow-hidden text-sm data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down"
+          style="
+            --radix-accordion-content-height: var(
+              --radix-collapsible-content-height
+            );
+            --radix-accordion-content-width: var(
+              --radix-collapsible-content-width
+            );
+          "></div>
+      </div>
     </div>
+  </div>
 </div>
