@@ -1628,6 +1628,10 @@ body {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.grid-cols-6 {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+
 .grid-cols-\[1fr_110px\] {
   grid-template-columns: 1fr 110px;
 }
