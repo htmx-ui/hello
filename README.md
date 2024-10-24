@@ -4,7 +4,7 @@
 Welcome to my HTMX, Hyperscript, and TailwindCSS UI library! This project is inspired by popular UI frameworks such as **Headless UI**, **ShadCN**, and **Skeleton UI**. Designed to be **completely free**, this library allows you to **copy and paste** every component with ease, enabling fast and efficient web development.
 
 Please go and check the demo
-[Demo](https://ar-92.github.io/UI/src/index){:target="_blank"}
+[Demo](https://ar-92.github.io/UI/src/index)
 
 > **Status**: 🚧 Work in Progress - Only 10% completed
 
