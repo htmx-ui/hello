@@ -1,5 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 
+// const { fontFamily } = require("tailwindcss/defaultTheme")
+
 module.exports = {
   darkMode: ["class"],
   content: ["./src/**/*.{html,js}"],
@@ -79,8 +81,4 @@ module.exports = {
     },
   },
   plugins: [],
-  // Add this to ensure custom colors are generated
-  corePlugins: {
-    preflight: true,
-  }
 };
