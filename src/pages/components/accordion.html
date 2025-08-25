@@ -87,8 +87,7 @@
             role="region"
             aria-labelledby="accordion-trigger-1"
             data-orientation="vertical"
-            class="overflow-hidden text-sm transition-all duration-300 ease-in-out"
-            style="max-height: 100px;">
+            class="overflow-hidden text-sm transition-all duration-300 ease-in-out">
             <div class="pb-4 pt-0">
               Yes. It adheres to the WAI-ARIA design pattern.
             </div>
@@ -149,8 +148,7 @@
             role="region"
             aria-labelledby="accordion-trigger-2"
             data-orientation="vertical"
-            class="overflow-hidden text-sm transition-all duration-300 ease-in-out hidden"
-            style="max-height: 0;">
+            class="overflow-hidden text-sm transition-all duration-300 ease-in-out hidden">
             <div class="pb-4 pt-0">
               Yes. It comes with default styles that match the other components' aesthetics.
             </div>
@@ -211,8 +209,7 @@
             role="region"
             aria-labelledby="accordion-trigger-3"
             data-orientation="vertical"
-            class="overflow-hidden text-sm transition-all duration-300 ease-in-out hidden"
-            style="max-height: 0;">
+            class="overflow-hidden text-sm transition-all duration-300 ease-in-out hidden">
             <div class="pb-4 pt-0">
               Yes. It's animated by default with smooth transitions, but you can customize the animation as needed.
             </div>
@@ -268,7 +265,12 @@
             </p>
             
             <div class="relative rounded-md bg-muted p-4 font-mono text-sm">
-              <pre class="overflow-x-auto"><code>&lt;div data-orientation="vertical"&gt;
+              <div class="overflow-x-auto">
+                <table class="w-full">
+                  <tbody>
+                    <tr>
+                      <td class="align-top">
+                        <pre class="!whitespace-pre-wrap !break-words"><code>&lt;div data-orientation="vertical"&gt;
   &lt;!-- Accordion Item 1 --&gt;
   &lt;div data-state="closed" data-orientation="vertical" class="border-b"&gt;
     &lt;h3 data-orientation="vertical" data-state="closed" class="flex"&gt;
@@ -292,8 +294,7 @@
       role="region"
       aria-labelledby="accordion-trigger-1"
       data-orientation="vertical"
-      class="overflow-hidden text-sm transition-all duration-300 ease-in-out hidden"
-      style="max-height: 0;"&gt;
+      class="overflow-hidden text-sm transition-all duration-300 ease-in-out hidden"&gt;
       &lt;div class="pb-4 pt-0"&gt;
         Accordion content goes here.
       &lt;/div&gt;
@@ -302,6 +303,11 @@
   
   &lt;!-- Additional accordion items... --&gt;
 &lt;/div&gt;</code></pre>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
           </div>
           
@@ -367,7 +373,12 @@
             </ul>
             
             <div class="relative rounded-md bg-muted p-4 font-mono text-sm">
-              <pre class="overflow-x-auto"><code>_="on click 
+              <div class="overflow-x-auto">
+                <table class="w-full">
+                  <tbody>
+                    <tr>
+                      <td class="align-top">
+                        <pre class="!whitespace-pre-wrap !break-words"><code>_="on click 
   if @aria-expanded equals 'true'
     set @aria-expanded to 'false' 
     set @data-state to 'closed'
@@ -382,6 +393,11 @@
       add .hidden to &lt;div[id^='accordion-content-']:not(#accordion-content-1)/&gt;
     end
   end"</code></pre>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
           </div>
           
@@ -395,7 +411,12 @@
               <div>
                 <h4 class="font-medium mb-2">Transition Classes</h4>
                 <div class="relative rounded-md bg-muted p-4 font-mono text-sm">
-                  <pre class="overflow-x-auto"><code>.transition-all {
+                  <div class="overflow-x-auto">
+                    <table class="w-full">
+                      <tbody>
+                        <tr>
+                          <td class="align-top">
+                            <pre class="!whitespace-pre-wrap !break-words"><code>.transition-all {
   transition-property: all;
   transition-duration: 300ms;
   transition-timing-function: ease-in-out;
@@ -405,17 +426,32 @@
   transition-property: transform;
   transition-duration: 200ms;
 }</code></pre>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
                 </div>
               </div>
               
               <div>
                 <h4 class="font-medium mb-2">Icon Rotation</h4>
                 <div class="relative rounded-md bg-muted p-4 font-mono text-sm">
-                  <pre class="overflow-x-auto"><code>[&[data-state=open]&gt;svg]:rotate-180 {
+                  <div class="overflow-x-auto">
+                    <table class="w-full">
+                      <tbody>
+                        <tr>
+                          <td class="align-top">
+                            <pre class="!whitespace-pre-wrap !break-words"><code>[&[data-state=open]&gt;svg]:rotate-180 {
   &[data-state="open"] &gt; svg {
     transform: rotate(180deg);
   }
 }</code></pre>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
                 </div>
               </div>
             </div>
@@ -434,7 +470,12 @@
             </p>
             
             <div class="relative rounded-md bg-muted p-4 font-mono text-sm">
-              <pre class="overflow-x-auto"><code>&lt;div data-orientation="vertical"&gt;
+              <div class="overflow-x-auto">
+                <table class="w-full">
+                  <tbody>
+                    <tr>
+                      <td class="align-top">
+                        <pre class="!whitespace-pre-wrap !break-words"><code>&lt;div data-orientation="vertical"&gt;
   &lt;div data-state="open" data-orientation="vertical" class="border-b"&gt;
     &lt;h3 data-orientation="vertical" data-state="open" class="flex"&gt;
       &lt;button
@@ -457,8 +498,7 @@
       role="region"
       aria-labelledby="accordion-trigger-1"
       data-orientation="vertical"
-      class="overflow-hidden text-sm transition-all duration-300 ease-in-out"
-      style="max-height: 100px;"&gt;
+      class="overflow-hidden text-sm transition-all duration-300 ease-in-out"&gt;
       &lt;div class="pb-4 pt-0"&gt;
         Hyperscript is a scripting language for front-end web development that emphasizes "Locality of Behavior" - keeping behavior close to the elements they affect.
       &lt;/div&gt;
@@ -487,14 +527,18 @@
       role="region"
       aria-labelledby="accordion-trigger-2"
       data-orientation="vertical"
-      class="overflow-hidden text-sm transition-all duration-300 ease-in-out hidden"
-      style="max-height: 0;"&gt;
+      class="overflow-hidden text-sm transition-all duration-300 ease-in-out hidden"&gt;
       &lt;div class="pb-4 pt-0"&gt;
         Hyperscript works seamlessly with HTMX by providing a simple way to add behavior to elements that trigger HTMX requests or respond to HTMX events.
       &lt;/div&gt;
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
           </div>
         </div>

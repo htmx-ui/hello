@@ -24,6 +24,7 @@
 pre {
   white-space: pre-wrap;
   word-wrap: break-word;
+  overflow-x: auto;
 }
 
 pre code {
@@ -36,8 +37,33 @@ pre code {
   word-wrap: break-word;
 }
 
-/* Accordion animation */
-.accordion-content {
-  transition: max-height 0.3s ease-out;
-  overflow: hidden;
+/* Ensure code blocks don't overflow */
+.code-block {
+  overflow-x: auto;
+  max-width: 100%;
+}
+
+.code-block pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  max-width: 100%;
+}
+
+/* Additional fixes for code block formatting */
+:not(pre) > code {
+  white-space: normal;
+}
+
+pre[class*="language-"] {
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+/* Fix for long lines in code blocks */
+pre code {
+  display: block;
+  overflow-x: auto;
+  padding: 1em;
+  line-height: 1.5;
 }
