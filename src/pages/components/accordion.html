@@ -475,22 +475,22 @@
             </ul>
             
             <div class="relative rounded-md bg-muted p-4 font-mono text-sm overflow-x-auto">
-              <pre class="whitespace-pre-wrap break-words"><code>_="on click 
+              <pre class="whitespace-pre-wrap break-words code-hyperscript"><code>_="on click 
   if @aria-expanded equals 'true'
     set @aria-expanded to 'false' 
     set @data-state to 'closed'
     add .hidden to #content-id
-    remove .rotate-180 from <svg/>
+    remove .rotate-180 from &lt;svg/&gt;
   else
     set @aria-expanded to 'true' 
     set @data-state to 'open'
     remove .hidden from #content-id
-    add .rotate-180 to <svg/>
-    for otherTrigger in <button:not(#trigger-id)/>
+    add .rotate-180 to &lt;svg/&gt;
+    for otherTrigger in &lt;button:not(#trigger-id)/&gt;
       set otherTrigger@aria-expanded to 'false'
       set otherTrigger@data-state to 'closed'
-      add .hidden to <div[id^='accordion-content-']:not(#content-id)/>
-      remove .rotate-180 from <svg/>
+      add .hidden to &lt;div[id^='accordion-content-']:not(#content-id)/&gt;
+      remove .rotate-180 from &lt;svg/&gt;
     end
   end"</code></pre>
             </div>
