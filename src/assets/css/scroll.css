@@ -25,11 +25,16 @@ pre {
   white-space: pre-wrap;
   word-wrap: break-word;
   overflow-x: auto;
+  max-width: 100%;
 }
 
 pre code {
   white-space: pre-wrap;
   word-wrap: break-word;
+  display: block;
+  overflow-x: auto;
+  padding: 1em;
+  line-height: 1.5;
 }
 
 .overflow-x-auto pre {
@@ -66,4 +71,18 @@ pre code {
   overflow-x: auto;
   padding: 1em;
   line-height: 1.5;
+}
+
+/* Force wrapping for very long lines */
+pre code * {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+/* Ensure tables in code blocks don't overflow */
+.code-block table,
+.code-block pre {
+  max-width: 100%;
+  overflow-x: auto;
+  display: block;
 }

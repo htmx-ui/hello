@@ -264,13 +264,8 @@
               The accordion component follows a specific HTML structure to ensure proper functionality and accessibility:
             </p>
             
-            <div class="relative rounded-md bg-muted p-4 font-mono text-sm">
-              <div class="overflow-x-auto">
-                <table class="w-full">
-                  <tbody>
-                    <tr>
-                      <td class="align-top">
-                        <pre class="!whitespace-pre-wrap !break-words"><code>&lt;div data-orientation="vertical"&gt;
+            <div class="relative rounded-md bg-muted p-4 font-mono text-sm overflow-x-auto">
+              <pre class="whitespace-pre-wrap break-words"><code>&lt;div data-orientation="vertical"&gt;
   &lt;!-- Accordion Item 1 --&gt;
   &lt;div data-state="closed" data-orientation="vertical" class="border-b"&gt;
     &lt;h3 data-orientation="vertical" data-state="closed" class="flex"&gt;
@@ -303,11 +298,6 @@
   
   &lt;!-- Additional accordion items... --&gt;
 &lt;/div&gt;</code></pre>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
             </div>
           </div>
           
@@ -372,13 +362,8 @@
               <li>Closes any other open accordion items</li>
             </ul>
             
-            <div class="relative rounded-md bg-muted p-4 font-mono text-sm">
-              <div class="overflow-x-auto">
-                <table class="w-full">
-                  <tbody>
-                    <tr>
-                      <td class="align-top">
-                        <pre class="!whitespace-pre-wrap !break-words"><code>_="on click 
+            <div class="relative rounded-md bg-muted p-4 font-mono text-sm overflow-x-auto">
+              <pre class="whitespace-pre-wrap break-words"><code>_="on click 
   if @aria-expanded equals 'true'
     set @aria-expanded to 'false' 
     set @data-state to 'closed'
@@ -393,11 +378,6 @@
       add .hidden to &lt;div[id^='accordion-content-']:not(#accordion-content-1)/&gt;
     end
   end"</code></pre>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
             </div>
           </div>
           
@@ -410,13 +390,8 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
                 <h4 class="font-medium mb-2">Transition Classes</h4>
-                <div class="relative rounded-md bg-muted p-4 font-mono text-sm">
-                  <div class="overflow-x-auto">
-                    <table class="w-full">
-                      <tbody>
-                        <tr>
-                          <td class="align-top">
-                            <pre class="!whitespace-pre-wrap !break-words"><code>.transition-all {
+                <div class="relative rounded-md bg-muted p-4 font-mono text-sm overflow-x-auto">
+                  <pre class="whitespace-pre-wrap break-words"><code>.transition-all {
   transition-property: all;
   transition-duration: 300ms;
   transition-timing-function: ease-in-out;
@@ -426,32 +401,17 @@
   transition-property: transform;
   transition-duration: 200ms;
 }</code></pre>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
                 </div>
               </div>
               
               <div>
                 <h4 class="font-medium mb-2">Icon Rotation</h4>
-                <div class="relative rounded-md bg-muted p-4 font-mono text-sm">
-                  <div class="overflow-x-auto">
-                    <table class="w-full">
-                      <tbody>
-                        <tr>
-                          <td class="align-top">
-                            <pre class="!whitespace-pre-wrap !break-words"><code>[&[data-state=open]&gt;svg]:rotate-180 {
+                <div class="relative rounded-md bg-muted p-4 font-mono text-sm overflow-x-auto">
+                  <pre class="whitespace-pre-wrap break-words"><code>[&[data-state=open]&gt;svg]:rotate-180 {
   &[data-state="open"] &gt; svg {
     transform: rotate(180deg);
   }
 }</code></pre>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
                 </div>
               </div>
             </div>
@@ -469,13 +429,8 @@
               A simple accordion with three items:
             </p>
             
-            <div class="relative rounded-md bg-muted p-4 font-mono text-sm">
-              <div class="overflow-x-auto">
-                <table class="w-full">
-                  <tbody>
-                    <tr>
-                      <td class="align-top">
-                        <pre class="!whitespace-pre-wrap !break-words"><code>&lt;div data-orientation="vertical"&gt;
+            <div class="relative rounded-md bg-muted p-4 font-mono text-sm overflow-x-auto">
+              <pre class="whitespace-pre-wrap break-words"><code>&lt;div data-orientation="vertical"&gt;
   &lt;div data-state="open" data-orientation="vertical" class="border-b"&gt;
     &lt;h3 data-orientation="vertical" data-state="open" class="flex"&gt;
       &lt;button
@@ -534,11 +489,6 @@
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
             </div>
           </div>
         </div>
