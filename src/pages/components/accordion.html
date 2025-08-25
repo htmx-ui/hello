@@ -24,8 +24,7 @@
     <h1 class="scroll-m-20 text-3xl font-bold tracking-tight">Accordion</h1>
 
     <p class="text-base text-muted-foreground">
-      A vertically stacked set of interactive headings that each reveal a 
-      section of content.
+      A vertically stacked set of interactive headings that each reveal a section of content.
     </p>
   </div>
 
@@ -49,20 +48,23 @@
               data-state="open"
               data-orientation="vertical"
               id="accordion-trigger-1"
-              class="flex flex-1 items-center justify-between py-4 text-sm font-medium transition-all hover:underline [&[data-state=open]>svg]:rotate-180"
+              class="flex flex-1 items-center justify-between py-4 text-sm font-medium transition-all hover:underline"
               _="on click 
                    if @aria-expanded equals 'true'
                      set @aria-expanded to 'false' 
                      set @data-state to 'closed'
                      add .hidden to #accordion-content-1
+                     remove .rotate-180 from <svg/>
                    else
                      set @aria-expanded to 'true' 
                      set @data-state to 'open'
                      remove .hidden from #accordion-content-1
+                     add .rotate-180 to <svg/>
                      for otherTrigger in <button:not(#accordion-trigger-1)/>
                        set otherTrigger@aria-expanded to 'false'
                        set otherTrigger@data-state to 'closed'
                        add .hidden to <div[id^='accordion-content-']:not(#accordion-content-1)/>
+                       remove .rotate-180 from <svg/>
                      end
                    end">
               Is it accessible?
@@ -72,7 +74,7 @@
                 viewBox="0 0 15 15"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
-                class="h-4 w-4 shrink-0 text-muted-foreground transition-transform duration-200">
+                class="h-4 w-4 shrink-0 text-muted-foreground transition-transform duration-200 rotate-180">
                 <path
                   d="M3.13523 6.15803C3.3241 5.95657 3.64052 5.94637 3.84197 6.13523L7.5 9.56464L11.158 6.13523C11.3595 5.94637 11.6759 5.95657 11.8648 6.15803C12.0536 6.35949 12.0434 6.67591 11.842 6.86477L7.84197 10.6148C7.64964 10.7951 7.35036 10.7951 7.15803 10.6148L3.15803 6.86477C2.95657 6.67591 2.94637 6.35949 3.13523 6.15803Z"
                   fill="currentColor"
@@ -110,20 +112,23 @@
               data-state="closed"
               data-orientation="vertical"
               id="accordion-trigger-2"
-              class="flex flex-1 items-center justify-between py-4 text-sm font-medium transition-all hover:underline [&[data-state=open]>svg]:rotate-180"
+              class="flex flex-1 items-center justify-between py-4 text-sm font-medium transition-all hover:underline"
               _="on click 
                    if @aria-expanded equals 'true'
                      set @aria-expanded to 'false' 
                      set @data-state to 'closed'
                      add .hidden to #accordion-content-2
+                     remove .rotate-180 from <svg/>
                    else
                      set @aria-expanded to 'true' 
                      set @data-state to 'open'
                      remove .hidden from #accordion-content-2
+                     add .rotate-180 to <svg/>
                      for otherTrigger in <button:not(#accordion-trigger-2)/>
                        set otherTrigger@aria-expanded to 'false'
                        set otherTrigger@data-state to 'closed'
                        add .hidden to <div[id^='accordion-content-']:not(#accordion-content-2)/>
+                       remove .rotate-180 from <svg/>
                      end
                    end">
               Is it styled?
@@ -151,8 +156,7 @@
             data-orientation="vertical"
             class="overflow-hidden text-sm transition-all duration-300 ease-in-out hidden">
             <div class="pb-4 pt-0">
-              Yes. It comes with default styles that match the other 
-              components' aesthetics.
+              Yes. It comes with default styles that match the other components' aesthetics.
             </div>
           </div>
         </div>
@@ -172,20 +176,23 @@
               data-state="closed"
               data-orientation="vertical"
               id="accordion-trigger-3"
-              class="flex flex-1 items-center justify-between py-4 text-sm font-medium transition-all hover:underline [&[data-state=open]>svg]:rotate-180"
+              class="flex flex-1 items-center justify-between py-4 text-sm font-medium transition-all hover:underline"
               _="on click 
                    if @aria-expanded equals 'true'
                      set @aria-expanded to 'false' 
                      set @data-state to 'closed'
                      add .hidden to #accordion-content-3
+                     remove .rotate-180 from <svg/>
                    else
                      set @aria-expanded to 'true' 
                      set @data-state to 'open'
                      remove .hidden from #accordion-content-3
+                     add .rotate-180 to <svg/>
                      for otherTrigger in <button:not(#accordion-trigger-3)/>
                        set otherTrigger@aria-expanded to 'false'
                        set otherTrigger@data-state to 'closed'
                        add .hidden to <div[id^='accordion-content-']:not(#accordion-content-3)/>
+                       remove .rotate-180 from <svg/>
                      end
                    end">
               Is it animated?
@@ -213,8 +220,7 @@
             data-orientation="vertical"
             class="overflow-hidden text-sm transition-all duration-300 ease-in-out hidden">
             <div class="pb-4 pt-0">
-              Yes. It's animated by default with smooth transitions, but you 
-              can customize the animation as needed.
+              Yes. It's animated by default with smooth transitions, but you can customize the animation as needed.
             </div>
           </div>
         </div>
@@ -226,11 +232,9 @@
         <h2 class="text-2xl font-semibold tracking-tight">Overview</h2>
         
         <p class="text-muted-foreground">
-          The Accordion component is a vertically stacked set of interactive 
-          headings that each reveal a section of content. Each accordion item 
-          can be expanded or collapsed to reveal the content associated with 
-          it. Only one accordion item can be open at a time (single expansion 
-          pattern).
+          The Accordion component is a vertically stacked set of interactive headings that each reveal a section of content. 
+          Each accordion item can be expanded or collapsed to reveal the content associated with it. Only one accordion item 
+          can be open at a time (single expansion pattern).
         </p>
         
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -260,18 +264,17 @@
       </div>
       
       <div class="space-y-4">
-        <h2 class="text-2xl font-semibold tracking-tight">Implementation</h2>
+        <h2 class="text-2xl font-semibold tracking-tight">Getting Started</h2>
         
         <div class="space-y-6">
           <div class="space-y-4">
-            <h3 class="text-lg font-medium">Core Structure</h3>
+            <h3 class="text-lg font-medium">Basic Structure</h3>
             <p class="text-sm text-muted-foreground">
               The accordion component follows a specific HTML structure:
             </p>
             
             <div class="relative rounded-md bg-muted p-4 font-mono text-sm overflow-x-auto">
               <pre class="whitespace-pre-wrap break-words"><code>&lt;div data-orientation="vertical"&gt;
-  &lt;!-- Accordion Item --&gt;
   &lt;div data-state="closed" 
        data-orientation="vertical" 
        class="border-b"&gt;
@@ -280,15 +283,16 @@
         class="flex"&gt;
       &lt;button
         type="button"
-        aria-controls="accordion-content-1"
+        aria-controls="content-id"
         aria-expanded="false"
         data-state="closed"
         data-orientation="vertical"
-        id="accordion-trigger-1"
+        id="trigger-id"
         class="flex flex-1 items-center 
-               justify-between py-4 font-medium 
-               transition-all hover:underline 
-               [&[data-state=open]&gt;svg]:rotate-180"&gt;
+               justify-between py-4
+               text-sm font-medium
+               transition-all 
+               hover:underline"&gt;
         Accordion Title
         &lt;svg class="h-4 w-4 shrink-0 
                      text-muted-foreground 
@@ -300,13 +304,16 @@
     &lt;/h3&gt;
     &lt;div
       data-state="closed"
-      id="accordion-content-1"
+      id="content-id"
       role="region"
-      aria-labelledby="accordion-trigger-1"
+      aria-labelledby="trigger-id"
       data-orientation="vertical"
-      class="overflow-hidden text-sm 
-             transition-all duration-300 
-             ease-in-out hidden"&gt;
+      class="overflow-hidden 
+             text-sm
+             transition-all 
+             duration-300 
+             ease-in-out 
+             hidden"&gt;
       &lt;div class="pb-4 pt-0"&gt;
         Content goes here.
       &lt;/div&gt;
@@ -334,7 +341,7 @@
                       <code>data-state</code>
                     </td>
                     <td class="p-3">
-                      Accordion Item, Trigger, Content
+                      Item, Trigger, Content
                     </td>
                     <td class="p-3">
                       "open" or "closed"
@@ -345,7 +352,7 @@
                       <code>data-orientation</code>
                     </td>
                     <td class="p-3">
-                      All accordion elements
+                      All elements
                     </td>
                     <td class="p-3">
                       Set to "vertical"
@@ -370,16 +377,22 @@
                       Trigger Button
                     </td>
                     <td class="p-3">
-                      Indicates content visibility
+                      Indicates visibility
                     </td>
                   </tr>
                 </tbody>
               </table>
             </div>
           </div>
-          
+        </div>
+      </div>
+      
+      <div class="space-y-4">
+        <h2 class="text-2xl font-semibold tracking-tight">Interactivity</h2>
+        
+        <div class="space-y-6">
           <div class="space-y-4">
-            <h3 class="text-lg font-medium">Hyperscript</h3>
+            <h3 class="text-lg font-medium">Hyperscript Logic</h3>
             <p class="text-sm text-muted-foreground">
               The accordion uses Hyperscript for interactions:
             </p>
@@ -387,6 +400,7 @@
             <ul class="list-disc pl-6 text-sm text-muted-foreground space-y-2">
               <li>Toggles <code>aria-expanded</code> and <code>data-state</code></li>
               <li>Adds/removes <code>.hidden</code> class</li>
+              <li>Adds/removes <code>.rotate-180</code> class to icon</li>
               <li>Closes other accordion items</li>
             </ul>
             
@@ -395,31 +409,61 @@
   if @aria-expanded equals 'true'
     set @aria-expanded to 'false' 
     set @data-state to 'closed'
-    add .hidden to #accordion-content-1
+    add .hidden to #content-id
+    remove .rotate-180 from <svg/>
   else
     set @aria-expanded to 'true' 
     set @data-state to 'open'
-    remove .hidden from #accordion-content-1
+    remove .hidden from #content-id
+    add .rotate-180 to <svg/>
     for otherTrigger in 
-      &lt;button:not(#accordion-trigger-1)/&gt;
+      &lt;button:not(#trigger-id)/&gt;
       set otherTrigger@aria-expanded to 'false'
       set otherTrigger@data-state to 'closed'
       add .hidden to 
         &lt;div[id^='accordion-content-']:
-        not(#accordion-content-1)/&gt;
+        not(#content-id)/&gt;
+      remove .rotate-180 from <svg/>
     end
   end"</code></pre>
+            </div>
+          </div>
+          
+          <div class="space-y-4">
+            <h3 class="text-lg font-medium">Icon Rotation</h3>
+            <p class="text-sm text-muted-foreground">
+              The chevron icon rotates 180 degrees when the accordion is open:
+            </p>
+            
+            <div class="relative rounded-md bg-muted p-4 font-mono text-sm overflow-x-auto">
+              <pre class="whitespace-pre-wrap break-words"><code>&lt;button&gt;
+  &lt;svg class="transition-transform duration-200"&gt;
+    &lt;!-- Chevron icon --&gt;
+  &lt;/svg&gt;
+&lt;/button&gt;</code></pre>
+            </div>
+            
+            <p class="text-sm text-muted-foreground">
+              When the accordion is open, we add the <code>.rotate-180</code> class to the SVG:
+            </p>
+            
+            <div class="relative rounded-md bg-muted p-4 font-mono text-sm overflow-x-auto">
+              <pre class="whitespace-pre-wrap break-words"><code>&lt;button&gt;
+  &lt;svg class="transition-transform duration-200 rotate-180"&gt;
+    &lt;!-- Chevron icon --&gt;
+  &lt;/svg&gt;
+&lt;/button&gt;</code></pre>
             </div>
           </div>
         </div>
       </div>
       
       <div class="space-y-4">
-        <h2 class="text-2xl font-semibold tracking-tight">Examples</h2>
+        <h2 class="text-2xl font-semibold tracking-tight">Complete Example</h2>
         
         <div class="space-y-6">
           <div class="space-y-4">
-            <h3 class="text-lg font-medium">Basic Accordion</h3>
+            <h3 class="text-lg font-medium">Full Accordion</h3>
             
             <div class="relative rounded-md bg-muted p-4 font-mono text-sm overflow-x-auto">
               <pre class="whitespace-pre-wrap break-words"><code>&lt;div data-orientation="vertical"&gt;
@@ -429,12 +473,38 @@
     &lt;h3 data-orientation="vertical" 
         data-state="open" 
         class="flex"&gt;
-      &lt;button ...&gt;
+      &lt;button
+        type="button"
+        aria-controls="accordion-content-1"
+        aria-expanded="true"
+        data-state="open"
+        data-orientation="vertical"
+        id="accordion-trigger-1"
+        class="flex flex-1 items-center 
+               justify-between py-4
+               text-sm font-medium
+               transition-all 
+               hover:underline"&gt;
         First Item
-        &lt;!-- Chevron icon --&gt;
+        &lt;svg class="h-4 w-4 shrink-0 
+                     text-muted-foreground 
+                     transition-transform 
+                     duration-200 
+                     rotate-180"&gt;
+          &lt;path d="M6.1584 3.13508..."/&gt;
+        &lt;/svg&gt;
       &lt;/button&gt;
     &lt;/h3&gt;
-    &lt;div data-state="open" ...&gt;
+    &lt;div data-state="open"
+         id="accordion-content-1"
+         role="region"
+         aria-labelledby="accordion-trigger-1"
+         data-orientation="vertical"
+         class="overflow-hidden 
+                text-sm
+                transition-all 
+                duration-300 
+                ease-in-out"&gt;
       &lt;div class="pb-4 pt-0"&gt;
         First item content.
       &lt;/div&gt;
@@ -447,12 +517,38 @@
     &lt;h3 data-orientation="vertical" 
         data-state="closed" 
         class="flex"&gt;
-      &lt;button ...&gt;
+      &lt;button
+        type="button"
+        aria-controls="accordion-content-2"
+        aria-expanded="false"
+        data-state="closed"
+        data-orientation="vertical"
+        id="accordion-trigger-2"
+        class="flex flex-1 items-center 
+               justify-between py-4
+               text-sm font-medium
+               transition-all 
+               hover:underline"&gt;
         Second Item
-        &lt;!-- Chevron icon --&gt;
+        &lt;svg class="h-4 w-4 shrink-0 
+                     text-muted-foreground 
+                     transition-transform 
+                     duration-200"&gt;
+          &lt;path d="M6.1584 3.13508..."/&gt;
+        &lt;/svg&gt;
       &lt;/button&gt;
     &lt;/h3&gt;
-    &lt;div data-state="closed" ...&gt;
+    &lt;div data-state="closed"
+         id="accordion-content-2"
+         role="region"
+         aria-labelledby="accordion-trigger-2"
+         data-orientation="vertical"
+         class="overflow-hidden 
+                text-sm
+                transition-all 
+                duration-300 
+                ease-in-out 
+                hidden"&gt;
       &lt;div class="pb-4 pt-0"&gt;
         Second item content.
       &lt;/div&gt;

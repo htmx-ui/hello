@@ -16,14 +16,16 @@
             <h3 class="flex">
                 <button
                     type="button"
-                    class="flex flex-1 items-center justify-between py-4 text-sm font-medium transition-all hover:underline [&[data-state=open]>svg]:rotate-180"
+                    class="flex flex-1 items-center justify-between py-4 text-sm font-medium transition-all hover:underline"
                     _="on click 
                         if my @data-state equals 'open'
                             set my @data-state to 'closed'
                             add .hidden to #content-1
+                            remove .rotate-180 from <svg/>
                         else
                             set my @data-state to 'open'
                             remove .hidden from #content-1
+                            add .rotate-180 to <svg/>
                         end">
                     Accordion Item #1
                     <svg
@@ -32,7 +34,7 @@
                         viewBox="0 0 15 15"
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
-                        class="h-4 w-4 shrink-0 text-muted-foreground transition-transform duration-200">
+                        class="h-4 w-4 shrink-0 text-muted-foreground transition-transform duration-200 rotate-180">
                         <path
                             d="M3.13523 6.15803C3.3241 5.95657 3.64052 5.94637 3.84197 6.13523L7.5 9.56464L11.158 6.13523C11.3595 5.94637 11.6759 5.95657 11.8648 6.15803C12.0536 6.35949 12.0434 6.67591 11.842 6.86477L7.84197 10.6148C7.64964 10.7951 7.35036 10.7951 7.15803 10.6148L3.15803 6.86477C2.95657 6.67591 2.94637 6.35949 3.13523 6.15803Z"
                             fill="currentColor"
@@ -54,14 +56,16 @@
             <h3 class="flex">
                 <button
                     type="button"
-                    class="flex flex-1 items-center justify-between py-4 text-sm font-medium transition-all hover:underline [&[data-state=open]>svg]:rotate-180"
+                    class="flex flex-1 items-center justify-between py-4 text-sm font-medium transition-all hover:underline"
                     _="on click 
                         if my @data-state equals 'open'
                             set my @data-state to 'closed'
                             add .hidden to #content-2
+                            remove .rotate-180 from <svg/>
                         else
                             set my @data-state to 'open'
                             remove .hidden from #content-2
+                            add .rotate-180 to <svg/>
                         end">
                     Accordion Item #2
                     <svg
@@ -86,16 +90,6 @@
                     This is the content of the second accordion item.
                 </div>
             </div>
-        </div>
-    </div>
-    
-    <div class="mt-8 max-w-2xl">
-        <h2 class="text-xl font-semibold mb-4">Code Block Test</h2>
-        <div class="relative rounded-md bg-muted p-4 font-mono text-sm overflow-x-auto">
-            <pre class="whitespace-pre-wrap break-words"><code>This is a test of a very long line of code that should wrap properly 
-instead of overflowing the container. This line is intentionally long 
-to demonstrate the text wrapping functionality. It should break into 
-multiple lines when it reaches the edge of the container.</code></pre>
         </div>
     </div>
 </body>
