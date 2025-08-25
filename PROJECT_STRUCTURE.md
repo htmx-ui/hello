@@ -50,7 +50,7 @@ The main entry point of the application that loads:
 Contains static assets used throughout the application:
 - `js/`: JavaScript libraries (htmx.js, hyperscript.js)
 - `icons/`: SVG icons collection (over 200 icons)
-- `css/`: Compiled CSS files
+- `css/`: Compiled CSS files (including animate.min.css for animations)
 - `img/`: Image assets
 - `svg/`: SVG graphics
 

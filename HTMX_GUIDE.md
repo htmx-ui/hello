@@ -244,4 +244,38 @@ Key considerations:
 </button>
 ```
 
+## HTMX with Animate.css Integration
+
+### Animating Content on Load
+Use HTMX's `load` trigger with animate.css classes for entrance animations:
+
+```html
+<!-- Trigger animation on HTMX load -->
+<div hx-get="/data" 
+     hx-target="#content"
+     class="animate__animated animate__fadeIn">
+  <div id="content">Loading...</div>
+</div>
+```
+
+### Animating Content After Swap
+Add animations after HTMX swaps content using hyperscript event handling:
+
+```html
+<!-- Animate element after HTMX swap -->
+<div _="on htmx:afterSwap add .animate__animated.animate__fadeIn to #new-content">
+  <div id="new-content" hx-get="/data"></div>
+</div>
+```
+
+### Combining Transitions with Animations
+Use HTMX's built-in transition feature with animate.css for smooth content updates:
+
+```html
+<div hx-get="/data" 
+     hx-swap="innerHTML transition:true"
+     class="animate__animated animate__fadeIn transition-all duration-300">
+</div>
+```
+
 This comprehensive guide provides Qwen CLI with all the necessary information to understand, implement, and work with HTMX effectively in the UI Library project.

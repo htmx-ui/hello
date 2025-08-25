@@ -15,8 +15,9 @@ This project now includes comprehensive documentation to help with development a
 9. **HTMX_GUIDE.md** - Comprehensive guide to HTMX usage
 10. **HTMX_CHEATSHEET.md** - Concise reference for HTMX syntax
 11. **QWEN_CLI_HTMX_IMPLEMENTATION.md** - Qwen CLI specific guide for implementing HTMX
-12. **PROJECT_RULES.md** - Rules for maintaining project simplicity (no npm)
-13. **DOCS.md** - This summary file that references all documentation
+12. **ANIMATE_CSS_CHEATSHEET.md** - Concise reference for animate.css animations
+13. **PROJECT_RULES.md** - Rules for maintaining project simplicity (no npm)
+14. **DOCS.md** - This summary file that references all documentation
 
 ## Key Sections Covered
 

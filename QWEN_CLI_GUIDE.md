@@ -222,7 +222,12 @@ qwen run "ls src/assets/icons/"
    qwen search_file_content --pattern "_=" --include "src/**/*.html"
    ```
 
-3. List all components:
+3. Find all animate.css usage:
+   ```bash
+   qwen search_file_content --pattern "animate__" --include "src/**/*.html"
+   ```
+
+4. List all components:
    ```bash
    qwen run "ls src/pages/components/"
    ```

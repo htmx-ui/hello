@@ -234,4 +234,68 @@ Each component should follow a consistent structure:
 </button>
 ```
 
+## Animation with Animate.css
+
+### Basic Animation Usage
+Components can use animate.css animations by adding the `animate__animated` class along with a specific animation class:
+
+```html
+<!-- Simple bounce animation -->
+<h1 class="animate__animated animate__bounce">Animated Heading</h1>
+
+<!-- Fade in with delay -->
+<div class="animate__animated animate__fadeIn animate__delay-2s">Fade In Content</div>
+```
+
+### Entrance Animations for Components
+Use entrance animations when loading components or revealing content:
+
+```html
+<div class="animate__animated animate__fadeInUp">
+  <div class="relative w-full rounded-lg border px-4 py-3">
+    <!-- Component content -->
+  </div>
+</div>
+```
+
+### Interactive Animations with Hyperscript
+Combine animate.css with hyperscript for interactive animations:
+
+```html
+<button _="on click 
+         add .animate__animated.animate__pulse to me 
+         wait for animationend 
+         remove .animate__pulse"
+        class="inline-flex items-center justify-center rounded-md">
+  Click for Pulse Effect
+</button>
+```
+
+### Animation Speed and Delay Control
+Control animation timing using built-in classes or CSS custom properties:
+
+```html
+<!-- Using built-in speed classes -->
+<div class="animate__animated animate__bounce animate__faster">Fast Bounce</div>
+
+<!-- Using built-in delay classes -->
+<div class="animate__animated animate__fadeIn animate__delay-2s">Delayed Fade</div>
+
+<!-- Using CSS custom properties -->
+<style>
+  .custom-animation {
+    --animate-duration: 0.5s;
+    --animate-delay: 1s;
+  }
+</style>
+<div class="animate__animated animate__slideInLeft custom-animation">Custom Timing</div>
+```
+
+### Best Practices for Animations
+1. Use animations purposefully to guide attention or signal transitions
+2. Avoid animating large elements that may degrade performance
+3. Limit infinite animations to prevent distraction
+4. Always respect user preferences for reduced motion
+5. Combine CSS transitions with `transition-all` classes for smooth state changes
+
 This guide provides a comprehensive overview of component development patterns in the library.
