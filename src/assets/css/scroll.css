@@ -86,3 +86,16 @@ pre code * {
   overflow-x: auto;
   display: block;
 }
+
+/* Additional wrapping for code blocks */
+.whitespace-pre-wrap {
+  white-space: pre-wrap;
+}
+
+.break-words {
+  word-wrap: break-word;
+}
+
+.overflow-x-auto {
+  overflow-x: auto;
+}
