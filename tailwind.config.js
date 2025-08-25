@@ -81,4 +81,10 @@ module.exports = {
     },
   },
   plugins: [],
+  // Add safelist for border utilities to ensure they're generated
+  safelist: [
+    'border-border',
+    'border-border/40',
+    'border-border/50',
+  ]
 };
