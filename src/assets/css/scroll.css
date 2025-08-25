@@ -25,21 +25,25 @@ pre {
   white-space: pre-wrap;
   word-wrap: break-word;
   overflow-x: auto;
-  max-width: 100%;
 }
 
 pre code {
   white-space: pre-wrap;
   word-wrap: break-word;
-  display: block;
-  overflow-x: auto;
-  padding: 1em;
-  line-height: 1.5;
 }
 
 .overflow-x-auto pre {
   white-space: pre-wrap;
   word-wrap: break-word;
+}
+
+/* Accordion animation classes */
+.accordion-content-open {
+  max-height: 100px;
+}
+
+.accordion-content-closed {
+  max-height: 0;
 }
 
 /* Ensure code blocks don't overflow */
@@ -85,17 +89,4 @@ pre code * {
   max-width: 100%;
   overflow-x: auto;
   display: block;
-}
-
-/* Additional wrapping for code blocks */
-.whitespace-pre-wrap {
-  white-space: pre-wrap;
-}
-
-.break-words {
-  word-wrap: break-word;
-}
-
-.overflow-x-auto {
-  overflow-x: auto;
 }

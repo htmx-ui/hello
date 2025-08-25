@@ -22,12 +22,10 @@
                             set my @data-state to 'closed'
                             add .hidden to #content-1
                             remove .rotate-180 from <svg/>
-                            set #content-1.style.maxHeight to '0px'
                         else
                             set my @data-state to 'open'
                             remove .hidden from #content-1
                             add .rotate-180 to <svg/>
-                            set #content-1.style.maxHeight to '100px'
                         end">
                     Accordion Item #1
                     <svg
@@ -47,8 +45,7 @@
             </h3>
             <div
                 id="content-1"
-                class="overflow-hidden text-sm transition-all duration-300 ease-in-out"
-                style="max-height: 100px;">
+                class="overflow-hidden text-sm transition-all duration-300 ease-in-out accordion-content-open">
                 <div class="pb-4 pt-0">
                     This is the content of the first accordion item. It has a smooth animation when expanding and collapsing.
                 </div>
@@ -65,12 +62,10 @@
                             set my @data-state to 'closed'
                             add .hidden to #content-2
                             remove .rotate-180 from <svg/>
-                            set #content-2.style.maxHeight to '0px'
                         else
                             set my @data-state to 'open'
                             remove .hidden from #content-2
                             add .rotate-180 to <svg/>
-                            set #content-2.style.maxHeight to '100px'
                         end">
                     Accordion Item #2
                     <svg
@@ -90,8 +85,7 @@
             </h3>
             <div
                 id="content-2"
-                class="overflow-hidden text-sm transition-all duration-300 ease-in-out hidden"
-                style="max-height: 0px;">
+                class="overflow-hidden text-sm transition-all duration-300 ease-in-out accordion-content-closed hidden">
                 <div class="pb-4 pt-0">
                     This is the content of the second accordion item. It also has smooth animations.
                 </div>
