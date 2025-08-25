@@ -218,17 +218,55 @@
       </div>
     </div>
 
-    <div class="space-y-6">
-      <h2 class="text-xl font-semibold tracking-tight">Implementation</h2>
-      
+    <div class="space-y-8">
       <div class="space-y-4">
-        <h3 class="font-medium">Basic Structure</h3>
-        <p class="text-sm text-muted-foreground">
-          The accordion component consists of a container with multiple accordion items. Each item has a trigger button and a content panel.
+        <h2 class="text-2xl font-semibold tracking-tight">Overview</h2>
+        
+        <p class="text-muted-foreground">
+          The Accordion component is a vertically stacked set of interactive headings that each reveal a section of content. 
+          Each accordion item can be expanded or collapsed to reveal the content associated with it. Only one accordion item 
+          can be open at a time (single expansion pattern).
         </p>
         
-        <div class="relative rounded-md bg-muted p-4 font-mono text-sm">
-          <pre class="overflow-x-auto"><code>&lt;div data-orientation="vertical"&gt;
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="space-y-2">
+            <h3 class="font-medium">Use Cases</h3>
+            <ul class="list-disc pl-6 text-sm text-muted-foreground space-y-2">
+              <li>FAQ sections</li>
+              <li>Product specifications</li>
+              <li>Settings panels</li>
+              <li>Navigation menus</li>
+              <li>Terms and conditions</li>
+            </ul>
+          </div>
+          
+          <div class="space-y-2">
+            <h3 class="font-medium">Features</h3>
+            <ul class="list-disc pl-6 text-sm text-muted-foreground space-y-2">
+              <li>Fully accessible (WAI-ARIA compliant)</li>
+              <li>Keyboard navigation support</li>
+              <li>Smooth animations</li>
+              <li>Responsive design</li>
+              <li>Single expansion pattern</li>
+              <li>Customizable styling</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="space-y-4">
+        <h2 class="text-2xl font-semibold tracking-tight">Implementation Details</h2>
+        
+        <div class="space-y-6">
+          <div class="space-y-4">
+            <h3 class="text-lg font-medium">Core Structure</h3>
+            <p class="text-sm text-muted-foreground">
+              The accordion component follows a specific HTML structure to ensure proper functionality and accessibility:
+            </p>
+            
+            <div class="relative rounded-md bg-muted p-4 font-mono text-sm">
+              <pre class="overflow-x-auto"><code>&lt;div data-orientation="vertical"&gt;
+  &lt;!-- Accordion Item 1 --&gt;
   &lt;div data-state="closed" data-orientation="vertical" class="border-b"&gt;
     &lt;h3 data-orientation="vertical" data-state="closed" class="flex"&gt;
       &lt;button
@@ -239,8 +277,10 @@
         data-orientation="vertical"
         id="accordion-trigger-1"
         class="flex flex-1 items-center justify-between py-4 font-medium transition-all hover:underline [&[data-state=open]>svg]:rotate-180"&gt;
-        Is it accessible?
-        &lt;!-- Icon --&gt;
+        Accordion Title
+        &lt;svg class="h-4 w-4 shrink-0 text-muted-foreground transition-transform duration-200"&gt;
+          &lt;!-- Chevron icon --&gt;
+        &lt;/svg&gt;
       &lt;/button&gt;
     &lt;/h3&gt;
     &lt;div
@@ -251,22 +291,79 @@
       data-orientation="vertical"
       class="overflow-hidden text-sm hidden"&gt;
       &lt;div class="pb-4 pt-0"&gt;
-        Yes. It adheres to the WAI-ARIA design pattern.
+        Accordion content goes here.
       &lt;/div&gt;
     &lt;/div&gt;
   &lt;/div&gt;
+  
+  &lt;!-- Additional accordion items... --&gt;
 &lt;/div&gt;</code></pre>
-        </div>
-      </div>
-      
-      <div class="space-y-4">
-        <h3 class="font-medium">Functionality with Hyperscript</h3>
-        <p class="text-sm text-muted-foreground">
-          The accordion uses Hyperscript to handle the interactive behavior. Each trigger button has a script that toggles its content panel.
-        </p>
-        
-        <div class="relative rounded-md bg-muted p-4 font-mono text-sm">
-          <pre class="overflow-x-auto"><code>_="on click 
+            </div>
+          </div>
+          
+          <div class="space-y-4">
+            <h3 class="text-lg font-medium">Key Attributes</h3>
+            
+            <div class="border rounded-md overflow-hidden">
+              <table class="w-full text-sm">
+                <thead class="bg-muted">
+                  <tr>
+                    <th class="text-left p-3 font-medium">Attribute</th>
+                    <th class="text-left p-3 font-medium">Element</th>
+                    <th class="text-left p-3 font-medium">Description</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y">
+                  <tr>
+                    <td class="p-3 font-mono text-xs"><code>data-state</code></td>
+                    <td class="p-3">Accordion Item, Trigger, Content</td>
+                    <td class="p-3">Indicates whether the item is "open" or "closed"</td>
+                  </tr>
+                  <tr>
+                    <td class="p-3 font-mono text-xs"><code>data-orientation</code></td>
+                    <td class="p-3">All accordion elements</td>
+                    <td class="p-3">Set to "vertical" for vertical orientation</td>
+                  </tr>
+                  <tr>
+                    <td class="p-3 font-mono text-xs"><code>aria-controls</code></td>
+                    <td class="p-3">Trigger Button</td>
+                    <td class="p-3">References the ID of the content panel</td>
+                  </tr>
+                  <tr>
+                    <td class="p-3 font-mono text-xs"><code>aria-expanded</code></td>
+                    <td class="p-3">Trigger Button</td>
+                    <td class="p-3">Indicates whether the content is visible</td>
+                  </tr>
+                  <tr>
+                    <td class="p-3 font-mono text-xs"><code>aria-labelledby</code></td>
+                    <td class="p-3">Content Panel</td>
+                    <td class="p-3">References the ID of the trigger button</td>
+                  </tr>
+                  <tr>
+                    <td class="p-3 font-mono text-xs"><code>role="region"</code></td>
+                    <td class="p-3">Content Panel</td>
+                    <td class="p-3">Defines the content panel as a region</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          
+          <div class="space-y-4">
+            <h3 class="text-lg font-medium">Hyperscript Functionality</h3>
+            <p class="text-sm text-muted-foreground">
+              The accordion uses Hyperscript for its interactive behavior. Each trigger button has a script that:
+            </p>
+            
+            <ul class="list-disc pl-6 text-sm text-muted-foreground space-y-2">
+              <li>Checks if the accordion is currently open or closed</li>
+              <li>Toggles the <code class="relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-xs font-semibold">aria-expanded</code> and <code class="relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-xs font-semibold">data-state</code> attributes</li>
+              <li>Adds or removes the <code class="relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-xs font-semibold">.hidden</code> class from the content panel</li>
+              <li>Closes any other open accordion items</li>
+            </ul>
+            
+            <div class="relative rounded-md bg-muted p-4 font-mono text-sm">
+              <pre class="overflow-x-auto"><code>_="on click 
   if @aria-expanded equals 'true'
     set @aria-expanded to 'false' 
     set @data-state to 'closed'
@@ -278,60 +375,250 @@
     for otherTrigger in &lt;button:not(#accordion-trigger-1)/&gt;
       set otherTrigger@aria-expanded to 'false'
       set otherTrigger@data-state to 'closed'
-      add .hidden to &lt;div[data-state="open"] .overflow-hidden/&gt;
+      add .hidden to &lt;div[data-state=\"open\"] .overflow-hidden/&gt;
     end
   end"</code></pre>
-        </div>
-      </div>
-      
-      <div class="space-y-4">
-        <h3 class="font-medium">Accessibility Features</h3>
-        <ul class="list-disc pl-6 text-sm text-muted-foreground space-y-2">
-          <li><code class="relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-xs font-semibold">aria-controls</code> attribute on the trigger button that points to the content panel</li>
-          <li><code class="relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-xs font-semibold">aria-expanded</code> attribute that indicates whether the content is visible</li>
-          <li><code class="relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-xs font-semibold">role="region"</code> on the content panel</li>
-          <li><code class="relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-xs font-semibold">aria-labelledby</code> attribute on the content panel that points to the trigger button</li>
-          <li>Keyboard navigation support</li>
-        </ul>
-      </div>
-      
-      <div class="space-y-4">
-        <h3 class="font-medium">Animation</h3>
-        <p class="text-sm text-muted-foreground">
-          The accordion uses Tailwind CSS transitions for smooth animations. The chevron icon rotates 180 degrees when the accordion is open.
-        </p>
-        
-        <div class="relative rounded-md bg-muted p-4 font-mono text-sm">
-          <pre class="overflow-x-auto"><code>&lt;svg class="h-4 w-4 shrink-0 text-muted-foreground transition-transform duration-200"&gt;
-  &lt;!-- Icon path --&gt;
-&lt;/svg&gt;</code></pre>
-        </div>
-        
-        <div class="relative rounded-md bg-muted p-4 font-mono text-sm">
-          <pre class="overflow-x-auto"><code>.transition-transform.duration-200 {
-  transition-property: transform;
-  transition-duration: 200ms;
+            </div>
+          </div>
+          
+          <div class="space-y-4">
+            <h3 class="text-lg font-medium">Styling & Animation</h3>
+            <p class="text-sm text-muted-foreground">
+              The accordion uses Tailwind CSS classes for styling and animations:
+            </p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <h4 class="font-medium mb-2">Transition Classes</h4>
+                <div class="relative rounded-md bg-muted p-4 font-mono text-sm">
+                  <pre class="overflow-x-auto"><code>.transition-all {
+  transition-property: all;
+  transition-duration: 150ms;
 }
 
-[&[data-state=open]>svg]:rotate-180 {
+.transition-transform.duration-200 {
+  transition-property: transform;
+  transition-duration: 200ms;
+}</code></pre>
+                </div>
+              </div>
+              
+              <div>
+                <h4 class="font-medium mb-2">Icon Rotation</h4>
+                <div class="relative rounded-md bg-muted p-4 font-mono text-sm">
+                  <pre class="overflow-x-auto"><code>[&[data-state=open]>svg]:rotate-180 {
   &[data-state="open"] > svg {
     transform: rotate(180deg);
   }
 }</code></pre>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       
       <div class="space-y-4">
-        <h3 class="font-medium">Usage Example</h3>
-        <p class="text-sm text-muted-foreground">
-          To use the accordion component, simply copy the structure and modify the content as needed. You'll need to ensure:
-        </p>
-        <ul class="list-disc pl-6 text-sm text-muted-foreground space-y-2">
-          <li>Each trigger button has a unique ID</li>
-          <li>Each content panel has a unique ID that matches the <code class="relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-xs font-semibold">aria-controls</code> attribute</li>
-          <li>Update the Hyperscript to reference the correct IDs</li>
-          <li>Maintain the data attributes for proper functionality</li>
-        </ul>
+        <h2 class="text-2xl font-semibold tracking-tight">Usage Examples</h2>
+        
+        <div class="space-y-6">
+          <div class="space-y-4">
+            <h3 class="text-lg font-medium">Basic Accordion</h3>
+            <p class="text-sm text-muted-foreground">
+              A simple accordion with three items:
+            </p>
+            
+            <div class="relative rounded-md bg-muted p-4 font-mono text-sm">
+              <pre class="overflow-x-auto"><code>&lt;div data-orientation="vertical"&gt;
+  &lt;div data-state="open" data-orientation="vertical" class="border-b"&gt;
+    &lt;h3 data-orientation="vertical" data-state="open" class="flex"&gt;
+      &lt;button
+        type="button"
+        aria-controls="accordion-content-1"
+        aria-expanded="true"
+        data-state="open"
+        data-orientation="vertical"
+        id="accordion-trigger-1"
+        class="flex flex-1 items-center justify-between py-4 font-medium transition-all hover:underline [&[data-state=open]>svg]:rotate-180"&gt;
+        What is Hyperscript?
+        &lt;svg class="h-4 w-4 shrink-0 text-muted-foreground transition-transform duration-200"&gt;
+          &lt;!-- Chevron icon --&gt;
+        &lt;/svg&gt;
+      &lt;/button&gt;
+    &lt;/h3&gt;
+    &lt;div
+      data-state="open"
+      id="accordion-content-1"
+      role="region"
+      aria-labelledby="accordion-trigger-1"
+      data-orientation="vertical"
+      class="overflow-hidden text-sm"&gt;
+      &lt;div class="pb-4 pt-0"&gt;
+        Hyperscript is a scripting language for front-end web development that emphasizes "Locality of Behavior" - keeping behavior close to the elements they affect.
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  
+  &lt;div data-state="closed" data-orientation="vertical" class="border-b"&gt;
+    &lt;h3 data-orientation="vertical" data-state="closed" class="flex"&gt;
+      &lt;button
+        type="button"
+        aria-controls="accordion-content-2"
+        aria-expanded="false"
+        data-state="closed"
+        data-orientation="vertical"
+        id="accordion-trigger-2"
+        class="flex flex-1 items-center justify-between py-4 font-medium transition-all hover:underline [&[data-state=open]>svg]:rotate-180"&gt;
+        How does it work with HTMX?
+        &lt;svg class="h-4 w-4 shrink-0 text-muted-foreground transition-transform duration-200"&gt;
+          &lt;!-- Chevron icon --&gt;
+        &lt;/svg&gt;
+      &lt;/button&gt;
+    &lt;/h3&gt;
+    &lt;div
+      data-state="closed"
+      id="accordion-content-2"
+      role="region"
+      aria-labelledby="accordion-trigger-2"
+      data-orientation="vertical"
+      class="overflow-hidden text-sm hidden"&gt;
+      &lt;div class="pb-4 pt-0"&gt;
+        Hyperscript works seamlessly with HTMX by providing a simple way to add behavior to elements that trigger HTMX requests or respond to HTMX events.
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+          </div>
+          
+          <div class="space-y-4">
+            <h3 class="text-lg font-medium">Custom Styling</h3>
+            <p class="text-sm text-muted-foreground">
+              You can customize the appearance of the accordion by modifying the Tailwind classes:
+            </p>
+            
+            <div class="relative rounded-md bg-muted p-4 font-mono text-sm">
+              <pre class="overflow-x-auto"><code>&lt;div data-orientation="vertical"&gt;
+  &lt;div data-state="closed" data-orientation="vertical" class="border-b border-primary"&gt;
+    &lt;h3 data-orientation="vertical" data-state="closed" class="flex"&gt;
+      &lt;button
+        type="button"
+        aria-controls="accordion-content-3"
+        aria-expanded="false"
+        data-state="closed"
+        data-orientation="vertical"
+        id="accordion-trigger-3"
+        class="flex flex-1 items-center justify-between py-6 text-lg font-semibold transition-all hover:text-primary [&[data-state=open]>svg]:rotate-180"&gt;
+        Custom Styled Accordion
+        &lt;svg class="h-5 w-5 shrink-0 text-primary transition-transform duration-300"&gt;
+          &lt;!-- Chevron icon --&gt;
+        &lt;/svg&gt;
+      &lt;/button&gt;
+    &lt;/h3&gt;
+    &lt;div
+      data-state="closed"
+      id="accordion-content-3"
+      role="region"
+      aria-labelledby="accordion-trigger-3"
+      data-orientation="vertical"
+      class="overflow-hidden text-base hidden"&gt;
+      &lt;div class="pb-6 pt-2"&gt;
+        This accordion uses custom styling with larger text, different colors, and slower animations.
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="space-y-4">
+        <h2 class="text-2xl font-semibold tracking-tight">Accessibility</h2>
+        
+        <div class="space-y-4">
+          <p class="text-muted-foreground">
+            The accordion component follows the WAI-ARIA Authoring Practices Guide for accordions. Key accessibility features include:
+          </p>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="space-y-2">
+              <h3 class="font-medium">Keyboard Navigation</h3>
+              <ul class="list-disc pl-6 text-sm text-muted-foreground space-y-2">
+                <li><kbd class="pointer-events-none inline-flex h-5 select-none items-center gap-1 rounded border bg-muted px-1.5 font-mono text-[10px] font-medium text-muted-foreground opacity-100">Tab</kbd> - Moves focus between accordion headers</li>
+                <li><kbd class="pointer-events-none inline-flex h-5 select-none items-center gap-1 rounded border bg-muted px-1.5 font-mono text-[10px] font-medium text-muted-foreground opacity-100">Enter</kbd> or <kbd class="pointer-events-none inline-flex h-5 select-none items-center gap-1 rounded border bg-muted px-1.5 font-mono text-[10px] font-medium text-muted-foreground opacity-100">Space</kbd> - Expands/collapses the focused accordion header</li>
+              </ul>
+            </div>
+            
+            <div class="space-y-2">
+              <h3 class="font-medium">Screen Reader Support</h3>
+              <ul class="list-disc pl-6 text-sm text-muted-foreground space-y-2">
+                <li>Proper ARIA roles and attributes</li>
+                <li>Content visibility announced correctly</li>
+                <li>Focus management</li>
+                <li>Semantic HTML structure</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="space-y-4">
+        <h2 class="text-2xl font-semibold tracking-tight">Best Practices</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="space-y-4">
+            <h3 class="font-medium">Implementation Guidelines</h3>
+            <ul class="list-disc pl-6 text-sm text-muted-foreground space-y-2">
+              <li>Ensure unique IDs for each trigger and content pair</li>
+              <li>Maintain proper ARIA attributes for accessibility</li>
+              <li>Use semantic HTML elements (button for triggers)</li>
+              <li>Keep content concise and scannable</li>
+              <li>Test with keyboard navigation</li>
+            </ul>
+          </div>
+          
+          <div class="space-y-4">
+            <h3 class="font-medium">Performance Considerations</h3>
+            <ul class="list-disc pl-6 text-sm text-muted-foreground space-y-2">
+              <li>Use <code class="relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-xs font-semibold">.hidden</code> class instead of removing elements from DOM</li>
+              <li>Limit the number of accordion items on a single page</li>
+              <li>Lazy load content for large accordions</li>
+              <li>Use CSS transitions for smooth animations</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="space-y-4">
+        <h2 class="text-2xl font-semibold tracking-tight">Troubleshooting</h2>
+        
+        <div class="space-y-4">
+          <h3 class="font-medium">Common Issues</h3>
+          
+          <div class="space-y-3">
+            <div>
+              <h4 class="font-medium text-sm">Accordion not expanding/collapsing</h4>
+              <p class="text-sm text-muted-foreground ml-4">
+                Check that Hyperscript is properly loaded and that the <code class="relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-xs font-semibold">_</code> attribute contains the correct script.
+              </p>
+            </div>
+            
+            <div>
+              <h4 class="font-medium text-sm">Multiple accordions opening at once</h4>
+              <p class="text-sm text-muted-foreground ml-4">
+                Ensure the Hyperscript logic correctly closes other accordion items when one is opened.
+              </p>
+            </div>
+            
+            <div>
+              <h4 class="font-medium text-sm">Animation not working</h4>
+              <p class="text-sm text-muted-foreground ml-4">
+                Verify that Tailwind CSS is properly loaded and that the transition classes are applied correctly.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
