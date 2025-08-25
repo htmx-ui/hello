@@ -1,51 +1,338 @@
-<!-- Accordion Component Implementation Guide -->
-<!--
-Project Philosophy:
-- No build tools or package managers
-- Pure HTML, CSS, and JavaScript with HTMX and Hyperscript
-- Copy-paste friendly implementation
-- Accessible and semantic HTML
-- Responsive design with TailwindCSS
+<div class="my-8 w-full min-w-0">
+  <div
+    class="mb-4 flex items-center space-x-1 text-sm leading-none text-muted-foreground">
+    <div class="truncate">Docs</div>
 
-Task:
-1. Create an Accordion component that follows the established component structure
-2. Use semantic HTML elements with proper ARIA attributes
-3. Implement interactive behavior using Hyperscript (no external dependencies)
-4. Style with TailwindCSS using the project's color system
-5. Ensure responsive design and accessibility
-6. Add smooth animations using animate.min.css (slideInDown/slideOutUp)
-7. Allow only one accordion item to be open at a time
-8. Include proper focus management and keyboard navigation
+    <svg
+      width="15"
+      height="15"
+      viewBox="0 0 15 15"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      class="h-3.5 w-3.5">
+      <path
+        d="M6.1584 3.13508C6.35985 2.94621 6.67627 2.95642 6.86514 3.15788L10.6151 7.15788C10.7954 7.3502 10.7954 7.64949 10.6151 7.84182L6.86514 11.8418C6.67627 12.0433 6.35985 12.0535 6.1584 11.8646C5.95694 11.6757 5.94673 11.3593 6.1356 11.1579L9.565 7.49985L6.1356 3.84182C5.94673 3.64036 5.95694 3.32394 6.1584 3.13508Z"
+        fill="currentColor"
+        fill-rule="evenodd"
+        clip-rule="evenodd"></path>
+    </svg>
 
-Implementation Plan:
-1. HTML Structure:
-   - Follow the component structure pattern from other components
-   - Use semantic elements (section, h3, button, div)
-   - Implement proper ARIA attributes (aria-expanded, aria-controls, role="region")
-   - Use data-state attributes to track open/closed states
-   - Include chevron icons that rotate when expanded
+    <div class="text-foreground">Accordion</div>
+  </div>
 
-2. Styling:
-   - Use TailwindCSS classes for styling
-   - Apply project color system (background, foreground, muted, border)
-   - Ensure responsive design
-   - Style focus states for accessibility
+  <div class="space-y-2">
+    <h1 class="scroll-m-20 text-3xl font-bold tracking-tight">Accordion</h1>
 
-3. Interactivity:
-   - Use Hyperscript for click handling
-   - Toggle data-state attributes between "open" and "closed"
-   - Show/hide content panels with animations
-   - Rotate chevron icons based on state
-   - Ensure only one item open at a time
+    <p class="text-base text-muted-foreground">
+      A vertically stacked set of interactive headings that each reveal a section of content.
+    </p>
+  </div>
 
-4. Animation:
-   - Use animate__slideInDown for opening
-   - Use animate__slideOutUp for closing
-   - Apply animate__animated class to content panels
+  <div class="space-y-12">
+    <div class="preview flex min-h-[350px] w-full justify-center p-10 items-center">
+      <div
+        class="w-full max-w-2xl"
+        data-orientation="vertical">
+        <div
+          data-state="open"
+          data-orientation="vertical"
+          class="border-b">
+          <h3
+            data-orientation="vertical"
+            data-state="open"
+            class="flex">
+            <button
+              type="button"
+              aria-controls="accordion-content-1"
+              aria-expanded="true"
+              data-state="open"
+              data-orientation="vertical"
+              id="accordion-trigger-1"
+              class="flex flex-1 items-center justify-between py-4 text-sm font-medium transition-all hover:underline [&[data-state=open]>svg]:rotate-180"
+              _="on click 
+                   if @aria-expanded equals 'true'
+                     set @aria-expanded to 'false' 
+                     set @data-state to 'closed'
+                     add .hidden to #accordion-content-1
+                   else
+                     set @aria-expanded to 'true' 
+                     set @data-state to 'open'
+                     remove .hidden from #accordion-content-1
+                     for otherTrigger in <button:not(#accordion-trigger-1)/>
+                       set otherTrigger@aria-expanded to 'false'
+                       set otherTrigger@data-state to 'closed'
+                       add .hidden to <div[data-state=\"open\"] .overflow-hidden/>
+                     end
+                   end">
+              Is it accessible?
+              <svg
+                width="15"
+                height="15"
+                viewBox="0 0 15 15"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-4 w-4 shrink-0 text-muted-foreground transition-transform duration-200">
+                <path
+                  d="M3.13523 6.15803C3.3241 5.95657 3.64052 5.94637 3.84197 6.13523L7.5 9.56464L11.158 6.13523C11.3595 5.94637 11.6759 5.95657 11.8648 6.15803C12.0536 6.35949 12.0434 6.67591 11.842 6.86477L7.84197 10.6148C7.64964 10.7951 7.35036 10.7951 7.15803 10.6148L3.15803 6.86477C2.95657 6.67591 2.94637 6.35949 3.13523 6.15803Z"
+                  fill="currentColor"
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"></path>
+              </svg>
+            </button>
+          </h3>
 
-5. Accessibility:
-   - Proper ARIA attributes
-   - Keyboard navigation support
-   - Focus management
-   - Screen reader compatibility
--->
+          <div
+            data-state="open"
+            id="accordion-content-1"
+            role="region"
+            aria-labelledby="accordion-trigger-1"
+            data-orientation="vertical"
+            class="overflow-hidden text-sm">
+            <div class="pb-4 pt-0">
+              Yes. It adheres to the WAI-ARIA design pattern.
+            </div>
+          </div>
+        </div>
+
+        <div
+          data-state="closed"
+          data-orientation="vertical"
+          class="border-b">
+          <h3
+            data-orientation="vertical"
+            data-state="closed"
+            class="flex">
+            <button
+              type="button"
+              aria-controls="accordion-content-2"
+              aria-expanded="false"
+              data-state="closed"
+              data-orientation="vertical"
+              id="accordion-trigger-2"
+              class="flex flex-1 items-center justify-between py-4 text-sm font-medium transition-all hover:underline [&[data-state=open]>svg]:rotate-180"
+              _="on click 
+                   if @aria-expanded equals 'true'
+                     set @aria-expanded to 'false' 
+                     set @data-state to 'closed'
+                     add .hidden to #accordion-content-2
+                   else
+                     set @aria-expanded to 'true' 
+                     set @data-state to 'open'
+                     remove .hidden from #accordion-content-2
+                     for otherTrigger in <button:not(#accordion-trigger-2)/>
+                       set otherTrigger@aria-expanded to 'false'
+                       set otherTrigger@data-state to 'closed'
+                       add .hidden to <div[data-state=\"open\"] .overflow-hidden/>
+                     end
+                   end">
+              Is it styled?
+              <svg
+                width="15"
+                height="15"
+                viewBox="0 0 15 15"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-4 w-4 shrink-0 text-muted-foreground transition-transform duration-200">
+                <path
+                  d="M3.13523 6.15803C3.3241 5.95657 3.64052 5.94637 3.84197 6.13523L7.5 9.56464L11.158 6.13523C11.3595 5.94637 11.6759 5.95657 11.8648 6.15803C12.0536 6.35949 12.0434 6.67591 11.842 6.86477L7.84197 10.6148C7.64964 10.7951 7.35036 10.7951 7.15803 10.6148L3.15803 6.86477C2.95657 6.67591 2.94637 6.35949 3.13523 6.15803Z"
+                  fill="currentColor"
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"></path>
+              </svg>
+            </button>
+          </h3>
+
+          <div
+            data-state="closed"
+            id="accordion-content-2"
+            role="region"
+            aria-labelledby="accordion-trigger-2"
+            data-orientation="vertical"
+            class="overflow-hidden text-sm hidden">
+            <div class="pb-4 pt-0">
+              Yes. It comes with default styles that match the other components' aesthetics.
+            </div>
+          </div>
+        </div>
+
+        <div
+          data-state="closed"
+          data-orientation="vertical"
+          class="border-b">
+          <h3
+            data-orientation="vertical"
+            data-state="closed"
+            class="flex">
+            <button
+              type="button"
+              aria-controls="accordion-content-3"
+              aria-expanded="false"
+              data-state="closed"
+              data-orientation="vertical"
+              id="accordion-trigger-3"
+              class="flex flex-1 items-center justify-between py-4 text-sm font-medium transition-all hover:underline [&[data-state=open]>svg]:rotate-180"
+              _="on click 
+                   if @aria-expanded equals 'true'
+                     set @aria-expanded to 'false' 
+                     set @data-state to 'closed'
+                     add .hidden to #accordion-content-3
+                   else
+                     set @aria-expanded to 'true' 
+                     set @data-state to 'open'
+                     remove .hidden from #accordion-content-3
+                     for otherTrigger in <button:not(#accordion-trigger-3)/>
+                       set otherTrigger@aria-expanded to 'false'
+                       set otherTrigger@data-state to 'closed'
+                       add .hidden to <div[data-state=\"open\"] .overflow-hidden/>
+                     end
+                   end">
+              Is it animated?
+              <svg
+                width="15"
+                height="15"
+                viewBox="0 0 15 15"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-4 w-4 shrink-0 text-muted-foreground transition-transform duration-200">
+                <path
+                  d="M3.13523 6.15803C3.3241 5.95657 3.64052 5.94637 3.84197 6.13523L7.5 9.56464L11.158 6.13523C11.3595 5.94637 11.6759 5.95657 11.8648 6.15803C12.0536 6.35949 12.0434 6.67591 11.842 6.86477L7.84197 10.6148C7.64964 10.7951 7.35036 10.7951 7.15803 10.6148L3.15803 6.86477C2.95657 6.67591 2.94637 6.35949 3.13523 6.15803Z"
+                  fill="currentColor"
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"></path>
+              </svg>
+            </button>
+          </h3>
+
+          <div
+            data-state="closed"
+            id="accordion-content-3"
+            role="region"
+            aria-labelledby="accordion-trigger-3"
+            data-orientation="vertical"
+            class="overflow-hidden text-sm hidden">
+            <div class="pb-4 pt-0">
+              Yes. It's animated by default, but you can customize the animation as needed.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="space-y-6">
+      <h2 class="text-xl font-semibold tracking-tight">Implementation</h2>
+      
+      <div class="space-y-4">
+        <h3 class="font-medium">Basic Structure</h3>
+        <p class="text-sm text-muted-foreground">
+          The accordion component consists of a container with multiple accordion items. Each item has a trigger button and a content panel.
+        </p>
+        
+        <div class="relative rounded-md bg-muted p-4 font-mono text-sm">
+          <pre class="overflow-x-auto"><code>&lt;div data-orientation="vertical"&gt;
+  &lt;div data-state="closed" data-orientation="vertical" class="border-b"&gt;
+    &lt;h3 data-orientation="vertical" data-state="closed" class="flex"&gt;
+      &lt;button
+        type="button"
+        aria-controls="accordion-content-1"
+        aria-expanded="false"
+        data-state="closed"
+        data-orientation="vertical"
+        id="accordion-trigger-1"
+        class="flex flex-1 items-center justify-between py-4 font-medium transition-all hover:underline [&[data-state=open]>svg]:rotate-180"&gt;
+        Is it accessible?
+        &lt;!-- Icon --&gt;
+      &lt;/button&gt;
+    &lt;/h3&gt;
+    &lt;div
+      data-state="closed"
+      id="accordion-content-1"
+      role="region"
+      aria-labelledby="accordion-trigger-1"
+      data-orientation="vertical"
+      class="overflow-hidden text-sm hidden"&gt;
+      &lt;div class="pb-4 pt-0"&gt;
+        Yes. It adheres to the WAI-ARIA design pattern.
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+      </div>
+      
+      <div class="space-y-4">
+        <h3 class="font-medium">Functionality with Hyperscript</h3>
+        <p class="text-sm text-muted-foreground">
+          The accordion uses Hyperscript to handle the interactive behavior. Each trigger button has a script that toggles its content panel.
+        </p>
+        
+        <div class="relative rounded-md bg-muted p-4 font-mono text-sm">
+          <pre class="overflow-x-auto"><code>_="on click 
+  if @aria-expanded equals 'true'
+    set @aria-expanded to 'false' 
+    set @data-state to 'closed'
+    add .hidden to #accordion-content-1
+  else
+    set @aria-expanded to 'true' 
+    set @data-state to 'open'
+    remove .hidden from #accordion-content-1
+    for otherTrigger in &lt;button:not(#accordion-trigger-1)/&gt;
+      set otherTrigger@aria-expanded to 'false'
+      set otherTrigger@data-state to 'closed'
+      add .hidden to &lt;div[data-state="open"] .overflow-hidden/&gt;
+    end
+  end"</code></pre>
+        </div>
+      </div>
+      
+      <div class="space-y-4">
+        <h3 class="font-medium">Accessibility Features</h3>
+        <ul class="list-disc pl-6 text-sm text-muted-foreground space-y-2">
+          <li><code class="relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-xs font-semibold">aria-controls</code> attribute on the trigger button that points to the content panel</li>
+          <li><code class="relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-xs font-semibold">aria-expanded</code> attribute that indicates whether the content is visible</li>
+          <li><code class="relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-xs font-semibold">role="region"</code> on the content panel</li>
+          <li><code class="relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-xs font-semibold">aria-labelledby</code> attribute on the content panel that points to the trigger button</li>
+          <li>Keyboard navigation support</li>
+        </ul>
+      </div>
+      
+      <div class="space-y-4">
+        <h3 class="font-medium">Animation</h3>
+        <p class="text-sm text-muted-foreground">
+          The accordion uses Tailwind CSS transitions for smooth animations. The chevron icon rotates 180 degrees when the accordion is open.
+        </p>
+        
+        <div class="relative rounded-md bg-muted p-4 font-mono text-sm">
+          <pre class="overflow-x-auto"><code>&lt;svg class="h-4 w-4 shrink-0 text-muted-foreground transition-transform duration-200"&gt;
+  &lt;!-- Icon path --&gt;
+&lt;/svg&gt;</code></pre>
+        </div>
+        
+        <div class="relative rounded-md bg-muted p-4 font-mono text-sm">
+          <pre class="overflow-x-auto"><code>.transition-transform.duration-200 {
+  transition-property: transform;
+  transition-duration: 200ms;
+}
+
+[&[data-state=open]>svg]:rotate-180 {
+  &[data-state="open"] > svg {
+    transform: rotate(180deg);
+  }
+}</code></pre>
+        </div>
+      </div>
+      
+      <div class="space-y-4">
+        <h3 class="font-medium">Usage Example</h3>
+        <p class="text-sm text-muted-foreground">
+          To use the accordion component, simply copy the structure and modify the content as needed. You'll need to ensure:
+        </p>
+        <ul class="list-disc pl-6 text-sm text-muted-foreground space-y-2">
+          <li>Each trigger button has a unique ID</li>
+          <li>Each content panel has a unique ID that matches the <code class="relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-xs font-semibold">aria-controls</code> attribute</li>
+          <li>Update the Hyperscript to reference the correct IDs</li>
+          <li>Maintain the data attributes for proper functionality</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
