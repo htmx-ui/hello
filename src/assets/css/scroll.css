@@ -35,3 +35,9 @@ pre code {
   white-space: pre-wrap;
   word-wrap: break-word;
 }
+
+/* Accordion animation */
+.accordion-content {
+  transition: max-height 0.3s ease-out;
+  overflow: hidden;
+}
