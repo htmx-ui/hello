@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Atuo commiter !
-./commiter.sh &
+#./commiter.sh &
 
 # Kill any process currently using port 8000
 lsof -i:8000
