@@ -90,7 +90,8 @@
             role="region"
             aria-labelledby="accordion-trigger-1"
             data-orientation="vertical"
-            class="overflow-hidden text-sm transition-all duration-300 ease-in-out">
+            class="overflow-hidden text-sm transition-all duration-300 ease-in-out"
+            style="max-height: 100px;">
             <div class="pb-4 pt-0">
               Yes. It adheres to the WAI-ARIA design pattern.
             </div>
@@ -154,7 +155,8 @@
             role="region"
             aria-labelledby="accordion-trigger-2"
             data-orientation="vertical"
-            class="overflow-hidden text-sm transition-all duration-300 ease-in-out hidden">
+            class="overflow-hidden text-sm transition-all duration-300 ease-in-out hidden"
+            style="max-height: 0;">
             <div class="pb-4 pt-0">
               Yes. It comes with default styles that match the other components' aesthetics.
             </div>
@@ -218,7 +220,8 @@
             role="region"
             aria-labelledby="accordion-trigger-3"
             data-orientation="vertical"
-            class="overflow-hidden text-sm transition-all duration-300 ease-in-out hidden">
+            class="overflow-hidden text-sm transition-all duration-300 ease-in-out hidden"
+            style="max-height: 0;">
             <div class="pb-4 pt-0">
               Yes. It's animated by default with smooth transitions, but you can customize the animation as needed.
             </div>
@@ -264,13 +267,13 @@
       </div>
       
       <div class="space-y-4">
-        <h2 class="text-2xl font-semibold tracking-tight">Getting Started</h2>
+        <h2 class="text-2xl font-semibold tracking-tight">Implementation</h2>
         
         <div class="space-y-6">
           <div class="space-y-4">
-            <h3 class="text-lg font-medium">Basic Structure</h3>
+            <h3 class="text-lg font-medium">HTML Structure</h3>
             <p class="text-sm text-muted-foreground">
-              The accordion component follows a specific HTML structure:
+              The accordion follows a specific HTML structure:
             </p>
             
             <div class="relative rounded-md bg-muted p-4 font-mono text-sm overflow-x-auto">
@@ -313,7 +316,8 @@
              transition-all 
              duration-300 
              ease-in-out 
-             hidden"&gt;
+             hidden"
+      style="max-height: 0;"&gt;
       &lt;div class="pb-4 pt-0"&gt;
         Content goes here.
       &lt;/div&gt;
@@ -388,6 +392,77 @@
       </div>
       
       <div class="space-y-4">
+        <h2 class="text-2xl font-semibold tracking-tight">Animations</h2>
+        
+        <div class="space-y-6">
+          <div class="space-y-4">
+            <h3 class="text-lg font-medium">Content Animation</h3>
+            <p class="text-sm text-muted-foreground">
+              The accordion uses CSS transitions for smooth animations:
+            </p>
+            
+            <div class="relative rounded-md bg-muted p-4 font-mono text-sm overflow-x-auto">
+              <pre class="whitespace-pre-wrap break-words"><code>&lt;div class="overflow-hidden 
+             text-sm
+             transition-all 
+             duration-300 
+             ease-in-out 
+             hidden"
+     style="max-height: 0;"&gt;
+  &lt;div class="pb-4 pt-0"&gt;
+    Content here.
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+            
+            <p class="text-sm text-muted-foreground">
+              When open, the max-height changes to show content:
+            </p>
+            
+            <div class="relative rounded-md bg-muted p-4 font-mono text-sm overflow-x-auto">
+              <pre class="whitespace-pre-wrap break-words"><code>&lt;div class="overflow-hidden 
+             text-sm
+             transition-all 
+             duration-300 
+             ease-in-out"
+     style="max-height: 200px;"&gt;
+  &lt;div class="pb-4 pt-0"&gt;
+    Content here.
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+          </div>
+          
+          <div class="space-y-4">
+            <h3 class="text-lg font-medium">Icon Rotation</h3>
+            <p class="text-sm text-muted-foreground">
+              The chevron icon rotates 180 degrees when the accordion is open:
+            </p>
+            
+            <div class="relative rounded-md bg-muted p-4 font-mono text-sm overflow-x-auto">
+              <pre class="whitespace-pre-wrap break-words"><code>&lt;button&gt;
+  &lt;svg class="transition-transform duration-200"&gt;
+    &lt;!-- Chevron icon --&gt;
+  &lt;/svg&gt;
+&lt;/button&gt;</code></pre>
+            </div>
+            
+            <p class="text-sm text-muted-foreground">
+              When the accordion is open, we add the <code>.rotate-180</code> class:
+            </p>
+            
+            <div class="relative rounded-md bg-muted p-4 font-mono text-sm overflow-x-auto">
+              <pre class="whitespace-pre-wrap break-words"><code>&lt;button&gt;
+  &lt;svg class="transition-transform duration-200 rotate-180"&gt;
+    &lt;!-- Chevron icon --&gt;
+  &lt;/svg&gt;
+&lt;/button&gt;</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="space-y-4">
         <h2 class="text-2xl font-semibold tracking-tight">Interactivity</h2>
         
         <div class="space-y-6">
@@ -426,33 +501,6 @@
       remove .rotate-180 from <svg/>
     end
   end"</code></pre>
-            </div>
-          </div>
-          
-          <div class="space-y-4">
-            <h3 class="text-lg font-medium">Icon Rotation</h3>
-            <p class="text-sm text-muted-foreground">
-              The chevron icon rotates 180 degrees when the accordion is open:
-            </p>
-            
-            <div class="relative rounded-md bg-muted p-4 font-mono text-sm overflow-x-auto">
-              <pre class="whitespace-pre-wrap break-words"><code>&lt;button&gt;
-  &lt;svg class="transition-transform duration-200"&gt;
-    &lt;!-- Chevron icon --&gt;
-  &lt;/svg&gt;
-&lt;/button&gt;</code></pre>
-            </div>
-            
-            <p class="text-sm text-muted-foreground">
-              When the accordion is open, we add the <code>.rotate-180</code> class to the SVG:
-            </p>
-            
-            <div class="relative rounded-md bg-muted p-4 font-mono text-sm overflow-x-auto">
-              <pre class="whitespace-pre-wrap break-words"><code>&lt;button&gt;
-  &lt;svg class="transition-transform duration-200 rotate-180"&gt;
-    &lt;!-- Chevron icon --&gt;
-  &lt;/svg&gt;
-&lt;/button&gt;</code></pre>
             </div>
           </div>
         </div>
@@ -504,7 +552,8 @@
                 text-sm
                 transition-all 
                 duration-300 
-                ease-in-out"&gt;
+                ease-in-out"
+         style="max-height: 100px;"&gt;
       &lt;div class="pb-4 pt-0"&gt;
         First item content.
       &lt;/div&gt;
@@ -548,7 +597,8 @@
                 transition-all 
                 duration-300 
                 ease-in-out 
-                hidden"&gt;
+                hidden"
+         style="max-height: 0;"&gt;
       &lt;div class="pb-4 pt-0"&gt;
         Second item content.
       &lt;/div&gt;
