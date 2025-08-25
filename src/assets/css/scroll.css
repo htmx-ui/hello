@@ -25,11 +25,14 @@ pre {
   white-space: pre-wrap;
   word-wrap: break-word;
   overflow-x: auto;
+  line-height: 1.5;
 }
 
 pre code {
   white-space: pre-wrap;
   word-wrap: break-word;
+  display: block;
+  padding: 1em;
 }
 
 .overflow-x-auto pre {
@@ -89,4 +92,23 @@ pre code * {
   max-width: 100%;
   overflow-x: auto;
   display: block;
+}
+
+/* Improve spacing in code blocks */
+pre code,
+.code-block pre code {
+  padding: 1.25em;
+  line-height: 1.6;
+  letter-spacing: 0.5px;
+}
+
+/* Special handling for Hyperscript code blocks */
+pre.code-hyperscript,
+.code-block.pre.code-hyperscript {
+  padding: 0;
+}
+
+pre.code-hyperscript code {
+  padding: 1.25em;
+  line-height: 1.6;
 }

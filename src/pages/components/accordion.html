@@ -486,13 +486,10 @@
     set @data-state to 'open'
     remove .hidden from #content-id
     add .rotate-180 to <svg/>
-    for otherTrigger in 
-      &lt;button:not(#trigger-id)/&gt;
+    for otherTrigger in <button:not(#trigger-id)/>
       set otherTrigger@aria-expanded to 'false'
       set otherTrigger@data-state to 'closed'
-      add .hidden to 
-        &lt;div[id^='accordion-content-']:
-        not(#content-id)/&gt;
+      add .hidden to <div[id^='accordion-content-']:not(#content-id)/>
       remove .rotate-180 from <svg/>
     end
   end"</code></pre>

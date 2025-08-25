@@ -62,10 +62,12 @@
                             set my @data-state to 'closed'
                             add .hidden to #content-2
                             remove .rotate-180 from <svg/>
+                            set #content-2.className to 'overflow-hidden text-sm transition-all duration-300 ease-in-out accordion-content-closed'
                         else
                             set my @data-state to 'open'
                             remove .hidden from #content-2
                             add .rotate-180 to <svg/>
+                            set #content-2.className to 'overflow-hidden text-sm transition-all duration-300 ease-in-out accordion-content-open'
                         end">
                     Accordion Item #2
                     <svg
@@ -90,6 +92,30 @@
                     This is the content of the second accordion item. It also has smooth animations.
                 </div>
             </div>
+        </div>
+    </div>
+    
+    <div class="mt-8 max-w-2xl">
+        <h2 class="text-xl font-semibold mb-4">Hyperscript Logic Example</h2>
+        <div class="relative rounded-md bg-muted p-4 font-mono text-sm overflow-x-auto">
+            <pre class="whitespace-pre-wrap break-words"><code>_="on click 
+  if @aria-expanded equals 'true'
+    set @aria-expanded to 'false' 
+    set @data-state to 'closed'
+    add .hidden to #content-id
+    remove .rotate-180 from <svg/>
+  else
+    set @aria-expanded to 'true' 
+    set @data-state to 'open'
+    remove .hidden from #content-id
+    add .rotate-180 to <svg/>
+    for otherTrigger in <button:not(#trigger-id)/>
+      set otherTrigger@aria-expanded to 'false'
+      set otherTrigger@data-state to 'closed'
+      add .hidden to <div[id^='accordion-content-']:not(#content-id)/>
+      remove .rotate-180 from <svg/>
+    end
+  end"</code></pre>
         </div>
     </div>
 </body>
