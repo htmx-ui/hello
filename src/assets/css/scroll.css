@@ -19,3 +19,19 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
+
+/* Fix for code block text wrapping */
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+pre code {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.overflow-x-auto pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
