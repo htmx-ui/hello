@@ -26,18 +26,20 @@ pre {
   word-wrap: break-word;
   overflow-x: auto;
   line-height: 1.5;
+  padding: 1em;
 }
 
 pre code {
   white-space: pre-wrap;
   word-wrap: break-word;
   display: block;
-  padding: 1em;
+  padding: 0;
 }
 
 .overflow-x-auto pre {
   white-space: pre-wrap;
   word-wrap: break-word;
+  padding: 1em;
 }
 
 /* Accordion animation classes */
@@ -59,24 +61,27 @@ pre code {
   white-space: pre-wrap;
   word-wrap: break-word;
   max-width: 100%;
+  padding: 1em;
 }
 
 /* Additional fixes for code block formatting */
 :not(pre) > code {
   white-space: normal;
+  padding: 0.2em 0.4em;
+  border-radius: 0.25rem;
 }
 
 pre[class*="language-"] {
   overflow-x: auto;
   white-space: pre-wrap;
   word-wrap: break-word;
+  padding: 1em;
 }
 
 /* Fix for long lines in code blocks */
 pre code {
   display: block;
   overflow-x: auto;
-  padding: 1em;
   line-height: 1.5;
 }
 
@@ -97,18 +102,22 @@ pre code * {
 /* Improve spacing in code blocks */
 pre code,
 .code-block pre code {
-  padding: 1.25em;
   line-height: 1.6;
   letter-spacing: 0.5px;
 }
 
 /* Special handling for Hyperscript code blocks */
 pre.code-hyperscript,
-.code-block.pre.code-hyperscript {
+.code-block pre.code-hyperscript {
   padding: 0;
 }
 
 pre.code-hyperscript code {
   padding: 1.25em;
   line-height: 1.6;
+}
+
+/* Fix SVG escaping in code blocks */
+code {
+  font-family: monospace;
 }

@@ -54,17 +54,17 @@
                      set @aria-expanded to 'false' 
                      set @data-state to 'closed'
                      add .hidden to #accordion-content-1
-                     remove .rotate-180 from <svg/>
+                     remove .rotate-180 from &lt;svg/&gt;
                    else
                      set @aria-expanded to 'true' 
                      set @data-state to 'open'
                      remove .hidden from #accordion-content-1
-                     add .rotate-180 to <svg/>
-                     for otherTrigger in <button:not(#accordion-trigger-1)/>
+                     add .rotate-180 to &lt;svg/&gt;
+                     for otherTrigger in &lt;button:not(#accordion-trigger-1)/&gt;
                        set otherTrigger@aria-expanded to 'false'
                        set otherTrigger@data-state to 'closed'
-                       add .hidden to <div[id^='accordion-content-']:not(#accordion-content-1)/>
-                       remove .rotate-180 from <svg/>
+                       add .hidden to &lt;div[id^='accordion-content-']:not(#accordion-content-1)/&gt;
+                       remove .rotate-180 from &lt;svg/&gt;
                      end
                    end">
               Is it accessible?
@@ -118,17 +118,17 @@
                      set @aria-expanded to 'false' 
                      set @data-state to 'closed'
                      add .hidden to #accordion-content-2
-                     remove .rotate-180 from <svg/>
+                     remove .rotate-180 from &lt;svg/&gt;
                    else
                      set @aria-expanded to 'true' 
                      set @data-state to 'open'
                      remove .hidden from #accordion-content-2
-                     add .rotate-180 to <svg/>
-                     for otherTrigger in <button:not(#accordion-trigger-2)/>
+                     add .rotate-180 to &lt;svg/&gt;
+                     for otherTrigger in &lt;button:not(#accordion-trigger-2)/&gt;
                        set otherTrigger@aria-expanded to 'false'
                        set otherTrigger@data-state to 'closed'
-                       add .hidden to <div[id^='accordion-content-']:not(#accordion-content-2)/>
-                       remove .rotate-180 from <svg/>
+                       add .hidden to &lt;div[id^='accordion-content-']:not(#accordion-content-2)/&gt;
+                       remove .rotate-180 from &lt;svg/&gt;
                      end
                    end">
               Is it styled?
@@ -182,17 +182,17 @@
                      set @aria-expanded to 'false' 
                      set @data-state to 'closed'
                      add .hidden to #accordion-content-3
-                     remove .rotate-180 from <svg/>
+                     remove .rotate-180 from &lt;svg/&gt;
                    else
                      set @aria-expanded to 'true' 
                      set @data-state to 'open'
                      remove .hidden from #accordion-content-3
-                     add .rotate-180 to <svg/>
-                     for otherTrigger in <button:not(#accordion-trigger-3)/>
+                     add .rotate-180 to &lt;svg/&gt;
+                     for otherTrigger in &lt;button:not(#accordion-trigger-3)/&gt;
                        set otherTrigger@aria-expanded to 'false'
                        set otherTrigger@data-state to 'closed'
-                       add .hidden to <div[id^='accordion-content-']:not(#accordion-content-3)/>
-                       remove .rotate-180 from <svg/>
+                       add .hidden to &lt;div[id^='accordion-content-']:not(#accordion-content-3)/&gt;
+                       remove .rotate-180 from &lt;svg/&gt;
                      end
                    end">
               Is it animated?
@@ -475,22 +475,22 @@
             </ul>
             
             <div class="relative rounded-md bg-muted p-4 font-mono text-sm overflow-x-auto">
-              <pre class="whitespace-pre-wrap break-words code-hyperscript"><code>_="on click 
+              <pre class="whitespace-pre-wrap break-words"><code>_="on click 
   if @aria-expanded equals 'true'
     set @aria-expanded to 'false' 
     set @data-state to 'closed'
     add .hidden to #content-id
-    remove .rotate-180 from &lt;svg/&gt;
+    remove .rotate-180 from &amp;lt;svg/&amp;gt;
   else
     set @aria-expanded to 'true' 
     set @data-state to 'open'
     remove .hidden from #content-id
-    add .rotate-180 to &lt;svg/&gt;
-    for otherTrigger in &lt;button:not(#trigger-id)/&gt;
+    add .rotate-180 to &amp;lt;svg/&amp;gt;
+    for otherTrigger in &amp;lt;button:not(#trigger-id)/&amp;gt;
       set otherTrigger@aria-expanded to 'false'
       set otherTrigger@data-state to 'closed'
-      add .hidden to &lt;div[id^='accordion-content-']:not(#content-id)/&gt;
-      remove .rotate-180 from &lt;svg/&gt;
+      add .hidden to &amp;lt;div[id^='accordion-content-']:not(#content-id)/&amp;gt;
+      remove .rotate-180 from &amp;lt;svg/&amp;gt;
     end
   end"</code></pre>
             </div>
