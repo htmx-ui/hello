@@ -90,8 +90,7 @@
             role="region"
             aria-labelledby="accordion-trigger-1"
             data-orientation="vertical"
-            class="overflow-hidden text-sm transition-all duration-300 ease-in-out"
-            style="max-height: 100px;">
+            class="overflow-hidden text-sm transition-all duration-300 ease-in-out accordion-content-open">
             <div class="pb-4 pt-0">
               Yes. It adheres to the WAI-ARIA design pattern.
             </div>
@@ -155,8 +154,7 @@
             role="region"
             aria-labelledby="accordion-trigger-2"
             data-orientation="vertical"
-            class="overflow-hidden text-sm transition-all duration-300 ease-in-out hidden"
-            style="max-height: 0;">
+            class="overflow-hidden text-sm transition-all duration-300 ease-in-out accordion-content-closed">
             <div class="pb-4 pt-0">
               Yes. It comes with default styles that match the other components' aesthetics.
             </div>
@@ -220,8 +218,7 @@
             role="region"
             aria-labelledby="accordion-trigger-3"
             data-orientation="vertical"
-            class="overflow-hidden text-sm transition-all duration-300 ease-in-out hidden"
-            style="max-height: 0;">
+            class="overflow-hidden text-sm transition-all duration-300 ease-in-out accordion-content-closed">
             <div class="pb-4 pt-0">
               Yes. It's animated by default with smooth transitions, but you can customize the animation as needed.
             </div>
@@ -316,8 +313,7 @@
              transition-all 
              duration-300 
              ease-in-out 
-             hidden"
-      style="max-height: 0;"&gt;
+             accordion-content-closed"&gt;
       &lt;div class="pb-4 pt-0"&gt;
         Content goes here.
       &lt;/div&gt;
@@ -398,7 +394,7 @@
           <div class="space-y-4">
             <h3 class="text-lg font-medium">Content Animation</h3>
             <p class="text-sm text-muted-foreground">
-              The accordion uses CSS transitions for smooth animations:
+              The accordion uses CSS classes for smooth animations:
             </p>
             
             <div class="relative rounded-md bg-muted p-4 font-mono text-sm overflow-x-auto">
@@ -407,8 +403,7 @@
              transition-all 
              duration-300 
              ease-in-out 
-             hidden"
-     style="max-height: 0;"&gt;
+             accordion-content-closed"&gt;
   &lt;div class="pb-4 pt-0"&gt;
     Content here.
   &lt;/div&gt;
@@ -416,7 +411,7 @@
             </div>
             
             <p class="text-sm text-muted-foreground">
-              When open, the max-height changes to show content:
+              When open, the class changes to <code>accordion-content-open</code>:
             </p>
             
             <div class="relative rounded-md bg-muted p-4 font-mono text-sm overflow-x-auto">
@@ -424,8 +419,8 @@
              text-sm
              transition-all 
              duration-300 
-             ease-in-out"
-     style="max-height: 200px;"&gt;
+             ease-in-out 
+             accordion-content-open"&gt;
   &lt;div class="pb-4 pt-0"&gt;
     Content here.
   &lt;/div&gt;
@@ -552,8 +547,8 @@
                 text-sm
                 transition-all 
                 duration-300 
-                ease-in-out"
-         style="max-height: 100px;"&gt;
+                ease-in-out 
+                accordion-content-open"&gt;
       &lt;div class="pb-4 pt-0"&gt;
         First item content.
       &lt;/div&gt;
@@ -597,8 +592,7 @@
                 transition-all 
                 duration-300 
                 ease-in-out 
-                hidden"
-         style="max-height: 0;"&gt;
+                accordion-content-closed"&gt;
       &lt;div class="pb-4 pt-0"&gt;
         Second item content.
       &lt;/div&gt;
