@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Atuo commiter !
+# Auto commiter !
 #./commiter.sh &
 
 # Kill any process currently using port 8000
@@ -14,4 +14,4 @@ python3 -m http.server 8000 &
 xdg-open http://localhost:8000/src/
 
 # Run Tailwind CSS in watch mode in the foreground
-tailwindcss -i ./main.css -o ./src/assets/css/tailwindcss.css --watch
+npx tailwindcss -i ./main.css -o ./src/assets/css/tailwindcss.css --watch

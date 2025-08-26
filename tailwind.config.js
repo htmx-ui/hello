@@ -1,10 +1,12 @@
 /** @type {import('tailwindcss').Config} */
 
-// const { fontFamily } = require("tailwindcss/defaultTheme")
-
 module.exports = {
-  darkMode: ["class"],
-  content: ["./src/**/*.{html,js}"],
+  content: [
+    "./src/**/*.{html,js}",
+    "./src/pages/**/*.{html,js}",
+    "./src/partials/**/*.{html,js}",
+    "./src/assets/**/*.{html,js}"
+  ],
   theme: {
     container: {
       center: true,
@@ -29,8 +31,8 @@ module.exports = {
           foreground: "hsl(var(--secondary-foreground))",
         },
         destructive: {
-          DEFAULT: "hsl(var(--destructive) / <alpha-value>)",
-          foreground: "hsl(var(--destructive-foreground) / <alpha-value>)",
+          DEFAULT: "hsl(var(--destructive))",
+          foreground: "hsl(var(--destructive-foreground))",
         },
         muted: {
           DEFAULT: "hsl(var(--muted))",
@@ -55,10 +57,6 @@ module.exports = {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
-      fontFamily: {
-        // sans: ["var(--font-geist-sans)", ...fontFamily.sans],
-        // mono: ["var(--font-mono)", ...fontFamily.mono],
-      },
       keyframes: {
         "accordion-down": {
           from: { height: "0" },
@@ -81,10 +79,4 @@ module.exports = {
     },
   },
   plugins: [],
-  // Add safelist for border utilities to ensure they're generated
-  safelist: [
-    'border-border',
-    'border-border/40',
-    'border-border/50',
-  ]
-};
+}

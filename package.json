@@ -1,0 +1,20 @@
+{
+  "name": "hello",
+  "version": "1.0.0",
+  "description": "Welcome to my HTMX, Hyperscript, and TailwindCSS UI library! This project is inspired by popular UI frameworks such as **Headless UI**, **ShadCN**, and **Skeleton UI**. Designed to be **completely free**, this library allows you to **copy and paste** every component with ease, enabling fast and efficient web development.",
+  "main": "tailwind.config.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "dev": "npx tailwindcss -i ./main.css -o ./src/assets/css/tailwindcss.css --watch",
+    "build": "npx tailwindcss -i ./main.css -o ./src/assets/css/tailwindcss.css --minify",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "tailwindcss": "^4.1.12"
+  }
+}
