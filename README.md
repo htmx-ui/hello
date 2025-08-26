@@ -1,12 +1,10 @@
-
 # HTMX + Hyperscript + TailwindCSS UI Library
 
 Welcome to my HTMX, Hyperscript, and TailwindCSS UI library! This project is inspired by popular UI frameworks such as **Headless UI**, **ShadCN**, and **Skeleton UI**. Designed to be **completely free**, this library allows you to **copy and paste** every component with ease, enabling fast and efficient web development.
 
-Please go and check the demo
 [Demo](https://ar-92.github.io/UI/src/index)
 
-> **Status**: 🚧 Work in Progress - Only 10% completed
+> **Status**: 🚧 Work in Progress - Continuously evolving
 
 ## Why This Library?
 
@@ -23,27 +21,130 @@ Please go and check the demo
    - Whether you're looking for flexibility, accessibility, or beautiful design, this library delivers a balanced blend of all three.
 
 ### 4. **Tailored for TailwindCSS**
-   - TailwindCSS makes it easy to customize and theme components to fit your brand or project’s design language. With this UI library, you get **pre-built components** ready to adapt to any style.
+   - TailwindCSS makes it easy to customize and theme components to fit your brand or project's design language. With this UI library, you get **pre-built components** ready to adapt to any style.
    - From buttons and forms to advanced modals and grids, everything is built with utility-first CSS in mind.
 
 ### 5. **Dynamic and Interactive by Default**
    - Powered by **HTMX** and **Hyperscript**, our components are designed to be interactive and dynamic without the need for JavaScript libraries like React or Vue.
    - You get **lightweight**, fast-loading components that deliver a **great user experience** without the overhead.
 
+## Tech Stack
+
+- **[HTMX](https://htmx.org/)** - High power tools for HTML
+- **[Hyperscript](https://hyperscript.org/)** - Small scripting language for the web
+- **[TailwindCSS](https://tailwindcss.com/)** - Utility-first CSS framework (v3.4.17)
+- **Pure HTML/CSS/JavaScript** - No build tools required
+
+## Recent Improvements
+
+### ✅ Tailwind CSS v4 to v3 Migration
+We've successfully resolved critical styling issues by downgrading from Tailwind CSS v4 to v3.4.17:
+- Fixed missing utility classes (rounded-lg, mr-4, border-border, etc.)
+- Restored proper class generation for all components
+- Improved CSS file size from 1 line to 4,255 lines with complete utilities
+- Enhanced content scanning and class detection
+
+### ✅ Design System Consistency
+- Unified spacing, typography, and component styling across all pages
+- Standardized layout structures for components, examples, and documentation
+- Improved responsive design patterns
+- Better dark/light mode implementation
+
+### ✅ Performance & Reliability
+- Optimized build process with proper Tailwind CSS compilation
+- Fixed missing CSS classes that were breaking component styling
+- Enhanced cross-browser compatibility
+
 ## Current Progress
 
-- 📅 **10% Complete**
-- This project is still in the early stages of development. Expect many more components to come soon!
+- 📅 **Actively Developing** - Regular updates and new components
+- 🎨 **Design System** - Consistent styling and component patterns
+- ⚡ **Performance** - Optimized for fast loading and interactions
+- 🌙 **Dark Mode** - Full light/dark theme support
+
+## Project Structure
+
+```
+src/
+├── assets/           # CSS, JS, images, and icons
+├── blocks/           # Pre-built page layouts
+├── components/       # Individual UI components
+├── examples/         # Complete page examples
+├── pages/            # Documentation pages
+└── partials/         # Header, footer, and navigation
+```
+
+## Quick Start
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/AR-92/UI.git
+   ```
+
+2. Navigate to the project directory:
+   ```bash
+   cd UI
+   ```
+
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+4. Build the CSS:
+   ```bash
+   npm run build
+   ```
+
+5. Serve the project:
+   ```bash
+   python3 -m http.server 8000
+   ```
+
+6. Visit `http://localhost:8000/src/` in your browser
+
+## Development
+
+To watch for changes and automatically rebuild CSS:
+
+```bash
+npm run dev
+```
+
+## Contributing
+
+We welcome contributions from the community! Here's how you can help:
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Submit a pull request
+
+### Areas Needing Help:
+- Adding new components
+- Improving documentation
+- Fixing bugs
+- Enhancing accessibility
+- Optimizing performance
 
 ## Future Goals
 
-- **Comprehensive Component Library**: Expand the library with a wide variety of components covering everything from simple UI elements to advanced layouts.
-- **Documentation and Examples**: Provide detailed usage examples and documentation to make integration as smooth as possible.
-- **Community Feedback**: We’re committed to growing this project with input from the community. Contributions and suggestions are welcome!
+- **Expand Component Library** - Add more UI components and patterns
+- **Enhanced Documentation** - Comprehensive guides and examples
+- **Testing Suite** - Automated tests for components
+- **Community Features** - Requested components and improvements
+- **Performance Optimization** - Further enhancements for speed
 
-## Get Involved
+## License
 
-If you're interested in contributing to this project, feel free to fork the repo and submit a pull request. Let's make this UI library **the best open-source solution** for developers!
+This project is completely free and open source under the [MIT License](LICENSE).
+
+## Acknowledgments
+
+Special thanks to:
+- **Headless UI**, **ShadCN**, and **Skeleton UI** for inspiration
+- The HTMX, Hyperscript, and TailwindCSS communities
+- All contributors and supporters of this project
 
 ---
 
