@@ -13,5 +13,5 @@ python3 -m http.server 8000 &
 # Open the link in the browser
 xdg-open http://localhost:8000/src/
 
-# Run Tailwind CSS v3 in watch mode in the foreground
+# Run Tailwind CSS v4 in watch mode in the foreground
 npx tailwindcss -i ./main.css -o ./src/assets/css/tailwindcss.css --watch
