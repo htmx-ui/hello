@@ -52,19 +52,37 @@ module.exports = {
         },
       },
       borderRadius: {
-        xl: "calc(var(--radius) + 4px)",
-        lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)",
+        // Consistent border radius system:
+        // none: 0px - for sharp edges
+        // xs: 2px - for very subtle rounding
+        // sm: 4px - for small elements like badges
+        // DEFAULT: 6px - for most UI components (buttons, cards, inputs)
+        // md: 8px - for slightly larger components
+        // lg: 12px - for containers and sections
+        // xl: 16px - for large containers and hero sections
+        // full: 9999px - for circular elements
+        none: "0px",
+        xs: "2px",
+        sm: "4px",
+        DEFAULT: "6px",
+        md: "8px",
+        lg: "12px",
+        xl: "16px",
+        full: "9999px",
       },
     },
   },
   plugins: [],
   safelist: [
     // Add classes that we know we're using to ensure they're generated
-    'rounded-lg',
-    'rounded-md',
+    'rounded-none',
+    'rounded-xs',
     'rounded-sm',
+    'rounded',
+    'rounded-md',
+    'rounded-lg',
+    'rounded-xl',
+    'rounded-full',
     'border',
     'border-border',
     'border-input',

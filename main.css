@@ -33,7 +33,13 @@
 
     --ring: 215 20.2% 65.1%;
 
-    --radius: 0.5rem;
+    /* Consistent border radius system */
+    --radius-xs: 2px;
+    --radius-sm: 4px;
+    --radius: 6px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    --radius-xl: 16px;
   }
 
   .dark {
@@ -66,7 +72,13 @@
 
     --ring: 240 4.9% 83.9%;
 
-    --radius: 0.5rem;
+    /* Consistent border radius system */
+    --radius-xs: 2px;
+    --radius-sm: 4px;
+    --radius: 6px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    --radius-xl: 16px;
   }
 }
 

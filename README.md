@@ -41,7 +41,7 @@ Welcome to my HTMX, Hyperscript, and TailwindCSS UI library! This project is ins
 We've successfully resolved critical styling issues by downgrading from Tailwind CSS v4 to v3.4.17:
 - Fixed missing utility classes (rounded-lg, mr-4, border-border, etc.)
 - Restored proper class generation for all components
-- Improved CSS file size from 1 line to 4,255 lines with complete utilities
+- Improved CSS file size from 1 line to 4,271 lines with complete utilities
 - Enhanced content scanning and class detection
 
 ### ✅ Design System Consistency
@@ -49,6 +49,7 @@ We've successfully resolved critical styling issues by downgrading from Tailwind
 - Standardized layout structures for components, examples, and documentation
 - Improved responsive design patterns
 - Better dark/light mode implementation
+- **Consistent Border Radius System** - Defined and implemented a standardized border radius scale
 
 ### ✅ Performance & Reliability
 - Optimized build process with proper Tailwind CSS compilation
@@ -110,6 +111,24 @@ To watch for changes and automatically rebuild CSS:
 ```bash
 npm run dev
 ```
+
+## Design System
+
+### Border Radius Consistency
+We've implemented a consistent border radius system across all components:
+
+| Class | Value | Usage |
+|-------|-------|-------|
+| `rounded-none` | 0px | Sharp edges, no rounding |
+| `rounded-xs` | 2px | Very subtle rounding for small elements |
+| `rounded-sm` | 4px | Small rounding for badges, tags, small buttons |
+| `rounded` | 6px | **Default rounding** for most UI components |
+| `rounded-md` | 8px | Medium rounding for cards, larger components |
+| `rounded-lg` | 12px | Large rounding for containers and sections |
+| `rounded-xl` | 16px | Extra large rounding for hero sections |
+| `rounded-full` | 9999px | Circular elements |
+
+See [DESIGN_SYSTEM_BORDER_RADIUS.md](DESIGN_SYSTEM_BORDER_RADIUS.md) for detailed usage guidelines.
 
 ## Contributing
 
