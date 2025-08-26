@@ -1,11 +1,11 @@
 /** @type {import('tailwindcss').Config} */
-
 module.exports = {
   content: [
     "./src/**/*.{html,js}",
     "./src/pages/**/*.{html,js}",
     "./src/partials/**/*.{html,js}",
-    "./src/assets/**/*.{html,js}"
+    "./src/assets/**/*.{html,js}",
+    "./content-test.html"
   ],
   theme: {
     container: {
@@ -57,26 +57,26 @@ module.exports = {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
-      keyframes: {
-        "accordion-down": {
-          from: { height: "0" },
-          to: { height: "var(--radix-accordion-content-height)" },
-        },
-        "accordion-up": {
-          from: { height: "var(--radix-accordion-content-height)" },
-          to: { height: "0" },
-        },
-        "caret-blink": {
-          "0%,70%,100%": { opacity: "1" },
-          "20%,50%": { opacity: "0" },
-        },
-      },
-      animation: {
-        "accordion-down": "accordion-down 0.2s ease-out",
-        "accordion-up": "accordion-up 0.2s ease-out",
-        "caret-blink": "caret-blink 1.25s ease-out infinite",
-      },
     },
   },
   plugins: [],
+  safelist: [
+    // Add classes that we know we're using to ensure they're generated
+    'rounded-lg',
+    'rounded-md',
+    'rounded-sm',
+    'border',
+    'border-border',
+    'border-input',
+    'mr-4',
+    'ml-4',
+    'mt-4',
+    'mb-4',
+    'pl-4',
+    'pr-4',
+    'pt-4',
+    'pb-4',
+    'text-center',
+    'justify-center'
+  ]
 }

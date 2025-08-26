@@ -22,20 +22,25 @@
         />
     </head>
 
-    <body class="min-h-screen bg-background font-sans">
-        <div class="relative flex min-h-screen flex-col bg-background">
+    <body class="min-h-screen bg-background font-sans text-foreground">
+        <div class="relative flex min-h-screen flex-col">
+            <!-- Navbar will be loaded here -->
             <div
                 hx-get="/src/partials/navbar.html"
                 hx-trigger="load"
                 hx-swap="outerHTML"
             ></div>
 
-            <div
-                hx-get="/src/pages/home/index.html"
-                hx-trigger="load"
-                hx-swap="outerHTML"
-            ></div>
+            <!-- Main content area -->
+            <main class="flex-1">
+                <div
+                    hx-get="/src/pages/home/index.html"
+                    hx-trigger="load"
+                    hx-swap="outerHTML"
+                ></div>
+            </main>
 
+            <!-- Footer will be loaded here -->
             <div
                 hx-get="/src/partials/footer.html"
                 hx-trigger="load"

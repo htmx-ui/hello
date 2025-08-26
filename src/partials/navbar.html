@@ -1,10 +1,10 @@
 <header
-  class="sticky top-0 z-50 w-full border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-  <div class="container flex h-14 max-w-(--breakpoint-2xl) items-center">
+  class="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+  <div class="container flex h-14 max-w-screen-2xl items-center">
     <div class="mr-4 hidden md:flex">
       <a
         _="on click remove .text-primary from .nav"
-        class="mr-4 hover:text-primary flex items-center space-x-2 lg:mr-6 cursor-pointer nav"
+        class="mr-6 flex items-center space-x-2 cursor-pointer nav"
         hx-get="./pages/home/index.html"
         hx-trigger="click"
         hx-target="#page"
@@ -15,17 +15,7 @@
       <nav class="flex items-center gap-4 text-sm lg:gap-6">
         <a
           _="on click remove .text-primary from .nav then add .text-primary on me"
-          class="transition-colors hover:text-primary text-foreground/60 cursor-pointer nav"
-          hx-get="./pages/components/index.html"
-          hx-trigger="click"
-          hx-target="#page"
-          hx-swap="outerHTML">
-          Docs
-        </a>
-
-        <a
-          _="on click remove .text-primary from .nav then add .text-primary on me"
-          class="transition-colors hover:text-primary text-foreground/60 cursor-pointer nav"
+          class="transition-colors hover:text-primary text-foreground/80 cursor-pointer nav"
           hx-get="./pages/components/index.html"
           hx-trigger="click"
           hx-target="#page"
@@ -35,7 +25,7 @@
 
         <a
           _="on click remove .text-primary from .nav then add .text-primary on me"
-          class="transition-colors hover:text-primary text-foreground/60 cursor-pointer nav"
+          class="transition-colors hover:text-primary text-foreground/80 cursor-pointer nav"
           hx-get="./pages/blocks/index.html"
           hx-trigger="click"
           hx-target="#page"
@@ -45,7 +35,7 @@
 
         <a
           _="on click remove .text-primary from .nav then add .text-primary on me"
-          class="transition-colors hover:text-primary text-foreground/60 cursor-pointer nav"
+          class="transition-colors hover:text-primary text-foreground/80 cursor-pointer nav"
           hx-get="./pages/charts/index.html"
           hx-trigger="click"
           hx-target="#page"
@@ -55,32 +45,12 @@
 
         <a
           _="on click remove .text-primary from .nav then add .text-primary on me"
-          class="transition-colors hover:text-primary text-foreground/60 cursor-pointer nav"
-          hx-get="./pages/themes/index.html"
-          hx-trigger="click"
-          hx-target="#page"
-          hx-swap="outerHTML">
-          Themes
-        </a>
-
-        <a
-          _="on click remove .text-primary from .nav then add .text-primary on me"
-          class="transition-colors hover:text-primary text-foreground/60 cursor-pointer nav"
+          class="transition-colors hover:text-primary text-foreground/80 cursor-pointer nav"
           hx-get="./pages/examples/index.html"
           hx-trigger="click"
           hx-target="#page"
           hx-swap="outerHTML">
           Examples
-        </a>
-
-        <a
-          _="on click remove .text-primary from .nav then add .text-primary on me"
-          class="transition-colors hover:text-primary text-foreground/60 cursor-pointer nav"
-          hx-get="./pages/icons/index.html"
-          hx-trigger="click"
-          hx-target="#page"
-          hx-swap="outerHTML">
-          Icons
         </a>
       </nav>
     </div>
@@ -89,7 +59,7 @@
       class="flex flex-1 items-center justify-between space-x-2 md:justify-end">
       <div class="w-full flex-1 md:w-auto md:flex-none">
         <button
-          class="inline-flex items-center whitespace-nowrap transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 border border-input hover:bg-accent hover:text-accent-foreground px-4 py-2 relative h-8 w-full justify-start rounded-lg bg-muted/50 text-sm font-normal text-muted-foreground shadow-none sm:pr-12 md:w-40 lg:w-64">
+          class="inline-flex items-center whitespace-nowrap transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 border border-input hover:bg-accent hover:text-accent-foreground px-4 py-2 relative h-9 w-full justify-start rounded-md bg-muted/50 text-sm font-normal text-muted-foreground shadow-none sm:pr-12 md:w-40 lg:w-64">
           <span class="hidden lg:inline-flex">Search documentation...</span>
 
           <span class="inline-flex lg:hidden">Search...</span>
@@ -97,31 +67,28 @@
           <kbd
             class="pointer-events-none absolute right-[0.3rem] top-[0.3rem] hidden h-5 select-none items-center gap-1 rounded border bg-muted px-1.5 font-mono text-[10px] font-medium opacity-100 sm:flex">
             <span class="text-xs">⌘</span>
-
             K
           </kbd>
         </button>
       </div>
 
-      <nav class="flex items-center">
+      <nav class="flex items-center gap-1">
         <a
           target="_blank"
           rel="noreferrer"
-          href="https://github.com/AR-92/UI">
+          href="https://github.com/AR-92/UI"
+          class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-9 w-9 px-0">
           <div
-            class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground py-2 h-8 w-8 px-0">
-            <div
-              hx-swap="innerHTML"
-              hx-trigger="load"
-              hx-get="./assets/icons/logo-github.svg"
-              class="h-6 w-6"></div>
-            <span class="sr-only">GitHub</span>
-          </div>
+            hx-swap="innerHTML"
+            hx-trigger="load"
+            hx-get="./assets/icons/logo-github.svg"
+            class="h-5 w-5"></div>
+          <span class="sr-only">GitHub</span>
         </a>
 
         <button
           _="on click toggle .dark on <html/>"
-          class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground py-2 h-8 w-8 px-0"
+          class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-9 w-9 px-0"
           type="button">
           <div
             hx-swap="innerHTML"
