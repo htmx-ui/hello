@@ -1,6 +1,6 @@
 # Border Radius System
 
-This document defines the consistent border radius system used throughout the UI library.
+This document defines the consistent border radius system used throughout the Hello UI library.
 
 ## Border Radius Scale
 

@@ -1,7 +1,7 @@
 # HTMX Comprehensive Guide for Qwen CLI
 
 ## Overview
-HTMX is a library that extends HTML to allow modern browser features without writing JavaScript. It enables elements to issue HTTP requests, handle responses, and update parts of the page dynamically. This guide provides everything Qwen CLI needs to understand and implement HTMX effectively in the UI Library project.
+HTMX is a library that extends HTML to allow modern browser features without writing JavaScript. It enables elements to issue HTTP requests, handle responses, and update parts of the page dynamically. This guide provides everything Qwen CLI needs to understand and implement HTMX effectively in the Hello UI Component Library project.
 
 ## Core Concepts
 

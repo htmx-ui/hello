@@ -8,7 +8,12 @@
       hx-trigger="click"
       hx-target="#page"
       hx-swap="outerHTML">
-      <span class="font-bold">UI</span>
+      <div
+        hx-swap="innerHTML"
+        hx-trigger="load"
+        hx-get="./assets/icons/logo-hello.svg"
+        class="h-6 w-6"></div>
+      <span class="font-bold">Hello UI</span>
     </a>
     
     <button
@@ -85,7 +90,12 @@
         hx-trigger="click"
         hx-target="#page"
         hx-swap="outerHTML">
-        <span class="hidden font-bold lg:inline-block">UI</span>
+        <div
+          hx-swap="innerHTML"
+          hx-trigger="load"
+          hx-get="./assets/icons/logo-hello.svg"
+          class="h-6 w-6"></div>
+        <span class="hidden font-bold lg:inline-block">Hello UI</span>
       </a>
 
       <nav class="flex items-center gap-4 text-sm lg:gap-6">

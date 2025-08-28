@@ -1,7 +1,7 @@
 # Project Structure Documentation
 
 ## Overview
-This document describes the structure and organization of the HTMX + Hyperscript + TailwindCSS UI Library project.
+This document describes the structure and organization of the Hello UI - HTMX + Hyperscript + TailwindCSS Component Library project.
 
 ## Directory Structure
 ```

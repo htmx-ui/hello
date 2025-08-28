@@ -1,7 +1,7 @@
 # Development Workflow Documentation
 
 ## Overview
-This document describes the development workflow for the HTMX + Hyperscript + TailwindCSS UI Library project.
+This document describes the development workflow for the Hello UI - HTMX + Hyperscript + TailwindCSS Component Library project.
 
 ## Prerequisites
 - Node.js (for Tailwind CSS)

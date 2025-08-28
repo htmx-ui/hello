@@ -1,7 +1,7 @@
 # Animate.css Comprehensive Guide for Qwen CLI
 
 ## Overview
-Animate.css is a library of ready-to-use, cross-browser CSS animations that can be easily integrated into web projects. It's ideal for adding emphasis, creating home pages, sliders, and guiding user attention. This guide provides everything Qwen CLI needs to understand and implement animate.css effectively in the UI Library project.
+Animate.css is a library of ready-to-use, cross-browser CSS animations that can be easily integrated into web projects. It's ideal for adding emphasis, creating home pages, sliders, and guiding user attention. This guide provides everything Qwen CLI needs to understand and implement animate.css effectively in the Hello UI Component Library project.
 
 ## Core Concepts
 

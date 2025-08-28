@@ -1,7 +1,7 @@
 # Hyperscript Comprehensive Guide for Qwen CLI
 
 ## Overview
-Hyperscript is a scripting language for front-end web development that emphasizes "Locality of Behavior" - keeping behavior close to the elements they affect. This guide provides everything Qwen CLI needs to understand and implement hyperscript effectively in the HTMX + TailwindCSS UI Library project.
+Hyperscript is a scripting language for front-end web development that emphasizes "Locality of Behavior" - keeping behavior close to the elements they affect. This guide provides everything Qwen CLI needs to understand and implement hyperscript effectively in the Hello UI - HTMX + TailwindCSS Component Library project.
 
 ## Core Concepts
 

@@ -1,7 +1,7 @@
 {
   "name": "hello",
   "version": "1.0.0",
-  "description": "Welcome to our comprehensive UI library built with HTMX, Hyperscript, and TailwindCSS. This project draws inspiration from leading UI frameworks including Headless UI, ShadCN, and Skeleton UI. As a completely free and open-source solution, this library enables developers to seamlessly integrate components through simple copy-and-paste functionality, facilitating rapid and efficient web application development.",
+  "description": "Welcome to Hello UI, a comprehensive component library built with HTMX, Hyperscript, and TailwindCSS. This project draws inspiration from leading UI frameworks including Headless UI, ShadCN, and Skeleton UI. As a completely free and open-source solution, this library enables developers to seamlessly integrate components through simple copy-and-paste functionality, facilitating rapid and efficient web application development.",
   "main": "tailwind.config.js",
   "directories": {
     "doc": "docs"

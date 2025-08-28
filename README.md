@@ -1,6 +1,6 @@
-# HTMX + Hyperscript + TailwindCSS UI Library
+# Hello UI - HTMX + Hyperscript + TailwindCSS Component Library
 
-Welcome to our comprehensive UI library built with HTMX, Hyperscript, and TailwindCSS. This project draws inspiration from leading UI frameworks including **Headless UI**, **ShadCN**, and **Skeleton UI**. As a completely free and open-source solution, this library enables developers to seamlessly integrate components through simple copy-and-paste functionality, facilitating rapid and efficient web application development.
+Welcome to Hello UI, a comprehensive component library built with HTMX, Hyperscript, and TailwindCSS. This project draws inspiration from leading UI frameworks including **Headless UI**, **ShadCN**, and **Skeleton UI**. As a completely free and open-source solution, this library enables developers to seamlessly integrate components through simple copy-and-paste functionality, facilitating rapid and efficient web application development.
 
 [Demo](https://htmx-ui.github.io/hello/src/index)
 

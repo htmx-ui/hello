@@ -1,6 +1,6 @@
-# HTMX + Hyperscript + TailwindCSS UI Library - Documentation
+# Hello UI - HTMX + Hyperscript + TailwindCSS Component Library - Documentation
 
-Welcome to the comprehensive documentation for the HTMX + Hyperscript + TailwindCSS UI Library project.
+Welcome to the comprehensive documentation for the Hello UI - HTMX + Hyperscript + TailwindCSS Component Library project.
 
 ## Table of Contents
 
@@ -42,4 +42,4 @@ This project is released into the public domain under the Unlicense. See [LICENS
 
 ## Contributing
 
-If you're interested in contributing to this project, feel free to fork the repo and submit a pull request. Let's make this UI library the best open-source solution for developers!
+If you're interested in contributing to this project, feel free to fork the repo and submit a pull request. Let's make Hello UI the best open-source solution for developers!

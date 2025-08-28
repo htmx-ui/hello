@@ -1,7 +1,7 @@
 # Component Development Guide
 
 ## Overview
-This guide provides instructions for creating and managing components in the HTMX + Hyperscript + TailwindCSS UI Library.
+This guide provides instructions for creating and managing components in the Hello UI - HTMX + Hyperscript + TailwindCSS Component Library.
 
 ## Component Structure
 
