@@ -1,26 +1,39 @@
 <div
-  class="rounded-xl border bg-card text-card-foreground shadow max-w-xs"
+  class="rounded-xl border bg-card text-card-foreground shadow transition-all hover:shadow-md"
   x-chunk="An area chart showing the time spent in bed for the past 7 days.">
-  <div class="flex flex-col p-6 space-y-0 pb-0">
-    <p class="text-sm text-muted-foreground">Time in Bed</p>
-
-    <h3
-      class="font-semibold tracking-tight flex items-baseline gap-1 text-4xl tabular-nums">
-      8
-      <span
-        class="font-sans text-sm font-normal tracking-normal text-muted-foreground">
-        hr
-      </span>
-
-      35
-      <span
-        class="font-sans text-sm font-normal tracking-normal text-muted-foreground">
-        min
-      </span>
-    </h3>
+  <div class="flex flex-col space-y-1.5 p-6">
+    <div class="flex items-center justify-between">
+      <h3 class="text-lg font-semibold leading-none tracking-tight">Sleep Duration</h3>
+      <div class="flex items-center gap-2">
+        <span class="inline-flex items-center rounded-full bg-purple-100 px-2.5 py-0.5 text-xs font-medium text-purple-800 dark:bg-purple-900 dark:text-purple-100">
+          Well Rested
+        </span>
+      </div>
+    </div>
+    
+    <p class="text-sm text-muted-foreground">
+      Your nightly sleep duration over the past week
+    </p>
   </div>
 
-  <div class="p-0">
+  <div class="p-6 pt-0">
+    <div class="mb-4">
+      <div class="flex items-baseline gap-2">
+        <span class="text-3xl font-bold tabular-nums">8</span>
+        <span class="text-sm text-muted-foreground">hr</span>
+        <span class="text-3xl font-bold tabular-nums">35</span>
+        <span class="text-sm text-muted-foreground">min</span>
+      </div>
+      <div class="mt-1 flex items-center gap-2">
+        <span class="text-xs text-green-600 dark:text-green-400">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M5.293 9.707a1 1 0 010-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414L11 7.414V15a1 1 0 11-2 0V7.414L6.707 9.707a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+          </svg>
+        </span>
+        <span class="text-xs text-muted-foreground">+0.2 hrs from avg</span>
+      </div>
+    </div>
+    
     <div
       data-chart="chart-Rbqpuuuuu6ja"
       class="flex aspect-video justify-center text-xs [&amp;_.recharts-cartesian-axis-tick_text]:fill-muted-foreground [&amp;_.recharts-cartesian-grid_line[stroke='#ccc']]:stroke-border/50 [&amp;_.recharts-curve.recharts-tooltip-cursor]:stroke-border [&amp;_.recharts-dot[stroke='#fff']]:stroke-transparent [&amp;_.recharts-layer]:outline-none [&amp;_.recharts-polar-grid_[stroke='#ccc']]:stroke-border [&amp;_.recharts-radial-bar-background-sector]:fill-muted [&amp;_.recharts-rectangle.recharts-tooltip-cursor]:fill-muted [&amp;_.recharts-reference-line_[stroke='#ccc']]:stroke-border [&amp;_.recharts-sector[stroke='#fff']]:stroke-transparent [&amp;_.recharts-sector]:outline-none [&amp;_.recharts-surface]:outline-none">
@@ -129,6 +142,20 @@
             "></div>
         </div>
       </div>
+    </div>
+  </div>
+
+  <div class="flex items-center justify-between border-t p-6 text-sm">
+    <div class="flex items-center gap-4">
+      <div class="flex items-center gap-2">
+        <div class="h-2 w-2 rounded-full bg-purple-500"></div>
+        <span class="text-muted-foreground">Weekly Avg</span>
+        <span class="font-medium">8.1 hrs</span>
+      </div>
+    </div>
+    <div>
+      <span class="text-muted-foreground">Goal:</span>
+      <span class="font-medium">7-9 hrs</span>
     </div>
   </div>
 </div>

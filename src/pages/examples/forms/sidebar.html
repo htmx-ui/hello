@@ -1,5 +1,27 @@
-<aside class="-mx-4 lg:w-1/5">
-  <nav class="flex space-x-2 lg:flex-col lg:space-x-0 lg:space-y-1">
+<!-- Mobile menu button -->
+<button
+  _="on click toggle .hidden on #mobile-forms-sidebar"
+  class="lg:hidden fixed top-4 left-4 z-50 inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground h-9 w-9">
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    class="lucide lucide-menu">
+    <line x1="4" x2="20" y1="12" y2="12"></line>
+    <line x1="4" x2="20" y1="6" y2="6"></line>
+    <line x1="4" x2="20" y1="18" y2="18"></line>
+  </svg>
+</button>
+
+<!-- Sidebar for mobile -->
+<aside id="mobile-forms-sidebar" class="fixed top-0 left-0 h-full w-64 bg-background border-r z-40 hidden lg:hidden">
+  <nav class="flex flex-col space-y-1 p-4">
     <a
       _="on click remove .bg-muted .text-primary from .nav-forms then add .text-muted-foreground to .nav-forms  then add .bg-muted .text-primary on me"
       class="inline-flex items-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:text-accent-foreground h-9 px-4 py-2 bg-muted hover:bg-muted justify-start cursor-pointer nav-forms"

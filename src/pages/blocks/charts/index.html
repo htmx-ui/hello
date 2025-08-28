@@ -1,53 +1,81 @@
 <section id="examples">
   <div class="relative flex min-h-screen flex-col bg-background">
-    <div class="themes-wrapper bg-background min-h-screen py-12">
-      <div
-        class="chart-wrapper mx-auto flex max-w-6xl flex-col flex-wrap items-start justify-center gap-6 p-6 sm:flex-row sm:p-8">
-        <div
-          class="grid w-full gap-6 sm:grid-cols-2 lg:max-w-88 lg:grid-cols-1 xl:max-w-100">
-          <div
-            hx-get="./pages/blocks/charts/today.html"
-            hx-trigger="load"
-            hx-swap="outerHTML"></div>
-
-          <div
-            hx-get="./pages/blocks/charts/resting.html"
-            hx-trigger="load"
-            hx-swap="outerHTML"></div>
+    <div class="themes-wrapper bg-background py-12">
+      <div class="container mx-auto px-4">
+        <div class="mb-12 text-center">
+          <h1 class="text-3xl font-bold tracking-tight md:text-4xl">Health & Activity Dashboard</h1>
+          <p class="mt-4 text-lg text-muted-foreground">
+            Comprehensive visualization of your health and activity metrics
+          </p>
         </div>
-
-        <div class="grid w-full flex-1 gap-6 lg:max-w-[20rem]">
-          <div
-            hx-get="./pages/blocks/charts/progress.html"
-            hx-trigger="load"
-            hx-swap="outerHTML"></div>
-
-          <div
-            hx-get="./pages/blocks/charts/walking-distance.html"
-            hx-trigger="load"
-            hx-swap="outerHTML"></div>
-
-          <div
-            hx-get="./pages/blocks/charts/bar.html"
-            hx-trigger="load"
-            hx-swap="outerHTML"></div>
-        </div>
-
-        <div class="grid w-full flex-1 gap-6">
-          <div
-            hx-get="./pages/blocks/charts/radial.html"
-            hx-trigger="load"
-            hx-swap="outerHTML"></div>
-
-          <div
-            hx-get="./pages/blocks/charts/active-energy.html"
-            hx-trigger="load"
-            hx-swap="outerHTML"></div>
-
-          <div
-            hx-get="./pages/blocks/charts/time-in-bed.html"
-            hx-trigger="load"
-            hx-swap="outerHTML"></div>
+      </div>
+      
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+          <!-- Column 1 -->
+          <div class="space-y-8">
+            <div
+              hx-get="./pages/blocks/charts/today.html"
+              hx-trigger="load"
+              hx-swap="outerHTML"></div>
+              
+            <div
+              hx-get="./pages/blocks/charts/walking-distance.html"
+              hx-trigger="load"
+              hx-swap="outerHTML"></div>
+              
+            <div
+              hx-get="./pages/blocks/charts/active-energy.html"
+              hx-trigger="load"
+              hx-swap="outerHTML"></div>
+          </div>
+          
+          <!-- Column 2 -->
+          <div class="space-y-8">
+            <div
+              hx-get="./pages/blocks/charts/resting.html"
+              hx-trigger="load"
+              hx-swap="outerHTML"></div>
+              
+            <div
+              hx-get="./pages/blocks/charts/progress.html"
+              hx-trigger="load"
+              hx-swap="outerHTML"></div>
+              
+            <div
+              hx-get="./pages/blocks/charts/time-in-bed.html"
+              hx-trigger="load"
+              hx-swap="outerHTML"></div>
+          </div>
+          
+          <!-- Column 3 -->
+          <div class="space-y-8">
+            <div
+              hx-get="./pages/blocks/charts/bar.html"
+              hx-trigger="load"
+              hx-swap="outerHTML"></div>
+              
+            <div
+              hx-get="./pages/blocks/charts/radial.html"
+              hx-trigger="load"
+              hx-swap="outerHTML"></div>
+          </div>
+          
+          <!-- Column 4 - Additional charts can go here -->
+          <div class="space-y-8">
+            <!-- Placeholder for additional charts -->
+            <div class="rounded-xl border bg-card p-6 text-center">
+              <div class="mx-auto h-12 w-12 rounded-full bg-muted p-3">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-muted-foreground" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                </svg>
+              </div>
+              <h3 class="mt-4 font-semibold">More Charts Coming Soon</h3>
+              <p class="mt-2 text-sm text-muted-foreground">
+                Additional health and activity visualizations will be added here.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>

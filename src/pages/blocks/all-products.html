@@ -1,6 +1,58 @@
 <div class="relative flex min-h-screen bg-background">
   <div class="themes-wrapper bg-background w-full h-full">
     <div class="flex min-h-screen w-full bg-muted/40">
+      <!-- Mobile menu button -->
+      <button
+        _="on click toggle .hidden on #mobile-all-products-sidebar"
+        class="sm:hidden fixed top-4 left-4 z-50 inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground h-9 w-9">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="lucide lucide-menu">
+          <line x1="4" x2="20" y1="12" y2="12"></line>
+          <line x1="4" x2="20" y1="6" y2="6"></line>
+          <line x1="4" x2="20" y1="18" y2="18"></line>
+        </svg>
+      </button>
+      
+      <!-- Sidebar for mobile -->
+      <aside id="mobile-all-products-sidebar" class="fixed top-0 left-0 h-full w-64 bg-background border-r z-40 hidden sm:hidden">
+        <nav class="flex flex-col items-start gap-4 px-4 py-4">
+          <a
+            class="group flex h-9 w-9 shrink-0 items-center justify-center gap-2 rounded-full bg-primary text-lg font-semibold text-primary-foreground md:h-8 md:w-8 md:text-base"
+            href="#">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-package2 h-4 w-4 transition-all group-hover:scale-110">
+              <path d="M3 9h18v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9Z"></path>
+
+              <path
+                d="m3 9 2.45-4.9A2 2 0 0 1 7.24 3h9.52a2 2 0 0 1 1.8 1.1L21 9"></path>
+
+              <path d="M12 3v6"></path>
+            </svg>
+
+            <span class="sr-only">Acme Inc</span>
+          </a>
+        </nav>
+      </aside>
+      
+      <!-- Sidebar for desktop -->
       <aside class="w-14 flex-col border-r bg-background sm:flex">
         <nav class="flex flex-col items-center gap-4 px-2 py-4">
           <a

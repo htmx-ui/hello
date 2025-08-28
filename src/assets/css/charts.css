@@ -1,0 +1,198 @@
+/* Chart color palette that complements the UI theme */
+[data-chart] {
+  /* Primary chart colors using the theme's color system */
+  --chart-1: hsl(var(--primary));
+  --chart-2: hsl(var(--secondary));
+  --chart-3: hsl(var(--accent));
+  --chart-4: hsl(var(--muted));
+  --chart-5: hsl(var(--destructive));
+  
+  /* Extended color palette for more data series */
+  --chart-6: 210 50% 60%;
+  --chart-7: 270 70% 60%;
+  --chart-8: 160 70% 50%;
+  --chart-9: 30 90% 60%;
+  --chart-10: 0 0% 70%;
+}
+
+.dark [data-chart] {
+  --chart-1: hsl(var(--primary));
+  --chart-2: hsl(var(--secondary));
+  --chart-3: hsl(var(--accent));
+  --chart-4: hsl(var(--muted));
+  --chart-5: hsl(var(--destructive));
+  --chart-6: 210 50% 50%;
+  --chart-7: 270 70% 50%;
+  --chart-8: 160 70% 40%;
+  --chart-9: 30 90% 50%;
+  --chart-10: 0 0% 60%;
+}
+
+/* Enhanced chart container styling */
+[data-chart] {
+  /* Apply consistent border radius from the design system */
+  --radius-xs: 2px;
+  --radius-sm: 4px;
+  --radius: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+}
+
+/* Improved Recharts styling */
+[data-chart] .recharts-wrapper {
+  /* Use theme-appropriate background */
+  background-color: hsl(var(--card));
+  border-radius: var(--radius-lg);
+}
+
+/* Enhanced grid lines */
+[data-chart] .recharts-cartesian-grid-line {
+  stroke: hsl(var(--border));
+  stroke-opacity: 0.5;
+}
+
+/* Improved axis styling */
+[data-chart] .recharts-cartesian-axis-tick-value {
+  fill: hsl(var(--muted-foreground));
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+[data-chart] .recharts-cartesian-axis-line {
+  stroke: hsl(var(--border));
+}
+
+/* Enhanced tooltip styling */
+[data-chart] .recharts-tooltip-wrapper {
+  --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  border-radius: var(--radius-md);
+  border: 1px solid hsl(var(--border));
+  background-color: hsl(var(--background));
+}
+
+[data-chart] .recharts-tooltip-label {
+  color: hsl(var(--foreground));
+  font-weight: 600;
+}
+
+[data-chart] .recharts-tooltip-item {
+  color: hsl(var(--muted-foreground));
+}
+
+/* Enhanced legend styling */
+[data-chart] .recharts-legend-wrapper {
+  margin-top: 1rem;
+}
+
+[data-chart] .recharts-legend-item-text {
+  color: hsl(var(--muted-foreground));
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+/* Improved bar chart styling */
+[data-chart] .recharts-bar-rectangle {
+  stroke: none;
+}
+
+[data-chart] .recharts-bar-rectangle:focus {
+  outline: none;
+}
+
+/* Enhanced line chart styling */
+[data-chart] .recharts-line-curve {
+  stroke-width: 2;
+  fill: none;
+}
+
+[data-chart] .recharts-line-dot {
+  stroke-width: 2;
+  fill: hsl(var(--background));
+}
+
+/* Improved area chart styling */
+[data-chart] .recharts-area-area {
+  stroke: none;
+  fill-opacity: 0.8;
+}
+
+[data-chart] .recharts-area-curve {
+  stroke-width: 2;
+  fill: none;
+}
+
+/* Enhanced pie chart styling */
+[data-chart] .recharts-pie-sector {
+  stroke: none;
+}
+
+[data-chart] .recharts-pie-sector:focus {
+  outline: none;
+}
+
+/* Interactive chart enhancements */
+[data-chart] .recharts-bar-rectangle,
+[data-chart] .recharts-line-dot,
+[data-chart] .recharts-pie-sector,
+[data-chart] .recharts-area-area {
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+[data-chart] .recharts-bar-rectangle:hover,
+[data-chart] .recharts-line-dot:hover,
+[data-chart] .recharts-pie-sector:hover {
+  opacity: 0.9;
+  transform: scale(1.05);
+}
+
+/* Animation classes for Hyperscript interactions */
+.animate-pulse {
+  animation: pulse 0.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.scale-110 {
+  transform: scale(1.1);
+}
+
+.scale-105 {
+  transform: scale(1.05);
+}
+
+.scale-125 {
+  transform: scale(1.25);
+}
+
+.opacity-70 {
+  opacity: 0.7;
+}
+
+.stroke-4 {
+  stroke-width: 4;
+}
+
+.r-6 {
+  r: 6;
+}
+
+/* Responsive chart improvements */
+@media (max-width: 768px) {
+  [data-chart] .recharts-cartesian-axis-tick-value {
+    font-size: 0.65rem;
+  }
+  
+  [data-chart] .recharts-legend-item-text {
+    font-size: 0.7rem;
+  }
+}

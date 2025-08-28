@@ -1,19 +1,37 @@
 <div
-  class="rounded-xl border bg-card text-card-foreground shadow lg:max-w-md"
+  class="rounded-xl border bg-card text-card-foreground shadow transition-all hover:shadow-md"
   x-chunk="A bar chart showing the number of steps you have walked in the past 7 days.">
-  <div class="flex flex-col p-6 space-y-0 pb-2">
-    <p class="text-sm text-muted-foreground">Today</p>
-
-    <h3 class="font-semibold tracking-tight text-4xl tabular-nums">
-      12,584
-      <span
-        class="font-sans text-sm font-normal tracking-normal text-muted-foreground">
-        steps
-      </span>
-    </h3>
+  <div class="flex flex-col space-y-1.5 p-6">
+    <div class="flex items-center justify-between">
+      <h3 class="text-lg font-semibold leading-none tracking-tight">Daily Steps</h3>
+      <div class="flex items-center gap-2">
+        <span class="inline-flex items-center rounded-full bg-blue-100 px-2.5 py-0.5 text-xs font-medium text-blue-800 dark:bg-blue-900 dark:text-blue-100">
+          Today
+        </span>
+      </div>
+    </div>
+    
+    <p class="text-sm text-muted-foreground">
+      Your step count over the past week
+    </p>
   </div>
 
   <div class="p-6 pt-0">
+    <div class="mb-4">
+      <div class="flex items-baseline gap-2">
+        <span class="text-3xl font-bold tabular-nums">12,584</span>
+        <span class="text-sm text-muted-foreground">steps</span>
+      </div>
+      <div class="mt-1 flex items-center gap-2">
+        <span class="text-xs text-green-600 dark:text-green-400">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M5.293 9.707a1 1 0 010-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414L11 7.414V15a1 1 0 11-2 0V7.414L6.707 9.707a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+          </svg>
+        </span>
+        <span class="text-xs text-muted-foreground">+2.3% from yesterday</span>
+      </div>
+    </div>
+    
     <div
       data-chart="chart-R9apuuuuu6ja"
       class="flex aspect-video justify-center text-xs [&amp;_.recharts-cartesian-axis-tick_text]:fill-muted-foreground [&amp;_.recharts-cartesian-grid_line[stroke='#ccc']]:stroke-border/50 [&amp;_.recharts-curve.recharts-tooltip-cursor]:stroke-border [&amp;_.recharts-dot[stroke='#fff']]:stroke-transparent [&amp;_.recharts-layer]:outline-none [&amp;_.recharts-polar-grid_[stroke='#ccc']]:stroke-border [&amp;_.recharts-radial-bar-background-sector]:fill-muted [&amp;_.recharts-rectangle.recharts-tooltip-cursor]:fill-muted [&amp;_.recharts-reference-line_[stroke='#ccc']]:stroke-border [&amp;_.recharts-sector[stroke='#fff']]:stroke-transparent [&amp;_.recharts-sector]:outline-none [&amp;_.recharts-surface]:outline-none">
@@ -84,7 +102,7 @@
                       radius="5"
                       fill="#2662d9"
                       fill-opacity="0.6"
-                      class="recharts-rectangle"
+                       class="recharts-rectangle"
                       d="M 52.25714285714286,37.11538461538461
                A 5,5,0,0,1,57.25714285714286,32.11538461538461
                L 87.25714285714287,32.11538461538461
@@ -144,7 +162,7 @@
                       radius="5"
                       fill="#2662d9"
                       fill-opacity="0.6"
-                      class="recharts-rectangle"
+                       class="recharts-rectangle"
                       d="M 205.6857142857143,82.07692307692308
                A 5,5,0,0,1,210.6857142857143,77.07692307692308
                L 240.6857142857143,77.07692307692308
@@ -164,7 +182,7 @@
                       radius="5"
                       fill="#2662d9"
                       fill-opacity="0.6"
-                      class="recharts-rectangle"
+                       class="recharts-rectangle"
                       d="M 256.8285714285714,11.423076923076906
                A 5,5,0,0,1,261.8285714285714,6.423076923076906
                L 291.8285714285714,6.423076923076906
@@ -184,7 +202,7 @@
                       radius="5"
                       fill="#2662d9"
                       fill-opacity="0.6"
-                      class="recharts-rectangle"
+                       class="recharts-rectangle"
                       d="M 307.9714285714286,69.23076923076923
                A 5,5,0,0,1,312.9714285714286,64.23076923076923
                L 342.9714285714286,64.23076923076923
@@ -362,22 +380,7 @@
                 <tspan
                   x="6"
                   dy="0em">
-                  Average Steps
-                </tspan>
-              </text>
-
-              <text
-                offset="10"
-                startOffset="100"
-                x="6"
-                y="99.92307692307692"
-                class="recharts-text text-lg"
-                text-anchor="start"
-                fill="hsl(var(--foreground))">
-                <tspan
-                  x="6"
-                  dy="0.71em">
-                  12,343
+                  Avg: 12,343
                 </tspan>
               </text>
             </g>
@@ -385,33 +388,30 @@
 
           <div
             tabindex="-1"
-            class="recharts-tooltip-wrapper recharts-tooltip-wrapper-right recharts-tooltip-wrapper-bottom"
+            class="recharts-tooltip-wrapper"
             style="
               visibility: hidden;
               pointer-events: none;
               position: absolute;
               top: 0px;
               left: 0px;
-              transform: translate(31.5714px, 119px);
             "></div>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="flex p-6 pt-0 flex-col items-start gap-1">
-    <p class="text-sm text-muted-foreground">
-      Over the past 7 days, you have walked
-      <span class="font-medium text-foreground">53,305</span>
-
-      steps.
-    </p>
-
-    <p class="text-sm text-muted-foreground">
-      You need
-      <span class="font-medium text-foreground">12,584</span>
-
-      more steps to reach your goal.
-    </p>
+  <div class="flex items-center justify-between border-t p-6 text-sm">
+    <div class="flex items-center gap-4">
+      <div class="flex items-center gap-2">
+        <div class="h-2 w-2 rounded-full bg-blue-500"></div>
+        <span class="text-muted-foreground">Weekly Total</span>
+        <span class="font-medium">53,305</span>
+      </div>
+    </div>
+    <div>
+      <span class="text-muted-foreground">Goal:</span>
+      <span class="font-medium">65,000</span>
+    </div>
   </div>
 </div>

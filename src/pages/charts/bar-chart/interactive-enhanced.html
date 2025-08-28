@@ -1,9 +1,11 @@
 <div
-  class="themes-wrapper group relative flex flex-col overflow-hidden rounded-xl border shadow transition-all duration-200 ease-in-out hover:z-30">
+  class="themes-wrapper group relative flex flex-col overflow-hidden rounded-xl border border-border shadow transition-all duration-300 ease-in-out hover:z-30 hover:shadow-lg"
+  _="on mouseenter add .ring-2 .ring-primary/20 to me then transition opacity to 1 over 0.3s end
+     on mouseleave remove .ring-2 .ring-primary/20 from me then transition opacity to 0 over 0.3s end">
   <div
-    class="items-center gap-2 relative z-20 flex justify-end border-b bg-card px-3 py-2.5 text-card-foreground">
+    class="items-center gap-2 relative z-20 flex justify-end border-b border-border bg-card px-3 py-2.5 text-card-foreground">
     <div
-      class="flex items-center gap-1.5 pl-1 text-[13px] text-muted-foreground [&amp;>svg]:h-[0.9rem] [&amp;>svg]:w-[0.9rem]">
+      class="flex items-center gap-1.5 pl-1 text-[13px] text-muted-foreground [&>svg]:h-[0.9rem] [&>svg]:w-[0.9rem]">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="24"
@@ -16,31 +18,23 @@
         stroke-linejoin="round"
         class="lucide lucide-bar-chart-big">
         <path d="M3 3v18h18"></path>
-
-        <rect
-          width="4"
-          height="7"
-          x="7"
-          y="10"
-          rx="1"></rect>
-
-        <rect
-          width="4"
-          height="12"
-          x="15"
-          y="5"
-          rx="1"></rect>
+        <rect width="4" height="7" x="7" y="10" rx="1"></rect>
+        <rect width="4" height="12" x="15" y="5" rx="1"></rect>
       </svg>
-
       Chart
     </div>
 
-    <div class="ml-auto flex items-center gap-2 [&amp;> form]:flex">
+    <div class="ml-auto flex items-center gap-2 [&> form]:flex">
       <button
-        class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 border border-input hover:text-accent-foreground [&amp;_svg]-h-3.5 [&amp;_svg]-h-3 h-6 w-6 rounded bg-transparent text-foreground shadow-none hover:bg-muted dark:text-foreground [&amp;_svg]:w-3"
-        data-state="closed">
+        class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 border border-input hover:text-accent-foreground [&_svg]-h-3.5 [&_svg]-h-3 h-6 w-6 rounded bg-transparent text-foreground shadow-none hover:bg-muted dark:text-foreground [&_svg]:w-3"
+        data-state="closed"
+        _="on click 
+             set the innerHTML of .copy-icon to '<path d=\"M20 6L9 17l-5-5\"/>' then 
+             add .text-green-500 to .copy-icon then
+             wait 2s then
+             set the innerHTML of .copy-icon to '<rect width=\"8\" height=\"4\" x=\"8\" y=\"2\" rx=\"1\" ry=\"1\"/><path d=\"M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2\"/>' then
+             remove .text-green-500 from .copy-icon">
         <span class="sr-only">Copy</span>
-
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="24"
@@ -51,17 +45,9 @@
           stroke-width="2"
           stroke-linecap="round"
           stroke-linejoin="round"
-          class="lucide lucide-clipboard">
-          <rect
-            width="8"
-            height="4"
-            x="8"
-            y="2"
-            rx="1"
-            ry="1"></rect>
-
-          <path
-            d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
+          class="lucide lucide-clipboard copy-icon">
+          <rect width="8" height="4" x="8" y="2" rx="1" ry="1"></rect>
+          <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
         </svg>
       </button>
 
@@ -71,37 +57,54 @@
         class="shrink-0 bg-border w-px mx-0 hidden h-4 md:flex"></div>
 
       <button
-        class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 border-input hover:text-accent-foreground h-6 rounded border bg-transparent px-2 text-xs text-foreground shadow-none hover:bg-muted dark:text-foreground"
+        class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 border-input hover:text-accent-foreground h-6 rounded border bg-transparent px-2 text-xs text-foreground shadow-none hover:bg-muted dark:text-foreground"
         type="button"
         aria-haspopup="dialog"
         aria-expanded="false"
         aria-controls="radix-:r1o:"
-        data-state="closed">
-        View Code
+        data-state="closed"
+        _="on click 
+             toggle .hidden on #code-block then
+             if #code-block matches .hidden then
+               set the innerHTML of .view-code-text to 'View Code'
+             else
+               set the innerHTML of .view-code-text to 'Hide Code'">
+        <span class="view-code-text">View Code</span>
       </button>
     </div>
   </div>
 
   <div
-    class="relative z-10 [&amp;>div]:rounded-none [&amp;>div]:border-none [&amp;>div]:shadow-none">
-    <div class="rounded-xl border bg-card text-card-foreground shadow">
+    class="relative z-10 [&>div]:rounded-none [&>div]:border-none [&>div]:shadow-none">
+    <div class="rounded-xl border border-border bg-card text-card-foreground shadow">
       <div class="flex flex-col space-y-1.5 p-6">
-        <h3 class="font-semibold leading-none tracking-tight">Bar Chart</h3>
-
+        <h3 class="font-semibold leading-none tracking-tight">Interactive Bar Chart</h3>
         <p class="text-sm text-muted-foreground">January - June 2024</p>
       </div>
 
       <div class="p-6 pt-0">
         <div
-          data-chart="chart-Ra2defkv9u6ja"
-          class="flex aspect-video justify-center text-xs [&amp;_.recharts-cartesian-axis-tick_text]:fill-muted-foreground [&amp;_.recharts-cartesian-grid_line[stroke='#ccc']]:stroke-border/50 [&amp;_.recharts-curve.recharts-tooltip-cursor]:stroke-border [&amp;_.recharts-dot[stroke='#fff']]:stroke-transparent [&amp;_.recharts-layer]:outline-none [&amp;_.recharts-polar-grid_[stroke='#ccc']]:stroke-border [&amp;_.recharts-radial-bar-background-sector]:fill-muted [&amp;_.recharts-rectangle.recharts-tooltip-cursor]:fill-muted [&amp;_.recharts-reference-line_[stroke='#ccc']]:stroke-border [&amp;_.recharts-sector[stroke='#fff']]:stroke-transparent [&amp;_.recharts-sector]:outline-none [&amp;_.recharts-surface]:outline-none">
+          data-chart="chart-interactive-bar"
+          class="flex aspect-video justify-center text-xs [&_.recharts-cartesian-axis-tick_text]:fill-muted-foreground [&_.recharts-cartesian-grid_line[stroke='#ccc']]:stroke-border/50 [&_.recharts-curve.recharts-tooltip-cursor]:stroke-border [&_.recharts-dot[stroke='#fff']]:stroke-transparent [&_.recharts-layer]:outline-none [&_.recharts-polar-grid_[stroke='#ccc']]:stroke-border [&_.recharts-radial-bar-background-sector]:fill-muted [&_.recharts-rectangle.recharts-tooltip-cursor]:fill-muted [&_.recharts-reference-line_[stroke='#ccc']]:stroke-border [&_.recharts-sector[stroke='#fff']]:stroke-transparent [&_.recharts-sector]:outline-none [&_.recharts-surface]:outline-none"
+          _="on load
+               call chartInit()">
           <style>
-            [data-chart="chart-Ra2defkv9u6ja"] {
-              --color-desktop: hsl(var(--chart-1));
+            [data-chart="chart-interactive-bar"] {
+              --color-jan: hsl(var(--chart-1));
+              --color-feb: hsl(var(--chart-2));
+              --color-mar: hsl(var(--chart-3));
+              --color-apr: hsl(var(--chart-4));
+              --color-may: hsl(var(--chart-5));
+              --color-jun: hsl(var(--chart-6));
             }
 
-            .dark [data-chart="chart-Ra2defkv9u6ja"] {
-              --color-desktop: hsl(var(--chart-1));
+            .dark [data-chart="chart-interactive-bar"] {
+              --color-jan: hsl(var(--chart-1));
+              --color-feb: hsl(var(--chart-2));
+              --color-mar: hsl(var(--chart-3));
+              --color-apr: hsl(var(--chart-4));
+              --color-may: hsl(var(--chart-5));
+              --color-jun: hsl(var(--chart-6));
             }
           </style>
 
@@ -112,12 +115,17 @@
               class="recharts-wrapper"
               style="
                 position: relative;
-                cursor: default;
+                cursor: pointer;
                 width: 100%;
                 height: 100%;
                 max-height: 186px;
                 max-width: 331px;
-              ">
+              "
+              _="on click 
+                   send chartClick to .chart-container then
+                   add .animate-pulse to .recharts-bar-rectangle then
+                   wait 0.5s then
+                   remove .animate-pulse from .recharts-bar-rectangle">
               <svg
                 tabindex="0"
                 role="application"
@@ -126,86 +134,26 @@
                 height="186"
                 viewBox="0 0 331 186"
                 style="width: 100%; height: 100%">
-                <title></title>
-
-                <desc></desc>
+                <title>Interactive Bar Chart</title>
+                <desc>Bar chart showing data for January to June 2024 with interactive elements</desc>
 
                 <defs>
-                  <clipPath id="recharts42-clip">
-                    <rect
-                      x="5"
-                      y="5"
-                      height="146"
-                      width="321"></rect>
+                  <clipPath id="recharts-interactive-clip">
+                    <rect x="5" y="5" height="146" width="321"></rect>
                   </clipPath>
                 </defs>
 
                 <g class="recharts-cartesian-grid">
                   <g class="recharts-cartesian-grid-horizontal">
-                    <line
-                      stroke="#ccc"
-                      fill="none"
-                      x="5"
-                      y="5"
-                      width="321"
-                      height="146"
-                      x1="5"
-                      y1="151"
-                      x2="326"
-                      y2="151"></line>
-
-                    <line
-                      stroke="#ccc"
-                      fill="none"
-                      x="5"
-                      y="5"
-                      width="321"
-                      height="146"
-                      x1="5"
-                      y1="114.5"
-                      x2="326"
-                      y2="114.5"></line>
-
-                    <line
-                      stroke="#ccc"
-                      fill="none"
-                      x="5"
-                      y="5"
-                      width="321"
-                      height="146"
-                      x1="5"
-                      y1="78"
-                      x2="326"
-                      y2="78"></line>
-
-                    <line
-                      stroke="#ccc"
-                      fill="none"
-                      x="5"
-                      y="5"
-                      width="321"
-                      height="146"
-                      x1="5"
-                      y1="41.5"
-                      x2="326"
-                      y2="41.5"></line>
-
-                    <line
-                      stroke="#ccc"
-                      fill="none"
-                      x="5"
-                      y="5"
-                      width="321"
-                      height="146"
-                      x1="5"
-                      y1="5"
-                      x2="326"
-                      y2="5"></line>
+                    <line stroke="hsl(var(--border))" stroke-opacity="0.5" fill="none" x="5" y="5" width="321" height="146" x1="5" y1="151" x2="326" y2="151"></line>
+                    <line stroke="hsl(var(--border))" stroke-opacity="0.3" fill="none" x="5" y="5" width="321" height="146" x1="5" y1="114.5" x2="326" y2="114.5"></line>
+                    <line stroke="hsl(var(--border))" stroke-opacity="0.3" fill="none" x="5" y="5" width="321" height="146" x1="5" y1="78" x2="326" y2="78"></line>
+                    <line stroke="hsl(var(--border))" stroke-opacity="0.3" fill="none" x="5" y="5" width="321" height="146" x1="5" y1="41.5" x2="326" y2="41.5"></line>
+                    <line stroke="hsl(var(--border))" stroke-opacity="0.5" fill="none" x="5" y="5" width="321" height="146" x1="5" y1="5" x2="326" y2="5"></line>
                   </g>
                 </g>
 
-                <g
-                  class="recharts-layer recharts-cartesian-axis recharts-xAxis xAxis">
+                <g class="recharts-layer recharts-cartesian-axis recharts-xAxis xAxis">
                   <g class="recharts-cartesian-axis-ticks">
                     <g class="recharts-layer recharts-cartesian-axis-tick">
                       <text
@@ -217,15 +165,10 @@
                         y="167"
                         class="recharts-text recharts-cartesian-axis-tick-value"
                         text-anchor="middle"
-                        fill="#666">
-                        <tspan
-                          x="31.75"
-                          dy="0.71em">
-                          Jan
-                        </tspan>
+                        fill="hsl(var(--muted-foreground))">
+                        <tspan x="31.75" dy="0.71em">Jan</tspan>
                       </text>
                     </g>
-
                     <g class="recharts-layer recharts-cartesian-axis-tick">
                       <text
                         orientation="bottom"
@@ -236,15 +179,10 @@
                         y="167"
                         class="recharts-text recharts-cartesian-axis-tick-value"
                         text-anchor="middle"
-                        fill="#666">
-                        <tspan
-                          x="85.25"
-                          dy="0.71em">
-                          Feb
-                        </tspan>
+                        fill="hsl(var(--muted-foreground))">
+                        <tspan x="85.25" dy="0.71em">Feb</tspan>
                       </text>
                     </g>
-
                     <g class="recharts-layer recharts-cartesian-axis-tick">
                       <text
                         orientation="bottom"
@@ -255,15 +193,10 @@
                         y="167"
                         class="recharts-text recharts-cartesian-axis-tick-value"
                         text-anchor="middle"
-                        fill="#666">
-                        <tspan
-                          x="138.75"
-                          dy="0.71em">
-                          Mar
-                        </tspan>
+                        fill="hsl(var(--muted-foreground))">
+                        <tspan x="138.75" dy="0.71em">Mar</tspan>
                       </text>
                     </g>
-
                     <g class="recharts-layer recharts-cartesian-axis-tick">
                       <text
                         orientation="bottom"
@@ -274,15 +207,10 @@
                         y="167"
                         class="recharts-text recharts-cartesian-axis-tick-value"
                         text-anchor="middle"
-                        fill="#666">
-                        <tspan
-                          x="192.25"
-                          dy="0.71em">
-                          Apr
-                        </tspan>
+                        fill="hsl(var(--muted-foreground))">
+                        <tspan x="192.25" dy="0.71em">Apr</tspan>
                       </text>
                     </g>
-
                     <g class="recharts-layer recharts-cartesian-axis-tick">
                       <text
                         orientation="bottom"
@@ -293,15 +221,10 @@
                         y="167"
                         class="recharts-text recharts-cartesian-axis-tick-value"
                         text-anchor="middle"
-                        fill="#666">
-                        <tspan
-                          x="245.75"
-                          dy="0.71em">
-                          May
-                        </tspan>
+                        fill="hsl(var(--muted-foreground))">
+                        <tspan x="245.75" dy="0.71em">May</tspan>
                       </text>
                     </g>
-
                     <g class="recharts-layer recharts-cartesian-axis-tick">
                       <text
                         orientation="bottom"
@@ -312,12 +235,8 @@
                         y="167"
                         class="recharts-text recharts-cartesian-axis-tick-value"
                         text-anchor="middle"
-                        fill="#666">
-                        <tspan
-                          x="299.25"
-                          dy="0.71em">
-                          Jun
-                        </tspan>
+                        fill="hsl(var(--muted-foreground))">
+                        <tspan x="299.25" dy="0.71em">Jun</tspan>
                       </text>
                     </g>
                   </g>
@@ -326,15 +245,15 @@
                 <g class="recharts-layer recharts-bar">
                   <g class="recharts-layer recharts-bar-rectangles">
                     <g class="recharts-layer">
-                      <g class="recharts-layer recharts-bar-rectangle">
+                      <g class="recharts-layer recharts-bar-rectangle" _="on click add .scale-110 to me then wait 0.2s then remove .scale-110 from me">
                         <path
                           x="10.35"
                           y="66.13749999999999"
                           width="42"
                           height="84.86250000000001"
                           radius="8"
-                          fill="#2662d9"
-                          class="recharts-rectangle"
+                          fill="hsl(var(--chart-1))"
+                          class="recharts-rectangle transition-all duration-200 ease-in-out hover:opacity-90"
                           d="M 10.35,74.13749999999999
             A 8,8,0,0,1,18.35,66.13749999999999
             L 44.35,66.13749999999999
@@ -342,18 +261,20 @@
             L 52.35,143
             A 8,8,0,0,1,44.35,151
             L 18.35,151
-            A 8,8,0,0,1,10.35,143 Z"></path>
+            A 8,8,0,0,1,10.35,143 Z">
+                          <title>January: 1200</title>
+                        </path>
                       </g>
 
-                      <g class="recharts-layer recharts-bar-rectangle">
+                      <g class="recharts-layer recharts-bar-rectangle" _="on click add .scale-110 to me then wait 0.2s then remove .scale-110 from me">
                         <path
                           x="63.85"
                           y="11.84375"
                           width="42"
                           height="139.15625"
                           radius="8"
-                          fill="#2662d9"
-                          class="recharts-rectangle"
+                          fill="hsl(var(--chart-2))"
+                          class="recharts-rectangle transition-all duration-200 ease-in-out hover:opacity-90"
                           d="M 63.85,19.84375
             A 8,8,0,0,1,71.85,11.84375
             L 97.85,11.84375
@@ -361,18 +282,20 @@
             L 105.85,143
             A 8,8,0,0,1,97.85,151
             L 71.85,151
-            A 8,8,0,0,1,63.85,143 Z"></path>
+            A 8,8,0,0,1,63.85,143 Z">
+                          <title>February: 2100</title>
+                        </path>
                       </g>
 
-                      <g class="recharts-layer recharts-bar-rectangle">
+                      <g class="recharts-layer recharts-bar-rectangle" _="on click add .scale-110 to me then wait 0.2s then remove .scale-110 from me">
                         <path
                           x="117.35"
                           y="42.868750000000006"
                           width="42"
                           height="108.13125"
                           radius="8"
-                          fill="#2662d9"
-                          class="recharts-rectangle"
+                          fill="hsl(var(--chart-3))"
+                          class="recharts-rectangle transition-all duration-200 ease-in-out hover:opacity-90"
                           d="M 117.35,50.868750000000006
             A 8,8,0,0,1,125.35,42.868750000000006
             L 151.35,42.868750000000006
@@ -380,18 +303,20 @@
             L 159.35,143
             A 8,8,0,0,1,151.35,151
             L 125.35,151
-            A 8,8,0,0,1,117.35,143 Z"></path>
+            A 8,8,0,0,1,117.35,143 Z">
+                          <title>March: 1500</title>
+                        </path>
                       </g>
 
-                      <g class="recharts-layer recharts-bar-rectangle">
+                      <g class="recharts-layer recharts-bar-rectangle" _="on click add .scale-110 to me then wait 0.2s then remove .scale-110 from me">
                         <path
                           x="170.85"
                           y="117.69375"
                           width="42"
                           height="33.306250000000006"
                           radius="8"
-                          fill="#2662d9"
-                          class="recharts-rectangle"
+                          fill="hsl(var(--chart-4))"
+                          class="recharts-rectangle transition-all duration-200 ease-in-out hover:opacity-90"
                           d="M 170.85,125.69375
             A 8,8,0,0,1,178.85,117.69375
             L 204.85,117.69375
@@ -399,18 +324,20 @@
             L 212.85,143
             A 8,8,0,0,1,204.85,151
             L 178.85,151
-            A 8,8,0,0,1,170.85,143 Z"></path>
+            A 8,8,0,0,1,170.85,143 Z">
+                          <title>April: 800</title>
+                        </path>
                       </g>
 
-                      <g class="recharts-layer recharts-bar-rectangle">
+                      <g class="recharts-layer recharts-bar-rectangle" _="on click add .scale-110 to me then wait 0.2s then remove .scale-110 from me">
                         <path
                           x="224.35"
                           y="55.64375000000001"
                           width="42"
                           height="95.35624999999999"
                           radius="8"
-                          fill="#2662d9"
-                          class="recharts-rectangle"
+                          fill="hsl(var(--chart-5))"
+                          class="recharts-rectangle transition-all duration-200 ease-in-out hover:opacity-90"
                           d="M 224.35,63.64375000000001
             A 8,8,0,0,1,232.35,55.64375000000001
             L 258.35,55.64375000000001
@@ -418,18 +345,20 @@
             L 266.35,143
             A 8,8,0,0,1,258.35,151
             L 232.35,151
-            A 8,8,0,0,1,224.35,143 Z"></path>
+            A 8,8,0,0,1,224.35,143 Z">
+                          <title>May: 1300</title>
+                        </path>
                       </g>
 
-                      <g class="recharts-layer recharts-bar-rectangle">
+                      <g class="recharts-layer recharts-bar-rectangle" _="on click add .scale-110 to me then wait 0.2s then remove .scale-110 from me">
                         <path
                           x="277.85"
                           y="53.36250000000001"
                           width="42"
                           height="97.63749999999999"
                           radius="8"
-                          fill="#2662d9"
-                          class="recharts-rectangle"
+                          fill="hsl(var(--chart-6))"
+                          class="recharts-rectangle transition-all duration-200 ease-in-out hover:opacity-90"
                           d="M 277.85,61.36250000000001
             A 8,8,0,0,1,285.85,53.36250000000001
             L 311.85,53.36250000000001
@@ -437,12 +366,12 @@
             L 319.85,143
             A 8,8,0,0,1,311.85,151
             L 285.85,151
-            A 8,8,0,0,1,277.85,143 Z"></path>
+            A 8,8,0,0,1,277.85,143 Z">
+                          <title>June: 1400</title>
+                        </path>
                       </g>
                     </g>
                   </g>
-
-                  <g class="recharts-layer"></g>
                 </g>
               </svg>
 
@@ -476,7 +405,6 @@
             stroke-linejoin="round"
             class="lucide lucide-trending-up h-4 w-4">
             <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline>
-
             <polyline points="16 7 22 7 22 13"></polyline>
           </svg>
         </div>
@@ -486,5 +414,14 @@
         </div>
       </div>
     </div>
+  </div>
+
+  <!-- Code block that can be toggled -->
+  <div id="code-block" class="hidden mt-4 p-4 bg-muted rounded-lg">
+    <pre><code class="language-html">&lt;!-- Interactive Bar Chart Component --&gt;
+&lt;div data-chart="chart-interactive-bar"&gt;
+  &lt;!-- Chart implementation with Hyperscript interactivity --&gt;
+  &lt;!-- Click on bars to see animation effects --&gt;
+&lt;/div&gt;</code></pre>
   </div>
 </div>

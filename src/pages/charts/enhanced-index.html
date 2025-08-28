@@ -1,0 +1,143 @@
+<div
+  class="themes-wrapper group relative flex flex-col overflow-hidden rounded-xl border border-border shadow transition-all duration-300 ease-in-out hover:z-30 hover:shadow-lg"
+  _="on mouseenter add .ring-2 .ring-primary/20 to me then transition opacity to 1 over 0.3s end
+     on mouseleave remove .ring-2 .ring-primary/20 from me then transition opacity to 0 over 0.3s end">
+  <div
+    class="items-center gap-2 relative z-20 flex justify-end border-b border-border bg-card px-3 py-2.5 text-card-foreground">
+    <div
+      class="flex items-center gap-1.5 pl-1 text-[13px] text-muted-foreground [&>svg]:h-[0.9rem] [&>svg]:w-[0.9rem]">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="lucide lucide-star">
+        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+      </svg>
+      Featured
+    </div>
+  </div>
+
+  <div
+    class="relative z-10 [&>div]:rounded-none [&>div]:border-none [&>div]:shadow-none">
+    <div class="rounded-xl border border-border bg-card text-card-foreground shadow">
+      <div class="flex flex-col space-y-1.5 p-6">
+        <h3 class="font-semibold leading-none tracking-tight">Enhanced Interactive Charts</h3>
+        <p class="text-sm text-muted-foreground">Charts with improved styling and Hyperscript interactivity</p>
+      </div>
+
+      <div class="p-6 pt-0">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <!-- Bar Chart Card -->
+          <div
+            class="rounded-lg border border-border p-4 transition-all duration-200 ease-in-out hover:shadow-md hover:border-primary"
+            _="on click send barChartClick to .charts-index">
+            <div class="flex items-center space-x-2 mb-3">
+              <div class="p-2 rounded-md bg-primary/10">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="text-primary">
+                  <path d="M3 3v18h18" />
+                  <rect width="4" height="7" x="7" y="10" rx="1" />
+                  <rect width="4" height="12" x="15" y="5" rx="1" />
+                </svg>
+              </div>
+              <h4 class="font-medium">Bar Charts</h4>
+            </div>
+            <p class="text-sm text-muted-foreground">
+              Interactive bar charts with animated transitions and hover effects.
+            </p>
+          </div>
+
+          <!-- Line Chart Card -->
+          <div
+            class="rounded-lg border border-border p-4 transition-all duration-200 ease-in-out hover:shadow-md hover:border-primary"
+            _="on click send lineChartClick to .charts-index">
+            <div class="flex items-center space-x-2 mb-3">
+              <div class="p-2 rounded-md bg-primary/10">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="text-primary">
+                  <path d="M3 3v18h18" />
+                  <path d="m19 9-5 5-4-4-3 3" />
+                </svg>
+              </div>
+              <h4 class="font-medium">Line Charts</h4>
+            </div>
+            <p class="text-sm text-muted-foreground">
+              Smooth line charts with interactive data points and area fills.
+            </p>
+          </div>
+
+          <!-- Pie Chart Card -->
+          <div
+            class="rounded-lg border border-border p-4 transition-all duration-200 ease-in-out hover:shadow-md hover:border-primary"
+            _="on click send pieChartClick to .charts-index">
+            <div class="flex items-center space-x-2 mb-3">
+              <div class="p-2 rounded-md bg-primary/10">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="text-primary">
+                  <path d="M21.21 15.89A10 10 0 1 1 8 2.83" />
+                  <path d="M22 12A10 10 0 0 0 12 2v10z" />
+                </svg>
+              </div>
+              <h4 class="font-medium">Pie Charts</h4>
+            </div>
+            <p class="text-sm text-muted-foreground">
+              Interactive pie charts with detailed legends and sector highlighting.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex p-6 pt-0 flex-col items-start gap-2 text-sm">
+        <div class="flex gap-2 font-medium leading-none">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="text-primary">
+            <path d="m9 18 6-6-6-6" />
+          </svg>
+          Click on any chart type above to explore interactive examples
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

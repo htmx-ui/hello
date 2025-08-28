@@ -1,0 +1,395 @@
+<div
+  class="themes-wrapper group relative flex flex-col overflow-hidden rounded-xl border border-border shadow transition-all duration-300 ease-in-out hover:z-30 hover:shadow-lg"
+  _="on mouseenter add .ring-2 .ring-primary/20 to me then transition opacity to 1 over 0.3s end
+     on mouseleave remove .ring-2 .ring-primary/20 from me then transition opacity to 0 over 0.3s end">
+  <div
+    class="items-center gap-2 relative z-20 flex justify-end border-b border-border bg-card px-3 py-2.5 text-card-foreground">
+    <div
+      class="flex items-center gap-1.5 pl-1 text-[13px] text-muted-foreground [&>svg]:h-[0.9rem] [&>svg]:w-[0.9rem]">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="lucide lucide-line-chart">
+        <path d="M3 3v18h18" />
+        <path d="m19 9-5 5-4-4-3 3" />
+      </svg>
+      Chart
+    </div>
+
+    <div class="ml-auto flex items-center gap-2 [&> form]:flex">
+      <button
+        class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 border border-input hover:text-accent-foreground [&_svg]-h-3.5 [&_svg]-h-3 h-6 w-6 rounded bg-transparent text-foreground shadow-none hover:bg-muted dark:text-foreground [&_svg]:w-3"
+        data-state="closed"
+        _="on click 
+             set the innerHTML of .copy-icon to '<path d=\"M20 6L9 17l-5-5\"/>' then 
+             add .text-green-500 to .copy-icon then
+             wait 2s then
+             set the innerHTML of .copy-icon to '<rect width=\"8\" height=\"4\" x=\"8\" y=\"2\" rx=\"1\" ry=\"1\"/><path d=\"M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2\"/>' then
+             remove .text-green-500 from .copy-icon">
+        <span class="sr-only">Copy</span>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="lucide lucide-clipboard copy-icon">
+          <rect width="8" height="4" x="8" y="2" rx="1" ry="1"></rect>
+          <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
+        </svg>
+      </button>
+
+      <div
+        data-orientation="vertical"
+        role="none"
+        class="shrink-0 bg-border w-px mx-0 hidden h-4 md:flex"></div>
+
+      <button
+        class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 border-input hover:text-accent-foreground h-6 rounded border bg-transparent px-2 text-xs text-foreground shadow-none hover:bg-muted dark:text-foreground"
+        type="button"
+        aria-haspopup="dialog"
+        aria-expanded="false"
+        aria-controls="radix-:r1o:"
+        data-state="closed"
+        _="on click 
+             toggle .hidden on #code-block then
+             if #code-block matches .hidden then
+               set the innerHTML of .view-code-text to 'View Code'
+             else
+               set the innerHTML of .view-code-text to 'Hide Code'">
+        <span class="view-code-text">View Code</span>
+      </button>
+    </div>
+  </div>
+
+  <div
+    class="relative z-10 [&>div]:rounded-none [&>div]:border-none [&>div]:shadow-none">
+    <div class="rounded-xl border border-border bg-card text-card-foreground shadow">
+      <div class="flex flex-col space-y-1.5 p-6">
+        <h3 class="font-semibold leading-none tracking-tight">Interactive Line Chart</h3>
+        <p class="text-sm text-muted-foreground">January - June 2024</p>
+      </div>
+
+      <div class="p-6 pt-0">
+        <div
+          data-chart="chart-interactive-line"
+          class="flex aspect-video justify-center text-xs [&_.recharts-cartesian-axis-tick_text]:fill-muted-foreground [&_.recharts-cartesian-grid_line[stroke='#ccc']]:stroke-border/50 [&_.recharts-curve.recharts-tooltip-cursor]:stroke-border [&_.recharts-dot[stroke='#fff']]:stroke-transparent [&_.recharts-layer]:outline-none [&_.recharts-polar-grid_[stroke='#ccc']]:stroke-border [&_.recharts-radial-bar-background-sector]:fill-muted [&_.recharts-rectangle.recharts-tooltip-cursor]:fill-muted [&_.recharts-reference-line_[stroke='#ccc']]:stroke-border [&_.recharts-sector[stroke='#fff']]:stroke-transparent [&_.recharts-sector]:outline-none [&_.recharts-surface]:outline-none"
+          _="on load call chartInit()">
+          <style>
+            [data-chart="chart-interactive-line"] {
+              --color-line: hsl(var(--chart-1));
+              --color-dot: hsl(var(--chart-2));
+              --color-area: hsl(var(--chart-3));
+            }
+
+            .dark [data-chart="chart-interactive-line"] {
+              --color-line: hsl(var(--chart-1));
+              --color-dot: hsl(var(--chart-2));
+              --color-area: hsl(var(--chart-3));
+            }
+          </style>
+
+          <div
+            class="recharts-responsive-container"
+            style="width: 100%; height: 100%; min-width: 0">
+            <div
+              class="recharts-wrapper"
+              style="
+                position: relative;
+                cursor: pointer;
+                width: 100%;
+                height: 100%;
+                max-height: 186px;
+                max-width: 331px;
+              "
+              _="on click 
+                   send chartClick to .chart-container then
+                   add .animate-pulse to .recharts-line-curve then
+                   wait 0.5s then
+                   remove .animate-pulse from .recharts-line-curve">
+              <svg
+                tabindex="0"
+                role="application"
+                class="recharts-surface"
+                width="331"
+                height="186"
+                viewBox="0 0 331 186"
+                style="width: 100%; height: 100%">
+                <title>Interactive Line Chart</title>
+                <desc>Line chart showing data for January to June 2024 with interactive elements</desc>
+
+                <defs>
+                  <clipPath id="recharts-line-clip">
+                    <rect x="5" y="5" height="146" width="321"></rect>
+                  </clipPath>
+                  <linearGradient id="line-gradient" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="5%" stop-color="hsl(var(--chart-1))" stop-opacity="0.8"/>
+                    <stop offset="95%" stop-color="hsl(var(--chart-1))" stop-opacity="0.1"/>
+                  </linearGradient>
+                </defs>
+
+                <g class="recharts-cartesian-grid">
+                  <g class="recharts-cartesian-grid-horizontal">
+                    <line stroke="hsl(var(--border))" stroke-opacity="0.5" fill="none" x="5" y="5" width="321" height="146" x1="5" y1="151" x2="326" y2="151"></line>
+                    <line stroke="hsl(var(--border))" stroke-opacity="0.3" fill="none" x="5" y="5" width="321" height="146" x1="5" y1="114.5" x2="326" y2="114.5"></line>
+                    <line stroke="hsl(var(--border))" stroke-opacity="0.3" fill="none" x="5" y="5" width="321" height="146" x1="5" y1="78" x2="326" y2="78"></line>
+                    <line stroke="hsl(var(--border))" stroke-opacity="0.3" fill="none" x="5" y="5" width="321" height="146" x1="5" y1="41.5" x2="326" y2="41.5"></line>
+                    <line stroke="hsl(var(--border))" stroke-opacity="0.5" fill="none" x="5" y="5" width="321" height="146" x1="5" y1="5" x2="326" y2="5"></line>
+                  </g>
+                </g>
+
+                <g class="recharts-layer recharts-cartesian-axis recharts-xAxis xAxis">
+                  <g class="recharts-cartesian-axis-ticks">
+                    <g class="recharts-layer recharts-cartesian-axis-tick">
+                      <text
+                        orientation="bottom"
+                        width="321"
+                        height="30"
+                        stroke="none"
+                        x="31.75"
+                        y="167"
+                        class="recharts-text recharts-cartesian-axis-tick-value"
+                        text-anchor="middle"
+                        fill="hsl(var(--muted-foreground))">
+                        <tspan x="31.75" dy="0.71em">Jan</tspan>
+                      </text>
+                    </g>
+                    <g class="recharts-layer recharts-cartesian-axis-tick">
+                      <text
+                        orientation="bottom"
+                        width="321"
+                        height="30"
+                        stroke="none"
+                        x="85.25"
+                        y="167"
+                        class="recharts-text recharts-cartesian-axis-tick-value"
+                        text-anchor="middle"
+                        fill="hsl(var(--muted-foreground))">
+                        <tspan x="85.25" dy="0.71em">Feb</tspan>
+                      </text>
+                    </g>
+                    <g class="recharts-layer recharts-cartesian-axis-tick">
+                      <text
+                        orientation="bottom"
+                        width="321"
+                        height="30"
+                        stroke="none"
+                        x="138.75"
+                        y="167"
+                        class="recharts-text recharts-cartesian-axis-tick-value"
+                        text-anchor="middle"
+                        fill="hsl(var(--muted-foreground))">
+                        <tspan x="138.75" dy="0.71em">Mar</tspan>
+                      </text>
+                    </g>
+                    <g class="recharts-layer recharts-cartesian-axis-tick">
+                      <text
+                        orientation="bottom"
+                        width="321"
+                        height="30"
+                        stroke="none"
+                        x="192.25"
+                        y="167"
+                        class="recharts-text recharts-cartesian-axis-tick-value"
+                        text-anchor="middle"
+                        fill="hsl(var(--muted-foreground))">
+                        <tspan x="192.25" dy="0.71em">Apr</tspan>
+                      </text>
+                    </g>
+                    <g class="recharts-layer recharts-cartesian-axis-tick">
+                      <text
+                        orientation="bottom"
+                        width="321"
+                        height="30"
+                        stroke="none"
+                        x="245.75"
+                        y="167"
+                        class="recharts-text recharts-cartesian-axis-tick-value"
+                        text-anchor="middle"
+                        fill="hsl(var(--muted-foreground))">
+                        <tspan x="245.75" dy="0.71em">May</tspan>
+                      </text>
+                    </g>
+                    <g class="recharts-layer recharts-cartesian-axis-tick">
+                      <text
+                        orientation="bottom"
+                        width="321"
+                        height="30"
+                        stroke="none"
+                        x="299.25"
+                        y="167"
+                        class="recharts-text recharts-cartesian-axis-tick-value"
+                        text-anchor="middle"
+                        fill="hsl(var(--muted-foreground))">
+                        <tspan x="299.25" dy="0.71em">Jun</tspan>
+                      </text>
+                    </g>
+                  </g>
+                </g>
+
+                <!-- Area fill -->
+                <g class="recharts-layer recharts-area">
+                  <g class="recharts-layer">
+                    <path
+                      fill="url(#line-gradient)"
+                      fill-opacity="0.4"
+                      width="307"
+                      height="156"
+                      stroke="none"
+                      class="recharts-curve recharts-area-area transition-all duration-300 ease-in-out"
+                      d="M31.75,95.325C52.217,70,72.683,44.675,93.15,37.313C113.617,29.95,134.083,40.551,154.55,70.463C175.017,100.374,195.483,149.597,215.95,150.413C236.417,151.228,256.883,103.637,277.35,84.113C297.817,64.588,318.283,73.132,331,81.675L331,156C318.283,156,297.817,156,277.35,156C256.883,156,236.417,156,215.95,156C195.483,156,175.017,156,154.55,156C134.083,156,113.617,156,93.15,156C72.683,156,52.217,156,31.75,156Z"
+                      _="on mouseenter add .opacity-70 to me then wait 0.2s then remove .opacity-70 from me">
+                      <title>Area Fill</title>
+                    </path>
+                  </g>
+                </g>
+
+                <!-- Line path -->
+                <g class="recharts-layer recharts-line">
+                  <g class="recharts-layer">
+                    <path
+                      fill="none"
+                      stroke="hsl(var(--chart-1))"
+                      stroke-width="3"
+                      class="recharts-curve recharts-line-curve transition-all duration-300 ease-in-out hover:stroke-4"
+                      d="M31.75,95.325C52.217,70,72.683,44.675,93.15,37.313C113.617,29.95,134.083,40.551,154.55,70.463C175.017,100.374,195.483,149.597,215.95,150.413C236.417,151.228,256.883,103.637,277.35,84.113C297.817,64.588,318.283,73.132,331,81.675"
+                      _="on mouseenter add .stroke-4 to me then wait 0.2s then remove .stroke-4 from me">
+                      <title>Line Path</title>
+                    </path>
+                  </g>
+                </g>
+
+                <!-- Data points -->
+                <g class="recharts-layer recharts-line-dots">
+                  <g class="recharts-layer">
+                    <circle
+                      cx="31.75"
+                      cy="95.325"
+                      r="5"
+                      fill="hsl(var(--background))"
+                      stroke="hsl(var(--chart-1))"
+                      stroke-width="3"
+                      class="recharts-dot recharts-line-dot transition-all duration-200 ease-in-out hover:r-6 cursor-pointer"
+                      _="on click add .scale-125 to me then wait 0.2s then remove .scale-125 from me">
+                      <title>January: 1000</title>
+                    </circle>
+                    <circle
+                      cx="93.15"
+                      cy="37.313"
+                      r="5"
+                      fill="hsl(var(--background))"
+                      stroke="hsl(var(--chart-1))"
+                      stroke-width="3"
+                      class="recharts-dot recharts-line-dot transition-all duration-200 ease-in-out hover:r-6 cursor-pointer"
+                      _="on click add .scale-125 to me then wait 0.2s then remove .scale-125 from me">
+                      <title>February: 1800</title>
+                    </circle>
+                    <circle
+                      cx="154.55"
+                      cy="70.463"
+                      r="5"
+                      fill="hsl(var(--background))"
+                      stroke="hsl(var(--chart-1))"
+                      stroke-width="3"
+                      class="recharts-dot recharts-line-dot transition-all duration-200 ease-in-out hover:r-6 cursor-pointer"
+                      _="on click add .scale-125 to me then wait 0.2s then remove .scale-125 from me">
+                      <title>March: 1300</title>
+                    </circle>
+                    <circle
+                      cx="215.95"
+                      cy="150.413"
+                      r="5"
+                      fill="hsl(var(--background))"
+                      stroke="hsl(var(--chart-1))"
+                      stroke-width="3"
+                      class="recharts-dot recharts-line-dot transition-all duration-200 ease-in-out hover:r-6 cursor-pointer"
+                      _="on click add .scale-125 to me then wait 0.2s then remove .scale-125 from me">
+                      <title>April: 600</title>
+                    </circle>
+                    <circle
+                      cx="277.35"
+                      cy="84.113"
+                      r="5"
+                      fill="hsl(var(--background))"
+                      stroke="hsl(var(--chart-1))"
+                      stroke-width="3"
+                      class="recharts-dot recharts-line-dot transition-all duration-200 ease-in-out hover:r-6 cursor-pointer"
+                      _="on click add .scale-125 to me then wait 0.2s then remove .scale-125 from me">
+                      <title>May: 1100</title>
+                    </circle>
+                    <circle
+                      cx="331"
+                      cy="81.675"
+                      r="5"
+                      fill="hsl(var(--background))"
+                      stroke="hsl(var(--chart-1))"
+                      stroke-width="3"
+                      class="recharts-dot recharts-line-dot transition-all duration-200 ease-in-out hover:r-6 cursor-pointer"
+                      _="on click add .scale-125 to me then wait 0.2s then remove .scale-125 from me">
+                      <title>June: 1200</title>
+                    </circle>
+                  </g>
+                </g>
+              </svg>
+
+              <div
+                tabindex="-1"
+                class="recharts-tooltip-wrapper"
+                style="
+                  visibility: hidden;
+                  pointer-events: none;
+                  position: absolute;
+                  top: 0px;
+                  left: 0px;
+                "></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex p-6 pt-0 flex-col items-start gap-2 text-sm">
+        <div class="flex gap-2 font-medium leading-none">
+          Trending up by 3.8% this month
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-trending-up h-4 w-4">
+            <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline>
+            <polyline points="16 7 22 7 22 13"></polyline>
+          </svg>
+        </div>
+
+        <div class="leading-none text-muted-foreground">
+          Showing total visitors for the last 6 months
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Code block that can be toggled -->
+  <div id="code-block" class="hidden mt-4 p-4 bg-muted rounded-lg">
+    <pre><code class="language-html">&lt;!-- Interactive Line Chart Component --&gt;
+&lt;div data-chart="chart-interactive-line"&gt;
+  &lt;!-- Chart implementation with Hyperscript interactivity --&gt;
+  &lt;!-- Hover over line and dots to see animation effects --&gt;
+&lt;/div&gt;</code></pre>
+  </div>
+</div>
