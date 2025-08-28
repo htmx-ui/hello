@@ -2,7 +2,7 @@
 
 Welcome to our comprehensive UI library built with HTMX, Hyperscript, and TailwindCSS. This project draws inspiration from leading UI frameworks including **Headless UI**, **ShadCN**, and **Skeleton UI**. As a completely free and open-source solution, this library enables developers to seamlessly integrate components through simple copy-and-paste functionality, facilitating rapid and efficient web application development.
 
-[Demo](https://ar-92.github.io/UI/src/index)
+[Demo](https://htmx-ui.github.io/hello/src/index)
 
 > **Status**: 🚧 Work in Progress - Continuously evolving
 
@@ -86,7 +86,7 @@ src/
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/AR-92/UI.git
+   git clone https://github.com/htmx-ui/hello.git
    ```
 
 2. Navigate to the project directory:
