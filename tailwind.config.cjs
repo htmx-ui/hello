@@ -97,5 +97,10 @@ module.exports = {
     "pb-4",
     "text-center",
     "justify-center",
+    // Dark mode classes
+    "dark:scale-0",
+    "dark:scale-100",
+    "dark:rotate-0",
+    "dark:-rotate-90",
   ],
 };

@@ -1,6 +1,6 @@
-@import './charts.css';
-@import './scroll.css';
-@import './animate.min.css';
+@import "./charts.css";
+@import "./scroll.css";
+@import "./animate.min.css";
 
 @tailwind base;
 @tailwind components;
@@ -100,6 +100,20 @@
 }
 
 @layer utilities {
+  /* Dark mode utilities */
+  .dark .scale-0 {
+    transform: scale(0);
+  }
+  .dark .scale-100 {
+    transform: scale(1);
+  }
+  .dark .rotate-0 {
+    transform: rotate(0deg);
+  }
+  .dark .-rotate-90 {
+    transform: rotate(-90deg);
+  }
+
   .bg-background {
     background-color: hsl(var(--background));
   }
