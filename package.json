@@ -33,6 +33,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "glob": "^11.0.3",
     "tailwindcss": "^3.4.17"
   },
   "devDependencies": {
