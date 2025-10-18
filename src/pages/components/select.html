@@ -38,34 +38,170 @@
     </p>
   </div>
 
-  <div
-    class="preview flex min-h-[350px] w-full justify-center p-10 items-center">
-    <button
-      type="button"
-      role="combobox"
-      aria-controls="radix-:r12d:"
-      aria-expanded="false"
-      aria-autocomplete="none"
-      dir="ltr"
-      data-state="closed"
-      data-placeholder=""
-      class="flex h-9 items-center justify-between whitespace-nowrap rounded-md border border-input bg-transparent px-3 py-2 text-sm shadow-sm ring-offset-background placeholder:text-muted-foreground focus:outline-none focus:ring-1 focus:ring-ring disabled:cursor-not-allowed disabled:opacity-50 [&amp;>span]:line-clamp-1 w-[180px]">
-      <span style="pointer-events: none">Select a fruit</span>
+  <div class="space-y-8">
+    <div class="space-y-4">
+      <h2 class="text-2xl font-semibold">Basic Select</h2>
+      <div class="preview flex min-h-[100px] w-full justify-center p-6 items-center bg-muted/50 rounded-lg">
+        <div class="relative w-[200px]">
+          <button
+            type="button"
+            class="flex h-9 w-full items-center justify-between whitespace-nowrap rounded-md border border-input bg-transparent px-3 py-2 text-sm shadow-sm ring-offset-background placeholder:text-muted-foreground focus:outline-none focus:ring-1 focus:ring-ring disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1"
+            _="on click
+              const dropdown = document.getElementById('basic-dropdown');
+              dropdown.classList.toggle('hidden')">
+            <span id="basic-selected">Select option</span>
+            <svg class="h-4 w-4 opacity-50" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div id="basic-dropdown" class="absolute top-full z-50 mt-1 hidden w-full rounded-md border bg-popover p-1 text-popover-foreground shadow-md">
+            <div class="cursor-pointer rounded-sm px-2 py-1.5 text-sm hover:bg-accent hover:text-accent-foreground"
+                 _="on click
+                   set #basic-selected.innerHTML to 'Option 1'
+                   add .hidden to #basic-dropdown">Option 1</div>
+            <div class="cursor-pointer rounded-sm px-2 py-1.5 text-sm hover:bg-accent hover:text-accent-foreground"
+                 _="on click
+                   set #basic-selected.innerHTML to 'Option 2'
+                   add .hidden to #basic-dropdown">Option 2</div>
+            <div class="cursor-pointer rounded-sm px-2 py-1.5 text-sm hover:bg-accent hover:text-accent-foreground"
+                 _="on click
+                   set #basic-selected.innerHTML to 'Option 3'
+                   add .hidden to #basic-dropdown">Option 3</div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-      <svg
-        width="15"
-        height="15"
-        viewBox="0 0 15 15"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        class="h-4 w-4 opacity-50"
-        aria-hidden="true">
-        <path
-          d="M4.93179 5.43179C4.75605 5.60753 4.75605 5.89245 4.93179 6.06819C5.10753 6.24392 5.39245 6.24392 5.56819 6.06819L7.49999 4.13638L9.43179 6.06819C9.60753 6.24392 9.89245 6.24392 10.0682 6.06819C10.2439 5.89245 10.2439 5.60753 10.0682 5.43179L7.81819 3.18179C7.73379 3.0974 7.61933 3.04999 7.49999 3.04999C7.38064 3.04999 7.26618 3.0974 7.18179 3.18179L4.93179 5.43179ZM10.0682 9.56819C10.2439 9.39245 10.2439 9.10753 10.0682 8.93179C9.89245 8.75606 9.60753 8.75606 9.43179 8.93179L7.49999 10.8636L5.56819 8.93179C5.39245 8.75606 5.10753 8.75606 4.93179 8.93179C4.75605 9.10753 4.75605 9.39245 4.93179 9.56819L7.18179 11.8182C7.35753 11.9939 7.64245 11.9939 7.81819 11.8182L10.0682 9.56819Z"
-          fill="currentColor"
-          fill-rule="evenodd"
-          clip-rule="evenodd"></path>
-      </svg>
-    </button>
+    <div class="space-y-4">
+      <h2 class="text-2xl font-semibold">Select with Search</h2>
+      <div class="preview flex min-h-[100px] w-full justify-center p-6 items-center bg-muted/50 rounded-lg">
+        <div class="relative w-[250px]">
+          <button
+            type="button"
+            class="flex h-9 w-full items-center justify-between whitespace-nowrap rounded-md border border-input bg-transparent px-3 py-2 text-sm shadow-sm ring-offset-background placeholder:text-muted-foreground focus:outline-none focus:ring-1 focus:ring-ring disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1"
+            _="on click
+              const dropdown = document.getElementById('search-dropdown');
+              dropdown.classList.toggle('hidden')">
+            <span id="search-selected">Choose country</span>
+            <svg class="h-4 w-4 opacity-50" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div id="search-dropdown" class="absolute top-full z-50 mt-1 hidden w-full rounded-md border bg-popover p-1 text-popover-foreground shadow-md">
+            <input
+              type="text"
+              placeholder="Search countries..."
+              class="w-full px-2 py-1 text-sm border-b border-border mb-1 focus:outline-none"
+              _="on input
+                const searchTerm = my.value.toLowerCase()
+                for option in <div[data-country]/>
+                  if option@data-country.toLowerCase().includes(searchTerm)
+                    remove .hidden from option
+                  else
+                    add .hidden to option
+                end" />
+            <div data-country="united states" class="cursor-pointer rounded-sm px-2 py-1.5 text-sm hover:bg-accent hover:text-accent-foreground"
+                 _="on click
+                   set #search-selected.innerHTML to 'United States'
+                   add .hidden to #search-dropdown">🇺🇸 United States</div>
+            <div data-country="canada" class="cursor-pointer rounded-sm px-2 py-1.5 text-sm hover:bg-accent hover:text-accent-foreground"
+                 _="on click
+                   set #search-selected.innerHTML to 'Canada'
+                   add .hidden to #search-dropdown">🇨🇦 Canada</div>
+            <div data-country="united kingdom" class="cursor-pointer rounded-sm px-2 py-1.5 text-sm hover:bg-accent hover:text-accent-foreground"
+                 _="on click
+                   set #search-selected.innerHTML to 'United Kingdom'
+                   add .hidden to #search-dropdown">🇬🇧 United Kingdom</div>
+            <div data-country="germany" class="cursor-pointer rounded-sm px-2 py-1.5 text-sm hover:bg-accent hover:text-accent-foreground"
+                 _="on click
+                   set #search-selected.innerHTML to 'Germany'
+                   add .hidden to #search-dropdown">🇩🇪 Germany</div>
+            <div data-country="france" class="cursor-pointer rounded-sm px-2 py-1.5 text-sm hover:bg-accent hover:text-accent-foreground"
+                 _="on click
+                   set #search-selected.innerHTML to 'France'
+                   add .hidden to #search-dropdown">🇫🇷 France</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="space-y-4">
+      <h2 class="text-2xl font-semibold">Multi-Select</h2>
+      <div class="preview flex min-h-[100px] w-full justify-center p-6 items-center bg-muted/50 rounded-lg">
+        <div class="relative w-[300px]">
+          <button
+            type="button"
+            class="flex h-9 w-full items-center justify-between whitespace-nowrap rounded-md border border-input bg-transparent px-3 py-2 text-sm shadow-sm ring-offset-background placeholder:text-muted-foreground focus:outline-none focus:ring-1 focus:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
+            _="on click
+              const dropdown = document.getElementById('multi-dropdown');
+              dropdown.classList.toggle('hidden')">
+            <span id="multi-selected">Select items</span>
+            <svg class="h-4 w-4 opacity-50" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div id="multi-dropdown" class="absolute top-full z-50 mt-1 hidden w-full rounded-md border bg-popover p-1 text-popover-foreground shadow-md max-h-48 overflow-y-auto">
+            <label class="flex items-center space-x-2 cursor-pointer rounded-sm px-2 py-1.5 text-sm hover:bg-accent hover:text-accent-foreground">
+              <input type="checkbox" class="rounded" _="on change if my.checked add .bg-blue-100 to closest <label/> else remove .bg-blue-100 from closest <label/>"/>
+              <span>Apple</span>
+            </label>
+            <label class="flex items-center space-x-2 cursor-pointer rounded-sm px-2 py-1.5 text-sm hover:bg-accent hover:text-accent-foreground">
+              <input type="checkbox" class="rounded" _="on change if my.checked add .bg-blue-100 to closest <label/> else remove .bg-blue-100 from closest <label/>"/>
+              <span>Banana</span>
+            </label>
+            <label class="flex items-center space-x-2 cursor-pointer rounded-sm px-2 py-1.5 text-sm hover:bg-accent hover:text-accent-foreground">
+              <input type="checkbox" class="rounded" _="on change if my.checked add .bg-blue-100 to closest <label/> else remove .bg-blue-100 from closest <label/>"/>
+              <span>Orange</span>
+            </label>
+            <label class="flex items-center space-x-2 cursor-pointer rounded-sm px-2 py-1.5 text-sm hover:bg-accent hover:text-accent-foreground">
+              <input type="checkbox" class="rounded" _="on change if my.checked add .bg-blue-100 to closest <label/> else remove .bg-blue-100 from closest <label/>"/>
+              <span>Grape</span>
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="space-y-4">
+      <h2 class="text-2xl font-semibold">Select States</h2>
+      <div class="preview flex min-h-[150px] w-full justify-center p-6 items-center bg-muted/50 rounded-lg">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 w-full max-w-lg">
+          <div class="space-y-2">
+            <label class="text-sm font-medium">Default</label>
+            <button
+              type="button"
+              class="flex h-9 w-full items-center justify-between whitespace-nowrap rounded-md border border-input bg-transparent px-3 py-2 text-sm shadow-sm ring-offset-background placeholder:text-muted-foreground focus:outline-none focus:ring-1 focus:ring-ring disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1">
+              <span>Select option</span>
+              <svg class="h-4 w-4 opacity-50" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </button>
+          </div>
+          <div class="space-y-2">
+            <label class="text-sm font-medium">Disabled</label>
+            <button
+              type="button"
+              disabled
+              class="flex h-9 w-full items-center justify-between whitespace-nowrap rounded-md border border-input bg-transparent px-3 py-2 text-sm shadow-sm ring-offset-background placeholder:text-muted-foreground focus:outline-none focus:ring-1 focus:ring-ring disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1">
+              <span>Disabled</span>
+              <svg class="h-4 w-4 opacity-50" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </button>
+          </div>
+          <div class="space-y-2">
+            <label class="text-sm font-medium">Error</label>
+            <button
+              type="button"
+              class="flex h-9 w-full items-center justify-between whitespace-nowrap rounded-md border border-destructive bg-transparent px-3 py-2 text-sm shadow-sm ring-offset-background placeholder:text-muted-foreground focus:outline-none focus:ring-1 focus:ring-ring disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1">
+              <span>Error state</span>
+              <svg class="h-4 w-4 opacity-50" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

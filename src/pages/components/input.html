@@ -38,11 +38,93 @@
     </p>
   </div>
 
-  <div
-    class="preview flex min-h-[350px] w-full justify-center p-10 items-center">
-    <input
-      class="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
-      placeholder="Email"
-      type="email" />
+  <div class="space-y-8">
+    <div class="space-y-4">
+      <h2 class="text-2xl font-semibold">Basic Input</h2>
+      <div class="preview flex min-h-[100px] w-full justify-center p-6 items-center bg-muted/50 rounded-lg">
+        <input
+          class="flex h-9 w-full max-w-sm rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
+          placeholder="Enter your email"
+          type="email" />
+      </div>
+    </div>
+
+    <div class="space-y-4">
+      <h2 class="text-2xl font-semibold">Input Types</h2>
+      <div class="preview flex min-h-[200px] w-full justify-center p-6 items-center bg-muted/50 rounded-lg">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 w-full max-w-md">
+          <div class="space-y-2">
+            <label class="text-sm font-medium">Text</label>
+            <input
+              class="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
+              placeholder="Enter text"
+              type="text" />
+          </div>
+          <div class="space-y-2">
+            <label class="text-sm font-medium">Password</label>
+            <input
+              class="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
+              placeholder="Enter password"
+              type="password" />
+          </div>
+          <div class="space-y-2">
+            <label class="text-sm font-medium">Number</label>
+            <input
+              class="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
+              placeholder="Enter number"
+              type="number" />
+          </div>
+          <div class="space-y-2">
+            <label class="text-sm font-medium">Date</label>
+            <input
+              class="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
+              type="date" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="space-y-4">
+      <h2 class="text-2xl font-semibold">Input with Icons</h2>
+      <div class="preview flex min-h-[100px] w-full justify-center p-6 items-center bg-muted/50 rounded-lg">
+        <div class="relative max-w-sm w-full">
+          <svg class="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+          </svg>
+          <input
+            class="flex h-9 w-full rounded-md border border-input bg-transparent pl-9 pr-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
+            placeholder="Search..."
+            type="search" />
+        </div>
+      </div>
+    </div>
+
+    <div class="space-y-4">
+      <h2 class="text-2xl font-semibold">Input States</h2>
+      <div class="preview flex min-h-[150px] w-full justify-center p-6 items-center bg-muted/50 rounded-lg">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 w-full max-w-lg">
+          <div class="space-y-2">
+            <label class="text-sm font-medium">Default</label>
+            <input
+              class="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
+              placeholder="Default"
+              value="Default value" />
+          </div>
+          <div class="space-y-2">
+            <label class="text-sm font-medium">Disabled</label>
+            <input
+              class="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
+              placeholder="Disabled"
+              disabled />
+          </div>
+          <div class="space-y-2">
+            <label class="text-sm font-medium">Error</label>
+            <input
+              class="flex h-9 w-full rounded-md border border-destructive bg-transparent px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
+              placeholder="Error state" />
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

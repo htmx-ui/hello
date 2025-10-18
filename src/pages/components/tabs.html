@@ -38,56 +38,201 @@
     </p>
   </div>
 
-  <div
-    class="preview flex min-h-[350px] w-full justify-center p-10 items-center">
-    <div
-      dir="ltr"
-      data-orientation="horizontal"
-      class="w-[400px]">
-      <div
-        role="tablist"
-        aria-orientation="horizontal"
-        class="h-9 items-center justify-center rounded-lg bg-muted p-1 text-muted-foreground grid w-full grid-cols-2"
-        tabindex="0"
-        data-orientation="horizontal"
-        style="outline: none">
-        <button
-          type="button"
-          role="tab"
-          aria-selected="true"
-          aria-controls="radix-:r17t:-content-account"
-          data-state="active"
-          id="radix-:r17t:-trigger-account"
-          class="inline-flex items-center justify-center whitespace-nowrap rounded-md px-3 py-1 text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:shadow"
-          tabindex="-1"
-          data-orientation="horizontal"
-          data-radix-collection-item="">
-          Account
-        </button>
-
-        <button
-          type="button"
-          role="tab"
-          aria-selected="false"
-          aria-controls="radix-:r17t:-content-password"
-          data-state="inactive"
-          id="radix-:r17t:-trigger-password"
-          class="inline-flex items-center justify-center whitespace-nowrap rounded-md px-3 py-1 text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:shadow"
-          tabindex="-1"
-          data-orientation="horizontal"
-          data-radix-collection-item="">
-          Password
-        </button>
+  <div class="space-y-8">
+    <div class="space-y-4">
+      <h2 class="text-2xl font-semibold">Basic Tabs</h2>
+      <div class="preview flex min-h-[200px] w-full justify-center p-6 items-center bg-muted/50 rounded-lg">
+        <div class="w-[400px]">
+          <div class="flex space-x-1 rounded-lg bg-muted p-1">
+            <button
+              class="flex-1 rounded-md px-3 py-2 text-sm font-medium transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 bg-background text-foreground shadow-sm"
+              _="on click
+                remove .bg-background from <button/>
+                remove .text-foreground from <button/>
+                remove .shadow-sm from <button/>
+                add .bg-muted to <button/>
+                add .text-muted-foreground to <button/>
+                add .bg-background to me
+                add .text-foreground to me
+                add .shadow-sm to me
+                add .hidden to <div.tab-content/>
+                remove .hidden from #tab1-content">
+              Tab 1
+            </button>
+            <button
+              class="flex-1 rounded-md px-3 py-2 text-sm font-medium transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 bg-muted text-muted-foreground"
+              _="on click
+                remove .bg-background from <button/>
+                remove .text-foreground from <button/>
+                remove .shadow-sm from <button/>
+                add .bg-muted to <button/>
+                add .text-muted-foreground to <button/>
+                add .bg-background to me
+                add .text-foreground to me
+                add .shadow-sm to me
+                add .hidden to <div.tab-content/>
+                remove .hidden from #tab2-content">
+              Tab 2
+            </button>
+            <button
+              class="flex-1 rounded-md px-3 py-2 text-sm font-medium transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 bg-muted text-muted-foreground"
+              _="on click
+                remove .bg-background from <button/>
+                remove .text-foreground from <button/>
+                remove .shadow-sm from <button/>
+                add .bg-muted to <button/>
+                add .text-muted-foreground to <button/>
+                add .bg-background to me
+                add .text-foreground to me
+                add .shadow-sm to me
+                add .hidden to <div.tab-content/>
+                remove .hidden from #tab3-content">
+              Tab 3
+            </button>
+          </div>
+          <div class="mt-4">
+            <div id="tab1-content" class="tab-content rounded-lg border p-4 bg-card">
+              <h3 class="font-semibold mb-2">Account Settings</h3>
+              <p class="text-sm text-muted-foreground">Manage your account settings and preferences.</p>
+            </div>
+            <div id="tab2-content" class="tab-content hidden rounded-lg border p-4 bg-card">
+              <h3 class="font-semibold mb-2">Security</h3>
+              <p class="text-sm text-muted-foreground">Configure your security settings and password.</p>
+            </div>
+            <div id="tab3-content" class="tab-content hidden rounded-lg border p-4 bg-card">
+              <h3 class="font-semibold mb-2">Notifications</h3>
+              <p class="text-sm text-muted-foreground">Manage your notification preferences.</p>
+            </div>
+          </div>
+        </div>
       </div>
+    </div>
 
-      <div
-        data-state="active"
-        data-orientation="horizontal"
-        role="tabpanel"
-        aria-labelledby="radix-:r17t:-trigger-account"
-        id="radix-:r17t:-content-account"
-        tabindex="0"
-        class="mt-2 ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+    <div class="space-y-4">
+      <h2 class="text-2xl font-semibold">Tabs with Icons</h2>
+      <div class="preview flex min-h-[200px] w-full justify-center p-6 items-center bg-muted/50 rounded-lg">
+        <div class="w-[450px]">
+          <div class="flex space-x-1 rounded-lg bg-muted p-1">
+            <button
+              class="flex-1 rounded-md px-3 py-2 text-sm font-medium transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 bg-background text-foreground shadow-sm flex items-center justify-center gap-2"
+              _="on click
+                remove .bg-background from <button/>
+                remove .text-foreground from <button/>
+                remove .shadow-sm from <button/>
+                add .bg-muted to <button/>
+                add .text-muted-foreground to <button/>
+                add .bg-background to me
+                add .text-foreground to me
+                add .shadow-sm to me
+                add .hidden to <div.icon-tab-content/>
+                remove .hidden from #icon-tab1">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+              </svg>
+              Profile
+            </button>
+            <button
+              class="flex-1 rounded-md px-3 py-2 text-sm font-medium transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 bg-muted text-muted-foreground flex items-center justify-center gap-2"
+              _="on click
+                remove .bg-background from <button/>
+                remove .text-foreground from <button/>
+                remove .shadow-sm from <button/>
+                add .bg-muted to <button/>
+                add .text-muted-foreground to <button/>
+                add .bg-background to me
+                add .text-foreground to me
+                add .shadow-sm to me
+                add .hidden to <div.icon-tab-content/>
+                remove .hidden from #icon-tab2">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4"/>
+              </svg>
+              Settings
+            </button>
+          </div>
+          <div class="mt-4">
+            <div id="icon-tab1" class="icon-tab-content rounded-lg border p-4 bg-card">
+              <h3 class="font-semibold mb-2">User Profile</h3>
+              <p class="text-sm text-muted-foreground">Update your personal information and profile picture.</p>
+            </div>
+            <div id="icon-tab2" class="icon-tab-content hidden rounded-lg border p-4 bg-card">
+              <h3 class="font-semibold mb-2">Application Settings</h3>
+              <p class="text-sm text-muted-foreground">Configure application preferences and behavior.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="space-y-4">
+      <h2 class="text-2xl font-semibold">Vertical Tabs</h2>
+      <div class="preview flex min-h-[250px] w-full justify-center p-6 items-center bg-muted/50 rounded-lg">
+        <div class="flex w-[500px]">
+          <div class="flex flex-col space-y-1 rounded-lg bg-muted p-1 w-32">
+            <button
+              class="rounded-md px-3 py-2 text-sm font-medium transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 bg-background text-foreground shadow-sm"
+              _="on click
+                remove .bg-background from <button/>
+                remove .text-foreground from <button/>
+                remove .shadow-sm from <button/>
+                add .bg-muted to <button/>
+                add .text-muted-foreground to <button/>
+                add .bg-background to me
+                add .text-foreground to me
+                add .shadow-sm to me
+                add .hidden to <div.vertical-content/>
+                remove .hidden from #vertical1">
+              Home
+            </button>
+            <button
+              class="rounded-md px-3 py-2 text-sm font-medium transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 bg-muted text-muted-foreground"
+              _="on click
+                remove .bg-background from <button/>
+                remove .text-foreground from <button/>
+                remove .shadow-sm from <button/>
+                add .bg-muted to <button/>
+                add .text-muted-foreground to <button/>
+                add .bg-background to me
+                add .text-foreground to me
+                add .shadow-sm to me
+                add .hidden to <div.vertical-content/>
+                remove .hidden from #vertical2">
+              About
+            </button>
+            <button
+              class="rounded-md px-3 py-2 text-sm font-medium transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 bg-muted text-muted-foreground"
+              _="on click
+                remove .bg-background from <button/>
+                remove .text-foreground from <button/>
+                remove .shadow-sm from <button/>
+                add .bg-muted to <button/>
+                add .text-muted-foreground to <button/>
+                add .bg-background to me
+                add .text-foreground to me
+                add .shadow-sm to me
+                add .hidden to <div.vertical-content/>
+                remove .hidden from #vertical3">
+              Contact
+            </button>
+          </div>
+          <div class="ml-4 flex-1">
+            <div id="vertical1" class="vertical-content rounded-lg border p-4 bg-card">
+              <h3 class="font-semibold mb-2">Welcome Home</h3>
+              <p class="text-sm text-muted-foreground">This is the home tab content. Here you can display your main content.</p>
+            </div>
+            <div id="vertical2" class="vertical-content hidden rounded-lg border p-4 bg-card">
+              <h3 class="font-semibold mb-2">About Us</h3>
+              <p class="text-sm text-muted-foreground">Learn more about our company and what we do.</p>
+            </div>
+            <div id="vertical3" class="vertical-content hidden rounded-lg border p-4 bg-card">
+              <h3 class="font-semibold mb-2">Get in Touch</h3>
+              <p class="text-sm text-muted-foreground">Contact us for more information or support.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
         style="animation-duration: 0s">
         <div class="rounded-xl border bg-card text-card-foreground shadow">
           <div class="flex flex-col space-y-1.5 p-6">
