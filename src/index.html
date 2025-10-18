@@ -11,11 +11,11 @@
     <script src="https://unpkg.com/htmx.org@1.9.12"></script>
     <script src="https://unpkg.com/hyperscript.org@0.9.12"></script>
 
-    <link rel="stylesheet" href="/src/assets/css/tailwindcss.css" />
-    <link rel="stylesheet" href="/src/assets/css/animate.min.css" />
+    <link rel="stylesheet" href="/assets/css/tailwindcss.css" />
+    <link rel="stylesheet" href="/assets/css/animate.min.css" />
     <link
       rel="shortcut icon"
-      href="/src/assets/icons/logo-hello.svg"
+      href="/assets/icons/logo-hello.svg"
       type="image/x-icon"
     />
   </head>
@@ -24,7 +24,7 @@
     <div class="relative flex min-h-screen flex-col">
       <!-- Navbar will be loaded here -->
       <div
-        hx-get="/src/partials/navbar.html"
+        hx-get="/partials/navbar.html"
         hx-trigger="load"
         hx-swap="outerHTML"
         hx-indicator="#navbar-loading"
@@ -39,7 +39,7 @@
       <main class="flex-1">
         <div id="main-content" class="min-h-full">
           <div
-            hx-get="/src/pages/home/index.html"
+            hx-get="/pages/home/index.html"
             hx-trigger="load"
             hx-swap="innerHTML"
             hx-indicator="#main-loading"
@@ -54,7 +54,7 @@
 
       <!-- Footer will be loaded here -->
       <div
-        hx-get="/src/partials/footer.html"
+        hx-get="/partials/footer.html"
         hx-trigger="load"
         hx-swap="outerHTML"
         hx-indicator="#footer-loading"
