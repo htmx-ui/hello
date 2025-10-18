@@ -1,532 +1,747 @@
-<main class="flex-1" >
-    <div class="border-b">
-        <div
-            class="container flex-1 items-start md:grid md:grid-cols-[220px_minmax(0,1fr)] md:gap-6 lg:grid-cols-[240px_minmax(0,1fr)] lg:gap-10"
+<div class="container py-8">
+  <div class="flex flex-col items-center text-center mb-12">
+    <h1 class="text-3xl font-bold tracking-tight text-foreground sm:text-4xl md:text-5xl">
+      Components
+    </h1>
+    <p class="mt-4 text-lg text-muted-foreground max-w-2xl">
+      Explore our comprehensive collection of UI components. Each component is built with HTMX, Hyperscript, and Tailwind CSS for modern web development.
+    </p>
+  </div>
+
+  <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+    <div class="group relative rounded-lg border bg-card p-6 shadow-sm transition-all hover:shadow-md">
+      <div class="flex items-center justify-between">
+        <h3 class="font-semibold text-foreground">Accordion</h3>
+        <a
+          hx-get="/pages/components/accordion.html"
+          hx-target="#main-content"
+          hx-swap="innerHTML"
+          class="inline-flex items-center justify-center rounded-md bg-primary px-3 py-1 text-xs font-medium text-primary-foreground transition-colors hover:bg-primary/90"
         >
-            <aside
-                class="fixed top-14 z-30 -ml-2 hidden h-[calc(100vh-3.5rem)] w-full shrink-0 md:sticky md:block"
-            >
-                <div class="relative overflow-hidden h-full py-6 pr-6 lg:py-8">
-                    <div
-                        class="h-full w-full rounded-[inherit]"
-                        style="overflow: hidden scroll"
-                    >
-                        <div style="min-width: 100%; display: table">
-                            <div class="w-full">
-                                <div class="pb-4">
-                                    <h4
-                                        class="mb-1 rounded-md px-2 py-1 text-sm font-semibold"
-                                    >
-                                        Components
-                                    </h4>
-
-                                    <div
-                                        class="grid grid-flow-row auto-rows-max text-sm"
-                                    >
-                                        <a
-                                            class="group flex w-full items-center rounded-md border border-transparent px-2 py-1 hover:underline text-muted-foreground"
-                                            hx-target="#component"
-                                            hx-trigger="click"
-                                            hx-swap="innerHTML"
-                                            hx-get="/pages/components/accordion.html"
-                                        >
-                                            Accordion
-                                        </a>
-
-                                        <a
-                                            class="group flex w-full items-center rounded-md border border-transparent px-2 py-1 hover:underline font-medium text-foreground"
-                                            hx-target="#component"
-                                            hx-trigger="click"
-                                            hx-swap="innerHTML"
-                                            hx-get="/pages/components/alert.html"
-                                        >
-                                            Alert
-                                        </a>
-
-                                        <a
-                                            class="group flex w-full items-center rounded-md border border-transparent px-2 py-1 hover:underline text-muted-foreground"
-                                            hx-target="#component"
-                                            hx-trigger="click"
-                                            hx-swap="innerHTML"
-                                            hx-get="/pages/components/alert-dialog.html"
-                                        >
-                                            Alert Dialog
-                                        </a>
-
-                                        <a
-                                            class="group flex w-full items-center rounded-md border border-transparent px-2 py-1 hover:underline text-muted-foreground"
-                                            hx-target="#component"
-                                            hx-trigger="click"
-                                            hx-swap="innerHTML"
-                                            hx-get="/pages/components/aspect-ratio.html"
-                                        >
-                                            Aspect Ratio
-                                        </a>
-
-                                        <a
-                                            class="group flex w-full items-center rounded-md border border-transparent px-2 py-1 hover:underline text-muted-foreground"
-                                            hx-target="#component"
-                                            hx-trigger="click"
-                                            hx-swap="innerHTML"
-                                            hx-get="/pages/components/avatar.html"
-                                        >
-                                            Avatar
-                                        </a>
-
-                                        <a
-                                            class="group flex w-full items-center rounded-md border border-transparent px-2 py-1 hover:underline text-muted-foreground"
-                                            hx-target="#component"
-                                            hx-trigger="click"
-                                            hx-swap="innerHTML"
-                                            hx-get="/pages/components/badge.html"
-                                        >
-                                            Badge
-                                        </a>
-
-                                        <a
-                                            class="group flex w-full items-center rounded-md border border-transparent px-2 py-1 hover:underline text-muted-foreground"
-                                            hx-target="#component"
-                                            hx-trigger="click"
-                                            hx-swap="innerHTML"
-                                            hx-get="/pages/components/breadcrumb.html"
-                                        >
-                                            Breadcrumb
-                                        </a>
-
-                                        <a
-                                            class="group flex w-full items-center rounded-md border border-transparent px-2 py-1 hover:underline text-muted-foreground"
-                                            hx-target="#component"
-                                            hx-trigger="click"
-                                            hx-swap="innerHTML"
-                                            hx-get="/pages/components/button.html"
-                                        >
-                                            Button
-                                        </a>
-
-                                        <a
-                                            class="group flex w-full items-center rounded-md border border-transparent px-2 py-1 hover:underline text-muted-foreground"
-                                            hx-target="#component"
-                                            hx-trigger="click"
-                                            hx-swap="innerHTML"
-                                            hx-get="/pages/components/calendar.html"
-                                        >
-                                            Calendar
-                                        </a>
-
-                                        <a
-                                            class="group flex w-full items-center rounded-md border border-transparent px-2 py-1 hover:underline text-muted-foreground"
-                                            hx-target="#component"
-                                            hx-trigger="click"
-                                            hx-swap="innerHTML"
-                                            hx-get="/pages/components/card.html"
-                                        >
-                                            Card
-                                        </a>
-
-                                        <a
-                                            class="group flex w-full items-center rounded-md border border-transparent px-2 py-1 hover:underline text-muted-foreground"
-                                            hx-target="#component"
-                                            hx-trigger="click"
-                                            hx-swap="innerHTML"
-                                            hx-get="/pages/components/carousel.html"
-                                        >
-                                            Carousel
-                                        </a>
-
-                                        <a
-                                            class="group flex w-full items-center rounded-md border border-transparent px-2 py-1 hover:underline text-muted-foreground"
-                                            hx-target="#component"
-                                            hx-trigger="click"
-                                            hx-swap="innerHTML"
-                                            hx-get="/pages/components/chart.html"
-                                        >
-                                            Chart
-                                        </a>
-
-                                        <a
-                                            class="group flex w-full items-center rounded-md border border-transparent px-2 py-1 hover:underline text-muted-foreground"
-                                            hx-target="#component"
-                                            hx-trigger="click"
-                                            hx-swap="innerHTML"
-                                            hx-get="/pages/components/checkbox.html"
-                                        >
-                                            Checkbox
-                                        </a>
-
-                                        <a
-                                            class="group flex w-full items-center rounded-md border border-transparent px-2 py-1 hover:underline text-muted-foreground"
-                                            hx-target="#component"
-                                            hx-trigger="click"
-                                            hx-swap="innerHTML"
-                                            hx-get="/pages/components/collapsible.html"
-                                        >
-                                            Collapsible
-                                        </a>
-
-                                        <a
-                                            class="group flex w-full items-center rounded-md border border-transparent px-2 py-1 hover:underline text-muted-foreground"
-                                            hx-target="#component"
-                                            hx-trigger="click"
-                                            hx-swap="innerHTML"
-                                            hx-get="/pages/components/combobox.html"
-                                        >
-                                            Combobox
-                                        </a>
-
-                                        <a
-                                            class="group flex w-full items-center rounded-md border border-transparent px-2 py-1 hover:underline text-muted-foreground"
-                                            hx-target="#component"
-                                            hx-trigger="click"
-                                            hx-swap="innerHTML"
-                                            hx-get="/pages/components/command.html"
-                                        >
-                                            Command
-                                        </a>
-
-                                        <a
-                                            class="group flex w-full items-center rounded-md border border-transparent px-2 py-1 hover:underline text-muted-foreground"
-                                            hx-target="#component"
-                                            hx-trigger="click"
-                                            hx-swap="innerHTML"
-                                            hx-get="/pages/components/context-menu.html"
-                                        >
-                                            Context Menu
-                                        </a>
-
-                                        <a
-                                            class="group flex w-full items-center rounded-md border border-transparent px-2 py-1 hover:underline text-muted-foreground"
-                                            hx-target="#component"
-                                            hx-trigger="click"
-                                            hx-swap="innerHTML"
-                                            hx-get="/pages/components/data-table.html"
-                                        >
-                                            Data Table
-                                        </a>
-
-                                        <a
-                                            class="group flex w-full items-center rounded-md border border-transparent px-2 py-1 hover:underline text-muted-foreground"
-                                            hx-target="#component"
-                                            hx-trigger="click"
-                                            hx-swap="innerHTML"
-                                            hx-get="/pages/components/date-picker.html"
-                                        >
-                                            Date Picker
-                                        </a>
-
-                                        <a
-                                            class="group flex w-full items-center rounded-md border border-transparent px-2 py-1 hover:underline text-muted-foreground"
-                                            hx-target="#component"
-                                            hx-trigger="click"
-                                            hx-swap="innerHTML"
-                                            hx-get="/pages/components/dialog.html"
-                                        >
-                                            Dialog
-                                        </a>
-
-                                        <a
-                                            class="group flex w-full items-center rounded-md border border-transparent px-2 py-1 hover:underline text-muted-foreground"
-                                            hx-target="#component"
-                                            hx-trigger="click"
-                                            hx-swap="innerHTML"
-                                            hx-get="/pages/components/drawer.html"
-                                        >
-                                            Drawer
-                                        </a>
-
-                                        <a
-                                            class="group flex w-full items-center rounded-md border border-transparent px-2 py-1 hover:underline text-muted-foreground"
-                                            hx-target="#component"
-                                            hx-trigger="click"
-                                            hx-swap="innerHTML"
-                                            hx-get="/pages/components/dropdown-menu.html"
-                                        >
-                                            Dropdown Menu
-                                        </a>
-
-                                        <a
-                                            class="group flex w-full items-center rounded-md border border-transparent px-2 py-1 hover:underline text-muted-foreground"
-                                            hx-target="#component"
-                                            hx-trigger="click"
-                                            hx-swap="innerHTML"
-                                            hx-get="/pages/components/form.html"
-                                        >
-                                            Form
-                                        </a>
-
-                                        <a
-                                            class="group flex w-full items-center rounded-md border border-transparent px-2 py-1 hover:underline text-muted-foreground"
-                                            hx-target="#component"
-                                            hx-trigger="click"
-                                            hx-swap="innerHTML"
-                                            hx-get="/pages/components/hover-card.html"
-                                        >
-                                            Hover Card
-                                        </a>
-
-                                        <a
-                                            class="group flex w-full items-center rounded-md border border-transparent px-2 py-1 hover:underline text-muted-foreground"
-                                            hx-target="#component"
-                                            hx-trigger="click"
-                                            hx-swap="innerHTML"
-                                            hx-get="/pages/components/input.html"
-                                        >
-                                            Input
-                                        </a>
-
-                                        <a
-                                            class="group flex w-full items-center rounded-md border border-transparent px-2 py-1 hover:underline text-muted-foreground"
-                                            hx-target="#component"
-                                            hx-trigger="click"
-                                            hx-swap="innerHTML"
-                                            hx-get="/pages/components/input-otp.html"
-                                        >
-                                            Input OTP
-                                        </a>
-
-                                        <a
-                                            class="group flex w-full items-center rounded-md border border-transparent px-2 py-1 hover:underline text-muted-foreground"
-                                            hx-target="#component"
-                                            hx-trigger="click"
-                                            hx-swap="innerHTML"
-                                            hx-get="/pages/components/label.html"
-                                        >
-                                            Label
-                                        </a>
-
-                                        <a
-                                            class="group flex w-full items-center rounded-md border border-transparent px-2 py-1 hover:underline text-muted-foreground"
-                                            hx-target="#component"
-                                            hx-trigger="click"
-                                            hx-swap="innerHTML"
-                                            hx-get="/pages/components/menubar.html"
-                                        >
-                                            Menubar
-                                        </a>
-
-                                        <a
-                                            class="group flex w-full items-center rounded-md border border-transparent px-2 py-1 hover:underline text-muted-foreground"
-                                            hx-target="#component"
-                                            hx-trigger="click"
-                                            hx-swap="innerHTML"
-                                            hx-get="/pages/components/navigation-menu.html"
-                                        >
-                                            Navigation Menu
-                                        </a>
-
-                                        <a
-                                            class="group flex w-full items-center rounded-md border border-transparent px-2 py-1 hover:underline text-muted-foreground"
-                                            hx-target="#component"
-                                            hx-trigger="click"
-                                            hx-swap="innerHTML"
-                                            hx-get="/pages/components/pagination.html"
-                                        >
-                                            Pagination
-                                        </a>
-
-                                        <a
-                                            class="group flex w-full items-center rounded-md border border-transparent px-2 py-1 hover:underline text-muted-foreground"
-                                            hx-target="#component"
-                                            hx-trigger="click"
-                                            hx-swap="innerHTML"
-                                            hx-get="/pages/components/popover.html"
-                                        >
-                                            Popover
-                                        </a>
-
-                                        <a
-                                            class="group flex w-full items-center rounded-md border border-transparent px-2 py-1 hover:underline text-muted-foreground"
-                                            hx-target="#component"
-                                            hx-trigger="click"
-                                            hx-swap="innerHTML"
-                                            hx-get="/pages/components/progress.html"
-                                        >
-                                            Progress
-                                        </a>
-
-                                        <a
-                                            class="group flex w-full items-center rounded-md border border-transparent px-2 py-1 hover:underline text-muted-foreground"
-                                            hx-target="#component"
-                                            hx-trigger="click"
-                                            hx-swap="innerHTML"
-                                            hx-get="/pages/components/radio-group.html"
-                                        >
-                                            Radio Group
-                                        </a>
-
-                                        <a
-                                            class="group flex w-full items-center rounded-md border border-transparent px-2 py-1 hover:underline text-muted-foreground"
-                                            hx-target="#component"
-                                            hx-trigger="click"
-                                            hx-swap="innerHTML"
-                                            hx-get="/pages/components/resizable.html"
-                                        >
-                                            Resizable
-                                        </a>
-
-                                        <a
-                                            class="group flex w-full items-center rounded-md border border-transparent px-2 py-1 hover:underline text-muted-foreground"
-                                            hx-target="#component"
-                                            hx-trigger="click"
-                                            hx-swap="innerHTML"
-                                            hx-get="/pages/components/scroll-area.html"
-                                        >
-                                            Scroll Area
-                                        </a>
-
-                                        <a
-                                            class="group flex w-full items-center rounded-md border border-transparent px-2 py-1 hover:underline text-muted-foreground"
-                                            hx-target="#component"
-                                            hx-trigger="click"
-                                            hx-swap="innerHTML"
-                                            hx-get="/pages/components/select.html"
-                                        >
-                                            Select
-                                        </a>
-
-                                        <a
-                                            class="group flex w-full items-center rounded-md border border-transparent px-2 py-1 hover:underline text-muted-foreground"
-                                            hx-target="#component"
-                                            hx-trigger="click"
-                                            hx-swap="innerHTML"
-                                            hx-get="/pages/components/separator.html"
-                                        >
-                                            Separator
-                                        </a>
-
-                                        <a
-                                            class="group flex w-full items-center rounded-md border border-transparent px-2 py-1 hover:underline text-muted-foreground"
-                                            hx-target="#component"
-                                            hx-trigger="click"
-                                            hx-swap="innerHTML"
-                                            hx-get="/pages/components/sheet.html"
-                                        >
-                                            Sheet
-                                        </a>
-
-                                        <a
-                                            class="group flex w-full items-center rounded-md border border-transparent px-2 py-1 hover:underline text-muted-foreground"
-                                            hx-target="#component"
-                                            hx-trigger="click"
-                                            hx-swap="innerHTML"
-                                            hx-get="/pages/components/skeleton.html"
-                                        >
-                                            Skeleton
-                                        </a>
-
-                                        <a
-                                            class="group flex w-full items-center rounded-md border border-transparent px-2 py-1 hover:underline text-muted-foreground"
-                                            hx-target="#component"
-                                            hx-trigger="click"
-                                            hx-swap="innerHTML"
-                                            hx-get="/pages/components/slider.html"
-                                        >
-                                            Slider
-                                        </a>
-
-                                        <a
-                                            class="group flex w-full items-center rounded-md border border-transparent px-2 py-1 hover:underline text-muted-foreground"
-                                            hx-target="#component"
-                                            hx-trigger="click"
-                                            hx-swap="innerHTML"
-                                            hx-get="/pages/components/sonner.html"
-                                        >
-                                            Sonner
-                                        </a>
-
-                                        <a
-                                            class="group flex w-full items-center rounded-md border border-transparent px-2 py-1 hover:underline text-muted-foreground"
-                                            hx-target="#component"
-                                            hx-trigger="click"
-                                            hx-swap="innerHTML"
-                                            hx-get="/pages/components/switch.html"
-                                        >
-                                            Switch
-                                        </a>
-
-                                        <a
-                                            class="group flex w-full items-center rounded-md border border-transparent px-2 py-1 hover:underline text-muted-foreground"
-                                            hx-target="#component"
-                                            hx-trigger="click"
-                                            hx-swap="innerHTML"
-                                            hx-get="/pages/components/table.html"
-                                        >
-                                            Table
-                                        </a>
-
-                                        <a
-                                            class="group flex w-full items-center rounded-md border border-transparent px-2 py-1 hover:underline text-muted-foreground"
-                                            hx-target="#component"
-                                            hx-trigger="click"
-                                            hx-swap="innerHTML"
-                                            hx-get="/pages/components/tabs.html"
-                                        >
-                                            Tabs
-                                        </a>
-
-                                        <a
-                                            class="group flex w-full items-center rounded-md border border-transparent px-2 py-1 hover:underline text-muted-foreground"
-                                            hx-target="#component"
-                                            hx-trigger="click"
-                                            hx-swap="innerHTML"
-                                            hx-get="/pages/components/textarea.html"
-                                        >
-                                            Textarea
-                                        </a>
-
-                                        <a
-                                            class="group flex w-full items-center rounded-md border border-transparent px-2 py-1 hover:underline text-muted-foreground"
-                                            hx-target="#component"
-                                            hx-trigger="click"
-                                            hx-swap="innerHTML"
-                                            hx-get="/pages/components/toast.html"
-                                        >
-                                            Toast
-                                        </a>
-
-                                        <a
-                                            class="group flex w-full items-center rounded-md border border-transparent px-2 py-1 hover:underline text-muted-foreground"
-                                            hx-target="#component"
-                                            hx-trigger="click"
-                                            hx-swap="innerHTML"
-                                            hx-get="/pages/components/toggle.html"
-                                        >
-                                            Toggle
-                                        </a>
-
-                                        <a
-                                            class="group flex w-full items-center rounded-md border border-transparent px-2 py-1 hover:underline text-muted-foreground"
-                                            hx-target="#component"
-                                            hx-trigger="click"
-                                            hx-swap="innerHTML"
-                                            hx-get="/pages/components/toggle-group.html"
-                                        >
-                                            Toggle Group
-                                        </a>
-
-                                        <a
-                                            class="group flex w-full items-center rounded-md border border-transparent px-2 py-1 hover:underline text-muted-foreground"
-                                            hx-target="#component"
-                                            hx-trigger="click"
-                                            hx-swap="innerHTML"
-                                            hx-get="/pages/components/tooltip.html"
-                                        >
-                                            Tooltip
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </aside>
-
-            <section id="component">
-                <div
-                    hx-get="/pages/components/alert.html"
-                    hx-trigger="load"
-                    hx-swap="innerHTML"
-                ></div>
-            </section>
-        </div>
+          View
+        </a>
+      </div>
+      <p class="mt-2 text-sm text-muted-foreground">A vertically stacked set of interactive headings.</p>
     </div>
-</main>
+
+    <div class="group relative rounded-lg border bg-card p-6 shadow-sm transition-all hover:shadow-md">
+      <div class="flex items-center justify-between">
+        <h3 class="font-semibold text-foreground">Alert</h3>
+        <a
+          hx-get="/pages/components/alert.html"
+          hx-target="#main-content"
+          hx-swap="innerHTML"
+          class="inline-flex items-center justify-center rounded-md bg-primary px-3 py-1 text-xs font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+        >
+          View
+        </a>
+      </div>
+      <p class="mt-2 text-sm text-muted-foreground">Displays a callout for user attention.</p>
+    </div>
+
+    <div class="group relative rounded-lg border bg-card p-6 shadow-sm transition-all hover:shadow-md">
+      <div class="flex items-center justify-between">
+        <h3 class="font-semibold text-foreground">Alert Dialog</h3>
+        <a
+          hx-get="/pages/components/alert-dialog.html"
+          hx-target="#main-content"
+          hx-swap="innerHTML"
+          class="inline-flex items-center justify-center rounded-md bg-primary px-3 py-1 text-xs font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+        >
+          View
+        </a>
+      </div>
+      <p class="mt-2 text-sm text-muted-foreground">A modal dialog that interrupts the user.</p>
+    </div>
+
+    <div class="group relative rounded-lg border bg-card p-6 shadow-sm transition-all hover:shadow-md">
+      <div class="flex items-center justify-between">
+        <h3 class="font-semibold text-foreground">Aspect Ratio</h3>
+        <a
+          hx-get="/pages/components/aspect-ratio.html"
+          hx-target="#main-content"
+          hx-swap="innerHTML"
+          class="inline-flex items-center justify-center rounded-md bg-primary px-3 py-1 text-xs font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+        >
+          View
+        </a>
+      </div>
+      <p class="mt-2 text-sm text-muted-foreground">Displays content within a desired ratio.</p>
+    </div>
+
+    <div class="group relative rounded-lg border bg-card p-6 shadow-sm transition-all hover:shadow-md">
+      <div class="flex items-center justify-between">
+        <h3 class="font-semibold text-foreground">Avatar</h3>
+        <a
+          hx-get="/pages/components/avatar.html"
+          hx-target="#main-content"
+          hx-swap="innerHTML"
+          class="inline-flex items-center justify-center rounded-md bg-primary px-3 py-1 text-xs font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+        >
+          View
+        </a>
+      </div>
+      <p class="mt-2 text-sm text-muted-foreground">An image element with a fallback for representing the user.</p>
+    </div>
+
+    <div class="group relative rounded-lg border bg-card p-6 shadow-sm transition-all hover:shadow-md">
+      <div class="flex items-center justify-between">
+        <h3 class="font-semibold text-foreground">Badge</h3>
+        <a
+          hx-get="/pages/components/badge.html"
+          hx-target="#main-content"
+          hx-swap="innerHTML"
+          class="inline-flex items-center justify-center rounded-md bg-primary px-3 py-1 text-xs font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+        >
+          View
+        </a>
+      </div>
+      <p class="mt-2 text-sm text-muted-foreground">Small status descriptors for UI elements.</p>
+    </div>
+
+    <div class="group relative rounded-lg border bg-card p-6 shadow-sm transition-all hover:shadow-md">
+      <div class="flex items-center justify-between">
+        <h3 class="font-semibold text-foreground">Breadcrumb</h3>
+        <a
+          hx-get="/pages/components/breadcrumb.html"
+          hx-target="#main-content"
+          hx-swap="innerHTML"
+          class="inline-flex items-center justify-center rounded-md bg-primary px-3 py-1 text-xs font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+        >
+          View
+        </a>
+      </div>
+      <p class="mt-2 text-sm text-muted-foreground">Indicates the current page's location.</p>
+    </div>
+
+    <div class="group relative rounded-lg border bg-card p-6 shadow-sm transition-all hover:shadow-md">
+      <div class="flex items-center justify-between">
+        <h3 class="font-semibold text-foreground">Button</h3>
+        <a
+          hx-get="/pages/components/button.html"
+          hx-target="#main-content"
+          hx-swap="innerHTML"
+          class="inline-flex items-center justify-center rounded-md bg-primary px-3 py-1 text-xs font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+        >
+          View
+        </a>
+      </div>
+      <p class="mt-2 text-sm text-muted-foreground">Displays a button or a component that looks like a button.</p>
+    </div>
+
+    <div class="group relative rounded-lg border bg-card p-6 shadow-sm transition-all hover:shadow-md">
+      <div class="flex items-center justify-between">
+        <h3 class="font-semibold text-foreground">Calendar</h3>
+        <a
+          hx-get="/pages/components/calendar.html"
+          hx-target="#main-content"
+          hx-swap="innerHTML"
+          class="inline-flex items-center justify-center rounded-md bg-primary px-3 py-1 text-xs font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+        >
+          View
+        </a>
+      </div>
+      <p class="mt-2 text-sm text-muted-foreground">A date field component that allows users to enter and edit date.</p>
+    </div>
+
+    <div class="group relative rounded-lg border bg-card p-6 shadow-sm transition-all hover:shadow-md">
+      <div class="flex items-center justify-between">
+        <h3 class="font-semibold text-foreground">Card</h3>
+        <a
+          hx-get="/pages/components/card.html"
+          hx-target="#main-content"
+          hx-swap="innerHTML"
+          class="inline-flex items-center justify-center rounded-md bg-primary px-3 py-1 text-xs font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+        >
+          View
+        </a>
+      </div>
+      <p class="mt-2 text-sm text-muted-foreground">Displays container for similar objects in a list.</p>
+    </div>
+
+    <div class="group relative rounded-lg border bg-card p-6 shadow-sm transition-all hover:shadow-md">
+      <div class="flex items-center justify-between">
+        <h3 class="font-semibold text-foreground">Carousel</h3>
+        <a
+          hx-get="/pages/components/carousel.html"
+          hx-target="#main-content"
+          hx-swap="innerHTML"
+          class="inline-flex items-center justify-center rounded-md bg-primary px-3 py-1 text-xs font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+        >
+          View
+        </a>
+      </div>
+      <p class="mt-2 text-sm text-muted-foreground">A carousel with motion and touch support.</p>
+    </div>
+
+    <div class="group relative rounded-lg border bg-card p-6 shadow-sm transition-all hover:shadow-md">
+      <div class="flex items-center justify-between">
+        <h3 class="font-semibold text-foreground">Chart</h3>
+        <a
+          hx-get="/pages/components/chart.html"
+          hx-target="#main-content"
+          hx-swap="innerHTML"
+          class="inline-flex items-center justify-center rounded-md bg-primary px-3 py-1 text-xs font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+        >
+          View
+        </a>
+      </div>
+      <p class="mt-2 text-sm text-muted-foreground">Beautiful charts built on top of Recharts.</p>
+    </div>
+
+    <div class="group relative rounded-lg border bg-card p-6 shadow-sm transition-all hover:shadow-md">
+      <div class="flex items-center justify-between">
+        <h3 class="font-semibold text-foreground">Checkbox</h3>
+        <a
+          hx-get="/pages/components/checkbox.html"
+          hx-target="#main-content"
+          hx-swap="innerHTML"
+          class="inline-flex items-center justify-center rounded-md bg-primary px-3 py-1 text-xs font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+        >
+          View
+        </a>
+      </div>
+      <p class="mt-2 text-sm text-muted-foreground">A control that allows the user to toggle between checked and not checked.</p>
+    </div>
+
+    <div class="group relative rounded-lg border bg-card p-6 shadow-sm transition-all hover:shadow-md">
+      <div class="flex items-center justify-between">
+        <h3 class="font-semibold text-foreground">Collapsible</h3>
+        <a
+          hx-get="/pages/components/collapsible.html"
+          hx-target="#main-content"
+          hx-swap="innerHTML"
+          class="inline-flex items-center justify-center rounded-md bg-primary px-3 py-1 text-xs font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+        >
+          View
+        </a>
+      </div>
+      <p class="mt-2 text-sm text-muted-foreground">An interactive component which expands/collapses a panel.</p>
+    </div>
+
+    <div class="group relative rounded-lg border bg-card p-6 shadow-sm transition-all hover:shadow-md">
+      <div class="flex items-center justify-between">
+        <h3 class="font-semibold text-foreground">Combobox</h3>
+        <a
+          hx-get="/pages/components/combobox.html"
+          hx-target="#main-content"
+          hx-swap="innerHTML"
+          class="inline-flex items-center justify-center rounded-md bg-primary px-3 py-1 text-xs font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+        >
+          View
+        </a>
+      </div>
+      <p class="mt-2 text-sm text-muted-foreground">A combo box with search functionality.</p>
+    </div>
+
+    <div class="group relative rounded-lg border bg-card p-6 shadow-sm transition-all hover:shadow-md">
+      <div class="flex items-center justify-between">
+        <h3 class="font-semibold text-foreground">Command</h3>
+        <a
+          hx-get="/pages/components/command.html"
+          hx-target="#main-content"
+          hx-swap="innerHTML"
+          class="inline-flex items-center justify-center rounded-md bg-primary px-3 py-1 text-xs font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+        >
+          View
+        </a>
+      </div>
+      <p class="mt-2 text-sm text-muted-foreground">Fast, composable, unstyled command palette for React.</p>
+    </div>
+
+    <div class="group relative rounded-lg border bg-card p-6 shadow-sm transition-all hover:shadow-md">
+      <div class="flex items-center justify-between">
+        <h3 class="font-semibold text-foreground">Context Menu</h3>
+        <a
+          hx-get="/pages/components/context-menu.html"
+          hx-target="#main-content"
+          hx-swap="innerHTML"
+          class="inline-flex items-center justify-center rounded-md bg-primary px-3 py-1 text-xs font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+        >
+          View
+        </a>
+      </div>
+      <p class="mt-2 text-sm text-muted-foreground">Displays a menu to the user — such as a set of actions or functions.</p>
+    </div>
+
+    <div class="group relative rounded-lg border bg-card p-6 shadow-sm transition-all hover:shadow-md">
+      <div class="flex items-center justify-between">
+        <h3 class="font-semibold text-foreground">Data Table</h3>
+        <a
+          hx-get="/pages/components/data-table.html"
+          hx-target="#main-content"
+          hx-swap="innerHTML"
+          class="inline-flex items-center justify-center rounded-md bg-primary px-3 py-1 text-xs font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+        >
+          View
+        </a>
+      </div>
+      <p class="mt-2 text-sm text-muted-foreground">Powerful table and datagrids built on top of TanStack Table.</p>
+    </div>
+
+    <div class="group relative rounded-lg border bg-card p-6 shadow-sm transition-all hover:shadow-md">
+      <div class="flex items-center justify-between">
+        <h3 class="font-semibold text-foreground">Date Picker</h3>
+        <a
+          hx-get="/pages/components/date-picker.html"
+          hx-target="#main-content"
+          hx-swap="innerHTML"
+          class="inline-flex items-center justify-center rounded-md bg-primary px-3 py-1 text-xs font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+        >
+          View
+        </a>
+      </div>
+      <p class="mt-2 text-sm text-muted-foreground">A date picker component with range and presets.</p>
+    </div>
+
+    <div class="group relative rounded-lg border bg-card p-6 shadow-sm transition-all hover:shadow-md">
+      <div class="flex items-center justify-between">
+        <h3 class="font-semibold text-foreground">Dialog</h3>
+        <a
+          hx-get="/pages/components/dialog.html"
+          hx-target="#main-content"
+          hx-swap="innerHTML"
+          class="inline-flex items-center justify-center rounded-md bg-primary px-3 py-1 text-xs font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+        >
+          View
+        </a>
+      </div>
+      <p class="mt-2 text-sm text-muted-foreground">A window overlaid on either the primary window or another dialog window.</p>
+    </div>
+
+    <div class="group relative rounded-lg border bg-card p-6 shadow-sm transition-all hover:shadow-md">
+      <div class="flex items-center justify-between">
+        <h3 class="font-semibold text-foreground">Drawer</h3>
+        <a
+          hx-get="/pages/components/drawer.html"
+          hx-target="#main-content"
+          hx-swap="innerHTML"
+          class="inline-flex items-center justify-center rounded-md bg-primary px-3 py-1 text-xs font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+        >
+          View
+        </a>
+      </div>
+      <p class="mt-2 text-sm text-muted-foreground">A drawer component for React.</p>
+    </div>
+
+    <div class="group relative rounded-lg border bg-card p-6 shadow-sm transition-all hover:shadow-md">
+      <div class="flex items-center justify-between">
+        <h3 class="font-semibold text-foreground">Dropdown Menu</h3>
+        <a
+          hx-get="/pages/components/dropdown-menu.html"
+          hx-target="#main-content"
+          hx-swap="innerHTML"
+          class="inline-flex items-center justify-center rounded-md bg-primary px-3 py-1 text-xs font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+        >
+          View
+        </a>
+      </div>
+      <p class="mt-2 text-sm text-muted-foreground">Displays a menu to the user — such as a set of actions or functions.</p>
+    </div>
+
+    <div class="group relative rounded-lg border bg-card p-6 shadow-sm transition-all hover:shadow-md">
+      <div class="flex items-center justify-between">
+        <h3 class="font-semibold text-foreground">Form</h3>
+        <a
+          hx-get="/pages/components/form.html"
+          hx-target="#main-content"
+          hx-swap="innerHTML"
+          class="inline-flex items-center justify-center rounded-md bg-primary px-3 py-1 text-xs font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+        >
+          View
+        </a>
+      </div>
+      <p class="mt-2 text-sm text-muted-foreground">Building forms with React Hook Form and Zod.</p>
+    </div>
+
+    <div class="group relative rounded-lg border bg-card p-6 shadow-sm transition-all hover:shadow-md">
+      <div class="flex items-center justify-between">
+        <h3 class="font-semibold text-foreground">Hover Card</h3>
+        <a
+          hx-get="/pages/components/hover-card.html"
+          hx-target="#main-content"
+          hx-swap="innerHTML"
+          class="inline-flex items-center justify-center rounded-md bg-primary px-3 py-1 text-xs font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+        >
+          View
+        </a>
+      </div>
+      <p class="mt-2 text-sm text-muted-foreground">For sighted users to preview content available behind a link.</p>
+    </div>
+
+    <div class="group relative rounded-lg border bg-card p-6 shadow-sm transition-all hover:shadow-md">
+      <div class="flex items-center justify-between">
+        <h3 class="font-semibold text-foreground">Input</h3>
+        <a
+          hx-get="/pages/components/input.html"
+          hx-target="#main-content"
+          hx-swap="innerHTML"
+          class="inline-flex items-center justify-center rounded-md bg-primary px-3 py-1 text-xs font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+        >
+          View
+        </a>
+      </div>
+      <p class="mt-2 text-sm text-muted-foreground">Displays a form input field or a component that looks like an input field.</p>
+    </div>
+
+    <div class="group relative rounded-lg border bg-card p-6 shadow-sm transition-all hover:shadow-md">
+      <div class="flex items-center justify-between">
+        <h3 class="font-semibold text-foreground">Input OTP</h3>
+        <a
+          hx-get="/pages/components/input-otp.html"
+          hx-target="#main-content"
+          hx-swap="innerHTML"
+          class="inline-flex items-center justify-center rounded-md bg-primary px-3 py-1 text-xs font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+        >
+          View
+        </a>
+      </div>
+      <p class="mt-2 text-sm text-muted-foreground">Accessible one-time password input component.</p>
+    </div>
+
+    <div class="group relative rounded-lg border bg-card p-6 shadow-sm transition-all hover:shadow-md">
+      <div class="flex items-center justify-between">
+        <h3 class="font-semibold text-foreground">Label</h3>
+        <a
+          hx-get="/pages/components/label.html"
+          hx-target="#main-content"
+          hx-swap="innerHTML"
+          class="inline-flex items-center justify-center rounded-md bg-primary px-3 py-1 text-xs font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+        >
+          View
+        </a>
+      </div>
+      <p class="mt-2 text-sm text-muted-foreground">Renders an accessible label associated with controls.</p>
+    </div>
+
+    <div class="group relative rounded-lg border bg-card p-6 shadow-sm transition-all hover:shadow-md">
+      <div class="flex items-center justify-between">
+        <h3 class="font-semibold text-foreground">Menubar</h3>
+        <a
+          hx-get="/pages/components/menubar.html"
+          hx-target="#main-content"
+          hx-swap="innerHTML"
+          class="inline-flex items-center justify-center rounded-md bg-primary px-3 py-1 text-xs font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+        >
+          View
+        </a>
+      </div>
+      <p class="mt-2 text-sm text-muted-foreground">A visually persistent menu common in desktop applications.</p>
+    </div>
+
+    <div class="group relative rounded-lg border bg-card p-6 shadow-sm transition-all hover:shadow-md">
+      <div class="flex items-center justify-between">
+        <h3 class="font-semibold text-foreground">Navigation Menu</h3>
+        <a
+          hx-get="/pages/components/navigation-menu.html"
+          hx-target="#main-content"
+          hx-swap="innerHTML"
+          class="inline-flex items-center justify-center rounded-md bg-primary px-3 py-1 text-xs font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+        >
+          View
+        </a>
+      </div>
+      <p class="mt-2 text-sm text-muted-foreground">A collection of links for navigating websites.</p>
+    </div>
+
+    <div class="group relative rounded-lg border bg-card p-6 shadow-sm transition-all hover:shadow-md">
+      <div class="flex items-center justify-between">
+        <h3 class="font-semibold text-foreground">Pagination</h3>
+        <a
+          hx-get="/pages/components/pagination.html"
+          hx-target="#main-content"
+          hx-swap="innerHTML"
+          class="inline-flex items-center justify-center rounded-md bg-primary px-3 py-1 text-xs font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+        >
+          View
+        </a>
+      </div>
+      <p class="mt-2 text-sm text-muted-foreground">Displays data in paged format.</p>
+    </div>
+
+    <div class="group relative rounded-lg border bg-card p-6 shadow-sm transition-all hover:shadow-md">
+      <div class="flex items-center justify-between">
+        <h3 class="font-semibold text-foreground">Popover</h3>
+        <a
+          hx-get="/pages/components/popover.html"
+          hx-target="#main-content"
+          hx-swap="innerHTML"
+          class="inline-flex items-center justify-center rounded-md bg-primary px-3 py-1 text-xs font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+        >
+          View
+        </a>
+      </div>
+      <p class="mt-2 text-sm text-muted-foreground">Displays rich content in a portal, triggered by a button.</p>
+    </div>
+
+    <div class="group relative rounded-lg border bg-card p-6 shadow-sm transition-all hover:shadow-md">
+      <div class="flex items-center justify-between">
+        <h3 class="font-semibold text-foreground">Progress</h3>
+        <a
+          hx-get="/pages/components/progress.html"
+          hx-target="#main-content"
+          hx-swap="innerHTML"
+          class="inline-flex items-center justify-center rounded-md bg-primary px-3 py-1 text-xs font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+        >
+          View
+        </a>
+      </div>
+      <p class="mt-2 text-sm text-muted-foreground">Displays an indicator showing the completion progress of a task.</p>
+    </div>
+
+    <div class="group relative rounded-lg border bg-card p-6 shadow-sm transition-all hover:shadow-md">
+      <div class="flex items-center justify-between">
+        <h3 class="font-semibold text-foreground">Radio Group</h3>
+        <a
+          hx-get="/pages/components/radio-group.html"
+          hx-target="#main-content"
+          hx-swap="innerHTML"
+          class="inline-flex items-center justify-center rounded-md bg-primary px-3 py-1 text-xs font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+        >
+          View
+        </a>
+      </div>
+      <p class="mt-2 text-sm text-muted-foreground">A set of checkable buttons—known as radio buttons.</p>
+    </div>
+
+    <div class="group relative rounded-lg border bg-card p-6 shadow-sm transition-all hover:shadow-md">
+      <div class="flex items-center justify-between">
+        <h3 class="font-semibold text-foreground">Resizable</h3>
+        <a
+          hx-get="/pages/components/resizable.html"
+          hx-target="#main-content"
+          hx-swap="innerHTML"
+          class="inline-flex items-center justify-center rounded-md bg-primary px-3 py-1 text-xs font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+        >
+          View
+        </a>
+      </div>
+      <p class="mt-2 text-sm text-muted-foreground">Accessible resizable panel groups and layouts.</p>
+    </div>
+
+    <div class="group relative rounded-lg border bg-card p-6 shadow-sm transition-all hover:shadow-md">
+      <div class="flex items-center justify-between">
+        <h3 class="font-semibold text-foreground">Scroll Area</h3>
+        <a
+          hx-get="/pages/components/scroll-area.html"
+          hx-target="#main-content"
+          hx-swap="innerHTML"
+          class="inline-flex items-center justify-center rounded-md bg-primary px-3 py-1 text-xs font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+        >
+          View
+        </a>
+      </div>
+      <p class="mt-2 text-sm text-muted-foreground">Augments native scrollable regions with custom scrollbars.</p>
+    </div>
+
+    <div class="group relative rounded-lg border bg-card p-6 shadow-sm transition-all hover:shadow-md">
+      <div class="flex items-center justify-between">
+        <h3 class="font-semibold text-foreground">Select</h3>
+        <a
+          hx-get="/pages/components/select.html"
+          hx-target="#main-content"
+          hx-swap="innerHTML"
+          class="inline-flex items-center justify-center rounded-md bg-primary px-3 py-1 text-xs font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+        >
+          View
+        </a>
+      </div>
+      <p class="mt-2 text-sm text-muted-foreground">Displays a list of options for the user to pick from.</p>
+    </div>
+
+    <div class="group relative rounded-lg border bg-card p-6 shadow-sm transition-all hover:shadow-md">
+      <div class="flex items-center justify-between">
+        <h3 class="font-semibold text-foreground">Separator</h3>
+        <a
+          hx-get="/pages/components/separator.html"
+          hx-target="#main-content"
+          hx-swap="innerHTML"
+          class="inline-flex items-center justify-center rounded-md bg-primary px-3 py-1 text-xs font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+        >
+          View
+        </a>
+      </div>
+      <p class="mt-2 text-sm text-muted-foreground">Visually or semantically separates content.</p>
+    </div>
+
+    <div class="group relative rounded-lg border bg-card p-6 shadow-sm transition-all hover:shadow-md">
+      <div class="flex items-center justify-between">
+        <h3 class="font-semibold text-foreground">Sheet</h3>
+        <a
+          hx-get="/pages/components/sheet.html"
+          hx-target="#main-content"
+          hx-swap="innerHTML"
+          class="inline-flex items-center justify-center rounded-md bg-primary px-3 py-1 text-xs font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+        >
+          View
+        </a>
+      </div>
+      <p class="mt-2 text-sm text-muted-foreground">Extends the Dialog component to display content in a panel.</p>
+    </div>
+
+    <div class="group relative rounded-lg border bg-card p-6 shadow-sm transition-all hover:shadow-md">
+      <div class="flex items-center justify-between">
+        <h3 class="font-semibold text-foreground">Skeleton</h3>
+        <a
+          hx-get="/pages/components/skeleton.html"
+          hx-target="#main-content"
+          hx-swap="innerHTML"
+          class="inline-flex items-center justify-center rounded-md bg-primary px-3 py-1 text-xs font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+        >
+          View
+        </a>
+      </div>
+      <p class="mt-2 text-sm text-muted-foreground">Used to display the loading state of some component.</p>
+    </div>
+
+    <div class="group relative rounded-lg border bg-card p-6 shadow-sm transition-all hover:shadow-md">
+      <div class="flex items-center justify-between">
+        <h3 class="font-semibold text-foreground">Slider</h3>
+        <a
+          hx-get="/pages/components/slider.html"
+          hx-target="#main-content"
+          hx-swap="innerHTML"
+          class="inline-flex items-center justify-center rounded-md bg-primary px-3 py-1 text-xs font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+        >
+          View
+        </a>
+      </div>
+      <p class="mt-2 text-sm text-muted-foreground">An input where the user selects a value from within a given range.</p>
+    </div>
+
+    <div class="group relative rounded-lg border bg-card p-6 shadow-sm transition-all hover:shadow-md">
+      <div class="flex items-center justify-between">
+        <h3 class="font-semibold text-foreground">Sonner</h3>
+        <a
+          hx-get="/pages/components/sonner.html"
+          hx-target="#main-content"
+          hx-swap="innerHTML"
+          class="inline-flex items-center justify-center rounded-md bg-primary px-3 py-1 text-xs font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+        >
+          View
+        </a>
+      </div>
+      <p class="mt-2 text-sm text-muted-foreground">An opinionated toast component for React.</p>
+    </div>
+
+    <div class="group relative rounded-lg border bg-card p-6 shadow-sm transition-all hover:shadow-md">
+      <div class="flex items-center justify-between">
+        <h3 class="font-semibold text-foreground">Switch</h3>
+        <a
+          hx-get="/pages/components/switch.html"
+          hx-target="#main-content"
+          hx-swap="innerHTML"
+          class="inline-flex items-center justify-center rounded-md bg-primary px-3 py-1 text-xs font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+        >
+          View
+        </a>
+      </div>
+      <p class="mt-2 text-sm text-muted-foreground">A control that allows the user to toggle between checked and not checked.</p>
+    </div>
+
+    <div class="group relative rounded-lg border bg-card p-6 shadow-sm transition-all hover:shadow-md">
+      <div class="flex items-center justify-between">
+        <h3 class="font-semibold text-foreground">Table</h3>
+        <a
+          hx-get="/pages/components/table.html"
+          hx-target="#main-content"
+          hx-swap="innerHTML"
+          class="inline-flex items-center justify-center rounded-md bg-primary px-3 py-1 text-xs font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+        >
+          View
+        </a>
+      </div>
+      <p class="mt-2 text-sm text-muted-foreground">A responsive table component.</p>
+    </div>
+
+    <div class="group relative rounded-lg border bg-card p-6 shadow-sm transition-all hover:shadow-md">
+      <div class="flex items-center justify-between">
+        <h3 class="font-semibold text-foreground">Tabs</h3>
+        <a
+          hx-get="/pages/components/tabs.html"
+          hx-target="#main-content"
+          hx-swap="innerHTML"
+          class="inline-flex items-center justify-center rounded-md bg-primary px-3 py-1 text-xs font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+        >
+          View
+        </a>
+      </div>
+      <p class="mt-2 text-sm text-muted-foreground">A set of layered sections of content.</p>
+    </div>
+
+    <div class="group relative rounded-lg border bg-card p-6 shadow-sm transition-all hover:shadow-md">
+      <div class="flex items-center justify-between">
+        <h3 class="font-semibold text-foreground">Textarea</h3>
+        <a
+          hx-get="/pages/components/textarea.html"
+          hx-target="#main-content"
+          hx-swap="innerHTML"
+          class="inline-flex items-center justify-center rounded-md bg-primary px-3 py-1 text-xs font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+        >
+          View
+        </a>
+      </div>
+      <p class="mt-2 text-sm text-muted-foreground">Displays a form textarea or a component that looks like a textarea.</p>
+    </div>
+
+    <div class="group relative rounded-lg border bg-card p-6 shadow-sm transition-all hover:shadow-md">
+      <div class="flex items-center justify-between">
+        <h3 class="font-semibold text-foreground">Toast</h3>
+        <a
+          hx-get="/pages/components/toast.html"
+          hx-target="#main-content"
+          hx-swap="innerHTML"
+          class="inline-flex items-center justify-center rounded-md bg-primary px-3 py-1 text-xs font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+        >
+          View
+        </a>
+      </div>
+      <p class="mt-2 text-sm text-muted-foreground">A succinct message that is displayed temporarily.</p>
+    </div>
+
+    <div class="group relative rounded-lg border bg-card p-6 shadow-sm transition-all hover:shadow-md">
+      <div class="flex items-center justify-between">
+        <h3 class="font-semibold text-foreground">Toggle</h3>
+        <a
+          hx-get="/pages/components/toggle.html"
+          hx-target="#main-content"
+          hx-swap="innerHTML"
+          class="inline-flex items-center justify-center rounded-md bg-primary px-3 py-1 text-xs font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+        >
+          View
+        </a>
+      </div>
+      <p class="mt-2 text-sm text-muted-foreground">A two-state button that can be either on or off.</p>
+    </div>
+
+    <div class="group relative rounded-lg border bg-card p-6 shadow-sm transition-all hover:shadow-md">
+      <div class="flex items-center justify-between">
+        <h3 class="font-semibold text-foreground">Toggle Group</h3>
+        <a
+          hx-get="/pages/components/toggle-group.html"
+          hx-target="#main-content"
+          hx-swap="innerHTML"
+          class="inline-flex items-center justify-center rounded-md bg-primary px-3 py-1 text-xs font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+        >
+          View
+        </a>
+      </div>
+      <p class="mt-2 text-sm text-muted-foreground">A set of two-state buttons that can be toggled on or off.</p>
+    </div>
+
+    <div class="group relative rounded-lg border bg-card p-6 shadow-sm transition-all hover:shadow-md">
+      <div class="flex items-center justify-between">
+        <h3 class="font-semibold text-foreground">Tooltip</h3>
+        <a
+          hx-get="/pages/components/tooltip.html"
+          hx-target="#main-content"
+          hx-swap="innerHTML"
+          class="inline-flex items-center justify-center rounded-md bg-primary px-3 py-1 text-xs font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+        >
+          View
+        </a>
+      </div>
+      <p class="mt-2 text-sm text-muted-foreground">A popup that displays information related to an element.</p>
+    </div>
+  </div>
+</div>
