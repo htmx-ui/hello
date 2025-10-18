@@ -85,40 +85,56 @@ src/
 
 ## Quick Start
 
+### 🚀 One-Command Development
+```bash
+npm run dev
+```
+This starts the development server with hot CSS reloading on `http://localhost:8000/src/`
+
+### 📦 Manual Setup
 1. Clone the repository:
    ```bash
    git clone https://github.com/htmx-ui/hello.git
+   cd hello
    ```
 
-2. Navigate to the project directory:
-   ```bash
-   cd UI
-   ```
-
-3. Install dependencies:
+2. Install dependencies:
    ```bash
    npm install
    ```
 
-4. Build the CSS:
+3. Start development server:
    ```bash
-   npm run build
+   npm run dev
    ```
 
-5. Serve the project:
-   ```bash
-   python3 -m http.server 8000
-   ```
+4. Visit `http://localhost:8000/src/` in your browser
 
-6. Visit `http://localhost:8000/src/` in your browser
-
-## Development
-
-To watch for changes and automatically rebuild CSS:
+## Development Commands
 
 ```bash
+# Start development server with CSS watching
 npm run dev
+
+# Build for production (minified CSS)
+npm run build
+
+# Build for development (unminified CSS)
+npm run build:dev
+
+# Start production server (builds first)
+npm start
+
+# Run tests
+npm test
+
+# Clean build artifacts
+npm run clean
 ```
+
+### 🎯 Available Ports
+- Default: `8000`
+- Custom port: `./dev.sh 3000` or `./start.sh 3000`
 
 ## Design System
 

@@ -7,10 +7,17 @@
     "doc": "docs"
   },
   "scripts": {
-    "dev": "npx tailwindcss -i ./main.css -o ./src/assets/css/tailwindcss.css --watch",
-    "build": "npx tailwindcss -i ./main.css -o ./src/assets/css/tailwindcss.css",
+    "build": "npx tailwindcss -i ./main.css -o ./src/assets/css/tailwindcss.css --minify",
+    "build:dev": "npx tailwindcss -i ./main.css -o ./src/assets/css/tailwindcss.css",
+    "dev": "./dev.sh",
+    "dev:server": "python3 -m http.server 8000",
+    "dev:css": "npx tailwindcss -i ./main.css -o ./src/assets/css/tailwindcss.css --watch",
+    "start": "./start.sh",
     "test": "jest",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "clean": "rm -rf node_modules/.cache && rm -f src/assets/css/tailwindcss.css",
+    "lint": "echo 'No linter configured yet'",
+    "preview": "npm run build && npm run dev:server"
   },
   "keywords": [],
   "author": "",
