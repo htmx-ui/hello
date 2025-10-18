@@ -1,81 +1,73 @@
 <!doctype html>
 
 <html lang="en" class="dark">
-    <head>
-        <meta charset="utf-8" />
+  <head>
+    <meta charset="utf-8" />
 
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        <title>Hello UI Library</title>
+    <title>Hello UI Library</title>
 
-        <script src="/assets/js/hyperscript.js"></script>
+    <script src="https://unpkg.com/htmx.org@1.9.12"></script>
+    <script src="https://unpkg.com/hyperscript.org@0.9.12"></script>
 
-        <script src="/assets/js/htmx.js"></script>
-
-        <link rel="stylesheet" href="/assets/css/main.css" />
-        <link rel="stylesheet" href="/assets/css/scroll.css" />
-        <link rel="stylesheet" href="/assets/css/animate.min.css" />
-        <link
+    <link rel="stylesheet" href="/src/assets/css/tailwindcss.css" />
+    <link rel="stylesheet" href="/src/assets/css/animate.min.css" />
+    <link
       rel="shortcut icon"
-      href="/assets/icons/logo-hello.svg"
+      href="/src/assets/icons/logo-hello.svg"
       type="image/x-icon"
     />
-    </head>
+  </head>
 
-    <body class="min-h-screen bg-background font-sans text-foreground">
-        <div class="relative flex min-h-screen flex-col">
-            <!-- Navbar will be loaded here -->
+  <body class="min-h-screen bg-background font-sans text-foreground">
+    <div class="relative flex min-h-screen flex-col">
+      <!-- Navbar will be loaded here -->
+      <div
+        hx-get="/src/partials/navbar.html"
+        hx-trigger="load"
+        hx-swap="outerHTML"
+        hx-indicator="#navbar-loading"
+      ></div>
+      <div id="navbar-loading" class="htmx-indicator flex justify-center p-4">
+        <div
+          class="animate-spin rounded-full h-8 w-8 border-b-2 border-primary"
+        ></div>
+      </div>
+
+      <!-- Main content area -->
+      <main class="flex-1">
+        <div id="main-content" class="min-h-full">
+          <div
+            hx-get="/src/pages/home/index.html"
+            hx-trigger="load"
+            hx-swap="innerHTML"
+            hx-indicator="#main-loading"
+          ></div>
+          <div id="main-loading" class="htmx-indicator flex justify-center p-8">
             <div
-                hx-get="/partials/navbar.html"
-                hx-trigger="load"
-                hx-swap="outerHTML"
+              class="animate-spin rounded-full h-12 w-12 border-b-2 border-primary"
             ></div>
-
-            <!-- Main content area -->
-            <main class="flex-1">
-                <div
-                    hx-get="/pages/home/index.html"
-                    hx-trigger="load"
-                    hx-swap="outerHTML"
-                ></div>
-            </main>
-
-            <!-- Footer will be loaded here -->
-            <div
-                hx-get="/partials/footer.html"
-                hx-trigger="load"
-                hx-swap="outerHTML"
-            ></div>
-                </nav>
-            </div>
-
-            <!-- Main content area -->
-            <main class="flex-1 p-8">
-                <div
-                    hx-get="/pages/home/index.html"
-                    hx-trigger="load"
-                    hx-swap="outerHTML"
-                >
-                    <div class="container mx-auto text-center">
-                        <h1 class="text-4xl font-bold mb-4">Hello UI Component Library</h1>
-                        <p class="text-xl text-gray-600">Loading content...</p>
-                        <div class="mt-8">
-                            <p>If you can see this, the basic page is loading but HTMX content is not.</p>
-                        </div>
-                    </div>
-                </div>
-            </main>
-
-            <!-- Footer will be loaded here -->
-            <div
-                hx-get="/partials/footer.html"
-                hx-trigger="load"
-                hx-swap="outerHTML"
-            >
-                <footer class="bg-gray-800 text-white p-4 text-center">
-                    <p>&copy; 2024 Hello UI Library</p>
-                </footer>
-            </div>
+          </div>
         </div>
-    </body>
+      </main>
+
+      <!-- Footer will be loaded here -->
+      <div
+        hx-get="/src/partials/footer.html"
+        hx-trigger="load"
+        hx-swap="outerHTML"
+        hx-indicator="#footer-loading"
+      >
+        <footer class="bg-gray-800 text-white p-4 text-center">
+          <p>&copy; 2024 Hello UI Library</p>
+        </footer>
+      </div>
+      <div id="footer-loading" class="htmx-indicator flex justify-center p-4">
+        <div
+          class="animate-spin rounded-full h-6 w-6 border-b-2 border-primary"
+        ></div>
+      </div>
+    </div>
+  </body>
 </html>

@@ -49,8 +49,8 @@ describe('Asset Tests', () => {
 
   test('Main index.html loads correctly', () => {
     const content = fs.readFileSync('src/index.html', 'utf8');
-    expect(content).toContain('hx-get="/src/partials/navbar.html"');
-    expect(content).toContain('hx-get="/src/pages/home/index.html"');
+    expect(content).toContain('hx-get="/partials/navbar.html"');
+    expect(content).toContain('hx-get="/pages/home/index.html"');
   });
 });
 

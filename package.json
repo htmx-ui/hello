@@ -1,54 +1,13 @@
 {
-  "name": "hello",
+  "name": "hello-ui",
   "version": "1.0.0",
-  "description": "Welcome to Hello UI, a comprehensive component library built with HTMX, Hyperscript, and TailwindCSS. This project draws inspiration from leading UI frameworks including Headless UI, ShadCN, and Skeleton UI. As a completely free and open-source solution, this library enables developers to seamlessly integrate components through simple copy-and-paste functionality, facilitating rapid and efficient web application development.",
-  "type": "module",
-  "main": "tailwind.config.js",
-  "directories": {
-    "doc": "docs"
-  },
+  "description": "Hello UI - Clean HTMX Component Library",
   "scripts": {
-    "build": "vite build",
-    "build:legacy": "npx tailwindcss -i ./main.css -o ./src/assets/css/tailwindcss.css --minify",
-    "build:dev": "npx tailwindcss -i ./main.css -o ./src/assets/css/tailwindcss.css",
-    "dev": "vite",
-    "dev:legacy": "./dev.sh",
-    "dev:server": "python3 -m http.server 8000",
-    "dev:css": "npx tailwindcss -i ./main.css -o ./src/assets/css/tailwindcss.css --watch",
-    "start": "vite preview",
-    "start:legacy": "./start.sh",
-    "test": "jest",
-    "test:watch": "jest --watch",
-    "test:e2e": "echo 'E2E tests not configured yet'",
-    "lint": "eslint test/**/*.js *.js",
-    "lint:fix": "eslint src/**/*.js test/**/*.js *.js --fix",
-    "format": "prettier --write \"src/**/*.{js,css}\" \"test/**/*.js\" \"*.{js,json,md}\"",
-    "format:check": "prettier --check \"src/**/*.{js,css}\" \"test/**/*.js\" \"*.{js,json,md}\"",
-    "type-check": "tsc --noEmit",
-    "clean": "rm -rf dist node_modules/.cache .vite",
-    "preview": "vite preview",
-    "analyze": "npx vite-bundle-analyzer dist"
+    "dev": "python3 -m http.server 8000 -d src",
+    "build": "npx tailwindcss -i ./src/assets/css/main.css -o ./src/assets/css/tailwindcss.css --minify"
   },
-  "keywords": [],
-  "author": "",
   "license": "ISC",
-  "dependencies": {
-    "glob": "^11.0.3",
-    "tailwindcss": "^3.4.17"
-  },
   "devDependencies": {
-    "@eslint/js": "^9.38.0",
-    "@types/node": "^24.8.1",
-    "@vitejs/plugin-legacy": "^7.2.1",
-    "autoprefixer": "^10.4.21",
-    "cssnano": "^7.1.1",
-    "eslint": "^9.38.0",
-    "eslint-config-prettier": "^10.1.8",
-    "eslint-plugin-prettier": "^5.5.4",
-    "jest": "^30.2.0",
-    "postcss": "^8.5.6",
-    "prettier": "^3.6.2",
-    "typescript": "^5.9.3",
-    "vite": "^7.1.10"
+    "tailwindcss": "^3.4.17"
   }
 }

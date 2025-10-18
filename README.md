@@ -46,7 +46,7 @@ Welcome to Hello UI, a comprehensive component library built with HTMX, Hyperscr
 - **[HTMX](https://htmx.org/)** - High power tools for HTML
 - **[Hyperscript](https://hyperscript.org/)** - Small scripting language for the web
 - **[TailwindCSS](https://tailwindcss.com/)** - Utility-first CSS framework (v3.4.17)
-- **Pure HTML/CSS/JavaScript** - No build tools required
+- **Clean Static Stack** - Pure static HTML with Python HTTP server - no script injection, no interference
 
 ## Recent Enhancements
 
@@ -75,11 +75,11 @@ We have successfully resolved critical styling inconsistencies through a strateg
 
 ## Development Status
 
-- ✅ **Production Ready** - All components implemented and tested
+- ✅ **Production Ready** - All components implemented and optimized
 - 🎨 **Comprehensive Design System** - Unified styling and component architecture
 - ⚡ **High Performance** - Optimized for rapid loading and seamless interactions
 - 🌙 **Advanced Theme Support** - Complete light/dark mode functionality
-- 🧪 **Automated Testing** - Jest test suite for component validation
+- 🧹 **Clean HTMX** - Pure static HTML with zero script injection or interference
 
 ## Project Architecture
 
@@ -95,48 +95,79 @@ src/
 
 ## Quick Start
 
-### 🚀 Modern Development (Recommended)
+### 🚀 Development (Static HTMX)
 
 ```bash
-# Clone and setup
-git clone https://github.com/htmx-ui/hello.git
-cd hello
-npm install
-
-# Start development server with hot reloading
+# Start clean development server
 npm run dev
 ```
 
-Visit `http://localhost:5173/src/` (Vite dev server with HMR)
+Visit `http://localhost:3000` (Clean Python HTTP server - no script injection)
 
-### 📦 Legacy Development
+### 📦 Production Build
 
 ```bash
-# Start with Tailwind watching
-npm run dev:legacy
+# Build for production
+npm run build
+
+# Serve production build
+npm run serve
 ```
 
-Visit `http://localhost:8000/src/`
+Visit `http://localhost:8080` (Production server)
 
 ## Development Commands
 
 ### Core Commands
 
 ```bash
-npm run dev          # Modern dev server with HMR
-npm run build        # Production build with Vite
-npm run start        # Preview production build
+npm run dev          # Development server with live reload
+npm run build        # Production build (CSS + static files)
+npm run serve        # Serve production build
 npm run test         # Run unit tests
 npm run lint         # Lint code
 npm run format       # Format code
 ```
 
-### Legacy Commands (Tailwind-only)
+### Development Options
 
 ```bash
-npm run dev:legacy   # Legacy dev server
-npm run build:legacy # Legacy Tailwind build
-npm run start:legacy # Legacy production server
+npm run dev:serve    # Live reload server only
+npm run dev:css      # CSS watching only
+npm run dev:legacy   # Python HTTP server (port 8000)
+```
+
+### Build Commands
+
+```bash
+npm run build:css    # Build CSS only
+npm run build:static # Copy static files only
+npm run build:dev    # Development CSS build
+npm run clean        # Clean build artifacts
+```
+
+### Quality Assurance
+
+```bash
+npm run format       # Format all files
+npm run format:check # Check formatting
+```
+
+### Development Options
+
+```bash
+npm run dev:serve    # Clean Python HTTP server (port 3000)
+npm run dev:css      # CSS watching only
+npm run dev:legacy   # Alternative Python HTTP server (port 8000)
+```
+
+### Build Commands
+
+```bash
+npm run build:css    # Build CSS only
+npm run build:static # Copy static files only
+npm run build:dev    # Development CSS build
+npm run clean        # Clean build artifacts
 ```
 
 ### Quality Assurance
@@ -147,15 +178,24 @@ npm run lint:fix     # Fix linting issues
 npm run format       # Format all files
 npm run format:check # Check formatting
 npm run type-check   # TypeScript checking
-npm run test         # Run test suite
+npm run test         # Run unit tests
+npm run test:watch   # Watch mode tests
+npm run test:ci      # Full CI test suite
 npm run clean        # Clean build artifacts
+```
+
+### Production & Deployment
+
+```bash
+npm run start        # Build and serve production
+npm run preview      # Preview production build
+npm run deploy       # Build for deployment
 ```
 
 ### Advanced
 
 ```bash
-npm run analyze      # Bundle size analysis
-npm run preview      # Preview production build
+npm run build:dev    # Development CSS build (no minification)
 ```
 
 ## Design System
@@ -198,7 +238,7 @@ We enthusiastically welcome contributions from the developer community! Here's h
 
 - ✅ **Component Library Complete** - 50+ UI components fully implemented
 - ✅ **Comprehensive Documentation** - Detailed guides and practical examples available
-- ✅ **Automated Testing Framework** - Jest test suite implemented and passing
+- ✅ **Static Optimization** - Pure static HTML with optimal performance
 - **Community-Driven Features** - Open for enhancement requests and contributions
 - **Advanced Performance Optimization** - Ongoing monitoring and improvements
 

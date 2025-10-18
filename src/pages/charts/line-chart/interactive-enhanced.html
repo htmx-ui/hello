@@ -25,14 +25,11 @@
 
     <div class="ml-auto flex items-center gap-2 [&> form]:flex">
       <button
-        class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 border border-input hover:text-accent-foreground [&_svg]-h-3.5 [&_svg]-h-3 h-6 w-6 rounded bg-transparent text-foreground shadow-none hover:bg-muted dark:text-foreground [&_svg]:w-3"
+        class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input hover:text-accent-foreground h-6 w-6 rounded bg-transparent text-foreground shadow-none hover:bg-muted dark:text-foreground"
         data-state="closed"
-        _="on click 
-             set the innerHTML of .copy-icon to '<path d=\"M20 6L9 17l-5-5\"/>' then 
-             add .text-green-500 to .copy-icon then
-             wait 2s then
-             set the innerHTML of .copy-icon to '<rect width=\"8\" height=\"4\" x=\"8\" y=\"2\" rx=\"1\" ry=\"1\"/><path d=\"M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2\"/>' then
-             remove .text-green-500 from .copy-icon">
+        _="on click set the innerHTML of .copy-icon to '<path d=\"M20 6L9 17l-5-5\"/>' then add .text-green-500 to .copy-icon then wait 2s then set the innerHTML of .copy-icon to '<rect width=\"8\" height=\"4\" x=\"8\" y=\"2\" rx=\"1\" ry=\"1\"/><path d=\"M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2\"/>' then remove .text-green-500 from .copy-icon"
+      >
+      </button>
         <span class="sr-only">Copy</span>
         <svg
           xmlns="http://www.w3.org/2000/svg"
