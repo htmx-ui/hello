@@ -6,12 +6,32 @@
     <p class="mt-4 text-lg text-muted-foreground max-w-2xl">
       Explore our comprehensive collection of UI components. Each component is built with HTMX, Hyperscript, and Tailwind CSS for modern web development.
     </p>
+    <div class="mt-6 w-full max-w-md">
+      <input
+        type="text"
+        placeholder="Search components..."
+        class="w-full px-4 py-2 border border-input bg-background rounded-md focus:outline-none focus:ring-2 focus:ring-ring"
+        id="component-search"
+        _="on input filter .component-card by .component-name contains my.value"
+      />
+    </div>
   </div>
 
-  <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-    <div class="group relative rounded-lg border bg-card p-6 shadow-sm transition-all hover:shadow-md">
+  <div class="mb-8">
+    <div class="flex flex-wrap justify-center gap-2">
+      <button class="category-btn px-4 py-2 rounded-md bg-primary text-primary-foreground" data-category="all" _="on click remove .bg-primary .text-primary-foreground from .category-btn then add .bg-primary .text-primary-foreground to me then remove .bg-muted .text-muted-foreground from .category-btn then add .bg-muted .text-muted-foreground to .category-btn except me then if my.data-category is 'all' then show .component-card else hide .component-card then show .component-card[data-category=my.data-category]">All</button>
+      <button class="category-btn px-4 py-2 rounded-md bg-muted text-muted-foreground" data-category="layout" _="on click remove .bg-primary .text-primary-foreground from .category-btn then add .bg-primary .text-primary-foreground to me then remove .bg-muted .text-muted-foreground from .category-btn then add .bg-muted .text-muted-foreground to .category-btn except me then if my.data-category is 'all' then show .component-card else hide .component-card then show .component-card[data-category=my.data-category]">Layout</button>
+      <button class="category-btn px-4 py-2 rounded-md bg-muted text-muted-foreground" data-category="forms" _="on click remove .bg-primary .text-primary-foreground from .category-btn then add .bg-primary .text-primary-foreground to me then remove .bg-muted .text-muted-foreground from .category-btn then add .bg-muted .text-muted-foreground to .category-btn except me then if my.data-category is 'all' then show .component-card else hide .component-card then show .component-card[data-category=my.data-category]">Forms</button>
+      <button class="category-btn px-4 py-2 rounded-md bg-muted text-muted-foreground" data-category="data" _="on click remove .bg-primary .text-primary-foreground from .category-btn then add .bg-primary .text-primary-foreground to me then remove .bg-muted .text-muted-foreground from .category-btn then add .bg-muted .text-muted-foreground to .category-btn except me then if my.data-category is 'all' then show .component-card else hide .component-card then show .component-card[data-category=my.data-category]">Data Display</button>
+      <button class="category-btn px-4 py-2 rounded-md bg-muted text-muted-foreground" data-category="feedback" _="on click remove .bg-primary .text-primary-foreground from .category-btn then add .bg-primary .text-primary-foreground to me then remove .bg-muted .text-muted-foreground from .category-btn then add .bg-muted .text-muted-foreground to .category-btn except me then if my.data-category is 'all' then show .component-card else hide .component-card then show .component-card[data-category=my.data-category]">Feedback</button>
+      <button class="category-btn px-4 py-2 rounded-md bg-muted text-muted-foreground" data-category="navigation" _="on click remove .bg-primary .text-primary-foreground from .category-btn then add .bg-primary .text-primary-foreground to me then remove .bg-muted .text-muted-foreground from .category-btn then add .bg-muted .text-muted-foreground to .category-btn except me then if my.data-category is 'all' then show .component-card else hide .component-card then show .component-card[data-category=my.data-category]">Navigation</button>
+    </div>
+  </div>
+
+  <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4" id="components-grid">
+    <div class="component-card group relative rounded-lg border bg-card p-6 shadow-sm transition-all hover:shadow-md" data-category="layout">
       <div class="flex items-center justify-between">
-        <h3 class="font-semibold text-foreground">Accordion</h3>
+        <h3 class="component-name font-semibold text-foreground">Accordion</h3>
         <a
           hx-get="/pages/components/accordion.html"
           hx-target="#main-content"
@@ -24,9 +44,9 @@
       <p class="mt-2 text-sm text-muted-foreground">A vertically stacked set of interactive headings.</p>
     </div>
 
-    <div class="group relative rounded-lg border bg-card p-6 shadow-sm transition-all hover:shadow-md">
+    <div class="component-card group relative rounded-lg border bg-card p-6 shadow-sm transition-all hover:shadow-md">
       <div class="flex items-center justify-between">
-        <h3 class="font-semibold text-foreground">Alert</h3>
+        <h3 class="component-name font-semibold text-foreground">Alert</h3>
         <a
           hx-get="/pages/components/alert.html"
           hx-target="#main-content"
