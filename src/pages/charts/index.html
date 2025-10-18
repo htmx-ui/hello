@@ -21,36 +21,6 @@
             <a
               _="on click remove .bg-muted .text-primary from .nav-charts then add .text-muted-foreground to .nav-charts  then add .bg-muted .text-primary on me"
               class="inline-flex h-8 items-center justify-center rounded-md px-3 text-center text-sm transition-colors hover:text-primary bg-muted text-primary cursor-pointer nav-charts whitespace-nowrap"
-              hx-get="/pages/charts/mixed.html"
-              hx-trigger="click"
-              hx-target="#charts-portal"
-              hx-swap="innerHTML">
-              Mixed Chart
-            </a>
-
-            <a
-              _="on click remove .bg-muted .text-primary from .nav-charts then add .text-muted-foreground to .nav-charts  then add .bg-muted .text-primary on me"
-              class="inline-flex h-8 items-center justify-center rounded-md px-3 text-center text-sm transition-colors hover:text-primary text-muted-foreground cursor-pointer nav-charts whitespace-nowrap"
-              hx-get="/pages/charts/area-chart/index.html"
-              hx-trigger="click"
-              hx-target="#charts-portal"
-              hx-swap="innerHTML">
-              Area Chart
-            </a>
-
-            <a
-              _="on click remove .bg-muted .text-primary from .nav-charts then add .text-muted-foreground to .nav-charts  then add .bg-muted .text-primary on me"
-              class="inline-flex h-8 items-center justify-center rounded-md px-3 text-center text-sm transition-colors hover:text-primary text-muted-foreground cursor-pointer nav-charts whitespace-nowrap"
-              hx-get="/pages/charts/bar-chart/index.html"
-              hx-trigger="click"
-              hx-target="#charts-portal"
-              hx-swap="innerHTML">
-              Bar Chart
-            </a>
-
-            <a
-              _="on click remove .bg-muted .text-primary from .nav-charts then add .text-muted-foreground to .nav-charts  then add .bg-muted .text-primary on me"
-              class="inline-flex h-8 items-center justify-center rounded-md px-3 text-center text-sm transition-colors hover:text-primary text-muted-foreground cursor-pointer nav-charts whitespace-nowrap"
               hx-get="/pages/charts/line-chart/index.html"
               hx-trigger="click"
               hx-target="#charts-portal"
@@ -67,36 +37,6 @@
               hx-swap="innerHTML">
               Pie Chart
             </a>
-
-            <a
-              _="on click remove .bg-muted .text-primary from .nav-charts then add .text-muted-foreground to .nav-charts  then add .bg-muted .text-primary on me"
-              class="inline-flex h-8 items-center justify-center rounded-md px-3 text-center text-sm transition-colors hover:text-primary text-muted-foreground cursor-pointer nav-charts whitespace-nowrap"
-              hx-get="/pages/charts/radar-chart/index.html"
-              hx-trigger="click"
-              hx-target="#charts-portal"
-              hx-swap="innerHTML">
-              Radar Chart
-            </a>
-
-            <a
-              _="on click remove .bg-muted .text-primary from .nav-charts then add .text-muted-foreground to .nav-charts  then add .bg-muted .text-primary on me"
-              class="inline-flex h-8 items-center justify-center rounded-md px-3 text-center text-sm transition-colors hover:text-primary text-muted-foreground cursor-pointer nav-charts whitespace-nowrap"
-              hx-get="/pages/charts/radial-chart/index.html"
-              hx-trigger="click"
-              hx-target="#charts-portal"
-              hx-swap="innerHTML">
-              Radial Chart
-            </a>
-
-            <a
-              _="on click remove .bg-muted .text-primary from .nav-charts then add .text-muted-foreground to .nav-charts  then add .bg-muted .text-primary on me"
-              class="inline-flex h-8 items-center justify-center rounded-md px-3 text-center text-sm transition-colors hover:text-primary text-muted-foreground cursor-pointer nav-charts whitespace-nowrap"
-              hx-get="/pages/charts/tooltip/index.html"
-              hx-trigger="click"
-              hx-target="#charts-portal"
-              hx-swap="innerHTML">
-              Tooltip
-            </a>
           </div>
         </div>
       </div>
@@ -104,16 +44,10 @@
 
     <section id="charts-portal">
       <div
-        hx-get="/pages/charts/area-chart/index.html"
+        hx-get="/pages/charts/line-chart/index.html"
         hx-trigger="load"
         hx-swap="outerHTML"></div>
     </section>
-    
-    <section class="mt-8">
-      <div
-        hx-get="/pages/charts/enhanced-index.html"
-        hx-trigger="load"
-        hx-swap="outerHTML"></div>
-    </section>
+
   </div>
 </main>
