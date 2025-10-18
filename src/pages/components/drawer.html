@@ -24,30 +24,56 @@
     <h1 class="scroll-m-20 text-3xl font-bold tracking-tight">Drawer</h1>
 
     <p class="text-base text-muted-foreground">
-      <span
-        data-br=":r1k:"
-        data-brr="1"
-        style="
-          display: inline-block;
-          vertical-align: top;
-          text-decoration: inherit;
-          max-width: 334px;
-        ">
-        Displays a callout for user attention.
-      </span>
+      A panel that slides out from the edge of the screen.
     </p>
   </div>
 
-  <div
-    class="preview flex min-h-[350px] w-full justify-center p-10 items-center">
+  <div class="preview flex min-h-[350px] w-full justify-center p-10 items-center">
     <button
       class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground h-9 px-4 py-2"
-      type="button"
-      aria-haspopup="dialog"
-      aria-expanded="false"
-      aria-controls="radix-:rmv:"
-      data-state="closed">
+      _="on click
+        const drawer = document.getElementById('drawer');
+        const overlay = document.getElementById('drawer-overlay');
+        if (drawer && overlay) {
+          drawer.classList.remove('translate-x-full');
+          overlay.classList.remove('hidden');
+        }">
       Open Drawer
     </button>
+
+    <!-- Drawer Overlay -->
+    <div id="drawer-overlay" class="fixed inset-0 z-50 hidden bg-black/80"
+         _="on click
+           const drawer = document.getElementById('drawer');
+           const overlay = document.getElementById('drawer-overlay');
+           if (drawer && overlay) {
+             drawer.classList.add('translate-x-full');
+             overlay.classList.add('hidden');
+           }"></div>
+
+    <!-- Drawer -->
+    <div id="drawer" class="fixed inset-y-0 right-0 z-50 h-full w-80 translate-x-full border-l bg-background p-6 shadow-lg transition-transform duration-300 ease-in-out">
+      <div class="flex items-center justify-between">
+        <h2 class="text-lg font-semibold">Drawer Title</h2>
+        <button
+          class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground h-9 w-9 p-0"
+          _="on click
+            const drawer = document.getElementById('drawer');
+            const overlay = document.getElementById('drawer-overlay');
+            if (drawer && overlay) {
+              drawer.classList.add('translate-x-full');
+              overlay.classList.add('hidden');
+            }">
+          <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M11.7816 4.03157C12.0062 3.80702 12.0062 3.44295 11.7816 3.2184C11.5571 2.99385 11.193 2.99385 10.9685 3.2184L7.50005 6.68682L4.03164 3.2184C3.80708 2.99385 3.44301 2.99385 3.21846 3.2184C2.99391 3.44295 2.99391 3.80702 3.21846 4.03157L6.68688 7.49999L3.21846 10.9684C2.99391 11.193 2.99391 11.557 3.21846 11.7816C3.44301 12.0061 3.80708 12.0061 4.03164 11.7816L7.50005 8.31316L10.9685 11.7816C11.193 12.0061 11.5571 12.0061 11.7816 11.7816C12.0062 11.557 12.0062 11.193 11.7816 10.9684L8.31322 7.49999L11.7816 4.03157Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path>
+          </svg>
+        </button>
+      </div>
+      <div class="mt-4">
+        <p class="text-sm text-muted-foreground">
+          This is the content of the drawer. You can put any content here.
+        </p>
+      </div>
+    </div>
   </div>
 </div>

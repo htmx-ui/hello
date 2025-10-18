@@ -24,25 +24,52 @@
     <h1 class="scroll-m-20 text-3xl font-bold tracking-tight">Sonner</h1>
 
     <p class="text-base text-muted-foreground">
-      <span
-        data-br=":r1k:"
-        data-brr="1"
-        style="
-          display: inline-block;
-          vertical-align: top;
-          text-decoration: inherit;
-          max-width: 334px;
-        ">
-        Displays a callout for user attention.
-      </span>
+      Toast notifications using Sonner for brief messages.
     </p>
   </div>
 
-  <div
-    class="preview flex min-h-[350px] w-full justify-center p-10 items-center">
-    <button
-      class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground h-9 px-4 py-2">
-      Show Toast
-    </button>
+  <div class="preview flex min-h-[350px] w-full justify-center p-10 items-center">
+    <div class="flex gap-2">
+      <button
+        class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground h-9 px-4 py-2"
+        _="on click
+          fetch('/src/pages/components/sonner-toast.html')
+          .then(response => response.text())
+          .then(html => {
+            let toastContainer = document.getElementById('toast-container');
+            if (!toastContainer) {
+              toastContainer = document.createElement('div');
+              toastContainer.id = 'toast-container';
+              toastContainer.className = 'fixed top-4 right-4 z-50 space-y-2';
+              document.body.appendChild(toastContainer);
+            }
+            const toast = document.createElement('div');
+            toast.innerHTML = html;
+            toastContainer.appendChild(toast.firstElementChild);
+            setTimeout(() => toast.firstElementChild?.remove(), 3000);
+          })">
+        Show Success Toast
+      </button>
+      <button
+        class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground h-9 px-4 py-2"
+        _="on click
+          fetch('/src/pages/components/sonner-error-toast.html')
+          .then(response => response.text())
+          .then(html => {
+            let toastContainer = document.getElementById('toast-container');
+            if (!toastContainer) {
+              toastContainer = document.createElement('div');
+              toastContainer.id = 'toast-container';
+              toastContainer.className = 'fixed top-4 right-4 z-50 space-y-2';
+              document.body.appendChild(toastContainer);
+            }
+            const toast = document.createElement('div');
+            toast.innerHTML = html;
+            toastContainer.appendChild(toast.firstElementChild);
+            setTimeout(() => toast.firstElementChild?.remove(), 3000);
+          })">
+        Show Error Toast
+      </button>
+    </div>
   </div>
 </div>
