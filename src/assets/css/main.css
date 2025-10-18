@@ -1,6 +1,6 @@
-@import './src/assets/css/charts.css';
-@import './src/assets/css/scroll.css';
-@import './src/assets/css/animate.min.css';
+@import './charts.css';
+@import './scroll.css';
+@import './animate.min.css';
 
 @tailwind base;
 @tailwind components;
