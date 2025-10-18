@@ -1,31 +1,128 @@
-<div class="container py-8 mb-8">
-  <section
-    class="mx-auto flex max-w-3xl flex-col items-center gap-4 text-center"
-  >
-    <h1 class="text-4xl font-bold leading-tight tracking-tight md:text-5xl">
-      Hello UI Component Library
-    </h1>
-
-    <p class="text-xl text-muted-foreground max-w-2xl">
-      Expertly crafted UI components for modern web applications.
-    </p>
-
-    <div class="flex gap-4 pt-4 mb-6">
-      <a
-        class="inline-flex items-center justify-center rounded-md bg-primary px-6 py-2.5 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
-        href="/docs"
-      >
-        Get Started
-      </a>
-
-      <a
-        target="_blank"
-        rel="noreferrer"
-        class="inline-flex items-center justify-center rounded-md border border-input bg-background px-6 py-2.5 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
-        href="https://github.com/htmx-ui/hello"
-      >
-        GitHub
-      </a>
+<div class="container py-16">
+  <div class="flex flex-col items-center text-center space-y-8 mb-16">
+    <div class="space-y-4">
+      <div class="flex items-center justify-center">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-foreground" viewBox="0 0 512 512" fill="currentColor">
+          <path d="M432 32H80a64.07 64.07 0 00-64 64v320a64.07 64.07 0 0064 64h352a64.07 64.07 0 0064-64V96a64.07 64.07 0 00-64-64zM96 256a16 16 0 01-10-28.49L150.39 176 86 124.49a16 16 0 1120-25l80 64a16 16 0 010 25l-80 64A16 16 0 0196 256zm160 0h-64a16 16 0 010-32h64a16 16 0 010 32z"/>
+        </svg>
+      </div>
+      <h1 class="text-4xl font-bold tracking-tight text-foreground sm:text-5xl md:text-6xl">
+        Hello UI Library
+      </h1>
+      <p class="mx-auto max-w-2xl text-lg text-muted-foreground sm:text-xl mb-12">
+        A clean, minimal component library built with HTMX, Hyperscript, and Tailwind CSS. Focus on what matters.
+      </p>
     </div>
-  </section>
+
+  </div>
+
+  <!-- Examples Portal -->
+  <div class="mt-20">
+    <div class="max-w-6xl mx-auto">
+      <div class="rounded-xl border bg-card p-6 shadow-sm">
+        <section class="relative">
+          <div class="relative">
+            <div class="h-full w-full rounded-lg bg-muted p-2 mb-6">
+              <div class="flex flex-wrap justify-center gap-2">
+            <a
+              _="on click remove .bg-muted .text-primary from .nav-example then add .text-muted-foreground to .nav-example  then add .bg-muted .text-primary on me"
+              class="inline-flex h-8 items-center justify-center rounded-md px-3 text-center text-sm transition-colors hover:text-primary bg-muted font-medium cursor-pointer nav-example whitespace-nowrap"
+              hx-get="/pages/examples/mail/index.html"
+              hx-trigger="click"
+              hx-target="#home-examples"
+              hx-swap="innerHTML"
+            >
+              Mail
+            </a>
+
+            <a
+              _="on click remove .bg-muted .text-primary from .nav-example then add .text-muted-foreground to .nav-example  then add .bg-muted .text-primary on me"
+              class="inline-flex h-8 items-center justify-center rounded-md px-3 text-center text-sm transition-colors hover:text-primary text-muted-foreground cursor-pointer nav-example whitespace-nowrap"
+              hx-get="/pages/examples/dashboard/index.html"
+              hx-trigger="click"
+              hx-target="#home-examples"
+              hx-swap="innerHTML"
+            >
+              Dashboard
+            </a>
+
+            <a
+              _="on click remove .bg-muted .text-primary from .nav-example then add .text-muted-foreground to .nav-example  then add .bg-muted .text-primary on me"
+              class="inline-flex h-8 items-center justify-center rounded-md px-3 text-center text-sm transition-colors hover:text-primary text-muted-foreground cursor-pointer nav-example whitespace-nowrap"
+              hx-get="/pages/examples/cards/index.html"
+              hx-trigger="click"
+              hx-target="#home-examples"
+              hx-swap="innerHTML"
+            >
+              Cards
+            </a>
+
+            <a
+              _="on click remove .bg-muted .text-primary from .nav-example then add .text-muted-foreground to .nav-example  then add .bg-muted .text-primary on me"
+              class="inline-flex h-8 items-center justify-center rounded-md px-3 text-center text-sm transition-colors hover:text-primary text-muted-foreground cursor-pointer nav-example whitespace-nowrap"
+              hx-get="/pages/examples/tasks/index.html"
+              hx-trigger="click"
+              hx-target="#home-examples"
+              hx-swap="innerHTML"
+            >
+              Tasks
+            </a>
+
+            <a
+              _="on click remove .bg-muted .text-primary from .nav-example then add .text-muted-foreground to .nav-example  then add .bg-muted .text-primary on me"
+              class="inline-flex h-8 items-center justify-center rounded-md px-3 text-center text-sm transition-colors hover:text-primary text-muted-foreground cursor-pointer nav-example whitespace-nowrap"
+              hx-get="/pages/examples/playground/index.html"
+              hx-trigger="click"
+              hx-target="#home-examples"
+              hx-swap="innerHTML"
+            >
+              Playground
+            </a>
+
+            <a
+              _="on click remove .bg-muted .text-primary from .nav-example then add .text-muted-foreground to .nav-example  then add .bg-muted .text-primary on me"
+              class="inline-flex h-8 items-center justify-center rounded-md px-3 text-center text-sm transition-colors hover:text-primary text-muted-foreground cursor-pointer nav-example whitespace-nowrap"
+              hx-get="/pages/examples/forms/index.html"
+              hx-trigger="click"
+              hx-target="#home-examples"
+              hx-swap="innerHTML"
+            >
+              Forms
+            </a>
+
+            <a
+              _="on click remove .bg-muted .text-primary from .nav-example then add .text-muted-foreground to .nav-example  then add .bg-muted .text-primary on me"
+              class="inline-flex h-8 items-center justify-center rounded-md px-3 text-center text-sm transition-colors hover:text-primary text-muted-foreground cursor-pointer nav-example whitespace-nowrap"
+              hx-get="/pages/examples/music/index.html"
+              hx-trigger="click"
+              hx-target="#home-examples"
+              hx-swap="innerHTML"
+            >
+              Music
+            </a>
+
+            <a
+              _="on click remove .bg-muted .text-primary from .nav-example then add .text-muted-foreground to .nav-example  then add .bg-muted .text-primary on me"
+              class="inline-flex h-8 items-center justify-center rounded-md px-3 text-center text-sm transition-colors hover:text-primary text-muted-foreground cursor-pointer nav-example whitespace-nowrap"
+              hx-get="/pages/examples/authentication/authentication.html"
+              hx-trigger="click"
+              hx-target="#home-examples"
+              hx-swap="innerHTML"
+            >
+              Authentication
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="home-examples" class="mt-8">
+      <div
+        hx-get="/pages/examples/mail/index.html"
+        hx-trigger="load"
+        hx-swap="outerHTML"
+      ></div>
+    </section>
+  </div>
+  </div>
 </div>
