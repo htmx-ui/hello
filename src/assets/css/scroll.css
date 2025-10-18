@@ -71,7 +71,7 @@ pre code {
   border-radius: 0.25rem;
 }
 
-pre[class*="language-"] {
+pre[class*='language-'] {
   overflow-x: auto;
   white-space: pre-wrap;
   word-wrap: break-word;

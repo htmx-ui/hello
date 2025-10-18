@@ -4,20 +4,21 @@ This document defines the consistent border radius system used throughout the He
 
 ## Border Radius Scale
 
-| Class | Value | Usage |
-|-------|-------|-------|
-| `rounded-none` | 0px | Sharp edges, no rounding |
-| `rounded-xs` | 2px | Very subtle rounding for small elements |
-| `rounded-sm` | 4px | Small rounding for badges, tags, small buttons |
-| `rounded` | 6px | **Default rounding** for most UI components |
-| `rounded-md` | 8px | Medium rounding for cards, larger components |
-| `rounded-lg` | 12px | Large rounding for containers and sections |
-| `rounded-xl` | 16px | Extra large rounding for hero sections |
-| `rounded-full` | 9999px | Circular elements |
+| Class          | Value  | Usage                                          |
+| -------------- | ------ | ---------------------------------------------- |
+| `rounded-none` | 0px    | Sharp edges, no rounding                       |
+| `rounded-xs`   | 2px    | Very subtle rounding for small elements        |
+| `rounded-sm`   | 4px    | Small rounding for badges, tags, small buttons |
+| `rounded`      | 6px    | **Default rounding** for most UI components    |
+| `rounded-md`   | 8px    | Medium rounding for cards, larger components   |
+| `rounded-lg`   | 12px   | Large rounding for containers and sections     |
+| `rounded-xl`   | 16px   | Extra large rounding for hero sections         |
+| `rounded-full` | 9999px | Circular elements                              |
 
 ## Usage Guidelines
 
 ### Default Components (`rounded`)
+
 - Buttons (primary, secondary, tertiary)
 - Input fields
 - Select dropdowns
@@ -28,6 +29,7 @@ This document defines the consistent border radius system used throughout the He
 - Modals
 
 ### Small Elements (`rounded-sm` to `rounded-xs`)
+
 - Small badges
 - Tags
 - Notification indicators
@@ -35,6 +37,7 @@ This document defines the consistent border radius system used throughout the He
 - Chip components
 
 ### Medium Components (`rounded-md`)
+
 - Card components
 - Panel sections
 - Dashboard widgets
@@ -42,6 +45,7 @@ This document defines the consistent border radius system used throughout the He
 - Table rows (in some contexts)
 
 ### Large Containers (`rounded-lg` to `rounded-xl`)
+
 - Page sections
 - Hero banners
 - Large modal dialogs
@@ -49,6 +53,7 @@ This document defines the consistent border radius system used throughout the He
 - Feature sections
 
 ### Circular Elements (`rounded-full`)
+
 - Avatar images
 - Circular buttons
 - Status indicators
@@ -66,6 +71,7 @@ This document defines the consistent border radius system used throughout the He
 ## Examples
 
 ### Buttons
+
 ```html
 <!-- Primary button -->
 <button class="rounded bg-primary text-primary-foreground px-4 py-2">
@@ -79,6 +85,7 @@ This document defines the consistent border radius system used throughout the He
 ```
 
 ### Cards
+
 ```html
 <!-- Standard card -->
 <div class="rounded-md border border-border bg-card p-6">
@@ -88,14 +95,16 @@ This document defines the consistent border radius system used throughout the He
 ```
 
 ### Avatars
+
 ```html
 <!-- Circular avatar -->
 <div class="rounded-full w-10 h-10 bg-muted overflow-hidden">
-  <img src="avatar.jpg" alt="Avatar">
+  <img src="avatar.jpg" alt="Avatar" />
 </div>
 ```
 
 ### Pills/Badges
+
 ```html
 <!-- Small pill badge -->
 <span class="rounded-full bg-primary text-primary-foreground px-3 py-1 text-xs">

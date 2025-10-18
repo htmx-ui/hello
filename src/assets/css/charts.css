@@ -6,7 +6,7 @@
   --chart-3: hsl(var(--accent));
   --chart-4: hsl(var(--muted));
   --chart-5: hsl(var(--destructive));
-  
+
   /* Extended color palette for more data series */
   --chart-6: 210 50% 60%;
   --chart-7: 270 70% 60%;
@@ -66,7 +66,9 @@
 /* Enhanced tooltip styling */
 [data-chart] .recharts-tooltip-wrapper {
   --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  box-shadow:
+    var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000),
+    var(--tw-shadow);
   border-radius: var(--radius-md);
   border: 1px solid hsl(var(--border));
   background-color: hsl(var(--background));
@@ -154,7 +156,8 @@
 }
 
 @keyframes pulse {
-  0%, 100% {
+  0%,
+  100% {
     opacity: 1;
   }
   50% {
@@ -191,7 +194,7 @@
   [data-chart] .recharts-cartesian-axis-tick-value {
     font-size: 0.65rem;
   }
-  
+
   [data-chart] .recharts-legend-item-text {
     font-size: 0.7rem;
   }

@@ -3,19 +3,30 @@ const path = require('path');
 
 describe('Component Library Tests', () => {
   const componentsDir = path.join(__dirname, '../src/pages/components');
-  const componentFiles = fs.readdirSync(componentsDir).filter(file => file.endsWith('.html'));
+  const componentFiles = fs
+    .readdirSync(componentsDir)
+    .filter(file => file.endsWith('.html'));
 
   test('All component files exist', () => {
     expect(componentFiles.length).toBeGreaterThan(40); // Should have at least 40 components
   });
 
-  componentFiles.filter(file => file !== 'index.html' && file !== 'template.html' && !file.includes('toast.html')).forEach(file => {
-    test(`${file} has valid HTML structure`, () => {
-      const content = fs.readFileSync(path.join(componentsDir, file), 'utf8');
-      expect(content).toContain('<div class="my-8 w-full min-w-0">'); // Standard component wrapper
-      expect(content).toContain('<h1 class="scroll-m-20 text-3xl font-bold tracking-tight">'); // Title
+  componentFiles
+    .filter(
+      file =>
+        file !== 'index.html' &&
+        file !== 'template.html' &&
+        !file.includes('toast.html')
+    )
+    .forEach(file => {
+      test(`${file} has valid HTML structure`, () => {
+        const content = fs.readFileSync(path.join(componentsDir, file), 'utf8');
+        expect(content).toContain('<div class="my-8 w-full min-w-0">'); // Standard component wrapper
+        expect(content).toContain(
+          '<h1 class="scroll-m-20 text-3xl font-bold tracking-tight">'
+        ); // Title
+      });
     });
-  });
 
   test('Index file exists and loads components', () => {
     const indexPath = path.join(componentsDir, 'index.html');
@@ -53,6 +64,8 @@ describe('Documentation Tests', () => {
 
   test('Documentation files exist', () => {
     expect(fs.existsSync('docs/references/DOCS.md')).toBe(true);
-    expect(fs.existsSync('docs/guides/COMPONENT_DEVELOPMENT_GUIDE.md')).toBe(true);
+    expect(fs.existsSync('docs/guides/COMPONENT_DEVELOPMENT_GUIDE.md')).toBe(
+      true
+    );
   });
 });

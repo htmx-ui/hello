@@ -3,7 +3,9 @@
 This project's documentation has been organized into the following categories:
 
 ## Guides
+
 Located in `docs/guides/`:
+
 - Animate.css Guide
 - Component Development Guide
 - Development Workflow
@@ -13,17 +15,23 @@ Located in `docs/guides/`:
 - Project Structure
 
 ## References
+
 Located in `docs/references/`:
+
 - Documentation Summary
 
 ## Cheatsheets
+
 Located in `docs/cheatsheets/`:
+
 - Animate.css Cheatsheet
 - HTMX Cheatsheet
 - Hyperscript Cheatsheet
 
 ## CLI Documentation
+
 Located in `docs/cli/`:
+
 - Qwen CLI Guide
 - Qwen CLI Documentation Summary
 - Qwen CLI HTMX Implementation
@@ -31,7 +39,9 @@ Located in `docs/cli/`:
 - Qwen CLI Quick Reference
 
 ## Root Files
+
 Kept in the project root:
+
 - README.md - Main project documentation
 - DOCUMENTATION_ORGANIZATION.md - This file
 
@@ -40,6 +50,7 @@ This organization helps maintain a clean project root while keeping all document
 ## Accessing Documentation
 
 To access any documentation file, simply navigate to the appropriate directory. For example:
+
 - Guides: `docs/guides/`
 - Cheatsheets: `docs/cheatsheets/`
 - CLI Docs: `docs/cli/`
