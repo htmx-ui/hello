@@ -9,12 +9,16 @@
   "scripts": {
     "dev": "npx tailwindcss -i ./main.css -o ./src/assets/css/tailwindcss.css --watch",
     "build": "npx tailwindcss -i ./main.css -o ./src/assets/css/tailwindcss.css",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "test:watch": "jest --watch"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "tailwindcss": "^3.4.17"
+  },
+  "devDependencies": {
+    "jest": "^30.2.0"
   }
 }
